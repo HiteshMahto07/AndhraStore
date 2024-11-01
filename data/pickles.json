@@ -1,0 +1,562 @@
+[
+    {
+        "type":"Chicken",
+        "name":"Chicken Pickle Original Andhra Store Recipe",
+        "image":[
+            {
+                "name":"/pickle3.jpeg"
+            }
+        ],
+        "benefits":"Chicken being a substantial source of protein, especially lean protein which is rich in amino acids will not only promote weight management and cardiac health but also enhance bone mineral density and reduce the risk of osteoporosis.",
+        "amount":300,
+        "ingredients":[
+            {
+                "name":"Fresh and high-quality meat"   
+            },
+            {
+                "name":"Garam Masala"   
+            },
+            {
+                "name":"Lemon"   
+            },
+            {
+                "name":"Red Chilli"   
+            },
+            {
+                "name":"Salt"   
+            },
+            {
+                "name":"Ground nut oil"   
+            },
+            {
+                "name":"Turmeric"   
+            },
+            {
+                "name":"Garlic and Ginger"   
+            }
+        ],
+        "desc":"Andhra Store is now introducing the special authentic and Andhra style Non-Veg Pickle, Zesty Boneless Chicken pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
+        "desc2":"This Boneless Chicken pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
+        "storage":"Andhra style chicken Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Chicken Achar is 1 month from the opening or manufacture date. The spicy chicken ooragai can be refrigerated for up to 3 months."
+    },
+    {
+        "type":"Meat",
+        "name":"Meat Pickle Original Andhra Store Recipe",
+        "image":[
+            {
+                "name":"/mutton-1.jpeg"
+            }
+        ],
+        "benefits":"Meat is a substantial source of lean protein, rich in essential amino acids that support weight management, promote heart health, enhance bone mineral density, and reduce the risk of osteoporosis.",
+        "amount":350,
+        "ingredients":[
+            {
+                "name":"Fresh and high-quality meat"   
+            },
+            {
+                "name":"Garam Masala"   
+            },
+            {
+                "name":"Lemon"   
+            },
+            {
+                "name":"Red Chilli"   
+            },
+            {
+                "name":"Salt"   
+            },
+            {
+                "name":"Ground nut oil"   
+            },
+            {
+                "name":"Turmeric"   
+            },
+            {
+                "name":"Garlic and Ginger"   
+            }
+        ],
+        "desc":"Andhra Store is now introducing the special authentic and Andhra style Non-Veg Pickle, Zesty Boneless Meat pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
+        "desc2":"This Boneless Meat pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
+        "storage":"Andhra style Meat Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Meat Achar is 1 month from the opening or manufacture date. The spicy meat ooragai can be refrigerated for up to 3 months."
+    },
+    {
+        "type":"Prawns",
+        "name":"Prawns Pickle Original Andhra Store Recipe",
+        "image":[
+            {
+                "name":"/prawns-1.jpeg"
+            }
+        ],
+        "benefits":"Prawns are a substantial source of lean protein, rich in essential amino acids that promote weight management, support heart health, enhance bone mineral density, and reduce the risk of osteoporosis.",
+        "amount":350,
+        "ingredients":[
+            {
+                "name":"Fresh and high-quality meat"   
+            },
+            {
+                "name":"Garam Masala"   
+            },
+            {
+                "name":"Lemon"   
+            },
+            {
+                "name":"Red Chilli"   
+            },
+            {
+                "name":"Salt"   
+            },
+            {
+                "name":"Ground nut oil"   
+            },
+            {
+                "name":"Turmeric"   
+            },
+            {
+                "name":"Garlic and Ginger"   
+            }
+        ],
+        "desc":"Andhra Store is now introducing the special authentic and Andhra style Non-Veg Pickle, Zesty Boneless Prawns pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
+        "desc2":"This Prawns pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
+        "storage":"Andhra style Prawns Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Prawns Achar is 1 month from the opening or manufacture date. The spicy prawns ooragai can be refrigerated for up to 3 months."
+    },
+    {
+        "type":"Ginger",
+        "name":"Ginger Pickle Original Andhra Store Recipe",
+        "image":[
+            {
+                "name":"/ginger-1.jpeg"
+            }
+        ],
+        "benefits":"Ginger is a potent source of antioxidants and bioactive compounds that support digestive health, reduce inflammation, boost immunity, and alleviate nausea. Regular consumption of ginger may also promote heart health, improve blood circulation, and support joint health.",
+        "amount":200,
+        "ingredients":[
+            {
+                "name":"Garam Masala"   
+            },
+            {
+                "name":"Lemon"   
+            },
+            {
+                "name":"Guntur Red Chilli"   
+            },
+            {
+                "name":"Salt"   
+            },
+            {
+                "name":"Ground nut oil"   
+            },
+            {
+                "name":"Turmeric"   
+            },
+            {
+                "name":"Roasted Mustard Seed Powder"   
+            },
+            {
+                "name":"Fenugreek Seeds Powder"   
+            }
+        ],
+        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Ginger pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
+        "desc2":"This Ginger pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
+        "storage":"Andhra style Ginger Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Ginger Achar is 1 month from the opening or manufacture date. The spicy ginger ooragai can be refrigerated for up to 3 months."
+    },
+    {
+        "type":"Mango",
+        "name":"Mango Pickle Original Andhra Store Recipe",
+        "image":[
+            {
+                "name":"/mango-1.jpeg"
+            }
+        ],
+        "benefits":"Mango is a rich source of vitamins, particularly vitamin C, vitamin A, and various antioxidants that support immune function, improve skin health, and promote good vision. Its high fiber content aids digestion and can help regulate blood sugar levels. Regular consumption of mango may also support heart health and overall vitality.",
+        "amount":200,
+        "ingredients":[
+            {
+                "name":"Garam Masala"   
+            },
+            {
+                "name":"Lemon"   
+            },
+            {
+                "name":"Red Chilli"   
+            },
+            {
+                "name":"Salt"   
+            },
+            {
+                "name":"Ground nut oil"   
+            },
+            {
+                "name":"Turmeric"   
+            },
+            {
+                "name":"Roasted Mustard Seed Powder"   
+            },
+            {
+                "name":"Fenugreek Seeds Powder"   
+            }
+        ],
+        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Mango pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
+        "desc2":"This Mango pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
+        "storage":"Andhra style Mango Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Garlic Achar is 1 month from the opening or manufacture date. The spicy mango ooragai can be refrigerated for up to 3 months."
+    },
+    {
+        "type":"Fish",
+        "name":"Fish Pickle Original Andhra Store Recipe",
+        "image":[
+            {
+                "name":"/fish-2.jpeg"
+            }
+        ],
+        "benefits":"Fish is an excellent source of high-quality protein and omega-3 fatty acids, which support heart health, reduce inflammation, and improve brain function. The nutrients in fish, including vitamin D and B vitamins, promote bone health, support immune function, and aid in muscle maintenance. Regular consumption of fish may also lower the risk of chronic diseases and enhance overall vitality.",
+        "amount":200,
+        "ingredients":[
+            {
+                "name":"Garam Masala"   
+            },
+            {
+                "name":"Lemon"   
+            },
+            {
+                "name":"Red Chilli"   
+            },
+            {
+                "name":"Salt"   
+            },
+            {
+                "name":"Ground nut oil"   
+            },
+            {
+                "name":"Turmeric"   
+            },
+            {
+                "name":"Roasted Mustard Seed Powder"   
+            },
+            {
+                "name":"Fenugreek Seeds Powder"   
+            }
+        ],
+        "desc":"Andhra Store is now introducing the special authentic and Andhra style Non-Veg Pickle, Zesty Fish pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
+        "desc2":"This Fish pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
+        "storage":"Andhra style Fish Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Fish Achar is 1 month from the opening or manufacture date. The spicy fish ooragai can be refrigerated for up to 3 months."
+    },
+    {
+        "type":"Garlic",
+        "name":"Garlic Pickle Original Andhra Store Recipe",
+        "image":[
+            {
+                "name":"/garlic-1.jpeg"
+            }
+        ],
+        "benefits":"Garlic is a nutrient-dense food rich in sulfur compounds, particularly allicin, which supports immune health, reduces inflammation, and promotes heart health by helping to manage blood pressure and cholesterol levels. Regular consumption of garlic may also have antioxidant properties, supporting cellular health and potentially reducing the risk of chronic diseases.",
+        "amount":200,
+        "ingredients":[
+            {
+                "name":"Garam Masala"   
+            },
+            {
+                "name":"Lemon"   
+            },
+            {
+                "name":"Red Chilli"   
+            },
+            {
+                "name":"Salt"   
+            },
+            {
+                "name":"Ground nut oil"   
+            },
+            {
+                "name":"Turmeric"   
+            },
+            {
+                "name":"Roasted Mustard Seed Powder"   
+            },
+            {
+                "name":"Fenugreek Seeds Powder"   
+            }
+        ],
+        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Garlic pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
+        "desc2":"This Garlic pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
+        "storage":"Andhra style Garlic Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Garlic Achar is 1 month from the opening or manufacture date. The spicy garlic ooragai can be refrigerated for up to 3 months."
+    },
+    {
+        "type":"RedChilli",
+        "name":"Red Chilli Pickle Original Andhra Store Recipe",
+        "image":[
+            {
+                "name":"/redchilli-1.jpeg"
+            }
+        ],
+        "benefits":"Red Chilli is a nutrient-dense food rich in sulfur compounds, particularly allicin, which supports immune health, reduces inflammation, and promotes heart health by helping to manage blood pressure and cholesterol levels. Regular consumption of red chilli may also have antioxidant properties, supporting cellular health and potentially reducing the risk of chronic diseases.",
+        "amount":200,
+        "ingredients":[
+            {
+                "name":"Garam Masala"   
+            },
+            {
+                "name":"Lemon"   
+            },
+            {
+                "name":"Red Chilli"   
+            },
+            {
+                "name":"Salt"   
+            },
+            {
+                "name":"Ground nut oil"   
+            },
+            {
+                "name":"Turmeric"   
+            },
+            {
+                "name":"Roasted Mustard Seed Powder"   
+            },
+            {
+                "name":"Fenugreek Seeds Powder"   
+            }
+        ],
+        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Red Chilli pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
+        "desc2":"This Red Chilli pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
+        "storage":"Andhra style Red Chilli Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Red Chilli Achar is 1 month from the opening or manufacture date. The spicy red chilli ooragai can be refrigerated for up to 3 months."
+    },
+    {
+        "type":"Gongura",
+        "name":"Gongura Pickle Original Andhra Store Recipe",
+        "image":[
+            {
+                "name":"/gongura-1.jpeg"
+            }
+        ],
+        "benefits":"Gongura is a nutrient-dense leafy green rich in iron, calcium, antioxidants, and essential vitamins, which support immune health, reduce inflammation, and promote heart health. Its high antioxidant content helps support cellular health and may reduce the risk of chronic diseases. Regular consumption of gongura may also aid in bone health, improve digestion, and support overall vitality.",
+        "amount":200,
+        "ingredients":[
+            {
+                "name":"Garam Masala"   
+            },
+            {
+                "name":"Lemon"   
+            },
+            {
+                "name":"Red Chilli"   
+            },
+            {
+                "name":"Salt"   
+            },
+            {
+                "name":"Ground nut oil"   
+            },
+            {
+                "name":"Turmeric"   
+            },
+            {
+                "name":"Roasted Mustard Seed Powder"   
+            },
+            {
+                "name":"Fenugreek Seeds Powder"   
+            }
+        ],
+        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Red Chilli pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
+        "desc2":"This Gongura pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
+        "storage":"Andhra style Gongura Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Gongura Achar is 1 month from the opening or manufacture date. The spicy gongura ooragai can be refrigerated for up to 3 months."
+    },
+    {
+        "type":"Tomato",
+        "name":"Tomato Pickle Original Andhra Store Recipe",
+        "image":[
+            {
+                "name":"/tomato-1.jpeg"
+            }
+        ],
+        "benefits":"Tomato is a nutrient-dense food rich in vitamins, particularly vitamin C and potassium, and antioxidants like lycopene, which support immune health, reduce inflammation, and promote heart health by helping to manage blood pressure and cholesterol levels. Regular consumption of tomatoes provides powerful antioxidant benefits, supports cellular health, and may help reduce the risk of chronic diseases, including certain cancers.",
+        "amount":200,
+        "ingredients":[
+            {
+                "name":"Garam Masala"   
+            },
+            {
+                "name":"Lemon"   
+            },
+            {
+                "name":"Red Chilli"   
+            },
+            {
+                "name":"Salt"   
+            },
+            {
+                "name":"Ground nut oil"   
+            },
+            {
+                "name":"Turmeric"   
+            },
+            {
+                "name":"Roasted Mustard Seed Powder"   
+            },
+            {
+                "name":"Fenugreek Seeds Powder"   
+            }
+        ],
+        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Tomato pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
+        "desc2":"This tomato pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
+        "storage":"Andhra style Tomato Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Tomato Achar is 1 month from the opening or manufacture date. The spicy tomato ooragai can be refrigerated for up to 3 months."
+    },
+    {
+        "type":"Lemon",
+        "name":"Lemon Pickle Original Andhra Store Recipe",
+        "image":[
+            {
+                "name":"/lemon-1.jpeg"
+            }
+        ],
+        "benefits":"Lemon is a nutrient-dense fruit rich in vitamin C, antioxidants, and flavonoids, which support immune health, reduce inflammation, and promote heart health by helping to manage blood pressure. The antioxidants in lemon support cellular health and may help reduce the risk of chronic diseases. Regular consumption of lemon also aids digestion, enhances skin health, and supports the body's natural detoxification processes.",
+        "amount":200,
+        "ingredients":[
+            {
+                "name":"Garam Masala"   
+            },
+            {
+                "name":"Lemon"   
+            },
+            {
+                "name":"Red Chilli"   
+            },
+            {
+                "name":"Salt"   
+            },
+            {
+                "name":"Ground nut oil"   
+            },
+            {
+                "name":"Turmeric"   
+            },
+            {
+                "name":"Roasted Mustard Seed Powder"   
+            },
+            {
+                "name":"Fenugreek Seeds Powder"   
+            }
+        ],
+        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Lemon pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
+        "desc2":"This lemon pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
+        "storage":"Andhra style Lemon Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Lemon Achar is 1 month from the opening or manufacture date. The spicy lemon ooragai can be refrigerated for up to 3 months."
+    },
+    {
+        "type":"Amla",
+        "name":"Amla Pickle Original Andhra Store Recipe",
+        "image":[
+            {
+                "name":"/amla-1.jpeg"
+            }
+        ],
+        "benefits":"Amla is a nutrient-dense fruit rich in vitamin C, antioxidants, and flavonoids, which support immune health, reduce inflammation, and promote heart health by helping to manage blood pressure and cholesterol levels. The antioxidants in amla support cellular health and may help reduce the risk of chronic diseases. Regular consumption of amla also aids digestion, promotes skin health, and supports detoxification processes in the body.",
+        "amount":200,
+        "ingredients":[
+            {
+                "name":"Garam Masala"   
+            },
+            {
+                "name":"Lemon"   
+            },
+            {
+                "name":"Red Chilli"   
+            },
+            {
+                "name":"Salt"   
+            },
+            {
+                "name":"Ground nut oil"   
+            },
+            {
+                "name":"Turmeric"   
+            },
+            {
+                "name":"Roasted Mustard Seed Powder"   
+            },
+            {
+                "name":"Fenugreek Seeds Powder"   
+            }
+        ],
+        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Amla pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
+        "desc2":"This amla pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
+        "storage":"Andhra style Amla Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Amla Achar is 1 month from the opening or manufacture date. The spicy amla ooragai can be refrigerated for up to 3 months."
+    },
+    {
+        "type":"Curry",
+        "name":"Curry Leaves Original Andhra Store Recipe",
+        "image":[
+            {
+                "name":"/curry-1.jpeg"
+            }
+        ],
+        "benefits":"Curry leaves are a nutrient-dense herb rich in vitamins A, B, C, and E, along with antioxidants and essential minerals that support immune health, reduce inflammation, and promote heart health by helping to manage blood pressure and cholesterol levels. The antioxidants in curry leaves support cellular health and may help reduce the risk of chronic diseases. Regular consumption of curry leaves also aids digestion, promotes skin and hair health, and supports liver function.",
+        "amount":200,
+        "ingredients":[
+            {
+                "name":"Garam Masala"   
+            },
+            {
+                "name":"Lemon"   
+            },
+            {
+                "name":"Red Chilli"   
+            },
+            {
+                "name":"Salt"   
+            },
+            {
+                "name":"Ground nut oil"   
+            },
+            {
+                "name":"Turmeric"   
+            },
+            {
+                "name":"Roasted Mustard Seed Powder"   
+            },
+            {
+                "name":"Fenugreek Seeds Powder"   
+            }
+        ],
+        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Curry Leaves pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
+        "desc2":"This curry leaves pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
+        "storage":"Andhra style Curry Leaves Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Curry Leaves Achar is 1 month from the opening or manufacture date. The spicy curry leaves ooragai can be refrigerated for up to 3 months."
+    },
+    {
+        "type":"GreenChilli",
+        "name":"Green Chilli Original Andhra Store Recipe",
+        "image":[
+            {
+                "name":"/green-1.jpeg"
+            }
+        ],
+        "benefits":"Green chillies are a nutrient-dense food rich in vitamins A, B, C, and E, along with antioxidants and essential minerals that support immune health, reduce inflammation, and promote heart health by helping to manage blood pressure and cholesterol levels. The antioxidants in green chillies support cellular health and may help reduce the risk of chronic diseases. Regular consumption of green chillies can also aid digestion, boost metabolism, and promote skin health.",
+        "amount":200,
+        "ingredients":[
+            {
+                "name":"Garam Masala"   
+            },
+            {
+                "name":"Lemon"   
+            },
+            {
+                "name":"Red Chilli"   
+            },
+            {
+                "name":"Salt"   
+            },
+            {
+                "name":"Ground nut oil"   
+            },
+            {
+                "name":"Turmeric"   
+            },
+            {
+                "name":"Roasted Mustard Seed Powder"   
+            },
+            {
+                "name":"Fenugreek Seeds Powder"   
+            }
+        ],
+        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Green Chilli pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
+        "desc2":"This green chilli pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
+        "storage":"Andhra style Green Chilli Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Green Chilli Achar is 1 month from the opening or manufacture date. The spicy green chilli ooragai can be refrigerated for up to 3 months."
+    }
+]
