@@ -53,7 +53,7 @@ const PickleData = () => {
                     {pickle.image.map((data) => (
                     <img key={data.name} src={data.name} alt={data.name} className="w-full h-64 sm:h-60 md:h-[28rem] object-fill" />
                     ))}
-                    <h1 className="md:hidden mt-8 pb-2 text-bold">{pickle.name}</h1><hr/>
+                    <h1 className="md:hidden mt-8 pb-2 font-serif text-bold">{pickle.name}</h1><hr/>
                     <div className="md:hidden grid grid-cols-2 gap-6">
                         <div className="mt-4">
                             <h3 className="mb-2 text-sm text-[#666666] font-semibold">Price</h3>
@@ -92,8 +92,8 @@ const PickleData = () => {
                     <h3 className="mt-4 mb-2 text-[#666666] text-left font-semibold">Product Storage</h3><hr/>
                     <h3 className="mt-4 mb-2 text-[#666666]">{pickle.storage}</h3>
                 </div>
-                <div className="sm:px-8 md:px:12 font-serif">
-                    <h1 className="hidden md:block pb-2 md:text-4xl text-bold">{pickle.name}</h1><hr/>
+                <div className="sm:px-8 md:px:12">
+                    <h1 className="hidden md:block pb-2 md:text-4xl font-serif text-bold">{pickle.name}</h1><hr/>
                     <div className="hidden md:grid grid-cols-3 gap-6">
                         <div className="mt-8">
                             <h3 className="mb-2 text-sm text-[#666666] font-semibold">Price</h3>
