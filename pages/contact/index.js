@@ -8,28 +8,26 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Our Location',
-    lines: ['East Godavari District,', 'Andhra Pradesh, India'],
+    lines: ['Andhra Store, Vikas Enclave,', 'SHop No-06, Nani Daman,', 'Daman and Diu. 396210'],
     color: 'brand',
   },
   {
     icon: Phone,
     title: 'Customer Support',
-    lines: ['+91 87583 02568'],
-    sub: 'MON - SAT, 9AM - 6PM',
+    lines: ['Phone: 8758302568, 8799114169'],
     color: 'olive',
   },
   {
     icon: Mail,
     title: 'Email Us',
-    lines: ['andhrastoreofficial@gmail.com'],
+    lines: ['Andhrastore.india@gmail.com'],
     sub: 'For bulk orders & queries',
     color: 'brand',
   },
   {
     icon: Clock,
     title: 'Working Hours',
-    lines: ['Mon – Sat: 9:00 AM – 6:00 PM'],
-    sub: 'Sunday: Closed',
+    lines: ['7 Days a week from 10:00 am'],
     color: 'olive',
   },
 ];
@@ -109,7 +107,7 @@ export default function ContactPage() {
                 <div className="mt-8 rounded-xl overflow-hidden border border-gray-100 bg-gray-50 h-40 flex items-center justify-center">
                   <div className="text-center">
                     <MapPin size={24} className="mx-auto text-gray-300 mb-2" />
-                    <p className="text-xs text-gray-400">East Godavari, Andhra Pradesh</p>
+                    <p className="text-xs text-gray-400">Nani Daman, Daman & Diu</p>
                   </div>
                 </div>
               </div>
@@ -128,7 +126,7 @@ export default function ContactPage() {
                       <label className="text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5 block">Full Name</label>
                       <input
                         type="text"
-                        placeholder="John Doe"
+                        placeholder="Arjun Sharma"
                         required
                         value={form.name}
                         onChange={e => setForm({ ...form, name: e.target.value })}
@@ -139,7 +137,7 @@ export default function ContactPage() {
                       <label className="text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5 block">Phone Number</label>
                       <input
                         type="tel"
-                        placeholder="+91 99999 99999"
+                        placeholder="+91 98765 43210"
                         value={form.phone}
                         onChange={e => setForm({ ...form, phone: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-olive-200 focus:border-olive-400 transition-all"
@@ -152,7 +150,7 @@ export default function ContactPage() {
                     <label className="text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5 block">Email Address</label>
                     <input
                       type="email"
-                      placeholder="john@example.com"
+                      placeholder="arjun@example.com"
                       required
                       value={form.email}
                       onChange={e => setForm({ ...form, email: e.target.value })}
@@ -165,7 +163,7 @@ export default function ContactPage() {
                     <label className="text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5 block">Your Message</label>
                     <textarea
                       rows={5}
-                      placeholder="Tell us how we can help..."
+                      placeholder="Namaste! I would like to inquire about..."
                       required
                       value={form.message}
                       onChange={e => setForm({ ...form, message: e.target.value })}

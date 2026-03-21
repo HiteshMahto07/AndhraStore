@@ -122,11 +122,11 @@ export default function PrivacyPolicy() {
                 If you have any questions or concerns about this Privacy Policy, please contact us.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-sm">
-                <a href="mailto:andhrastoreofficial@gmail.com" className="inline-flex items-center gap-1.5 px-4 py-2 bg-olive-600 text-white rounded-lg hover:bg-olive-700 transition-colors font-medium text-xs">
-                  📧 andhrastoreofficial@gmail.com
+                <a href="mailto:Andhrastore.india@gmail.com" className="inline-flex items-center gap-1.5 px-4 py-2 bg-olive-600 text-white rounded-lg hover:bg-olive-700 transition-colors font-medium text-xs">
+                  📧 Andhrastore.india@gmail.com
                 </a>
                 <a href="tel:+918758302568" className="inline-flex items-center gap-1.5 px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors font-medium text-xs">
-                  📞 +91 87583 02568
+                  📞 8758302568
                 </a>
               </div>
             </div>

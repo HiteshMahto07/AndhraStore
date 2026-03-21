@@ -35,7 +35,7 @@ export default function Header() {
     <>
       {/* Top Bar */}
       <div className="bg-olive-700 text-white text-center py-1.5 text-[11px] font-medium tracking-wide">
-        🚚 Free Delivery on Orders Above ₹500 &nbsp;|&nbsp; 📞 +91 87583 02568
+        🚚 Free Delivery on Orders Above ₹500 &nbsp;|&nbsp; 📞 8758302568, 8799114169
       </div>
 
       <header className={`sticky top-0 z-50 transition-shadow duration-300 bg-white ${scrolled ? 'shadow-md' : 'shadow-sm'}`}>
