@@ -3,9 +3,9 @@
         "type":"Chicken",
         "name":"Chicken Pickle Original Andhra Store Recipe",
         "image":[
-            {
-                "name":"/pickle3.jpeg"
-            }
+            { "name":"/pickle3.jpeg" },
+            { "name":"/chicken-1.jpeg" },
+            { "name":"/pickle17.jpeg" }
         ],
         "benefits":"Chicken being a substantial source of protein, especially lean protein which is rich in amino acids will not only promote weight management and cardiac health but also enhance bone mineral density and reduce the risk of osteoporosis.",
         "amount":300,
@@ -43,9 +43,9 @@
         "type":"Meat",
         "name":"Meat Pickle Original Andhra Store Recipe",
         "image":[
-            {
-                "name":"/mutton-1.jpeg"
-            }
+            { "name":"/mutton-1.jpeg" },
+            { "name":"/pickle14.jpeg" },
+            { "name":"/pickle18.jpeg" }
         ],
         "benefits":"Meat is a substantial source of lean protein, rich in essential amino acids that support weight management, promote heart health, enhance bone mineral density, and reduce the risk of osteoporosis.",
         "amount":350,
@@ -83,9 +83,9 @@
         "type":"Prawns",
         "name":"Prawns Pickle Original Andhra Store Recipe",
         "image":[
-            {
-                "name":"/prawns-1.jpeg"
-            }
+            { "name":"/prawns-1.jpeg" },
+            { "name":"/pickle15.jpeg" },
+            { "name":"/pickle16.jpeg" }
         ],
         "benefits":"Prawns are a substantial source of lean protein, rich in essential amino acids that promote weight management, support heart health, enhance bone mineral density, and reduce the risk of osteoporosis.",
         "amount":350,
@@ -123,9 +123,10 @@
         "type":"Ginger",
         "name":"Ginger Pickle Original Andhra Store Recipe",
         "image":[
-            {
-                "name":"/ginger-1.jpeg"
-            }
+            { "name":"/ginger-1.jpeg" },
+            { "name":"/ginger-2.jpeg" },
+            { "name":"/ginger-3.jpeg" },
+            { "name":"/ginger-4.jpeg" }
         ],
         "benefits":"Ginger is a potent source of antioxidants and bioactive compounds that support digestive health, reduce inflammation, boost immunity, and alleviate nausea. Regular consumption of ginger may also promote heart health, improve blood circulation, and support joint health.",
         "amount":200,
@@ -163,9 +164,9 @@
         "type":"Mango",
         "name":"Mango Pickle Original Andhra Store Recipe",
         "image":[
-            {
-                "name":"/mango-1.jpeg"
-            }
+            { "name":"/mango-1.jpeg" },
+            { "name":"/mango-2.jpeg" },
+            { "name":"/mango-3.jpeg" }
         ],
         "benefits":"Mango is a rich source of vitamins, particularly vitamin C, vitamin A, and various antioxidants that support immune function, improve skin health, and promote good vision. Its high fiber content aids digestion and can help regulate blood sugar levels. Regular consumption of mango may also support heart health and overall vitality.",
         "amount":200,
@@ -203,9 +204,8 @@
         "type":"Fish",
         "name":"Fish Pickle Original Andhra Store Recipe",
         "image":[
-            {
-                "name":"/fish-2.jpeg"
-            }
+            { "name":"/fish-2.jpeg" },
+            { "name":"/fish-1.jpeg" }
         ],
         "benefits":"Fish is an excellent source of high-quality protein and omega-3 fatty acids, which support heart health, reduce inflammation, and improve brain function. The nutrients in fish, including vitamin D and B vitamins, promote bone health, support immune function, and aid in muscle maintenance. Regular consumption of fish may also lower the risk of chronic diseases and enhance overall vitality.",
         "amount":200,
@@ -243,9 +243,10 @@
         "type":"Garlic",
         "name":"Garlic Pickle Original Andhra Store Recipe",
         "image":[
-            {
-                "name":"/garlic-1.jpeg"
-            }
+            { "name":"/garlic-1.jpeg" },
+            { "name":"/garlic-2.jpeg" },
+            { "name":"/garlic-3.jpeg" },
+            { "name":"/garlic-4.jpeg" }
         ],
         "benefits":"Garlic is a nutrient-dense food rich in sulfur compounds, particularly allicin, which supports immune health, reduces inflammation, and promotes heart health by helping to manage blood pressure and cholesterol levels. Regular consumption of garlic may also have antioxidant properties, supporting cellular health and potentially reducing the risk of chronic diseases.",
         "amount":200,
@@ -283,9 +284,9 @@
         "type":"RedChilli",
         "name":"Red Chilli Pickle Original Andhra Store Recipe",
         "image":[
-            {
-                "name":"/redchilli-1.jpeg"
-            }
+            { "name":"/redchilli-1.jpeg" },
+            { "name":"/redchilli-2.jpeg" },
+            { "name":"/redchilli-3.jpeg" }
         ],
         "benefits":"Red Chilli is a nutrient-dense food rich in sulfur compounds, particularly allicin, which supports immune health, reduces inflammation, and promotes heart health by helping to manage blood pressure and cholesterol levels. Regular consumption of red chilli may also have antioxidant properties, supporting cellular health and potentially reducing the risk of chronic diseases.",
         "amount":200,
@@ -363,9 +364,8 @@
         "type":"Tomato",
         "name":"Tomato Pickle Original Andhra Store Recipe",
         "image":[
-            {
-                "name":"/tomato-1.jpeg"
-            }
+            { "name":"/tomato-1.jpeg" },
+            { "name":"/tomato-2.jpeg" }
         ],
         "benefits":"Tomato is a nutrient-dense food rich in vitamins, particularly vitamin C and potassium, and antioxidants like lycopene, which support immune health, reduce inflammation, and promote heart health by helping to manage blood pressure and cholesterol levels. Regular consumption of tomatoes provides powerful antioxidant benefits, supports cellular health, and may help reduce the risk of chronic diseases, including certain cancers.",
         "amount":200,
