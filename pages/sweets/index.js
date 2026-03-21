@@ -2,17 +2,20 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-function Sweets() {
+export default function SweetsPage() {
   return (
-    <div>
+    <>
       <Header />
-      <div className="flex flex-col justify-center items-center h-screen text-center bg-gray-100">
-        <h1 className="text-5xl font-bold text-gray-800 mb-4">Sweets</h1>
-        <p className="text-2xl font-semibold text-red-600">This page will be updated soon.</p>
-      </div>
+      <section className="section-pad bg-white">
+        <div className="container-main max-w-md mx-auto text-center">
+          <span className="text-4xl">🍬</span>
+          <h1 className="text-2xl font-heading text-gray-900 mt-3 mb-2">Sweets</h1>
+          <p className="text-sm text-gray-500 mb-1">Our sweets collection is coming soon!</p>
+          <p className="text-xs text-gray-400 mb-6">Traditional recipes, premium ingredients.</p>
+          <Link href="/home" className="btn-primary">Explore Pickles →</Link>
+        </div>
+      </section>
       <Footer />
-    </div>
+    </>
   );
 }
-
-export default Sweets;
