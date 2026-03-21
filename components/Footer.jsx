@@ -66,9 +66,9 @@ export default function Footer() {
           <div>
             <h4 className="text-white text-sm font-bold mb-3 font-sans">Get in Touch</h4>
             <div className="space-y-2 text-xs text-gray-400">
-              <p>📞 +91 87583 02568</p>
-              <p>📧 andhrastoreofficial@gmail.com</p>
-              <p>📍 Andhra Pradesh, India</p>
+              <p>📞 8758302568, 8799114169</p>
+              <p>📧 Andhrastore.india@gmail.com</p>
+              <p>📍 Nani Daman, Daman & Diu</p>
             </div>
           </div>
         </div>
