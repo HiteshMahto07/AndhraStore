@@ -66,14 +66,14 @@ const ratingBreakdown = [
 
 /* ── All products for "You Might Also Like" ── */
 const allProducts = [
-  { name: 'Mango Pickle', image: '/images/Veg Pickle/Mango Pickle 1 (2).png', price: 200, type: 'Mango', rating: 4.9, badge: 'BEST SELLER' },
-  { name: 'Chicken Pickle', image: '/images/Non Veg Pickle/Chicken Pickle.png', price: 300, type: 'Chicken', rating: 4.8, badge: 'BEST SELLER' },
-  { name: 'Garlic Pickle', image: '/images/Veg Pickle/Garlic Pickle.png', price: 200, type: 'Garlic', rating: 4.6 },
-  { name: 'Red Chilli Pickle', image: '/images/Veg Pickle/Red Chilli Pickle.png', price: 200, type: 'RedChilli', rating: 4.4 },
-  { name: 'Ginger Pickle', image: '/images/Veg Pickle/Ginger Pickle 1.png', price: 200, type: 'Ginger', rating: 4.5 },
-  { name: 'Prawns Pickle', image: '/images/Non Veg Pickle/Prawns Pickle.png', price: 350, type: 'Prawns', rating: 4.7, badge: 'PREMIUM' },
-  { name: 'Tomato Pickle', image: '/images/Veg Pickle/Tomato Pickle 1.png', price: 200, type: 'Tomato', rating: 4.4 },
-  { name: 'Meat Pickle', image: '/images/Non Veg Pickle/Mutton Pickle.png', price: 350, type: 'Meat', rating: 4.7, badge: 'PREMIUM' },
+  { name: 'Mango Pickle', image: '/mango-1.jpeg', price: 200, type: 'Mango', rating: 4.9, badge: 'BEST SELLER' },
+  { name: 'Chicken Pickle', image: '/chicken-1.jpeg', price: 300, type: 'Chicken', rating: 4.8, badge: 'BEST SELLER' },
+  { name: 'Garlic Pickle', image: '/garlic-1.jpeg', price: 200, type: 'Garlic', rating: 4.6 },
+  { name: 'Red Chilli Pickle', image: '/redchilli-1.jpeg', price: 200, type: 'RedChilli', rating: 4.4 },
+  { name: 'Ginger Pickle', image: '/ginger-1.jpeg', price: 200, type: 'Ginger', rating: 4.5 },
+  { name: 'Prawns Pickle', image: '/prawns-1.jpeg', price: 350, type: 'Prawns', rating: 4.7, badge: 'PREMIUM' },
+  { name: 'Tomato Pickle', image: '/tomato-1.jpeg', price: 200, type: 'Tomato', rating: 4.4 },
+  { name: 'Meat Pickle', image: '/mutton-1.jpeg', price: 350, type: 'Meat', rating: 4.7, badge: 'PREMIUM' },
 ];
 
 export default function PickleDetail() {
@@ -298,18 +298,18 @@ export default function PickleDetail() {
           {/* Accordion details */}
           <div className="space-y-2">
             {[
-              { title: 'Ingredients', content: <div className="flex flex-wrap gap-1.5">{pickle.ingredients.map((i) => <span key={i.name} className="px-3 py-1 bg-gray-200 rounded-md text-xs text-gray-800 font-medium border border-gray-300">{i.name}</span>)}</div> },
-              { title: 'Health Benefits', content: <p className="text-sm text-gray-800 leading-relaxed font-medium">{pickle.benefits}</p> },
-              { title: 'Storage', content: <p className="text-sm text-gray-800 leading-relaxed font-medium">{pickle.storage}</p> },
+              { title: 'Ingredients', content: <div className="flex flex-wrap gap-1.5">{pickle.ingredients.map((i) => <span key={i.name} className="px-3 py-1 bg-gray-100 rounded-md text-xs text-gray-600 font-medium">{i.name}</span>)}</div> },
+              { title: 'Health Benefits', content: <p className="text-sm text-gray-500 leading-relaxed">{pickle.benefits}</p> },
+              { title: 'Storage', content: <p className="text-sm text-gray-500 leading-relaxed">{pickle.storage}</p> },
             ].map((card) => (
-              <details key={card.title} className="border-2 border-gray-200 rounded-xl group bg-gray-50/50">
-                <summary className="px-4 py-3.5 cursor-pointer text-sm font-bold text-gray-900 flex items-center justify-between list-none hover:bg-gray-100 rounded-xl transition-colors">
+              <details key={card.title} className="border border-gray-100 rounded-xl group">
+                <summary className="px-4 py-3.5 cursor-pointer text-sm font-semibold text-gray-700 flex items-center justify-between list-none hover:bg-gray-50 rounded-xl transition-colors">
                   {card.title}
-                  <svg className="w-4 h-4 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-4 h-4 text-gray-300 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                   </svg>
                 </summary>
-                <div className="px-4 pb-4 border-t border-gray-200 pt-3">{card.content}</div>
+                <div className="px-4 pb-4 border-t border-gray-50 pt-3">{card.content}</div>
               </details>
             ))}
           </div>
@@ -466,7 +466,7 @@ export default function PickleDetail() {
       </section>
 
       <Footer />
-      {showAR && <ARView pickle={pickle} weight={weight} onClose={() => setShowAR(false)} />}
+      {showAR && <ARView pickle={pickle} onClose={() => setShowAR(false)} />}
     </>
   );
 }
