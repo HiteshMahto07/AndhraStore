@@ -174,10 +174,12 @@ function AnimNum({ value, suffix = '', delay = 0 }) {
 }
 
 /* ─── Main Component ─────────────────────────────────────────────── */
-export default function ARView({ pickle, onClose }) {
+export default function ARView({ pickle, weight = '250', onClose }) {
   const [phase, setPhase] = useState('boot');     // boot → scan → reveal
   const [scanY, setScanY] = useState(0);
   const overlayRef = useRef(null);
+
+  const displayWeight = weight === '1' ? '1 Kg' : `${weight}g`;
 
   const nutrition = nutritionData[pickle.type] || nutritionData.Mango;
   const spice     = spiceLevels[pickle.type] || 3;
@@ -526,7 +528,7 @@ export default function ARView({ pickle, onClose }) {
             {/* ── Bottom stat cards ── */}
             <div className="ar-bottom-stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 14, marginBottom: 20 }}>
               {[
-                { label: 'Net Wt', value: '300g', c1: '#3b82f6', c2: '#06b6d4', d: '.6s' },
+                { label: 'Net Wt', value: displayWeight, c1: '#3b82f6', c2: '#06b6d4', d: '.6s' },
                 { label: 'Origin', value: 'Andhra Pradesh', c1: '#f97316', c2: '#eab308', d: '.7s' },
                 { label: 'Serves', value: '~60', c1: '#22c55e', c2: '#10b981', d: '.8s' },
                 { label: 'Rating', value: '4.8 ★', c1: '#eab308', c2: '#f97316', d: '.9s' },

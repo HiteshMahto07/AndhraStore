@@ -1,24 +1,43 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import { useCart } from '@/context/CartContext';
 
 export default function ProductCard({ name, image, price, type, badge, showCart = false }) {
+    const { addToCart, cartItems } = useCart();
+    const inCart = cartItems.some(i => i.type === type);
+
+    const handleAddToCart = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        addToCart({ name, image, price, type });
+    };
+
     return (
-        <div className="bg-white rounded-xl border border-gray-100 overflow-hidden group hover:shadow-lg hover:border-gray-200 transition-all duration-300">
+        <div className="bg-white rounded-xl border border-gray-100 overflow-hidden group hover:shadow-lg hover:border-gray-200 active:scale-[0.98] transition-all duration-300">
             <Link href={{ pathname: '/pickleinfo', query: { type } }}>
                 {/* Image */}
-                <div className="relative aspect-square overflow-hidden bg-gray-50">
+                <div className="relative h-32 sm:h-auto sm:aspect-square overflow-hidden bg-gray-50">
                     {badge && (
-                        <span className={`absolute top-2 left-2 z-10 badge ${badge === 'BEST SELLER' ? 'badge-orange' :
+                        <span className={`absolute top-2 left-2 z-20 badge ${badge === 'BEST SELLER' ? 'badge-orange' :
                                 badge === 'PREMIUM' ? 'badge-dark' : 'badge-green'
                             }`}>
                             {badge}
                         </span>
                     )}
-                    <img src={image} alt={name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <Image 
+                        src={image} 
+                        alt={name} 
+                        fill
+                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                        className="object-cover group-hover:scale-107 transition-transform duration-500" 
+                    />
+                    {/* Subtle shimmer overlay on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
             </Link>
 
             {/* Info */}
-            <div className="p-3 sm:p-3.5">
+            <div className="p-2.5 sm:p-3.5">
                 {/* Rating */}
                 <div className="flex items-center gap-1 mb-1.5">
                     <div className="flex gap-px">
@@ -32,25 +51,48 @@ export default function ProductCard({ name, image, price, type, badge, showCart 
                 </div>
 
                 <Link href={{ pathname: '/pickleinfo', query: { type } }}>
-                    <h3 className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors truncate">{name}</h3>
+                    <h3 className="text-xs sm:text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors truncate leading-snug">{name}</h3>
                 </Link>
 
-                <div className="flex items-center justify-between mt-2">
-                    <div>
-                        <span className="text-base font-bold text-gray-900">₹{price}</span>
-                        <span className="text-xs text-gray-400 line-through ml-1.5">₹{Math.round(price * 1.2)}</span>
-                    </div>
-                    <span className="text-[10px] font-bold text-green-600 bg-green-50 px-1.5 py-0.5 rounded">20% OFF</span>
+                <div className="flex items-center gap-1 mt-1">
+                    <span className="text-sm font-bold text-gray-900">₹{price}</span>
+                    <span className="text-[11px] text-gray-400 line-through">₹{Math.round(price * 1.2)}</span>
+                    <span className="text-[9px] sm:text-[10px] font-bold text-green-600 bg-green-50 px-1.5 py-0.5 rounded ml-auto">20% OFF</span>
                 </div>
 
-                {/* Add to Cart */}
-                <Link href={{ pathname: '/pickleinfo', query: { type } }}
-                    className="mt-3 w-full flex items-center justify-center gap-1.5 bg-brand-50 text-brand-600 hover:bg-brand-500 hover:text-white py-2 rounded-lg text-xs font-semibold transition-all duration-200">
-                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-5.98.286m5.98-.286h9m-9 0a3.001 3.001 0 01-2.4-1.2M16.5 14.25a3 3 0 105.98.286m-5.98-.286h-9m9 0a3 3 0 012.4-1.2M4.575 6.75h14.85c.637 0 1.122.57.999 1.192l-.893 4.465a1.125 1.125 0 01-1.1.893H6.483" />
-                    </svg>
-                    View & Order
-                </Link>
+                {/* Action buttons — slide up on group-hover */}
+                <div className="mt-2.5 flex gap-1.5 translate-y-1 group-hover:translate-y-0 transition-transform duration-200">
+                    {/* Add to Cart */}
+                    <button
+                        onClick={handleAddToCart}
+                        className={`flex-1 flex items-center justify-center gap-1 py-2 rounded-lg text-[11px] sm:text-xs font-semibold transition-all duration-200 active:scale-95 border ${inCart
+                            ? 'bg-green-500 border-green-500 text-white'
+                            : 'bg-brand-50 border-brand-200 text-brand-600 hover:bg-brand-500 hover:border-brand-500 hover:text-white'
+                        }`}
+                    >
+                        {inCart ? (
+                            <>
+                                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                                Added
+                            </>
+                        ) : (
+                            <>
+                                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" /></svg>
+                                Add
+                            </>
+                        )}
+                    </button>
+
+                    {/* View */}
+                    <Link href={{ pathname: '/pickleinfo', query: { type } }}
+                        className="flex-1 flex items-center justify-center gap-1 bg-gray-50 border border-gray-200 text-gray-600 hover:bg-gray-100 hover:text-gray-900 hover:border-gray-300 py-2 rounded-lg text-[11px] sm:text-xs font-semibold transition-all duration-200 active:scale-95">
+                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                        View
+                    </Link>
+                </div>
             </div>
         </div>
     );

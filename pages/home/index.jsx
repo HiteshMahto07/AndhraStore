@@ -1,37 +1,61 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
 import CategoryCard from '@/components/CategoryCard';
 import ProductCard from '@/components/ProductCard';
 import SectionHeading from '@/components/SectionHeading';
 
+const Footer = dynamic(() => import('@/components/Footer'));
+const CategoryShowcase = dynamic(() => import('@/components/CategoryShowcase'));
+
 const categories = [
-  { name: 'Chicken', image: '/chicken-1.jpeg', type: 'Chicken' },
-  { name: 'Mango', image: '/mango-1.jpeg', type: 'Mango' },
-  { name: 'Prawns', image: '/prawns-1.jpeg', type: 'Prawns' },
-  { name: 'Ginger', image: '/ginger-1.jpeg', type: 'Ginger' },
-  { name: 'Garlic', image: '/garlic-1.jpeg', type: 'Garlic' },
-  { name: 'Red Chilli', image: '/redchilli-1.jpeg', type: 'RedChilli' },
+  { name: 'Veg Pickles',     icon: '🥭', image: '/images/Veg Pickle/Mango Pickle.jpg',                              href: '/pickle?type=veg' },
+  { name: 'Non-Veg',         icon: '🍗', image: '/images/Non Veg Pickle/Chicken.jpg',                               href: '/pickle?type=non-veg' },
+  { name: 'Podi / Masala',  icon: '🌶️', image: '/images/Podi & Gun Powder Masala/Kandi Podi.jpg',                  href: '/pickle?type=podi' },
+  { name: 'Snacks',          icon: '🥨', image: '/images/Snacks/Bhavnagari_Gathiya.webp',                           href: '/pickle?type=snacks' },
+  { name: 'Sweets',          icon: '🍬', image: '/images/Sweets & Laddu/Dry Fruits Laddu.jpg',                      href: '/pickle?type=sweets' },
+  { name: 'Andhra Special', icon: '🌟', image: '/images/Andhra Special/Rice Paper Roll _Putharekulu.jpg',           href: '/pickle?type=special' },
+  { name: 'Viral Products', icon: '🔥', image: '/images/Viral Products/Rajwadi-mukhwas.jpg',                       href: '/pickle?type=viral' },
 ];
 
 const bestSellers = [
-  { name: 'Chicken Pickle', image: '/chicken-1.jpeg', price: 300, type: 'Chicken', badge: 'BEST SELLER' },
-  { name: 'Meat Pickle', image: '/mutton-1.jpeg', price: 350, type: 'Meat', badge: 'PREMIUM' },
-  { name: 'Prawns Pickle', image: '/prawns-1.jpeg', price: 350, type: 'Prawns' },
-  { name: 'Fish Pickle', image: '/fish-2.jpeg', price: 200, type: 'Fish' },
+  { name: 'Chicken Pickle', image: '/images/Non Veg Pickle/Chicken Pickle.png', price: 300, type: 'Chicken', badge: 'BEST SELLER' },
+  { name: 'Meat Pickle', image: '/images/Non Veg Pickle/Mutton Pickle.png', price: 350, type: 'Meat', badge: 'PREMIUM' },
+  { name: 'Prawns Pickle', image: '/images/Non Veg Pickle/Prawns Pickle.png', price: 350, type: 'Prawns' },
+  { name: 'Fish Pickle', image: '/images/Non Veg Pickle/Fish Pickle 1.jpg', price: 200, type: 'Fish' },
 ];
 
 const vegPickles = [
-  { name: 'Ginger Pickle', image: '/ginger-1.jpeg', price: 200, type: 'Ginger' },
-  { name: 'Mango Pickle', image: '/mango-1.jpeg', price: 200, type: 'Mango' },
-  { name: 'Garlic Pickle', image: '/garlic-1.jpeg', price: 200, type: 'Garlic' },
-  { name: 'Red Chilli', image: '/redchilli-1.jpeg', price: 200, type: 'RedChilli' },
-  { name: 'Gongura Pickle', image: '/gongura-1.jpeg', price: 200, type: 'Gongura' },
-  { name: 'Tomato Pickle', image: '/tomato-1.jpeg', price: 200, type: 'Tomato' },
-  { name: 'Lemon Pickle', image: '/lemon-1.jpeg', price: 200, type: 'Lemon' },
-  { name: 'Amla Pickle', image: '/amla-1.jpeg', price: 200, type: 'Amla' },
+  { name: 'Ginger Pickle', image: '/images/Veg Pickle/Ginger Pickle 1.png', price: 200, type: 'Ginger' },
+  { name: 'Mango Pickle', image: '/images/Veg Pickle/Mango Pickle 1 (2).png', price: 200, type: 'Mango' },
+  { name: 'Garlic Pickle', image: '/images/Veg Pickle/Garlic Pickle.png', price: 200, type: 'Garlic' },
+  { name: 'Red Chilli', image: '/images/Veg Pickle/Red Chilli Pickle.png', price: 200, type: 'RedChilli' },
+  { name: 'Gongura Pickle', image: '/images/Veg Pickle/Gongura Pickle.png', price: 200, type: 'Gongura' },
+  { name: 'Tomato Pickle', image: '/images/Veg Pickle/Tomato Pickle 1.png', price: 200, type: 'Tomato' },
+  { name: 'Lemon Pickle', image: '/images/Veg Pickle/Lemon Pickle.png', price: 200, type: 'Lemon' },
+  { name: 'Amla Pickle', image: '/images/Veg Pickle/Amla Pickle.png', price: 200, type: 'Amla' },
+];
+
+const podiProducts = [
+  { name: 'Vellulli Karam Podi', image: '/images/Podi & Gun Powder Masala/Red Chilli Garlic Podi & vellulli karam podi.jfif', price: 165, type: 'VellulliPodi' },
+  { name: 'Palli Karampodi', image: '/images/Podi & Gun Powder Masala/Peanut Podi.JPG', price: 160, type: 'PalliPodi' },
+  { name: 'Karivepaku Karam Podi', image: '/images/Podi & Gun Powder Masala/Nala Karam Podi.JPG', price: 160, type: 'KarivepakuPodi' },
+  { name: 'Kothimeera Karam Podi', image: '/images/Podi & Gun Powder Masala/Kandi Podi.jpg', price: 160, type: 'KothimeeraPodi' },
+];
+
+const sweetsProducts = [
+  { name: 'Pootharekulu', image: '/images/Andhra Special/Rice Paper Roll _Putharekulu.jpg', price: 250, type: 'Pootharekulu', cat: 'sweets' },
+  { name: 'Kaja', image: '/images/Andhra Special/Madta Kaja.jpg', price: 200, type: 'Kaja', cat: 'sweets' },
+  { name: 'Sunnundalu', image: '/images/Andhra Special/Sunundalu_ Urad Dal Laddu.jpg', price: 300, type: 'Sunnundalu', cat: 'sweets' },
+  { name: 'Ariselu', image: '/images/Andhra Special/Ariselu-Sweet.jpg', price: 180, type: 'Ariselu', cat: 'sweets' },
+];
+
+const snacksProducts = [
+  { name: 'Chegodi', image: '/images/Andhra Special/Chegodi.jpg', price: 120, type: 'Chegodi', cat: 'snacks' },
+  { name: 'Bhavnagari Gathiya', image: '/images/Snacks/Bhavnagari_Gathiya.webp', price: 150, type: 'Murukulu', cat: 'snacks' },
 ];
 
 export default function HomePage() {
@@ -42,30 +66,38 @@ export default function HomePage() {
 
       {/* Trust Bar */}
       <div className="bg-olive-700 py-3">
-        <div className="container-main grid grid-cols-2 md:grid-cols-4 gap-3">
-          {[
-            { icon: '🫙', text: 'Handmade', sub: 'Traditional recipes' },
-            { icon: '🌿', text: 'No Preservatives', sub: 'Pure & natural' },
-            { icon: '🚚', text: 'Pan-India Delivery', sub: 'Free above ₹500' },
-            { icon: '⭐', text: '4.9/5 Rating', sub: '500+ happy customers' },
-          ].map((t) => (
-            <div key={t.text} className="flex items-center gap-2.5 text-white">
-              <span className="text-lg">{t.icon}</span>
-              <div>
-                <p className="text-xs font-semibold">{t.text}</p>
-                <p className="text-[10px] text-white/60">{t.sub}</p>
+        {/* Mobile: horizontal scroll row; Desktop: 4-col grid */}
+        <div className="container-main">
+        <div className="flex md:grid md:grid-cols-4 gap-4 overflow-x-auto pb-0.5 scrollbar-none">
+            {[
+              { icon: '🫙', text: 'Handmade', sub: 'Traditional recipes' },
+              { icon: '🌿', text: 'No Preservatives', sub: 'Pure & natural' },
+              { icon: '🚚', text: 'Pan-India Delivery', sub: 'Free above ₹500' },
+              { icon: '⭐', text: '4.9/5 Rating', sub: '500+ happy customers' },
+            ].map((t, i) => (
+              <div
+                key={t.text}
+                className="flex items-center gap-2 text-white flex-shrink-0"
+                style={{ animation: `fadeUp 0.5s ease-out ${i * 80}ms both` }}
+              >
+                <span className="text-xl">{t.icon}</span>
+                <div>
+                  <p className="text-xs font-semibold whitespace-nowrap">{t.text}</p>
+                  <p className="text-[10px] text-white/60 whitespace-nowrap">{t.sub}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Categories */}
       <section className="section-pad bg-white">
         <div className="container-main">
-          <SectionHeading label="Categories" title="Shop by Pickle Type" />
-          <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 sm:gap-4">
-            {categories.map((c) => <CategoryCard key={c.type} {...c} />)}
+          <SectionHeading label="Categories" title="Shop by Category" />
+          {/* 7 categories: 4-col on mobile, 7-col on lg */}
+          <div className="grid grid-cols-4 sm:grid-cols-4 lg:grid-cols-7 gap-3 sm:gap-4">
+            {categories.map((c) => <CategoryCard key={c.name} {...c} />)}
           </div>
         </div>
       </section>
@@ -87,7 +119,7 @@ export default function HomePage() {
 
       {/* Full-width Banner */}
       <section className="relative h-48 sm:h-56 overflow-hidden">
-        <img src="/pickle17.jpeg" alt="Fresh pickles" className="absolute inset-0 w-full h-full object-cover" />
+        <Image src="/pickle17.jpeg" alt="Fresh pickles" fill sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/40 flex items-center">
           <div className="container-main">
             <h2 className="text-2xl sm:text-3xl font-heading text-white mb-1">Freshly Made, Weekly</h2>
@@ -103,14 +135,60 @@ export default function HomePage() {
       {/* Veg Pickles */}
       <section className="section-pad bg-white">
         <div className="container-main">
-          <SectionHeading
-            label="Veg Pickles"
-            title="Vegetarian Collection"
-            actionHref="/pickle?type=veg"
+          <CategoryShowcase 
+            title="Veg Pickles" 
+            bgImage="/images/Veg Pickle/Mango Pickle 1 (2).png" 
+            href="/pickle?type=veg" 
+            products={vegPickles} 
           />
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-            {vegPickles.map((p) => <ProductCard key={p.type} {...p} />)}
-          </div>
+        </div>
+      </section>
+
+      {/* Karam Podulu */}
+      <section className="section-pad bg-cream">
+        <div className="container-main">
+          <CategoryShowcase 
+            title="Karam Podulu" 
+            bgImage="/images/Podi & Gun Powder Masala/Kandi Podi.jpg" 
+            href="/pickle?type=podi" 
+            products={podiProducts} 
+          />
+        </div>
+      </section>
+
+      {/* Non-Veg Pickles */}
+      <section className="section-pad bg-white">
+        <div className="container-main">
+          <CategoryShowcase 
+            title="Non-Veg Pickles" 
+            bgImage="/images/Non Veg Pickle/Chicken Pickle.png" 
+            href="/pickle?type=non-veg" 
+            products={bestSellers} 
+          />
+        </div>
+      </section>
+
+      {/* Sweets */}
+      <section className="section-pad bg-cream">
+        <div className="container-main">
+          <CategoryShowcase 
+            title="Traditional Sweets" 
+            bgImage="/images/Andhra Special/Rice Paper Roll _Putharekulu.jpg" 
+            href="/pickle?type=sweets" 
+            products={sweetsProducts} 
+          />
+        </div>
+      </section>
+
+      {/* Snacks */}
+      <section className="section-pad bg-white">
+        <div className="container-main">
+          <CategoryShowcase 
+            title="Savoury Snacks" 
+            bgImage="/images/Snacks/Bhavnagari_Gathiya.webp" 
+            href="/pickle?type=snacks" 
+            products={snacksProducts} 
+          />
         </div>
       </section>
 
@@ -123,8 +201,12 @@ export default function HomePage() {
               { name: 'Priya K.', loc: 'Hyderabad', text: 'The chicken pickle is absolutely divine! Tastes just like my grandmother\'s recipe.' },
               { name: 'Rajesh M.', loc: 'Bangalore', text: 'Best mango pickle I\'ve ever had. The spice level is perfect and quality outstanding.' },
               { name: 'Sneha D.', loc: 'Mumbai', text: 'Ordered the combo pack — every single variant was delicious. Fresh and authentic!' },
-            ].map((t) => (
-              <div key={t.name} className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm">
+            ].map((t, i) => (
+              <div
+                key={t.name}
+                className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
+                style={{ animation: `fadeUp 0.5s ease-out ${i * 120}ms both` }}
+              >
                 <div className="flex gap-0.5 mb-3">
                   {[1, 2, 3, 4, 5].map((s) => (
                     <svg key={s} className="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
