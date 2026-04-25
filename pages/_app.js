@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import Head from 'next/head';
-import SalePopup from "@/components/SalePopup";
+// import SalePopup from "@/components/SalePopup";
 import CookieConsent from "@/components/CookieConsent";
 
 export default function App({ Component, pageProps }) {
@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
-      <SalePopup />
+      {/* <SalePopup /> */}
       <CookieConsent />
     </>
   );
