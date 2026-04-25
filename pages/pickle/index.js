@@ -7,26 +7,46 @@ import { useRouter } from 'next/router';
 import PickleType from '@/data/pickles.json';
 
 const allProducts = [
-  { name: 'Ginger Pickle', image: '/ginger-1.jpeg', price: 200, type: 'Ginger', cat: 'veg', weight: '250g', badge: '' },
-  { name: 'Mango Pickle', image: '/mango-1.jpeg', price: 200, type: 'Mango', cat: 'veg', weight: '250g', badge: 'BEST SELLER' },
-  { name: 'Garlic Pickle', image: '/garlic-1.jpeg', price: 200, type: 'Garlic', cat: 'veg', weight: '250g', badge: '' },
-  { name: 'Red Chilli Pickle', image: '/redchilli-1.jpeg', price: 200, type: 'RedChilli', cat: 'veg', weight: '250g', badge: '' },
-  { name: 'Gongura Pickle', image: '/gongura-1.jpeg', price: 200, type: 'Gongura', cat: 'veg', weight: '250g', badge: '' },
-  { name: 'Tomato Pickle', image: '/tomato-1.jpeg', price: 200, type: 'Tomato', cat: 'veg', weight: '250g', badge: '' },
-  { name: 'Lemon Pickle', image: '/lemon-1.jpeg', price: 200, type: 'Lemon', cat: 'veg', weight: '250g', badge: '' },
-  { name: 'Curry Leaves Pickle', image: '/curry-1.jpeg', price: 200, type: 'Curry', cat: 'veg', weight: '250g', badge: '' },
-  { name: 'Green Chilli Pickle', image: '/green-1.jpeg', price: 200, type: 'GreenChilli', cat: 'veg', weight: '250g', badge: '' },
-  { name: 'Amla Pickle', image: '/amla-1.jpeg', price: 200, type: 'Amla', cat: 'veg', weight: '250g', badge: '' },
-  { name: 'Chicken Pickle', image: '/chicken-1.jpeg', price: 300, type: 'Chicken', cat: 'non-veg', weight: '250g', badge: 'BEST SELLER' },
-  { name: 'Meat Pickle', image: '/mutton-1.jpeg', price: 350, type: 'Meat', cat: 'non-veg', weight: '250g', badge: 'PREMIUM' },
-  { name: 'Prawns Pickle', image: '/prawns-1.jpeg', price: 350, type: 'Prawns', cat: 'non-veg', weight: '250g', badge: '' },
-  { name: 'Fish Pickle', image: '/fish-2.jpeg', price: 200, type: 'Fish', cat: 'non-veg', weight: '250g', badge: '' },
+  { name: 'Ginger Pickle', image: '/images/Veg Pickle/Ginger Pickle 1.png', price: 200, type: 'Ginger', cat: 'veg', weight: '250g', badge: '' },
+  { name: 'Mango Pickle', image: '/images/Veg Pickle/Mango Pickle 1 (2).png', price: 200, type: 'Mango', cat: 'veg', weight: '250g', badge: 'BEST SELLER' },
+  { name: 'Garlic Pickle', image: '/images/Veg Pickle/Garlic Pickle.png', price: 200, type: 'Garlic', cat: 'veg', weight: '250g', badge: '' },
+  { name: 'Red Chilli Pickle', image: '/images/Veg Pickle/Red Chilli Pickle.png', price: 200, type: 'RedChilli', cat: 'veg', weight: '250g', badge: '' },
+  { name: 'Gongura Pickle', image: '/images/Veg Pickle/Gongura Pickle.png', price: 200, type: 'Gongura', cat: 'veg', weight: '250g', badge: '' },
+  { name: 'Tomato Pickle', image: '/images/Veg Pickle/Tomato Pickle 1.png', price: 200, type: 'Tomato', cat: 'veg', weight: '250g', badge: '' },
+  { name: 'Lemon Pickle', image: '/images/Veg Pickle/Lemon Pickle.png', price: 200, type: 'Lemon', cat: 'veg', weight: '250g', badge: '' },
+  { name: 'Curry Leaves Pickle', image: '/images/Veg Pickle/Curry Leaves Pickle.jpg', price: 200, type: 'Curry', cat: 'veg', weight: '250g', badge: '' },
+  { name: 'Green Chilli Pickle', image: '/images/Veg Pickle/Green Chilli Pickle.png', price: 200, type: 'GreenChilli', cat: 'veg', weight: '250g', badge: '' },
+  { name: 'Amla Pickle', image: '/images/Veg Pickle/Amla Pickle.png', price: 200, type: 'Amla', cat: 'veg', weight: '250g', badge: '' },
+  { name: 'Chicken Pickle', image: '/images/Non Veg Pickle/Chicken Pickle.png', price: 300, type: 'Chicken', cat: 'non-veg', weight: '250g', badge: 'BEST SELLER' },
+  { name: 'Meat Pickle', image: '/images/Non Veg Pickle/Mutton Pickle.png', price: 350, type: 'Meat', cat: 'non-veg', weight: '250g', badge: 'PREMIUM' },
+  { name: 'Prawns Pickle', image: '/images/Non Veg Pickle/Prawns Pickle.png', price: 350, type: 'Prawns', cat: 'non-veg', weight: '250g', badge: '' },
+  { name: 'Fish Pickle', image: '/images/Non Veg Pickle/Fish Pickle 1.jpg', price: 200, type: 'Fish', cat: 'non-veg', weight: '250g', badge: '' },
+  { name: 'Vellulli Karam Podi', image: '/images/Podi & Gun Powder Masala/Red Chilli Garlic Podi & vellulli karam podi.jfif', price: 165, type: 'VellulliPodi', cat: 'podi', weight: '250g', badge: '' },
+  { name: 'Palli Karampodi', image: '/images/Podi & Gun Powder Masala/Peanut Podi.JPG', price: 160, type: 'PalliPodi', cat: 'podi', weight: '250g', badge: '' },
+  { name: 'Karivepaku Karam Podi', image: '/images/Podi & Gun Powder Masala/Nala Karam Podi.JPG', price: 160, type: 'KarivepakuPodi', cat: 'podi', weight: '250g', badge: '' },
+  { name: 'Kothimeera Karam Podi', image: '/images/Podi & Gun Powder Masala/Kandi Podi.jpg', price: 160, type: 'KothimeeraPodi', cat: 'podi', weight: '250g', badge: '' },
+  { name: 'Chegodi', image: '/images/Andhra Special/Chegodi.jpg', price: 120, type: 'Chegodi', cat: 'snacks', weight: '250g', badge: '' },
+  { name: 'Bhavnagari Gathiya', image: '/images/Snacks/Bhavnagari_Gathiya.webp', price: 150, type: 'Murukulu', cat: 'snacks', weight: '250g', badge: '' },
+  { name: 'Pootharekulu', image: '/images/Andhra Special/Rice Paper Roll _Putharekulu.jpg', price: 250, type: 'Pootharekulu', cat: 'sweets', weight: '10 Sheets', badge: '' },
+  { name: 'Madatha Kaja', image: '/images/Andhra Special/Madta Kaja.jpg', price: 200, type: 'Kaja', cat: 'sweets', weight: '250g', badge: '' },
+  { name: 'Sunnundalu', image: '/images/Andhra Special/Sunundalu_ Urad Dal Laddu.jpg', price: 300, type: 'Sunnundalu', cat: 'sweets', weight: '250g', badge: '' },
+  { name: 'Ariselu', image: '/images/Andhra Special/Ariselu-Sweet.jpg', price: 180, type: 'Ariselu', cat: 'sweets', weight: '250g', badge: '' },
+  { name: 'Calcutta Pan Mukhwas', image: '/images/Viral Products/Pan Mukhwas.jpeg', price: 150, type: 'PanMukhwas', cat: 'viral', weight: '250g', badge: 'TRENDING' },
+  { name: 'Rajwadi Mukhwas', image: '/images/Viral Products/Rajwadi-mukhwas.jpg', price: 180, type: 'RajwadiMukhwas', cat: 'viral', weight: '250g', badge: '' },
+  { name: 'Rang Bhi Rangi', image: '/images/Viral Products/Rang Bhi Rangi Mukhwas.webp', price: 120, type: 'RangBhiRangiMukhwas', cat: 'viral', weight: '250g', badge: '' },
+  { name: 'Eye Pack Warmer', image: '/images/Viral Products/Eye Pack Wamer 1.jpeg', price: 499, type: 'EyeWarmer', cat: 'viral', weight: '1 Pack', badge: '' },
+  { name: 'Black Pepper Papad', image: '/images/Viral Products/Black_pepper_papad_2-removebg-preview-2.png', price: 90, type: 'BlackPepperPapad', cat: 'viral', weight: '250g', badge: '' },
+  { name: 'Spring Roll Sheets', image: '/images/Viral Products/Spring Roll Sheets.jpeg', price: 140, type: 'SpringRollSheets', cat: 'viral', weight: '20 Sheets', badge: '' },
 ];
 
 const categoryFilters = [
   { value: 'all', label: 'All' },
   { value: 'veg', label: 'Veg Pickles' },
   { value: 'non-veg', label: 'Non-Veg Pickles' },
+  { value: 'podi', label: 'Podi & Masala' },
+  { value: 'snacks', label: 'Snacks' },
+  { value: 'sweets', label: 'Traditional Sweets' },
+  { value: 'viral', label: 'Viral Products' },
 ];
 
 const sortOptions = [
@@ -38,17 +58,30 @@ const sortOptions = [
 
 const ratings = { Chicken: 4.8, Mango: 4.9, Meat: 4.7, Garlic: 4.6, Ginger: 4.5, RedChilli: 4.4, Prawns: 4.7, Fish: 4.3, Gongura: 4.5, Tomato: 4.4, Lemon: 4.3, Amla: 4.2, Curry: 4.3, GreenChilli: 4.4 };
 
-export default function ShopPage() {
+export default function Shop() {
   const router = useRouter();
-  const { type } = router.query;
+  const { type, search } = router.query;
 
   const [category, setCategory] = useState('all');
   const [sort, setSort] = useState('featured');
+  const [searchTerm, setSearchTerm] = useState('');
   const [showMobileFilter, setShowMobileFilter] = useState(false);
 
+  // Sync global search queries
   useEffect(() => {
-    if (type === 'veg' || type === 'non-veg') setCategory(type);
-  }, [type]);
+    if (search) {
+      setSearchTerm(search);
+      if (!type) setCategory('all');
+    }
+  }, [search, type]);
+
+  useEffect(() => {
+    if (['veg', 'non-veg', 'podi', 'snacks', 'sweets', 'viral'].includes(type)) {
+      setCategory(type);
+    } else if (!type && !search) {
+      setCategory('all');
+    }
+  }, [type, search]);
 
   const filtered = useMemo(() => {
     let items = category === 'all' ? [...allProducts] : allProducts.filter(p => p.cat === category);
