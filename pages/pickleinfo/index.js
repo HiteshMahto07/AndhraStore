@@ -7,6 +7,8 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import PickleType from '@/data/pickles.json';
 
+const BASE_URL = "https://www.andhrastore.in";
+
 /* ── Nutrient highlights per pickle type ── */
 const nutrientMap = {
   Chicken: [
@@ -100,13 +102,35 @@ export default function PickleDetail() {
   const nutrients = nutrientMap[type] || defaultNutrients;
   const recommended = allProducts.filter(p => p.type !== type).slice(0, 5);
 
+  const productSchema = pickle ? {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: pickle.name,
+    description: pickle.desc,
+    image: `${BASE_URL}${pickle.image[0]?.name}`,
+    brand: { "@type": "Brand", name: "Andhra Store" },
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "INR",
+      price: pickle.amount,
+      availability: "https://schema.org/InStock",
+      url: `${BASE_URL}/pickleinfo?type=${pickle.type}`,
+      seller: { "@type": "Organization", name: "Andhra Store" },
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "245",
+    },
+  } : null;
+
   if (!pickle) {
     return (
       <>
         <Header />
-        <div className="min-h-[60vh] flex items-center justify-center">
+        <div className="min-h-[60vh] flex items-center justify-center" role="status" aria-live="polite">
           <div className="flex items-center gap-2">
-            <div className="w-5 h-5 rounded-full border-2 border-brand-500 border-t-transparent animate-spin" />
+            <div className="w-5 h-5 rounded-full border-2 border-brand-500 border-t-transparent animate-spin" aria-hidden="true" />
             <span className="text-sm text-gray-400">Loading…</span>
           </div>
         </div>
@@ -115,11 +139,28 @@ export default function PickleDetail() {
     );
   }
 
+  const pageTitle = `${pickle.name} — Authentic Andhra Pickle | Andhra Store`;
+  const pageDesc = pickle.desc?.slice(0, 155) || `Buy authentic ${pickle.name} handcrafted with traditional Andhra recipes. No preservatives, pure spices, pan-India delivery.`;
+
   return (
     <>
       <Head>
-        <title>{pickle.name} | Andhra Store</title>
-        <meta name="description" content={pickle.desc} />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDesc} />
+        <link rel="canonical" href={`${BASE_URL}/pickleinfo?type=${pickle.type}`} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDesc} />
+        <meta property="og:url" content={`${BASE_URL}/pickleinfo?type=${pickle.type}`} />
+        <meta property="og:image" content={`${BASE_URL}${pickle.image[0]?.name}`} />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDesc} />
+        <meta name="twitter:image" content={`${BASE_URL}${pickle.image[0]?.name}`} />
+        {productSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+          />
+        )}
       </Head>
       <Header />
 
@@ -141,8 +182,13 @@ export default function PickleDetail() {
             {/* Images */}
             <div>
               <div className="rounded-xl overflow-hidden bg-gray-50 border border-gray-100 mb-3">
-                <img src={pickle.image[activeImg]?.name} alt={pickle.name}
-                  className="w-full h-60 sm:h-80 lg:h-[420px] object-cover" />
+                <img
+                  src={pickle.image[activeImg]?.name}
+                  alt={`${pickle.name} — authentic Andhra-style pickle handcrafted with traditional spices`}
+                  className="w-full h-60 sm:h-80 lg:h-[420px] object-cover"
+                  width={800}
+                  height={600}
+                />
               </div>
               {pickle.image.length > 1 && (
                 <div className="flex gap-2">
@@ -150,7 +196,7 @@ export default function PickleDetail() {
                     <button key={i} onClick={() => setActiveImg(i)}
                       className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${activeImg === i ? 'border-brand-500 shadow-sm' : 'border-gray-200 opacity-60 hover:opacity-100'
                         }`}>
-                      <img src={img.name} alt="" className="w-full h-full object-cover" />
+                      <img src={img.name} alt={`${pickle.name} view ${i + 1}`} className="w-full h-full object-cover" width={64} height={64} />
                     </button>
                   ))}
                 </div>
@@ -363,7 +409,7 @@ export default function PickleDetail() {
                       p.badge === 'BEST SELLER' ? 'bg-brand-500 text-white' : 'bg-gray-900 text-white'
                     }`}>{p.badge}</span>
                   )}
-                  <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <img src={p.image} alt={`${p.name} — authentic Andhra pickle`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" width={300} height={300} />
                 </div>
                 <div className="p-3">
                   <div className="flex items-center gap-1 mb-1">

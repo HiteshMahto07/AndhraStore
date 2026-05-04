@@ -44,7 +44,6 @@ export default function CookieConsent() {
 
   return (
     <>
-      {/* Backdrop */}
       <div
         className={`fixed inset-0 bg-black/30 backdrop-blur-[2px] z-[200] transition-opacity duration-500 ${
           isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
@@ -53,9 +52,9 @@ export default function CookieConsent() {
         aria-hidden="true"
       />
 
-      {/* Dialog */}
       <div
         role="dialog"
+        aria-modal="true"
         aria-label="Cookie consent"
         className={`fixed z-[201] left-1/2 bottom-4 -translate-x-1/2 w-[92%] max-w-[500px] max-h-[85vh] overflow-y-auto transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
           isVisible
@@ -64,19 +63,16 @@ export default function CookieConsent() {
         }`}
       >
         <div className="bg-white rounded-2xl shadow-2xl border border-gray-200/80 overflow-hidden">
-          {/* Accent line */}
-          <div className="h-[3px] w-full bg-gradient-to-r from-brand-400 via-brand-500 to-olive-500" />
+          <div className="h-[3px] w-full bg-gradient-to-r from-brand-400 via-brand-500 to-olive-500" aria-hidden="true" />
 
           <div className="p-5 sm:p-6">
-            {/* Header */}
             <div className="flex items-center gap-3 mb-3">
-              <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-brand-50 border border-brand-100">
+              <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-brand-50 border border-brand-100" aria-hidden="true">
                 <Cookie size={18} className="text-brand-600" />
               </div>
-              <h3 className="text-lg font-heading font-bold text-gray-900">Cookie consent</h3>
+              <h2 className="text-lg font-heading font-bold text-gray-900">Cookie consent</h2>
             </div>
 
-            {/* Description */}
             <p className="text-gray-500 text-[13px] leading-relaxed mb-5">
               We and our partners use cookies and other technologies to personalize
               your experience, show you ads, and perform analytics, and we will not use
@@ -87,34 +83,32 @@ export default function CookieConsent() {
               </Link>.
             </p>
 
-            {/* Preferences Panel — only rendered when toggled */}
             {showPreferences && (
               <div className="mb-5 p-4 bg-gray-50 rounded-xl border border-gray-200 space-y-3 animate-fade-in">
-                <h4 className="text-xs font-semibold text-gray-700 uppercase tracking-wider flex items-center gap-1.5">
-                  <Settings size={12} />
+                <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wider flex items-center gap-1.5">
+                  <Settings size={12} aria-hidden="true" />
                   Preferences
-                </h4>
+                </h3>
 
-                {/* Necessary */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Shield size={13} className="text-olive-600" />
+                    <Shield size={13} className="text-olive-600" aria-hidden="true" />
                     <span className="text-sm text-gray-700">Necessary</span>
                     <span className="text-[10px] text-gray-400 font-medium">(always on)</span>
                   </div>
-                  <div style={{ position: 'relative', width: '44px', height: '24px', flexShrink: 0 }}>
+                  <div style={{ position: 'relative', width: '44px', height: '24px', flexShrink: 0 }} aria-label="Necessary cookies — always enabled" role="status">
                     <div style={{ width: '44px', height: '24px', borderRadius: '12px', backgroundColor: '#6B8E3A' }} />
                     <div style={{ position: 'absolute', top: '2px', left: '22px', width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', boxShadow: '0 1px 3px rgba(0,0,0,0.2)' }} />
                   </div>
                 </div>
 
-                {/* Analytics */}
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-700">Analytics</span>
                   <button
                     type="button"
                     role="switch"
                     aria-checked={preferences.analytics}
+                    aria-label="Toggle analytics cookies"
                     onClick={() => setPreferences(p => ({ ...p, analytics: !p.analytics }))}
                     style={{
                       position: 'relative', width: '44px', height: '24px', borderRadius: '12px', flexShrink: 0, border: 'none', cursor: 'pointer', padding: 0,
@@ -131,13 +125,13 @@ export default function CookieConsent() {
                   </button>
                 </div>
 
-                {/* Marketing */}
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-700">Marketing</span>
                   <button
                     type="button"
                     role="switch"
                     aria-checked={preferences.marketing}
+                    aria-label="Toggle marketing cookies"
                     onClick={() => setPreferences(p => ({ ...p, marketing: !p.marketing }))}
                     style={{
                       position: 'relative', width: '44px', height: '24px', borderRadius: '12px', flexShrink: 0, border: 'none', cursor: 'pointer', padding: 0,
@@ -163,12 +157,12 @@ export default function CookieConsent() {
               </div>
             )}
 
-            {/* Bottom actions */}
             <div className="border-t border-gray-100 pt-4">
               <div className="flex items-center justify-between gap-3">
                 <button
                   onClick={() => setShowPreferences(prev => !prev)}
                   className="text-[13px] font-medium text-gray-500 hover:text-gray-800 underline underline-offset-2 transition-colors whitespace-nowrap"
+                  aria-expanded={showPreferences}
                 >
                   {showPreferences ? 'Hide preferences' : 'Manage preferences'}
                 </button>
