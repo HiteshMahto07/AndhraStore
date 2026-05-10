@@ -2,8 +2,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Head from 'next/head';
-
-const BASE_URL = "https://www.andhrastore.in";
+import { SITE_URL } from '@/lib/seo';
 
 const pageTitle = "Your Cart | Andhra Store — Authentic Andhra Pickles";
 const pageDesc = "Review your Andhra Store cart. Order authentic handcrafted Andhra pickles via WhatsApp for fast and secure delivery across India.";
@@ -14,14 +13,14 @@ export default function CartPage() {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
-        <link rel="canonical" href={`${BASE_URL}/cart`} />
+        <link rel="canonical" href={`${SITE_URL}/cart`} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
-        <meta property="og:url" content={`${BASE_URL}/cart`} />
-        <meta property="og:image" content={`${BASE_URL}/pickle17.jpeg`} />
+        <meta property="og:url" content={`${SITE_URL}/cart`} />
+        <meta property="og:image" content={`${SITE_URL}/pickle17.jpeg`} />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
-        <meta name="twitter:image" content={`${BASE_URL}/pickle17.jpeg`} />
+        <meta name="twitter:image" content={`${SITE_URL}/pickle17.jpeg`} />
       </Head>
       <Header />
       <section className="section-pad bg-white" aria-labelledby="cart-heading">

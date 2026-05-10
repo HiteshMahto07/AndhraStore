@@ -2,8 +2,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Head from 'next/head';
 import { Shield, Lock, Eye, Cookie, Server, UserCheck } from 'lucide-react';
-
-const BASE_URL = "https://www.andhrastore.in";
+import { SITE_URL } from '@/lib/seo';
 
 const pageTitle = "Privacy Policy | Andhra Store Data Protection";
 const pageDesc = "Read how Andhra Store collects, uses, and protects your personal data. We are committed to transparency, security, and your privacy rights under applicable laws.";
@@ -76,11 +75,11 @@ const privacySchema = {
   "@type": "WebPage",
   name: pageTitle,
   description: pageDesc,
-  url: `${BASE_URL}/privacy-policy`,
+  url: `${SITE_URL}/privacy-policy`,
   publisher: {
     "@type": "Organization",
     name: "Andhra Store",
-    url: BASE_URL,
+    url: SITE_URL,
   },
 };
 
@@ -90,14 +89,14 @@ export default function PrivacyPolicy() {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
-        <link rel="canonical" href={`${BASE_URL}/privacy-policy`} />
+        <link rel="canonical" href={`${SITE_URL}/privacy-policy`} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
-        <meta property="og:url" content={`${BASE_URL}/privacy-policy`} />
-        <meta property="og:image" content={`${BASE_URL}/pickle17.jpeg`} />
+        <meta property="og:url" content={`${SITE_URL}/privacy-policy`} />
+        <meta property="og:image" content={`${SITE_URL}/pickle17.jpeg`} />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
-        <meta name="twitter:image" content={`${BASE_URL}/pickle17.jpeg`} />
+        <meta name="twitter:image" content={`${SITE_URL}/pickle17.jpeg`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(privacySchema) }}
