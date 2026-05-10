@@ -2,8 +2,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Head from 'next/head';
-
-const BASE_URL = "https://www.andhrastore.in";
+import { SITE_URL } from '@/lib/seo';
 
 const pageTitle = "Sweets Collection — Coming Soon | Andhra Store";
 const pageDesc = "Andhra Store is bringing you authentic traditional Indian sweets made with premium ingredients and time-honored recipes. Stay tuned for our exclusive sweets collection.";
@@ -13,15 +12,16 @@ export default function SweetsPage() {
     <>
       <Head>
         <title>{pageTitle}</title>
+        <meta name="robots" content="noindex, follow" />
         <meta name="description" content={pageDesc} />
-        <link rel="canonical" href={`${BASE_URL}/sweets`} />
+        <link rel="canonical" href={`${SITE_URL}/sweets`} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
-        <meta property="og:url" content={`${BASE_URL}/sweets`} />
-        <meta property="og:image" content={`${BASE_URL}/pickle17.jpeg`} />
+        <meta property="og:url" content={`${SITE_URL}/sweets`} />
+        <meta property="og:image" content={`${SITE_URL}/pickle17.jpeg`} />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
-        <meta name="twitter:image" content={`${BASE_URL}/pickle17.jpeg`} />
+        <meta name="twitter:image" content={`${SITE_URL}/pickle17.jpeg`} />
       </Head>
       <Header />
       <section className="section-pad bg-white" aria-labelledby="sweets-heading">

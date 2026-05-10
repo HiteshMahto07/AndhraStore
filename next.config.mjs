@@ -3,6 +3,23 @@ const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
+  async redirects() {
+    return [
+      // www → non-www permanent redirect (301)
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.andhrastore.com' }],
+        destination: 'https://andhrastore.com/:path*',
+        permanent: true,
+      },
+      // Root → /home permanent redirect (301)
+      {
+        source: '/',
+        destination: '/home',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

@@ -1,15 +1,14 @@
 import "@/styles/globals.css";
 import Head from 'next/head';
 import CookieConsent from "@/components/CookieConsent";
-
-const BASE_URL = "https://www.andhrastore.in";
+import { SITE_URL } from '@/lib/seo';
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Andhra Store",
-  url: BASE_URL,
-  logo: `${BASE_URL}/logo.jpeg`,
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo.jpeg`,
   description: "Authentic handcrafted Andhra-style pickles made with traditional recipes. Pure, spicy, and delivered fresh across India.",
   contactPoint: {
     "@type": "ContactPoint",
@@ -17,7 +16,7 @@ const organizationSchema = {
     contactType: "customer service",
     availableLanguage: ["English", "Telugu", "Hindi"],
   },
-  sameAs: [],
+  sameAs: ["https://www.instagram.com/andhrastore.india"],
 };
 
 export default function App({ Component, pageProps }) {

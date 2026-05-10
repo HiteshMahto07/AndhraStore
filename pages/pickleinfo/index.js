@@ -6,8 +6,7 @@ import ARView from '@/components/ARView';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import PickleType from '@/data/pickles.json';
-
-const BASE_URL = "https://www.andhrastore.in";
+import { SITE_URL, PRODUCT_RATINGS, PRODUCT_SEO_NAMES, PRODUCT_SEO_DESCS, NON_VEG_TYPES } from '@/lib/seo';
 
 /* ── Nutrient highlights per pickle type ── */
 const nutrientMap = {
@@ -102,25 +101,36 @@ export default function PickleDetail() {
   const nutrients = nutrientMap[type] || defaultNutrients;
   const recommended = allProducts.filter(p => p.type !== type).slice(0, 5);
 
+  const seoName = PRODUCT_SEO_NAMES[type] || pickle?.name;
+  const seoDesc = PRODUCT_SEO_DESCS[type] || pickle?.desc;
+  const productRating = PRODUCT_RATINGS[type] || { rating: 4.5, count: 100 };
+
   const productSchema = pickle ? {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: pickle.name,
-    description: pickle.desc,
-    image: `${BASE_URL}${pickle.image[0]?.name}`,
+    name: seoName,
+    description: seoDesc,
+    image: pickle.image.map(img => `${SITE_URL}${img.name}`),
+    sku: `AS-${type?.toUpperCase()}`,
+    category: NON_VEG_TYPES.has(type) ? 'Non-Veg Andhra Pickle' : 'Veg Andhra Pickle',
     brand: { "@type": "Brand", name: "Andhra Store" },
     offers: {
       "@type": "Offer",
       priceCurrency: "INR",
       price: pickle.amount,
+      priceValidUntil: "2026-12-31",
       availability: "https://schema.org/InStock",
-      url: `${BASE_URL}/pickleinfo?type=${pickle.type}`,
-      seller: { "@type": "Organization", name: "Andhra Store" },
+      url: `${SITE_URL}/pickleinfo?type=${pickle.type}`,
+      seller: {
+        "@type": "Organization",
+        name: "Andhra Store",
+        url: SITE_URL,
+      },
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "245",
+      ratingValue: String(productRating.rating),
+      reviewCount: String(productRating.count),
     },
   } : null;
 
@@ -139,22 +149,24 @@ export default function PickleDetail() {
     );
   }
 
-  const pageTitle = `${pickle.name} — Authentic Andhra Pickle | Andhra Store`;
-  const pageDesc = pickle.desc?.slice(0, 155) || `Buy authentic ${pickle.name} handcrafted with traditional Andhra recipes. No preservatives, pure spices, pan-India delivery.`;
+  const pageTitle = PRODUCT_SEO_NAMES[type]
+    ? `${PRODUCT_SEO_NAMES[type]} | ₹${pickle.amount} | Andhra Store`
+    : `${pickle.name} — Authentic Andhra Pickle | Andhra Store`;
+  const pageDesc = PRODUCT_SEO_DESCS[type] || pickle.desc?.slice(0, 155) || `Buy authentic ${pickle.name} handcrafted with traditional Andhra recipes. No preservatives, pure spices, pan-India delivery.`;
 
   return (
     <>
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
-        <link rel="canonical" href={`${BASE_URL}/pickleinfo?type=${pickle.type}`} />
+        <link rel="canonical" href={`${SITE_URL}/pickleinfo?type=${pickle.type}`} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
-        <meta property="og:url" content={`${BASE_URL}/pickleinfo?type=${pickle.type}`} />
-        <meta property="og:image" content={`${BASE_URL}${pickle.image[0]?.name}`} />
+        <meta property="og:url" content={`${SITE_URL}/pickleinfo?type=${pickle.type}`} />
+        <meta property="og:image" content={`${SITE_URL}${pickle.image[0]?.name}`} />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
-        <meta name="twitter:image" content={`${BASE_URL}${pickle.image[0]?.name}`} />
+        <meta name="twitter:image" content={`${SITE_URL}${pickle.image[0]?.name}`} />
         {productSchema && (
           <script
             type="application/ld+json"

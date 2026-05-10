@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.andhrastore.in/sitemap.xml
+Sitemap: https://andhrastore.com/sitemap.xml
