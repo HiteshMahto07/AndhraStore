@@ -7,8 +7,7 @@ import HeroSection from '@/components/HeroSection';
 import CategoryCard from '@/components/CategoryCard';
 import ProductCard from '@/components/ProductCard';
 import SectionHeading from '@/components/SectionHeading';
-
-const BASE_URL = "https://www.andhrastore.in";
+import { SITE_URL } from '@/lib/seo';
 
 const categories = [
   { name: 'Chicken', image: '/chicken-1.jpeg', type: 'Chicken' },
@@ -37,17 +36,17 @@ const vegPickles = [
   { name: 'Amla Pickle', image: '/amla-1.jpeg', price: 200, type: 'Amla' },
 ];
 
-const pageTitle = "Andhra Store | Authentic Handcrafted Andhra Pickles";
-const pageDesc = "Shop authentic Andhra-style pickles handcrafted with traditional recipes — chicken, mango, prawns, garlic & more. No preservatives. Pan-India delivery. Starting at ₹200.";
+const pageTitle = "Buy Andhra Pickles Online — Andhra Store | Free Pan-India Delivery";
+const pageDesc = "Shop authentic Andhra pickles online — Mango Avakaya, Gongura, Chicken & 11 more. Handcrafted in East Godavari. No preservatives. Free delivery across India.";
 
 const homeSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Andhra Store",
-  url: BASE_URL,
+  url: SITE_URL,
   potentialAction: {
     "@type": "SearchAction",
-    target: `${BASE_URL}/pickle?type={search_term_string}`,
+    target: `${SITE_URL}/pickle?type={search_term_string}`,
     "query-input": "required name=search_term_string",
   },
 };
@@ -58,14 +57,14 @@ export default function HomePage() {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
-        <link rel="canonical" href={`${BASE_URL}/home`} />
+        <link rel="canonical" href={`${SITE_URL}/home`} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
-        <meta property="og:url" content={`${BASE_URL}/home`} />
-        <meta property="og:image" content={`${BASE_URL}/chicken-1.jpeg`} />
+        <meta property="og:url" content={`${SITE_URL}/home`} />
+        <meta property="og:image" content={`${SITE_URL}/chicken-1.jpeg`} />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
-        <meta name="twitter:image" content={`${BASE_URL}/chicken-1.jpeg`} />
+        <meta name="twitter:image" content={`${SITE_URL}/chicken-1.jpeg`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }}
@@ -103,7 +102,7 @@ export default function HomePage() {
                 </svg>
               ),
               text: 'Pan-India Delivery',
-              sub: 'Free above ₹500',
+              sub: 'Hyderabad, Bangalore, Mumbai & more',
             },
             {
               icon: (

@@ -2,22 +2,21 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { SITE_URL } from '@/lib/seo';
 
-const BASE_URL = "https://www.andhrastore.in";
-
-const pageTitle = "About Andhra Store — Our Story & Heritage";
-const pageDesc = "Learn how Andhra Store was born from a passion for authentic East Godavari pickles. Handcrafted with traditional Telugu recipes, no preservatives, and delivered pan-India.";
+const pageTitle = "About Andhra Store — Authentic Handmade Andhra Pickles from East Godavari";
+const pageDesc = "Andhra Store handcrafts authentic Andhra pickles in East Godavari using Guntur chillies, cold-pressed oils, and zero preservatives. Discover our 14-variety pickle range.";
 
 const aboutSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
   name: pageTitle,
   description: pageDesc,
-  url: `${BASE_URL}/about`,
+  url: `${SITE_URL}/about`,
   publisher: {
     "@type": "Organization",
     name: "Andhra Store",
-    url: BASE_URL,
+    url: SITE_URL,
   },
 };
 
@@ -27,14 +26,14 @@ export default function AboutPage() {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
-        <link rel="canonical" href={`${BASE_URL}/about`} />
+        <link rel="canonical" href={`${SITE_URL}/about`} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
-        <meta property="og:url" content={`${BASE_URL}/about`} />
-        <meta property="og:image" content={`${BASE_URL}/pickle17.jpeg`} />
+        <meta property="og:url" content={`${SITE_URL}/about`} />
+        <meta property="og:image" content={`${SITE_URL}/pickle17.jpeg`} />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
-        <meta name="twitter:image" content={`${BASE_URL}/pickle17.jpeg`} />
+        <meta name="twitter:image" content={`${SITE_URL}/pickle17.jpeg`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
@@ -165,7 +164,7 @@ export default function AboutPage() {
           <h2 className="text-2xl sm:text-3xl font-heading text-white mb-2">Ready to taste tradition?</h2>
           <p className="text-white/70 text-sm max-w-sm mx-auto mb-5">Order now and experience authentic Andhra pickles delivered to your doorstep. Free delivery on orders above ₹500.</p>
           <div className="flex items-center justify-center gap-3">
-            <Link href="/home" className="inline-flex items-center gap-2 bg-white text-brand-700 px-6 py-3 rounded-lg font-bold text-sm hover:bg-gray-50 transition-colors shadow">
+            <Link href="/pickle" className="inline-flex items-center gap-2 bg-white text-brand-700 px-6 py-3 rounded-lg font-bold text-sm hover:bg-gray-50 transition-colors shadow">
               Shop Now →
             </Link>
             <Link href="https://wa.me/918758302568" target="_blank" rel="noopener noreferrer"
