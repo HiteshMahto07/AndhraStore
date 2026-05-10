@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# SEO reference docs (local only, not pushed to GitHub)
+/_seo_docs
