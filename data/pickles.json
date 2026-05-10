@@ -7,7 +7,7 @@
             { "name":"/chicken-1.jpeg" },
             { "name":"/pickle17.jpeg" }
         ],
-        "benefits":"Chicken being a substantial source of protein, especially lean protein which is rich in amino acids will not only promote weight management and cardiac health but also enhance bone mineral density and reduce the risk of osteoporosis.",
+        "benefits":"Chicken is an excellent source of lean protein and essential amino acids that support muscle maintenance, weight management, and cardiac health. Protein-rich diets help maintain bone mineral density and reduce the risk of osteoporosis. The Guntur chilli in our chicken pickle is rich in capsaicin, which has anti-inflammatory and metabolism-boosting properties. Garlic and ginger — both key ingredients — are known for their antibacterial and immune-supporting compounds. Cold-pressed groundnut oil provides heart-healthy monounsaturated fats. Together, the ingredients combine the nutritional benefits of lean protein with the medicinal properties of traditional Andhra spices.",
         "amount":300,
         "ingredients":[
             {
@@ -35,9 +35,9 @@
                 "name":"Garlic and Ginger"   
             }
         ],
-        "desc":"Andhra Store is now introducing the special authentic and Andhra style Non-Veg Pickle, Zesty Boneless Chicken pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
-        "desc2":"This Boneless Chicken pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
-        "storage":"Andhra style chicken Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Chicken Achar is 1 month from the opening or manufacture date. The spicy chicken ooragai can be refrigerated for up to 3 months."
+        "desc":"Andhra Chicken Pickle is one of the most iconic non-vegetarian pickles from East Godavari, Andhra Pradesh — a region famous for its bold, spicy flavors and deep culinary traditions. Our boneless chicken pickle is made from fresh, tender chicken pieces marinated in a potent spice blend of Guntur red chilli powder, garam masala, turmeric, garlic, and ginger, then slow-cooked in cold-pressed groundnut oil until the spices are fully absorbed into the meat. The result is an intensely flavored, oil-preserved chicken pickle with fiery heat and deep umami richness. Every batch is handmade in small quantities in East Godavari, with zero artificial preservatives, colors, or flavor enhancers — just the authentic flavors of traditional Telugu cooking that have made Andhra chicken achar a sought-after delicacy across India.",
+        "desc2":"Andhra chicken pickle pairs perfectly with hot steamed rice, chapati, or as a bold accompaniment to curd rice and dal. It is also excellent as a quick protein-rich side dish. Available in 250 g, 500 g, and 1 kg jars to suit individuals and families. Is the chicken fully cooked in the pickle? Yes — the chicken pieces are fully cooked during the pickling process and preserved in spiced oil, ready to eat directly from the jar. How long does Andhra chicken pickle last? Unopened jars remain fresh up to 12 months from the manufacture date; once opened, consume within 3 months and refrigerate for maximum freshness.",
+        "storage":"Store Andhra Chicken Pickle in an airtight container immediately after opening. Always use a clean, dry spoon — moisture accelerates spoilage. Unopened jars are best before 12 months from manufacture date. Once opened, refrigerate and consume within 3 months for best flavor and safety. Do not leave the jar open or at room temperature for extended periods."
     },
     {
         "type":"Meat",
@@ -168,7 +168,7 @@
             { "name":"/mango-2.jpeg" },
             { "name":"/mango-3.jpeg" }
         ],
-        "benefits":"Mango is a rich source of vitamins, particularly vitamin C, vitamin A, and various antioxidants that support immune function, improve skin health, and promote good vision. Its high fiber content aids digestion and can help regulate blood sugar levels. Regular consumption of mango may also support heart health and overall vitality.",
+        "benefits":"Mango is rich in vitamins C and A, beta-carotene, and dietary fiber that support immunity, skin health, and digestion. The Guntur chilli in avakaya contains capsaicin, a natural antioxidant linked to improved metabolism and anti-inflammatory properties. Cold-pressed gingelly oil — the traditional carrier for avakaya — is rich in sesamol and lignans known for heart health benefits. Mustard seeds contribute to digestive health and provide natural omega-3 fatty acids. Together, these whole-food ingredients make avakaya not just a condiment, but a nutritionally rich addition to your daily meals.",
         "amount":200,
         "ingredients":[
             {
@@ -196,9 +196,9 @@
                 "name":"Fenugreek Seeds Powder"   
             }
         ],
-        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Mango pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
-        "desc2":"This Mango pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
-        "storage":"Andhra style Mango Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Garlic Achar is 1 month from the opening or manufacture date. The spicy mango ooragai can be refrigerated for up to 3 months."
+        "desc":"Mango Avakaya is one of the most beloved pickles in Telugu cuisine — a staple found in nearly every household across Andhra Pradesh. Our Andhra avakaya is made using raw, unripe mangoes sourced from the fertile orchards of Rajahmundry and East Godavari, hand-selected at peak tartness before the summer harvest. The mangoes are cut into thick pieces with the stone intact, then coated in a bold masala of Guntur red chilli powder, freshly ground mustard seeds, rock salt, turmeric, and pure cold-pressed gingelly oil. The jars are sealed and left to cure, allowing the natural moisture of the mango to meld with the spices over several days — a slow process that produces the signature punch of authentic Andhra avakaya. No artificial preservatives, no shortcuts — just a recipe perfected over generations in the kitchens of East Godavari.",
+        "desc2":"Avakaya pairs beautifully with hot rice and a spoonful of ghee — the classic Andhra combination. It also works as a bold side with curd rice, chapati, or as a condiment alongside sambar and papad. Each jar is available in 250 g, 500 g, and 1 kg quantities to suit every household. Wondering how long Andhra mango pickle lasts? When stored correctly with a clean, dry spoon, our avakaya keeps up to 12 months unopened and 3 months once opened. Is this avakaya spicy? The heat level is traditional Andhra — bold and full-flavored, balanced by the tartness of raw mango and the richness of cold-pressed oil. If you are looking to buy authentic andhra avakaya online, you have found the real thing.",
+        "storage":"Store Andhra Mango Avakaya in an airtight glass container immediately after opening. Always use a dry spoon — any moisture reduces shelf life. Unopened jars are best before 12 months from manufacture date. Once opened, consume within 3 months for best flavor; refrigerating after opening extends freshness further. Do not store in direct sunlight or near heat sources."
     },
     {
         "type":"Fish",
@@ -328,7 +328,7 @@
                 "name":"/gongura-1.jpeg"
             }
         ],
-        "benefits":"Gongura is a nutrient-dense leafy green rich in iron, calcium, antioxidants, and essential vitamins, which support immune health, reduce inflammation, and promote heart health. Its high antioxidant content helps support cellular health and may reduce the risk of chronic diseases. Regular consumption of gongura may also aid in bone health, improve digestion, and support overall vitality.",
+        "benefits":"Gongura is exceptionally rich in iron, calcium, folic acid, and antioxidants. Its high iron content makes it particularly beneficial for managing anaemia. The antioxidants in gongura help neutralize free radicals, supporting immune health and reducing inflammation. Gongura's natural acidity aids digestion and improves gut health, while its calcium content supports bone strength. The Guntur chilli and fenugreek in gongura pachadi add capsaicin and fiber, further supporting metabolism and digestive wellness. A daily serving of gongura pachadi with rice is a time-honored Andhra health practice.",
         "amount":200,
         "ingredients":[
             {
@@ -356,9 +356,9 @@
                 "name":"Fenugreek Seeds Powder"   
             }
         ],
-        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Red Chilli pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
-        "desc2":"This Gongura pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
-        "storage":"Andhra style Gongura Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Gongura Achar is 1 month from the opening or manufacture date. The spicy gongura ooragai can be refrigerated for up to 3 months."
+        "desc":"Gongura Pickle — known as gongura pachadi in Telugu — is a signature dish of Andhra Pradesh cuisine, beloved for its unmistakable tangy sourness and bold spice. Gongura (sorrel leaves) grows abundantly in East Godavari and the surrounding districts and has been central to Andhra cooking for centuries. Our gongura pachadi is crafted from freshly harvested sorrel leaves, slow-cooked with Guntur red chillies, garlic, mustard seeds, fenugreek, and pure cold-pressed sesame oil. The result is a deep, complex paste with a signature sourness that no other pickle can replicate — sharp, spicy, and intensely aromatic. Gongura is often called the queen of Andhra pickles for its bold and distinctive flavor. Handmade in small batches in East Godavari, with zero artificial preservatives, and prepared to the traditional Telugu recipe that has defined Andhra cuisine for generations.",
+        "desc2":"Gongura pachadi is most traditionally served with hot white rice, a drizzle of ghee, and papad alongside. It also pairs beautifully with chapati, dosa, or as a flavor-packed base for gongura chicken curry. Available in 250 g, 500 g, and 1 kg jars. Is gongura pickle the same as gongura pachadi? Yes — both terms refer to the same beloved Andhra condiment; pachadi is the Telugu word for pickle or chutney. What makes our gongura pachadi online different? Every batch is handmade from fresh gongura leaves sourced directly from East Godavari, ground with traditional stone spices and cold-pressed oil — never mass-produced or made from dried stored leaves.",
+        "storage":"Store Gongura Pickle in an airtight container away from moisture and direct sunlight. Always use a clean, dry spoon. Unopened jars are best before 12 months from manufacture date. Once opened, consume within 3 months for best flavor. Refrigerating after opening further extends freshness and preserves the bright tangy character of the sorrel leaves."
     },
     {
         "type":"Tomato",
