@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React, { useState, useEffect, useMemo } from 'react';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Head from 'next/head';
@@ -133,10 +134,11 @@ export default function ShopPage() {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
-        <link rel="canonical" href={`${SITE_URL}/pickle`} />
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href={`${SITE_URL}/pickles`} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
-        <meta property="og:url" content={`${SITE_URL}/pickle`} />
+        <meta property="og:url" content={`${SITE_URL}/pickles`} />
         <meta property="og:image" content={`${SITE_URL}/mango-1.jpeg`} />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
@@ -217,12 +219,12 @@ export default function ShopPage() {
                               {p.badge}
                             </span>
                           )}
-                          <img
+                          <Image
                             src={p.image}
                             alt={`Andhra ${p.name} — handmade in East Godavari, ${p.weight}`}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                             width={400}
                             height={400}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                           />
                         </div>
                       </Link>
