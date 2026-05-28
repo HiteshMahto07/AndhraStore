@@ -1,562 +1,1597 @@
 [
-    {
-        "type":"Chicken",
-        "name":"Chicken Pickle Original Andhra Store Recipe",
-        "image":[
-            { "name":"/pickle3.jpeg" },
-            { "name":"/chicken-1.jpeg" },
-            { "name":"/pickle17.jpeg" }
-        ],
-        "benefits":"Chicken being a substantial source of protein, especially lean protein which is rich in amino acids will not only promote weight management and cardiac health but also enhance bone mineral density and reduce the risk of osteoporosis.",
-        "amount":300,
-        "ingredients":[
-            {
-                "name":"Fresh and high-quality meat"   
-            },
-            {
-                "name":"Garam Masala"   
-            },
-            {
-                "name":"Lemon"   
-            },
-            {
-                "name":"Red Chilli"   
-            },
-            {
-                "name":"Salt"   
-            },
-            {
-                "name":"Ground nut oil"   
-            },
-            {
-                "name":"Turmeric"   
-            },
-            {
-                "name":"Garlic and Ginger"   
-            }
-        ],
-        "desc":"Andhra Store is now introducing the special authentic and Andhra style Non-Veg Pickle, Zesty Boneless Chicken pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
-        "desc2":"This Boneless Chicken pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
-        "storage":"Andhra style chicken Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Chicken Achar is 1 month from the opening or manufacture date. The spicy chicken ooragai can be refrigerated for up to 3 months."
-    },
-    {
-        "type":"Meat",
-        "name":"Meat Pickle Original Andhra Store Recipe",
-        "image":[
-            { "name":"/mutton-1.jpeg" },
-            { "name":"/pickle14.jpeg" },
-            { "name":"/pickle18.jpeg" }
-        ],
-        "benefits":"Meat is a substantial source of lean protein, rich in essential amino acids that support weight management, promote heart health, enhance bone mineral density, and reduce the risk of osteoporosis.",
-        "amount":350,
-        "ingredients":[
-            {
-                "name":"Fresh and high-quality meat"   
-            },
-            {
-                "name":"Garam Masala"   
-            },
-            {
-                "name":"Lemon"   
-            },
-            {
-                "name":"Red Chilli"   
-            },
-            {
-                "name":"Salt"   
-            },
-            {
-                "name":"Ground nut oil"   
-            },
-            {
-                "name":"Turmeric"   
-            },
-            {
-                "name":"Garlic and Ginger"   
-            }
-        ],
-        "desc":"Andhra Store is now introducing the special authentic and Andhra style Non-Veg Pickle, Zesty Boneless Meat pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
-        "desc2":"This Boneless Meat pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
-        "storage":"Andhra style Meat Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Meat Achar is 1 month from the opening or manufacture date. The spicy meat ooragai can be refrigerated for up to 3 months."
-    },
-    {
-        "type":"Prawns",
-        "name":"Prawns Pickle Original Andhra Store Recipe",
-        "image":[
-            { "name":"/prawns-1.jpeg" },
-            { "name":"/pickle15.jpeg" },
-            { "name":"/pickle16.jpeg" }
-        ],
-        "benefits":"Prawns are a substantial source of lean protein, rich in essential amino acids that promote weight management, support heart health, enhance bone mineral density, and reduce the risk of osteoporosis.",
-        "amount":350,
-        "ingredients":[
-            {
-                "name":"Fresh and high-quality meat"   
-            },
-            {
-                "name":"Garam Masala"   
-            },
-            {
-                "name":"Lemon"   
-            },
-            {
-                "name":"Red Chilli"   
-            },
-            {
-                "name":"Salt"   
-            },
-            {
-                "name":"Ground nut oil"   
-            },
-            {
-                "name":"Turmeric"   
-            },
-            {
-                "name":"Garlic and Ginger"   
-            }
-        ],
-        "desc":"Andhra Store is now introducing the special authentic and Andhra style Non-Veg Pickle, Zesty Boneless Prawns pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
-        "desc2":"This Prawns pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
-        "storage":"Andhra style Prawns Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Prawns Achar is 1 month from the opening or manufacture date. The spicy prawns ooragai can be refrigerated for up to 3 months."
-    },
-    {
-        "type":"Ginger",
-        "name":"Ginger Pickle Original Andhra Store Recipe",
-        "image":[
-            { "name":"/ginger-1.jpeg" },
-            { "name":"/ginger-2.jpeg" },
-            { "name":"/ginger-3.jpeg" },
-            { "name":"/ginger-4.jpeg" }
-        ],
-        "benefits":"Ginger is a potent source of antioxidants and bioactive compounds that support digestive health, reduce inflammation, boost immunity, and alleviate nausea. Regular consumption of ginger may also promote heart health, improve blood circulation, and support joint health.",
-        "amount":200,
-        "ingredients":[
-            {
-                "name":"Garam Masala"   
-            },
-            {
-                "name":"Lemon"   
-            },
-            {
-                "name":"Guntur Red Chilli"   
-            },
-            {
-                "name":"Salt"   
-            },
-            {
-                "name":"Ground nut oil"   
-            },
-            {
-                "name":"Turmeric"   
-            },
-            {
-                "name":"Roasted Mustard Seed Powder"   
-            },
-            {
-                "name":"Fenugreek Seeds Powder"   
-            }
-        ],
-        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Ginger pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
-        "desc2":"This Ginger pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
-        "storage":"Andhra style Ginger Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Ginger Achar is 1 month from the opening or manufacture date. The spicy ginger ooragai can be refrigerated for up to 3 months."
-    },
-    {
-        "type":"Mango",
-        "name":"Mango Pickle Original Andhra Store Recipe",
-        "image":[
-            { "name":"/mango-1.jpeg" },
-            { "name":"/mango-2.jpeg" },
-            { "name":"/mango-3.jpeg" }
-        ],
-        "benefits":"Mango is a rich source of vitamins, particularly vitamin C, vitamin A, and various antioxidants that support immune function, improve skin health, and promote good vision. Its high fiber content aids digestion and can help regulate blood sugar levels. Regular consumption of mango may also support heart health and overall vitality.",
-        "amount":200,
-        "ingredients":[
-            {
-                "name":"Garam Masala"   
-            },
-            {
-                "name":"Lemon"   
-            },
-            {
-                "name":"Red Chilli"   
-            },
-            {
-                "name":"Salt"   
-            },
-            {
-                "name":"Ground nut oil"   
-            },
-            {
-                "name":"Turmeric"   
-            },
-            {
-                "name":"Roasted Mustard Seed Powder"   
-            },
-            {
-                "name":"Fenugreek Seeds Powder"   
-            }
-        ],
-        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Mango pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
-        "desc2":"This Mango pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
-        "storage":"Andhra style Mango Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Garlic Achar is 1 month from the opening or manufacture date. The spicy mango ooragai can be refrigerated for up to 3 months."
-    },
-    {
-        "type":"Fish",
-        "name":"Fish Pickle Original Andhra Store Recipe",
-        "image":[
-            { "name":"/fish-2.jpeg" },
-            { "name":"/fish-1.jpeg" }
-        ],
-        "benefits":"Fish is an excellent source of high-quality protein and omega-3 fatty acids, which support heart health, reduce inflammation, and improve brain function. The nutrients in fish, including vitamin D and B vitamins, promote bone health, support immune function, and aid in muscle maintenance. Regular consumption of fish may also lower the risk of chronic diseases and enhance overall vitality.",
-        "amount":200,
-        "ingredients":[
-            {
-                "name":"Garam Masala"   
-            },
-            {
-                "name":"Lemon"   
-            },
-            {
-                "name":"Red Chilli"   
-            },
-            {
-                "name":"Salt"   
-            },
-            {
-                "name":"Ground nut oil"   
-            },
-            {
-                "name":"Turmeric"   
-            },
-            {
-                "name":"Roasted Mustard Seed Powder"   
-            },
-            {
-                "name":"Fenugreek Seeds Powder"   
-            }
-        ],
-        "desc":"Andhra Store is now introducing the special authentic and Andhra style Non-Veg Pickle, Zesty Fish pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
-        "desc2":"This Fish pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
-        "storage":"Andhra style Fish Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Fish Achar is 1 month from the opening or manufacture date. The spicy fish ooragai can be refrigerated for up to 3 months."
-    },
-    {
-        "type":"Garlic",
-        "name":"Garlic Pickle Original Andhra Store Recipe",
-        "image":[
-            { "name":"/garlic-1.jpeg" },
-            { "name":"/garlic-2.jpeg" },
-            { "name":"/garlic-3.jpeg" },
-            { "name":"/garlic-4.jpeg" }
-        ],
-        "benefits":"Garlic is a nutrient-dense food rich in sulfur compounds, particularly allicin, which supports immune health, reduces inflammation, and promotes heart health by helping to manage blood pressure and cholesterol levels. Regular consumption of garlic may also have antioxidant properties, supporting cellular health and potentially reducing the risk of chronic diseases.",
-        "amount":200,
-        "ingredients":[
-            {
-                "name":"Garam Masala"   
-            },
-            {
-                "name":"Lemon"   
-            },
-            {
-                "name":"Red Chilli"   
-            },
-            {
-                "name":"Salt"   
-            },
-            {
-                "name":"Ground nut oil"   
-            },
-            {
-                "name":"Turmeric"   
-            },
-            {
-                "name":"Roasted Mustard Seed Powder"   
-            },
-            {
-                "name":"Fenugreek Seeds Powder"   
-            }
-        ],
-        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Garlic pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
-        "desc2":"This Garlic pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
-        "storage":"Andhra style Garlic Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Garlic Achar is 1 month from the opening or manufacture date. The spicy garlic ooragai can be refrigerated for up to 3 months."
-    },
-    {
-        "type":"RedChilli",
-        "name":"Red Chilli Pickle Original Andhra Store Recipe",
-        "image":[
-            { "name":"/redchilli-1.jpeg" },
-            { "name":"/redchilli-2.jpeg" },
-            { "name":"/redchilli-3.jpeg" }
-        ],
-        "benefits":"Red Chilli is a nutrient-dense food rich in sulfur compounds, particularly allicin, which supports immune health, reduces inflammation, and promotes heart health by helping to manage blood pressure and cholesterol levels. Regular consumption of red chilli may also have antioxidant properties, supporting cellular health and potentially reducing the risk of chronic diseases.",
-        "amount":200,
-        "ingredients":[
-            {
-                "name":"Garam Masala"   
-            },
-            {
-                "name":"Lemon"   
-            },
-            {
-                "name":"Red Chilli"   
-            },
-            {
-                "name":"Salt"   
-            },
-            {
-                "name":"Ground nut oil"   
-            },
-            {
-                "name":"Turmeric"   
-            },
-            {
-                "name":"Roasted Mustard Seed Powder"   
-            },
-            {
-                "name":"Fenugreek Seeds Powder"   
-            }
-        ],
-        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Red Chilli pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
-        "desc2":"This Red Chilli pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
-        "storage":"Andhra style Red Chilli Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Red Chilli Achar is 1 month from the opening or manufacture date. The spicy red chilli ooragai can be refrigerated for up to 3 months."
-    },
-    {
-        "type":"Gongura",
-        "name":"Gongura Pickle Original Andhra Store Recipe",
-        "image":[
-            {
-                "name":"/gongura-1.jpeg"
-            }
-        ],
-        "benefits":"Gongura is a nutrient-dense leafy green rich in iron, calcium, antioxidants, and essential vitamins, which support immune health, reduce inflammation, and promote heart health. Its high antioxidant content helps support cellular health and may reduce the risk of chronic diseases. Regular consumption of gongura may also aid in bone health, improve digestion, and support overall vitality.",
-        "amount":200,
-        "ingredients":[
-            {
-                "name":"Garam Masala"   
-            },
-            {
-                "name":"Lemon"   
-            },
-            {
-                "name":"Red Chilli"   
-            },
-            {
-                "name":"Salt"   
-            },
-            {
-                "name":"Ground nut oil"   
-            },
-            {
-                "name":"Turmeric"   
-            },
-            {
-                "name":"Roasted Mustard Seed Powder"   
-            },
-            {
-                "name":"Fenugreek Seeds Powder"   
-            }
-        ],
-        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Red Chilli pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
-        "desc2":"This Gongura pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
-        "storage":"Andhra style Gongura Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Gongura Achar is 1 month from the opening or manufacture date. The spicy gongura ooragai can be refrigerated for up to 3 months."
-    },
-    {
-        "type":"Tomato",
-        "name":"Tomato Pickle Original Andhra Store Recipe",
-        "image":[
-            { "name":"/tomato-1.jpeg" },
-            { "name":"/tomato-2.jpeg" }
-        ],
-        "benefits":"Tomato is a nutrient-dense food rich in vitamins, particularly vitamin C and potassium, and antioxidants like lycopene, which support immune health, reduce inflammation, and promote heart health by helping to manage blood pressure and cholesterol levels. Regular consumption of tomatoes provides powerful antioxidant benefits, supports cellular health, and may help reduce the risk of chronic diseases, including certain cancers.",
-        "amount":200,
-        "ingredients":[
-            {
-                "name":"Garam Masala"   
-            },
-            {
-                "name":"Lemon"   
-            },
-            {
-                "name":"Red Chilli"   
-            },
-            {
-                "name":"Salt"   
-            },
-            {
-                "name":"Ground nut oil"   
-            },
-            {
-                "name":"Turmeric"   
-            },
-            {
-                "name":"Roasted Mustard Seed Powder"   
-            },
-            {
-                "name":"Fenugreek Seeds Powder"   
-            }
-        ],
-        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Tomato pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
-        "desc2":"This tomato pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
-        "storage":"Andhra style Tomato Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Tomato Achar is 1 month from the opening or manufacture date. The spicy tomato ooragai can be refrigerated for up to 3 months."
-    },
-    {
-        "type":"Lemon",
-        "name":"Lemon Pickle Original Andhra Store Recipe",
-        "image":[
-            {
-                "name":"/lemon-1.jpeg"
-            }
-        ],
-        "benefits":"Lemon is a nutrient-dense fruit rich in vitamin C, antioxidants, and flavonoids, which support immune health, reduce inflammation, and promote heart health by helping to manage blood pressure. The antioxidants in lemon support cellular health and may help reduce the risk of chronic diseases. Regular consumption of lemon also aids digestion, enhances skin health, and supports the body's natural detoxification processes.",
-        "amount":200,
-        "ingredients":[
-            {
-                "name":"Garam Masala"   
-            },
-            {
-                "name":"Lemon"   
-            },
-            {
-                "name":"Red Chilli"   
-            },
-            {
-                "name":"Salt"   
-            },
-            {
-                "name":"Ground nut oil"   
-            },
-            {
-                "name":"Turmeric"   
-            },
-            {
-                "name":"Roasted Mustard Seed Powder"   
-            },
-            {
-                "name":"Fenugreek Seeds Powder"   
-            }
-        ],
-        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Lemon pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
-        "desc2":"This lemon pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
-        "storage":"Andhra style Lemon Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Lemon Achar is 1 month from the opening or manufacture date. The spicy lemon ooragai can be refrigerated for up to 3 months."
-    },
-    {
-        "type":"Amla",
-        "name":"Amla Pickle Original Andhra Store Recipe",
-        "image":[
-            {
-                "name":"/amla-1.jpeg"
-            }
-        ],
-        "benefits":"Amla is a nutrient-dense fruit rich in vitamin C, antioxidants, and flavonoids, which support immune health, reduce inflammation, and promote heart health by helping to manage blood pressure and cholesterol levels. The antioxidants in amla support cellular health and may help reduce the risk of chronic diseases. Regular consumption of amla also aids digestion, promotes skin health, and supports detoxification processes in the body.",
-        "amount":200,
-        "ingredients":[
-            {
-                "name":"Garam Masala"   
-            },
-            {
-                "name":"Lemon"   
-            },
-            {
-                "name":"Red Chilli"   
-            },
-            {
-                "name":"Salt"   
-            },
-            {
-                "name":"Ground nut oil"   
-            },
-            {
-                "name":"Turmeric"   
-            },
-            {
-                "name":"Roasted Mustard Seed Powder"   
-            },
-            {
-                "name":"Fenugreek Seeds Powder"   
-            }
-        ],
-        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Amla pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
-        "desc2":"This amla pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
-        "storage":"Andhra style Amla Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Amla Achar is 1 month from the opening or manufacture date. The spicy amla ooragai can be refrigerated for up to 3 months."
-    },
-    {
-        "type":"Curry",
-        "name":"Curry Leaves Original Andhra Store Recipe",
-        "image":[
-            {
-                "name":"/curry-1.jpeg"
-            }
-        ],
-        "benefits":"Curry leaves are a nutrient-dense herb rich in vitamins A, B, C, and E, along with antioxidants and essential minerals that support immune health, reduce inflammation, and promote heart health by helping to manage blood pressure and cholesterol levels. The antioxidants in curry leaves support cellular health and may help reduce the risk of chronic diseases. Regular consumption of curry leaves also aids digestion, promotes skin and hair health, and supports liver function.",
-        "amount":200,
-        "ingredients":[
-            {
-                "name":"Garam Masala"   
-            },
-            {
-                "name":"Lemon"   
-            },
-            {
-                "name":"Red Chilli"   
-            },
-            {
-                "name":"Salt"   
-            },
-            {
-                "name":"Ground nut oil"   
-            },
-            {
-                "name":"Turmeric"   
-            },
-            {
-                "name":"Roasted Mustard Seed Powder"   
-            },
-            {
-                "name":"Fenugreek Seeds Powder"   
-            }
-        ],
-        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Curry Leaves pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
-        "desc2":"This curry leaves pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
-        "storage":"Andhra style Curry Leaves Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Curry Leaves Achar is 1 month from the opening or manufacture date. The spicy curry leaves ooragai can be refrigerated for up to 3 months."
-    },
-    {
-        "type":"GreenChilli",
-        "name":"Green Chilli Original Andhra Store Recipe",
-        "image":[
-            {
-                "name":"/green-1.jpeg"
-            }
-        ],
-        "benefits":"Green chillies are a nutrient-dense food rich in vitamins A, B, C, and E, along with antioxidants and essential minerals that support immune health, reduce inflammation, and promote heart health by helping to manage blood pressure and cholesterol levels. The antioxidants in green chillies support cellular health and may help reduce the risk of chronic diseases. Regular consumption of green chillies can also aid digestion, boost metabolism, and promote skin health.",
-        "amount":200,
-        "ingredients":[
-            {
-                "name":"Garam Masala"   
-            },
-            {
-                "name":"Lemon"   
-            },
-            {
-                "name":"Red Chilli"   
-            },
-            {
-                "name":"Salt"   
-            },
-            {
-                "name":"Ground nut oil"   
-            },
-            {
-                "name":"Turmeric"   
-            },
-            {
-                "name":"Roasted Mustard Seed Powder"   
-            },
-            {
-                "name":"Fenugreek Seeds Powder"   
-            }
-        ],
-        "desc":"Andhra Store is now introducing the special authentic and Andhra style Veg Pickle, Zesty Green Chilli pickle, which was produced at home-made atmosphere with our unique and perfect mix of spice masala to make your meals much more delicious.",
-        "desc2":"This green chilli pachadi is offered in different quantities of 250 gms, 500 gms, and 1 kg.",
-        "storage":"Andhra style Green Chilli Pickle is required to be stored in an air-tight container immediately after unpacking. The best before the date for Green Chilli Achar is 1 month from the opening or manufacture date. The spicy green chilli ooragai can be refrigerated for up to 3 months."
-    }
+  {
+    "type": "Mango",
+    "sku": "AS-VEG-001",
+    "slug": "andhra-mango-pickle",
+    "name": "Andhra Mango Pickle",
+    "displayName": "Mango Pickle",
+    "localName": "Avakaya",
+    "category": "veg",
+    "subcategory": "Andhra Veg Pickle",
+    "badge": "BEST SELLER",
+    "sortOrder": 1,
+    "spiceLevel": "hot",
+    "spiceLevelNum": 3,
+    "amount": 200,
+    "shortDesc": "Chunky raw mango pieces with Guntur red chilli, mustard powder and cold-pressed sesame oil. Made the old-fashioned way — no vinegar, nothing extra.",
+    "tags": [
+      "avakaya",
+      "andhra mango pickle",
+      "avakaya pickle",
+      "raw mango pickle",
+      "andhra avakaya online",
+      "mango pickle without vinegar",
+      "sesame oil pickle",
+      "andhra pickle"
+    ],
+    "image": [
+      {
+        "name": "/images/pickles/andhra-mango-pickle-sealed.webp",
+        "alt": "Mango Pickle — Andhra Store sealed glass jar on white background, hygienically packed"
+      },
+      {
+        "name": "/images/pickles/andhra-mango-pickle-hero.webp",
+        "alt": "Mango Pickle — Andhra Store glass jar, front view"
+      },
+      {
+        "name": "/images/pickles/andhra-mango-pickle-spoon.webp",
+        "alt": "Mango Pickle — close-up of spiced oil and pickle pieces on wooden spoon"
+      },
+      {
+        "name": "/images/pickles/andhra-mango-pickle-serving.webp",
+        "alt": "Mango Pickle served on hot steaming rice on banana leaf — traditional Andhra style"
+      },
+      {
+        "name": "/images/pickles/andhra-mango-pickle-ingredients.webp",
+        "alt": "Fresh ingredients for Andhra Store Mango Pickle — red chillies, garlic, curry leaves and whole spices"
+      },
+      {
+        "name": "/images/pickles/andhra-mango-pickle-lifestyle.webp",
+        "alt": "Hand holding Andhra Store Mango Pickle jar outdoors — authentic homemade pickle"
+      }
+    ],
+    "servingWith": [
+      "Hot steamed white rice with ghee",
+      "Curd rice",
+      "Chapati or phulka",
+      "Dal tadka and rice",
+      "Papad and sambar"
+    ],
+    "crossSells": [
+      "Gongura",
+      "Garlic",
+      "Lemon"
+    ],
+    "relatedTypes": [
+      "Gongura",
+      "Garlic",
+      "Lemon",
+      "Ginger",
+      "Tomato"
+    ],
+    "ingredients": [
+      {
+        "name": "Raw Mango (Rajahmundry variety)"
+      },
+      {
+        "name": "Guntur Red Chilli Powder"
+      },
+      {
+        "name": "Roasted Mustard Seed Powder"
+      },
+      {
+        "name": "Rock Salt"
+      },
+      {
+        "name": "Cold-Pressed Gingelly Oil"
+      },
+      {
+        "name": "Turmeric"
+      },
+      {
+        "name": "Fenugreek Seeds Powder"
+      }
+    ],
+    "benefits": "Mango is rich in vitamins C and A, beta-carotene, and dietary fiber that support immunity, skin health, and digestion. The Guntur chilli in avakaya contains capsaicin, a natural antioxidant linked to improved metabolism and anti-inflammatory properties. Cold-pressed gingelly oil — the traditional carrier for avakaya — is rich in sesamol and lignans known for heart health benefits. Mustard seeds contribute to digestive health and provide natural omega-3 fatty acids. Together, these whole-food ingredients make avakaya not just a condiment, but a nutritionally rich addition to your daily meals.",
+    "desc": "If you grew up in an Andhra household, you know what mango season really means. It's not just the fruit — it's the batches of avakaya that get made in May and June, the smell of sesame oil in the kitchen, and glass jars lined up on the shelf. Avakaya is one of those things that has its own place at the table. No other pickle quite does what it does.\n\nWe use raw mangoes that are firm and properly sour — cut into chunky pieces, not thin slices. Mixed with Guntur red chilli powder, roasted mustard seed powder, fenugreek, rock salt, turmeric and cold-pressed sesame oil. That's the whole ingredient list. No vinegar, no citric acid, no preservatives.\n\nThe way to eat this is simple: hot rice, one spoonful of avakaya on the side, a drizzle of ghee. The oil and spices melt into the rice, the mango holds its texture and gives that sharp sour note that no dal or rasam can replace. It works with curd rice too, and honestly even as a spread in a roti roll if you're up for it.\n\nThe spice builds slowly rather than hitting all at once. If you find it sharp, just mix a small piece into curd rice — that balances it immediately. One jar usually lasts a family a couple of weeks, depending on how much rice they eat.",
+    "desc2": "Avakaya pairs beautifully with hot rice and a spoonful of ghee — the classic Andhra combination. It also works as a bold side with curd rice, chapati, or as a condiment alongside sambar and papad. Each jar is available in 250 g, 500 g, and 1 kg quantities to suit every household. How long does Andhra mango pickle last? When stored correctly with a clean, dry spoon, our avakaya keeps up to 12 months unopened and 3 months once opened. Is this avakaya spicy? The heat level is traditional Andhra — bold and full-flavored, balanced by the tartness of raw mango and the richness of cold-pressed oil. If you are looking to buy authentic andhra avakaya online, you have found the real thing.",
+    "storage": "Store Andhra Mango Avakaya in an airtight glass container immediately after opening. Always use a dry spoon — any moisture reduces shelf life. Unopened jars are best before 12 months from manufacture date. Once opened, consume within 3 months for best flavor; refrigerating after opening extends freshness further. Do not store in direct sunlight or near heat sources.",
+    "metaDesc": "Classic Andhra avakaya with chunky raw mango, Guntur red chilli, mustard powder and cold-pressed sesame oil. No vinegar, no preservatives. 250g jar. Ships pan-India."
+  },
+  {
+    "type": "Gongura",
+    "sku": "AS-VEG-002",
+    "slug": "andhra-gongura-pickle",
+    "name": "Andhra Gongura Pickle",
+    "displayName": "Gongura Pickle",
+    "localName": "Gongura Pachadi",
+    "category": "veg",
+    "subcategory": "Andhra Veg Pickle",
+    "badge": "FAN FAVOURITE",
+    "sortOrder": 2,
+    "spiceLevel": "medium",
+    "spiceLevelNum": 2,
+    "amount": 200,
+    "shortDesc": "Fresh sorrel leaves cooked down with garlic and Guntur chilli in sesame oil. Tangy, bold and deeply Andhra — the taste most people from the region miss the most.",
+    "tags": [
+      "gongura pickle",
+      "gongura pachadi",
+      "sorrel leaf pickle",
+      "andhra gongura",
+      "gongura online",
+      "andhra sorrel pickle",
+      "pulicha keerai pickle"
+    ],
+    "image": [
+      {
+        "name": "/images/pickles/andhra-gongura-pickle-sealed.webp",
+        "alt": "Gongura Pickle — Andhra Store sealed glass jar on white background, hygienically packed"
+      },
+      {
+        "name": "/images/pickles/andhra-gongura-pickle-hero.webp",
+        "alt": "Gongura Pickle — Andhra Store glass jar, front view"
+      },
+      {
+        "name": "/images/pickles/andhra-gongura-pickle-spoon.webp",
+        "alt": "Gongura Pickle — close-up of spiced oil and pickle pieces on wooden spoon"
+      },
+      {
+        "name": "/images/pickles/andhra-gongura-pickle-serving.webp",
+        "alt": "Gongura Pickle served on hot steaming rice on banana leaf — traditional Andhra style"
+      },
+      {
+        "name": "/images/pickles/andhra-gongura-pickle-ingredients.webp",
+        "alt": "Fresh ingredients for Andhra Store Gongura Pickle — red chillies, garlic, curry leaves and whole spices"
+      },
+      {
+        "name": "/images/pickles/andhra-gongura-pickle-lifestyle.webp",
+        "alt": "Hand holding Andhra Store Gongura Pickle jar outdoors — authentic homemade pickle"
+      }
+    ],
+    "servingWith": [
+      "Hot white rice with ghee",
+      "As base for gongura chicken curry",
+      "Chapati",
+      "Dosa or pesarattu",
+      "Dal rice"
+    ],
+    "crossSells": [
+      "Mango",
+      "Tomato",
+      "Garlic"
+    ],
+    "relatedTypes": [
+      "Mango",
+      "Tomato",
+      "Garlic",
+      "RedChilli",
+      "Lemon"
+    ],
+    "ingredients": [
+      {
+        "name": "Fresh Gongura (Sorrel) Leaves"
+      },
+      {
+        "name": "Guntur Red Chilli"
+      },
+      {
+        "name": "Garlic"
+      },
+      {
+        "name": "Cold-Pressed Sesame Oil"
+      },
+      {
+        "name": "Roasted Mustard Seeds"
+      },
+      {
+        "name": "Fenugreek Seeds"
+      },
+      {
+        "name": "Salt"
+      },
+      {
+        "name": "Turmeric"
+      }
+    ],
+    "benefits": "Gongura is exceptionally rich in iron, calcium, folic acid, and antioxidants. Its high iron content makes it particularly beneficial for managing anaemia. The antioxidants in gongura help neutralize free radicals, supporting immune health and reducing inflammation. Gongura's natural acidity aids digestion and improves gut health, while its calcium content supports bone strength. The Guntur chilli and fenugreek in gongura pachadi add capsaicin and fiber, further supporting metabolism and digestive wellness. A daily serving of gongura pachadi with rice is a time-honored Andhra health practice.",
+    "desc": "Gongura might be the one ingredient that every Andhra person, wherever they end up in India or abroad, genuinely misses. It has a sourness that nothing else can replace — not tamarind, not kokum, not raw mango. It's specific to the sorrel leaf, and when it's made into a pickle the right way, it makes everything else on the plate feel optional.\n\nThe way this pickle is made: fresh gongura leaves are cooked until soft, then mixed with garlic, Guntur red chilli, roasted mustard seeds, fenugreek and sesame oil. The garlic is important — it cuts through the aggressive tang of the leaves and brings the whole thing together. Without it, gongura can feel one-dimensional.\n\nEat this with plain steamed rice and a little ghee. It also works really well with dosa and pesarattu. If you've been to an Andhra restaurant and had gongura chicken or gongura mutton, the sourness in those dishes comes from a base exactly like this.\n\nThe flavour is bold. If you haven't eaten gongura before, start with a small amount on your rice. It grows on you fast.",
+    "desc2": "Gongura pachadi is most traditionally served with hot white rice, a drizzle of ghee, and papad alongside. It also pairs beautifully with chapati, dosa, or as a flavor-packed base for gongura chicken curry. Available in 250 g, 500 g, and 1 kg jars. Is gongura pickle the same as gongura pachadi? Yes — both terms refer to the same beloved Andhra condiment; pachadi is the Telugu word for pickle or chutney. What makes our gongura pachadi different? Every batch is handmade from fresh gongura leaves, ground with traditional stone spices and cold-pressed oil — never mass-produced or made from dried stored leaves.",
+    "storage": "Store Gongura Pickle in an airtight container away from moisture and direct sunlight. Always use a clean, dry spoon. Unopened jars are best before 12 months from manufacture date. Once opened, consume within 3 months for best flavor. Refrigerating after opening further extends freshness and preserves the bright tangy character of the sorrel leaves.",
+    "metaDesc": "Gongura pachadi made with fresh sorrel leaves, garlic, Guntur chilli and cold-pressed sesame oil. Tangy, bold and genuinely Andhra. No preservatives. Ships pan-India."
+  },
+  {
+    "type": "Garlic",
+    "sku": "AS-VEG-003",
+    "slug": "andhra-garlic-pickle",
+    "name": "Andhra Garlic Pickle",
+    "displayName": "Garlic Pickle",
+    "localName": "Vellulli Pachadi",
+    "category": "veg",
+    "subcategory": "Andhra Veg Pickle",
+    "badge": "",
+    "sortOrder": 3,
+    "spiceLevel": "hot",
+    "spiceLevelNum": 3,
+    "amount": 200,
+    "shortDesc": "Whole garlic cloves slow-cured in Guntur red chilli, mustard powder and cold-pressed groundnut oil. The kind that makes plain rice feel like a complete meal.",
+    "tags": [
+      "garlic pickle",
+      "vellulli pachadi",
+      "andhra garlic pickle",
+      "lahsun ka achar andhra style",
+      "garlic achar",
+      "whole garlic pickle",
+      "andhra achar"
+    ],
+    "image": [
+      {
+        "name": "/images/pickles/andhra-garlic-pickle-sealed.webp",
+        "alt": "Garlic Pickle — Andhra Store sealed glass jar on white background, hygienically packed"
+      },
+      {
+        "name": "/images/pickles/andhra-garlic-pickle-hero.webp",
+        "alt": "Garlic Pickle — Andhra Store glass jar, front view"
+      },
+      {
+        "name": "/images/pickles/andhra-garlic-pickle-spoon.webp",
+        "alt": "Garlic Pickle — close-up of spiced oil and pickle pieces on wooden spoon"
+      },
+      {
+        "name": "/images/pickles/andhra-garlic-pickle-serving.webp",
+        "alt": "Garlic Pickle served on hot steaming rice on banana leaf — traditional Andhra style"
+      },
+      {
+        "name": "/images/pickles/andhra-garlic-pickle-ingredients.webp",
+        "alt": "Fresh ingredients for Andhra Store Garlic Pickle — red chillies, garlic, curry leaves and whole spices"
+      },
+      {
+        "name": "/images/pickles/andhra-garlic-pickle-lifestyle.webp",
+        "alt": "Hand holding Andhra Store Garlic Pickle jar outdoors — authentic homemade pickle"
+      }
+    ],
+    "servingWith": [
+      "Hot steamed rice with ghee",
+      "Curd rice",
+      "Roti or chapati",
+      "Biryani as a side",
+      "Plain dal and rice"
+    ],
+    "crossSells": [
+      "Mango",
+      "Ginger",
+      "RedChilli"
+    ],
+    "relatedTypes": [
+      "Mango",
+      "Ginger",
+      "RedChilli",
+      "Gongura",
+      "Lemon"
+    ],
+    "ingredients": [
+      {
+        "name": "Whole Garlic Cloves"
+      },
+      {
+        "name": "Guntur Red Chilli Powder"
+      },
+      {
+        "name": "Roasted Mustard Seed Powder"
+      },
+      {
+        "name": "Fenugreek Seeds Powder"
+      },
+      {
+        "name": "Cold-Pressed Groundnut Oil"
+      },
+      {
+        "name": "Rock Salt"
+      },
+      {
+        "name": "Turmeric"
+      },
+      {
+        "name": "Lemon"
+      }
+    ],
+    "benefits": "Garlic is a nutrient-dense food rich in sulfur compounds, particularly allicin, which supports immune health, reduces inflammation, and promotes heart health by helping to manage blood pressure and cholesterol levels. Regular consumption of garlic is associated with antimicrobial properties, supporting cellular health and potentially reducing the risk of chronic diseases. Cold-pressed groundnut oil adds heart-healthy monounsaturated fats. The slow-cooking process in Andhra pickle preparation preserves most of garlic's active compounds while making it more bioavailable.",
+    "desc": "Garlic pickle is one of those things that doesn't need much explanation to anyone who has eaten it once. You open the jar, the smell hits you, and you know exactly what it's going to taste like with rice. It's strong, it's pungent, it's oily in a good way — the kind of oily that coats your rice and makes each grain taste different.\n\nThis is made with whole garlic cloves, not crushed or minced. The cloves absorb the spices over time and get slightly softer, while still holding their shape. The masala is Guntur red chilli, roasted mustard seed powder, fenugreek powder, turmeric and rock salt — all in cold-pressed groundnut oil. A little lemon goes in as the acidic balance.\n\nWorks best with plain steamed rice or dal rice. Some people also eat it with parathas, which is not traditional but genuinely works. If you cook a lot of curries, a small piece of this pickle added to the tempering actually changes the whole dish — the slow-cured garlic has a depth that raw garlic doesn't.\n\nOne note: this is not for the faint-hearted about garlic breath. It's a strong pickle. But it's also the best one to reach for when you're having a plain lunch and want something that makes the meal feel complete.",
+    "desc2": "Garlic pickle pairs best with plain rice and dal — a single teaspoon transforms a simple meal into something deeply satisfying. It also works as a bold side with curd rice, roti, or papad. Available in 250 g, 500 g, and 1 kg jars. How spicy is Andhra garlic pickle? The heat level is firmly in the hot range — it uses Guntur red chillies which are significantly hotter than standard market chillies. The garlic's flavor is the primary character, but there is real heat present. Does garlic pickle smell strong? Garlic pickle has a characteristic pungent aroma that is natural and expected — it indicates the quality and freshness of the garlic used.",
+    "storage": "Store Andhra Garlic Pickle in an airtight container immediately after opening. Use a clean, dry spoon every time — moisture shortens shelf life significantly. Unopened jars remain fresh for up to 12 months from manufacture date. Once opened, consume within 3 months and refrigerate for best flavor and safety.",
+    "metaDesc": "Vellulli pachadi — whole garlic cloves slow-cured in Guntur red chilli, mustard, fenugreek and cold-pressed groundnut oil. Rich, pungent and genuinely good. Ships pan-India."
+  },
+  {
+    "type": "Ginger",
+    "sku": "AS-VEG-004",
+    "slug": "andhra-ginger-pickle",
+    "name": "Andhra Ginger Pickle",
+    "displayName": "Ginger Pickle",
+    "localName": "Allam Pachadi",
+    "category": "veg",
+    "subcategory": "Andhra Veg Pickle",
+    "badge": "",
+    "sortOrder": 4,
+    "spiceLevel": "medium",
+    "spiceLevelNum": 2,
+    "amount": 200,
+    "shortDesc": "Sliced ginger in Guntur red chilli and groundnut oil — sharp, warming and a little spicy. Good with rice, roti or even plain dosa.",
+    "tags": [
+      "ginger pickle",
+      "allam pachadi",
+      "andhra ginger pickle",
+      "adrak ka achar",
+      "ginger achar",
+      "homemade ginger pickle",
+      "andhra pickle"
+    ],
+    "image": [
+      {
+        "name": "/images/pickles/andhra-ginger-pickle-sealed.webp",
+        "alt": "Ginger Pickle — Andhra Store sealed glass jar on white background, hygienically packed"
+      },
+      {
+        "name": "/images/pickles/andhra-ginger-pickle-hero.webp",
+        "alt": "Ginger Pickle — Andhra Store glass jar, front view"
+      },
+      {
+        "name": "/images/pickles/andhra-ginger-pickle-spoon.webp",
+        "alt": "Ginger Pickle — close-up of spiced oil and pickle pieces on wooden spoon"
+      },
+      {
+        "name": "/images/pickles/andhra-ginger-pickle-serving.webp",
+        "alt": "Ginger Pickle served on hot steaming rice on banana leaf — traditional Andhra style"
+      },
+      {
+        "name": "/images/pickles/andhra-ginger-pickle-ingredients.webp",
+        "alt": "Fresh ingredients for Andhra Store Ginger Pickle — red chillies, garlic, curry leaves and whole spices"
+      },
+      {
+        "name": "/images/pickles/andhra-ginger-pickle-lifestyle.webp",
+        "alt": "Hand holding Andhra Store Ginger Pickle jar outdoors — authentic homemade pickle"
+      }
+    ],
+    "servingWith": [
+      "Hot rice with ghee",
+      "Idli or dosa",
+      "Chapati",
+      "Curd rice",
+      "Upma or pongal"
+    ],
+    "crossSells": [
+      "Garlic",
+      "Tomato",
+      "CurryLeaves"
+    ],
+    "relatedTypes": [
+      "Garlic",
+      "Tomato",
+      "Curry",
+      "GreenChilli",
+      "Lemon"
+    ],
+    "ingredients": [
+      {
+        "name": "Fresh Ginger"
+      },
+      {
+        "name": "Guntur Red Chilli Powder"
+      },
+      {
+        "name": "Roasted Mustard Seed Powder"
+      },
+      {
+        "name": "Fenugreek Seeds Powder"
+      },
+      {
+        "name": "Cold-Pressed Groundnut Oil"
+      },
+      {
+        "name": "Rock Salt"
+      },
+      {
+        "name": "Turmeric"
+      },
+      {
+        "name": "Lemon"
+      }
+    ],
+    "benefits": "Ginger is a potent source of antioxidants and bioactive compounds that support digestive health, reduce inflammation, boost immunity, and alleviate nausea. Regular consumption of ginger may also promote heart health, improve blood circulation, and support joint health. The active compound gingerol is well-studied for its anti-inflammatory and antioxidant effects. Combined with mustard seeds (digestive), fenugreek (blood sugar support), and cold-pressed groundnut oil (heart-healthy fats), this pickle is one of the most health-forward in the Andhra repertoire.",
+    "desc": "Ginger pickle sits somewhere between a condiment and a digestive. It's the one pickle in Andhra cooking that people reach for not just because it tastes good but because they know it settles the stomach — especially during the colder months or when the stomach feels heavy after a big meal.\n\nThis is made with fresh ginger, sliced into pieces thick enough that you can taste the ginger and not just the masala. Marinated in Guntur red chilli, roasted mustard seed powder, fenugreek, turmeric, rock salt and cold-pressed groundnut oil. A little lemon goes in to keep the sourness balanced. The ginger softens in the oil over time and takes on the spices while keeping its own distinct bite.\n\nOn its own, it's strong. That's the point. You eat a small piece — maybe two or three bites — with rice or roti, not the whole jar in one sitting. It also works well as a side to upma or khichdi when you want something punchy to cut through the mild flavour.\n\nIn Andhra homes, allam pachadi is also made fresh as a chutney for dosa and idli — a smooth paste version with jaggery. This pickle version is different — it's the slow-cured, oil-based kind that keeps for months and gets better as it matures.",
+    "desc2": "Ginger pickle pairs beautifully with idli, dosa, and steamed breakfast items — its sharp acidity and spice balance the mild flavors of rice-based dishes. It also works well with plain rice, chapati, or curd rice. Available in 250 g, 500 g, and 1 kg jars. Is ginger pickle good for digestion? Ginger is one of the most well-studied digestive aids in traditional medicine — the allam pachadi format delivers its active compounds in a preserved, ready-to-use form alongside complementary digestive spices like mustard and fenugreek.",
+    "storage": "Store Andhra Ginger Pickle in an airtight container immediately after opening. Use a clean, dry spoon every time. Unopened jars remain fresh for up to 12 months. Once opened, consume within 3 months and refrigerate to maintain the bright fresh character of the ginger.",
+    "metaDesc": "Allam pachadi — sliced ginger slow-cured in Guntur red chilli, mustard, fenugreek and cold-pressed groundnut oil. Sharp, warming and distinctly Andhra. Ships pan-India."
+  },
+  {
+    "type": "RedChilli",
+    "sku": "AS-VEG-005",
+    "slug": "andhra-red-chilli-pickle",
+    "name": "Andhra Red Chilli Pickle",
+    "displayName": "Red Chilli Pickle",
+    "localName": "Endu Mirchi Pachadi",
+    "category": "veg",
+    "subcategory": "Andhra Veg Pickle",
+    "badge": "",
+    "sortOrder": 5,
+    "spiceLevel": "extra-hot",
+    "spiceLevelNum": 4,
+    "amount": 200,
+    "shortDesc": "Whole Guntur dried red chillies in sesame oil with mustard and tamarind. Extra hot, unapologetically Andhra.",
+    "tags": [
+      "red chilli pickle",
+      "endu mirchi pachadi",
+      "guntur chilli pickle",
+      "andhra red chilli achar",
+      "mirchi pickle",
+      "spicy pickle andhra",
+      "extra hot pickle"
+    ],
+    "image": [
+      {
+        "name": "/images/pickles/andhra-red-chilli-pickle-sealed.webp",
+        "alt": "Red Chilli Pickle — Andhra Store sealed glass jar on white background, hygienically packed"
+      },
+      {
+        "name": "/images/pickles/andhra-red-chilli-pickle-hero.webp",
+        "alt": "Red Chilli Pickle — Andhra Store glass jar, front view"
+      },
+      {
+        "name": "/images/pickles/andhra-red-chilli-pickle-spoon.webp",
+        "alt": "Red Chilli Pickle — close-up of spiced oil and pickle pieces on wooden spoon"
+      },
+      {
+        "name": "/images/pickles/andhra-red-chilli-pickle-serving.webp",
+        "alt": "Red Chilli Pickle served on hot steaming rice on banana leaf — traditional Andhra style"
+      },
+      {
+        "name": "/images/pickles/andhra-red-chilli-pickle-ingredients.webp",
+        "alt": "Fresh ingredients for Andhra Store Red Chilli Pickle — red chillies, garlic, curry leaves and whole spices"
+      },
+      {
+        "name": "/images/pickles/andhra-red-chilli-pickle-lifestyle.webp",
+        "alt": "Hand holding Andhra Store Red Chilli Pickle jar outdoors — authentic homemade pickle"
+      }
+    ],
+    "servingWith": [
+      "Hot rice with ghee",
+      "Curd rice",
+      "Dal and rice",
+      "Chapati with butter",
+      "Idli as heat condiment"
+    ],
+    "crossSells": [
+      "GreenChilli",
+      "Garlic",
+      "Mango"
+    ],
+    "relatedTypes": [
+      "GreenChilli",
+      "Garlic",
+      "Mango",
+      "Gongura",
+      "Lemon"
+    ],
+    "ingredients": [
+      {
+        "name": "Guntur Dried Red Chillies"
+      },
+      {
+        "name": "Roasted Mustard Seed Powder"
+      },
+      {
+        "name": "Fenugreek Seeds Powder"
+      },
+      {
+        "name": "Cold-Pressed Groundnut Oil"
+      },
+      {
+        "name": "Rock Salt"
+      },
+      {
+        "name": "Turmeric"
+      },
+      {
+        "name": "Tamarind"
+      }
+    ],
+    "benefits": "Red chillies are rich in capsaicin, a bioactive compound associated with anti-inflammatory properties, improved metabolism, and pain relief. They are also a good source of vitamins A, C, and B6, along with potassium and iron. Guntur red chillies — among India's hottest varieties — deliver a concentrated dose of capsaicin along with antioxidants that support cellular health. Tamarind adds a natural source of tartaric acid, which aids digestion. Mustard seeds contribute digestive enzymes and omega-3 fatty acids.",
+    "desc": "This pickle is not for everyone, and it doesn't pretend to be. It's made for people who grew up eating Andhra food at full heat, who find regular pickle \"not spicy enough,\" and who understand that a small piece of this is all you need to transform a plate of plain rice.\n\nThe base is whole dried Guntur red chillies — the same variety used in most of Andhra's cooking and known for a heat that comes with flavour, not just fire. The chillies are combined with roasted mustard seed powder, fenugreek powder, rock salt, tamarind and cold-pressed sesame oil. The tamarind adds a slight sourness that balances the heat.\n\nYou eat a small piece at a time. Not a spoonful — a piece. It goes into plain rice with ghee, or alongside curd rice when you want to balance hot and cool together. Some people chop a small bit into a roti roll with onions. It also works as a flavour base if you're making a quick tadka for dal.\n\nIf you like your food genuinely spicy and you've been ordering \"extra chilli\" at restaurants your whole life, this is the pickle your kitchen needs.",
+    "desc2": "Red chilli pickle is best used as a heat condiment rather than a main pickle — a small amount goes a long way. Mix with rice and ghee, add to curd rice for heat, or serve alongside dal. Available in 250 g, 500 g, and 1 kg jars. How hot is Andhra red chilli pickle? This is the hottest pickle in our range — it is made with Guntur chillies (rated among the top 10 hottest chilli varieties in India) and is not diluted by other main ingredients. People who enjoy extreme spice will find this exceptional; those with low spice tolerance should try Mango or Gongura first.",
+    "storage": "Store Andhra Red Chilli Pickle in an airtight container immediately after opening. Always use a clean, dry spoon. Unopened jars remain fresh for up to 12 months from manufacture date. Once opened, consume within 3 months. Refrigerating after opening maintains the deep color and heat intensity.",
+    "metaDesc": "Endu mirchi pachadi — whole Guntur dried red chillies in mustard, fenugreek and sesame oil. For those who take their spice seriously. No preservatives. Ships pan-India."
+  },
+  {
+    "type": "Lemon",
+    "sku": "AS-VEG-006",
+    "slug": "andhra-lemon-pickle",
+    "name": "Andhra Lemon Pickle",
+    "displayName": "Lemon Pickle",
+    "localName": "Nimma Pachadi",
+    "category": "veg",
+    "subcategory": "Andhra Veg Pickle",
+    "badge": "",
+    "sortOrder": 6,
+    "spiceLevel": "medium",
+    "spiceLevelNum": 2,
+    "amount": 200,
+    "shortDesc": "Whole lemon pieces slow-cured in Guntur chilli and sesame oil. Sharp and sour — the one that goes best with curd rice.",
+    "tags": [
+      "lemon pickle",
+      "nimmakaya pachadi",
+      "andhra lemon pickle",
+      "nimbu ka achar andhra",
+      "lemon achar without vinegar",
+      "homemade lemon pickle",
+      "andhra pickle"
+    ],
+    "image": [
+      {
+        "name": "/images/pickles/andhra-lemon-pickle-sealed.webp",
+        "alt": "Lemon Pickle — Andhra Store sealed glass jar on white background, hygienically packed"
+      },
+      {
+        "name": "/images/pickles/andhra-lemon-pickle-hero.webp",
+        "alt": "Lemon Pickle — Andhra Store glass jar, front view"
+      },
+      {
+        "name": "/images/pickles/andhra-lemon-pickle-spoon.webp",
+        "alt": "Lemon Pickle — close-up of spiced oil and pickle pieces on wooden spoon"
+      },
+      {
+        "name": "/images/pickles/andhra-lemon-pickle-serving.webp",
+        "alt": "Lemon Pickle served on hot steaming rice on banana leaf — traditional Andhra style"
+      },
+      {
+        "name": "/images/pickles/andhra-lemon-pickle-ingredients.webp",
+        "alt": "Fresh ingredients for Andhra Store Lemon Pickle — red chillies, garlic, curry leaves and whole spices"
+      },
+      {
+        "name": "/images/pickles/andhra-lemon-pickle-lifestyle.webp",
+        "alt": "Hand holding Andhra Store Lemon Pickle jar outdoors — authentic homemade pickle"
+      }
+    ],
+    "servingWith": [
+      "Plain rice with ghee",
+      "Curd rice",
+      "Chapati",
+      "Papad and sambar",
+      "Dal and rice"
+    ],
+    "crossSells": [
+      "Mango",
+      "Amla",
+      "GreenChilli"
+    ],
+    "relatedTypes": [
+      "Mango",
+      "Amla",
+      "GreenChilli",
+      "Gongura",
+      "Tomato"
+    ],
+    "ingredients": [
+      {
+        "name": "Whole Lemons"
+      },
+      {
+        "name": "Rock Salt"
+      },
+      {
+        "name": "Guntur Red Chilli Powder"
+      },
+      {
+        "name": "Roasted Mustard Seed Powder"
+      },
+      {
+        "name": "Fenugreek Seeds Powder"
+      },
+      {
+        "name": "Cold-Pressed Groundnut Oil"
+      },
+      {
+        "name": "Turmeric"
+      }
+    ],
+    "benefits": "Lemon is a nutrient-dense fruit exceptionally rich in vitamin C, antioxidants, and flavonoids, which support immune health, reduce inflammation, and promote heart health. The antioxidants in lemon support cellular health. Regular consumption of lemon aids digestion, enhances skin health, and supports the body's natural detoxification processes. The lemon rind used in this pickle contains limonene and flavonoids — bioactive compounds with strong antioxidant and antimicrobial properties. Mustard seeds and fenugreek add digestive enzyme support.",
+    "desc": "Lemon pickle has a different character from the other pickles in Andhra cooking. Where mango avakaya is chunky and rich, and gongura is deeply tangy and bold, lemon pickle is clean and sharp. The sourness comes from the lemon rind itself, which softens over time in oil and spices and takes on a slightly bitter edge that works really well with mild food.\n\nThis is made with whole lemons cut into pieces — rind included. The pieces cure in Guntur red chilli powder, roasted mustard seed powder, fenugreek, turmeric, rock salt and cold-pressed sesame oil over time. The longer the jar sits, the more the rind softens and the better the pickle gets.\n\nThe classic pairing is curd rice. The coolness of the curd, the sharpness of the lemon, the heat of the chilli — it's a very satisfying combination, especially for a simple lunch or a light evening meal. It also works well alongside dal rice or khichdi.\n\nFresh enough to be balanced, sharp enough to be interesting. This is a solid everyday pickle.",
+    "desc2": "Lemon pickle pairs best with plain rice and ghee — where its sharp acidity cuts through the richness of the oil and creates a perfect balance. Also excellent with curd rice, chapati, or as a digestive condiment after meals. Available in 250 g, 500 g, and 1 kg jars. Why does lemon pickle taste bitter? The bitterness comes from the lemon rind, which is an essential part of the authentic whole-lemon pickle. This bitterness mellows over time as the pickle cures — older jars will have a more rounded, balanced flavor than freshly prepared ones.",
+    "storage": "Store Andhra Lemon Pickle in an airtight container away from moisture and direct sunlight. Use a clean, dry spoon every time. Unopened jars remain fresh for up to 12 months. Once opened, consume within 3 months. The acidity of lemon is a natural preservative — the pickle actually improves in flavor over the first few months of opening.",
+    "metaDesc": "Nimmakaya pachadi — whole lemon pieces slow-cured in Guntur chilli, mustard, fenugreek and sesame oil. Sharp, sour and very good with curd rice. Ships pan-India."
+  },
+  {
+    "type": "Tomato",
+    "sku": "AS-VEG-007",
+    "slug": "andhra-tomato-pickle",
+    "name": "Andhra Tomato Pickle",
+    "displayName": "Tomato Pickle",
+    "localName": "Tomato Pachadi",
+    "category": "veg",
+    "subcategory": "Andhra Veg Pickle",
+    "badge": "",
+    "sortOrder": 7,
+    "spiceLevel": "medium",
+    "spiceLevelNum": 2,
+    "amount": 200,
+    "shortDesc": "Slow-cooked tomatoes with Guntur chilli, garlic and sesame oil. Tangy, slightly smoky and versatile enough to use beyond just rice.",
+    "tags": [
+      "tomato pickle",
+      "tomato pachadi",
+      "andhra tomato pickle",
+      "tamatar ka achar andhra",
+      "tomato chutney pickle",
+      "andhra condiment"
+    ],
+    "image": [
+      {
+        "name": "/images/pickles/andhra-tomato-pickle-sealed.webp",
+        "alt": "Tomato Pickle — Andhra Store sealed glass jar on white background, hygienically packed"
+      },
+      {
+        "name": "/images/pickles/andhra-tomato-pickle-hero.webp",
+        "alt": "Tomato Pickle — Andhra Store glass jar, front view"
+      },
+      {
+        "name": "/images/pickles/andhra-tomato-pickle-spoon.webp",
+        "alt": "Tomato Pickle — close-up of spiced oil and pickle pieces on wooden spoon"
+      },
+      {
+        "name": "/images/pickles/andhra-tomato-pickle-serving.webp",
+        "alt": "Tomato Pickle served on hot steaming rice on banana leaf — traditional Andhra style"
+      },
+      {
+        "name": "/images/pickles/andhra-tomato-pickle-ingredients.webp",
+        "alt": "Fresh ingredients for Andhra Store Tomato Pickle — red chillies, garlic, curry leaves and whole spices"
+      },
+      {
+        "name": "/images/pickles/andhra-tomato-pickle-lifestyle.webp",
+        "alt": "Hand holding Andhra Store Tomato Pickle jar outdoors — authentic homemade pickle"
+      }
+    ],
+    "servingWith": [
+      "Hot rice with ghee",
+      "Idli or dosa",
+      "Chapati",
+      "Plain sambar rice",
+      "Upma or pongal"
+    ],
+    "crossSells": [
+      "Gongura",
+      "Ginger",
+      "Curry"
+    ],
+    "relatedTypes": [
+      "Gongura",
+      "Ginger",
+      "Curry",
+      "GreenChilli",
+      "Amla"
+    ],
+    "ingredients": [
+      {
+        "name": "Fresh Ripe Tomatoes"
+      },
+      {
+        "name": "Guntur Red Chilli Powder"
+      },
+      {
+        "name": "Roasted Mustard Seed Powder"
+      },
+      {
+        "name": "Fenugreek Seeds Powder"
+      },
+      {
+        "name": "Cold-Pressed Groundnut Oil"
+      },
+      {
+        "name": "Rock Salt"
+      },
+      {
+        "name": "Turmeric"
+      },
+      {
+        "name": "Tamarind"
+      }
+    ],
+    "benefits": "Tomato is a nutrient-dense food rich in vitamins C and potassium, and especially lycopene — a powerful antioxidant linked to heart health, reduced cancer risk, and improved skin health. Cooking tomatoes increases the bioavailability of lycopene significantly, making this slow-cooked pickle one of the richest lycopene sources in the Andhra pantry. Tamarind adds tartaric acid which aids digestion. Red chilli provides capsaicin for metabolism. Cold-pressed groundnut oil contributes heart-healthy monounsaturated fats.",
+    "desc": "Tomato pickle in Andhra cooking is different from the versions you find in other parts of India. It's not smooth like a chutney, and it's not chunky like most pickles. It sits in between — cooked tomatoes that have broken down but still have texture, mixed with a spice base that brings in warmth and body.\n\nThis is made with ripe tomatoes slow-cooked with garlic, Guntur red chilli, mustard seeds, curry leaves, fenugreek and cold-pressed sesame oil. The tomatoes cook down and release their natural sourness, which means no added tamarind is needed. The result is a thick, jammy pickle that has both the freshness of tomato and the depth of cooked spices.\n\nOne reason this pickle is popular beyond just rice: it genuinely works as a cooking paste. A spoonful stirred into dal thickens it and adds a whole layer of flavour. Mix it into scrambled eggs in the morning and it becomes a completely different breakfast. If you're making a quick tadka rice, add a little of this instead of separate tomatoes and spices.\n\nFor kids in the family who find regular pickles too hot, tomato pickle is usually the one they'll eat without complaint — it's the most approachable of the Andhra pickles.",
+    "desc2": "Tomato pickle is one of the most versatile pickles in this range — it works equally well with rice, chapati, idli, dosa, and upma. Its tangy-spiced flavor profile bridges North and South Indian palates, making it an excellent introduction to Andhra pickles. Available in 250 g, 500 g, and 1 kg jars. Is tomato pachadi different from tomato chutney? Yes — tomato pachadi is oil-preserved and designed for extended shelf life (up to 3 months after opening), while tomato chutney is typically fresh and consumed within days. The slow-cooked Andhra pachadi has a deeper, more complex flavor than fresh chutney.",
+    "storage": "Store Andhra Tomato Pickle in an airtight container immediately after opening. Use a clean, dry spoon every time. Unopened jars remain fresh for up to 12 months. Once opened, consume within 3 months and refrigerate for best flavor.",
+    "metaDesc": "Tomato pachadi Andhra style — slow-cooked tomatoes with Guntur chilli, garlic and sesame oil. Works as a pickle, a chutney and a curry base. Ships pan-India."
+  },
+  {
+    "type": "Curry",
+    "sku": "AS-VEG-008",
+    "slug": "andhra-curry-leaves-pickle",
+    "name": "Andhra Curry Leaves Pickle",
+    "displayName": "Curry Leaves Pickle",
+    "localName": "Karivepaku Pachadi",
+    "category": "veg",
+    "subcategory": "Andhra Veg Pickle",
+    "badge": "",
+    "sortOrder": 8,
+    "spiceLevel": "medium",
+    "spiceLevelNum": 2,
+    "amount": 200,
+    "shortDesc": "Fresh curry leaves cooked down with tamarind, Guntur chilli and sesame oil. Earthy and fragrant — a pickle you can't find at most stores.",
+    "tags": [
+      "curry leaves pickle",
+      "karivepaku pachadi",
+      "curry leaf achar",
+      "andhra curry leaves pickle",
+      "karivepaku pickle online",
+      "andhra condiment"
+    ],
+    "image": [
+      {
+        "name": "/images/pickles/andhra-curry-leaves-pickle-sealed.webp",
+        "alt": "Curry Leaves Pickle — Andhra Store sealed glass jar on white background, hygienically packed"
+      },
+      {
+        "name": "/images/pickles/andhra-curry-leaves-pickle-hero.webp",
+        "alt": "Curry Leaves Pickle — Andhra Store glass jar, front view"
+      },
+      {
+        "name": "/images/pickles/andhra-curry-leaves-pickle-spoon.webp",
+        "alt": "Curry Leaves Pickle — close-up of spiced oil and pickle pieces on wooden spoon"
+      },
+      {
+        "name": "/images/pickles/andhra-curry-leaves-pickle-serving.webp",
+        "alt": "Curry Leaves Pickle served on hot steaming rice on banana leaf — traditional Andhra style"
+      },
+      {
+        "name": "/images/pickles/andhra-curry-leaves-pickle-ingredients.webp",
+        "alt": "Fresh ingredients for Andhra Store Curry Leaves Pickle — red chillies, garlic, curry leaves and whole spices"
+      },
+      {
+        "name": "/images/pickles/andhra-curry-leaves-pickle-lifestyle.webp",
+        "alt": "Hand holding Andhra Store Curry Leaves Pickle jar outdoors — authentic homemade pickle"
+      }
+    ],
+    "servingWith": [
+      "Plain steamed rice",
+      "Idli or dosa",
+      "Upma",
+      "Pongal",
+      "Plain chapati"
+    ],
+    "crossSells": [
+      "Ginger",
+      "Tomato",
+      "Amla"
+    ],
+    "relatedTypes": [
+      "Ginger",
+      "Tomato",
+      "Amla",
+      "GreenChilli",
+      "Garlic"
+    ],
+    "ingredients": [
+      {
+        "name": "Fresh Curry Leaves"
+      },
+      {
+        "name": "Guntur Red Chilli Powder"
+      },
+      {
+        "name": "Roasted Mustard Seed Powder"
+      },
+      {
+        "name": "Fenugreek Seeds Powder"
+      },
+      {
+        "name": "Cold-Pressed Groundnut Oil"
+      },
+      {
+        "name": "Tamarind"
+      },
+      {
+        "name": "Rock Salt"
+      },
+      {
+        "name": "Turmeric"
+      }
+    ],
+    "benefits": "Curry leaves are exceptionally rich in vitamins A, B, C, and E, along with antioxidants, iron, calcium, and essential minerals that support immune health, reduce inflammation, and promote heart health. The carbazole alkaloids in curry leaves are studied for their antidiabetic, antimicrobial, and anti-inflammatory properties. Regular consumption of curry leaves supports liver function, aids digestion, and is associated with improved hair health in traditional Indian medicine. Tamarind adds digestive acids. The slow-cooking process in oil preserves the aromatic compounds of the leaves.",
+    "desc": "Most people in India use curry leaves as a garnish — something added to the tadka and then pushed aside on the plate. In Andhra cooking, curry leaves are an ingredient in their own right, and this pickle is the clearest proof of that. When you slow-cook curry leaves with chilli, tamarind and sesame oil, they lose their bitterness and develop a deep, earthy flavour that's completely different from how they taste raw.\n\nThis is made with fresh curry leaves, dried slightly and then cooked down with Guntur red chilli, tamarind, mustard seeds, fenugreek and sesame oil. The tamarind adds sourness, the chilli adds heat, and the curry leaves give a warm, slightly medicinal quality that people either love immediately or take a few tries to appreciate.\n\nThe natural pairing is rice with ghee — simple, light, uncomplicated. It also works well as an accompaniment to upma or just spread on a dosa. Older generations in Andhra families often ate this pickle specifically because of the belief that curry leaves support digestion and hair health — whether that's proven or not, the pickle tastes good enough on its own.\n\nThis is not a common pickle — you won't find it at most stores. If you've been looking for karivepaku pachadi, this is the one.",
+    "desc2": "Curry leaves pickle pairs beautifully with plain rice, idli, dosa, and steamed snacks — its herbal brightness and moderate spice complement mild, starchy dishes perfectly. Also excellent as a flavor-packed accompaniment to sambar rice and curd rice. Available in 250 g, 500 g, and 1 kg jars. Is karivepaku pachadi the same as curry leaf powder? No — karivepaku pachadi is a wet pickle preserved in oil with a full spice base, while curry leaf powder (karivepaku podi) is dry and used differently. This pickle delivers the fresh aromatic character of curry leaves in a preserved format ready to serve with any meal.",
+    "storage": "Store Curry Leaves Pickle in an airtight container away from moisture and direct sunlight. Use a clean, dry spoon every time. Unopened jars remain fresh for up to 12 months. Once opened, consume within 3 months and refrigerate to preserve the aromatic freshness of the curry leaves.",
+    "metaDesc": "Karivepaku pachadi — fresh curry leaves slow-cooked in Guntur chilli, tamarind and sesame oil. Earthy, fragrant and unlike any other pickle. Ships pan-India."
+  },
+  {
+    "type": "GreenChilli",
+    "sku": "AS-VEG-009",
+    "slug": "andhra-green-chilli-pickle",
+    "name": "Andhra Green Chilli Pickle",
+    "displayName": "Green Chilli Pickle",
+    "localName": "Pachi Mirchi Pachadi",
+    "category": "veg",
+    "subcategory": "Andhra Veg Pickle",
+    "badge": "",
+    "sortOrder": 9,
+    "spiceLevel": "extra-hot",
+    "spiceLevelNum": 4,
+    "amount": 200,
+    "shortDesc": "Whole green chillies slow-cured in mustard and sesame oil. Fresh heat — sharper and brighter than dried red chilli pickles.",
+    "tags": [
+      "green chilli pickle",
+      "pachimirchi pachadi",
+      "hari mirch achar andhra",
+      "andhra green chilli achar",
+      "whole green chilli pickle",
+      "spicy pickle"
+    ],
+    "image": [
+      {
+        "name": "/images/pickles/andhra-green-chilli-pickle-sealed.webp",
+        "alt": "Green Chilli Pickle — Andhra Store sealed glass jar on white background, hygienically packed"
+      },
+      {
+        "name": "/images/pickles/andhra-green-chilli-pickle-hero.webp",
+        "alt": "Green Chilli Pickle — Andhra Store glass jar, front view"
+      },
+      {
+        "name": "/images/pickles/andhra-green-chilli-pickle-spoon.webp",
+        "alt": "Green Chilli Pickle — close-up of spiced oil and pickle pieces on wooden spoon"
+      },
+      {
+        "name": "/images/pickles/andhra-green-chilli-pickle-serving.webp",
+        "alt": "Green Chilli Pickle served on hot steaming rice on banana leaf — traditional Andhra style"
+      },
+      {
+        "name": "/images/pickles/andhra-green-chilli-pickle-ingredients.webp",
+        "alt": "Fresh ingredients for Andhra Store Green Chilli Pickle — red chillies, garlic, curry leaves and whole spices"
+      },
+      {
+        "name": "/images/pickles/andhra-green-chilli-pickle-lifestyle.webp",
+        "alt": "Hand holding Andhra Store Green Chilli Pickle jar outdoors — authentic homemade pickle"
+      }
+    ],
+    "servingWith": [
+      "Dal and rice",
+      "Curd rice",
+      "Chapati with butter",
+      "Khichdi",
+      "Plain yogurt rice"
+    ],
+    "crossSells": [
+      "RedChilli",
+      "Garlic",
+      "Ginger"
+    ],
+    "relatedTypes": [
+      "RedChilli",
+      "Garlic",
+      "Ginger",
+      "Lemon",
+      "Tomato"
+    ],
+    "ingredients": [
+      {
+        "name": "Fresh Green Chillies"
+      },
+      {
+        "name": "Roasted Mustard Seed Powder"
+      },
+      {
+        "name": "Fenugreek Seeds Powder"
+      },
+      {
+        "name": "Cold-Pressed Groundnut Oil"
+      },
+      {
+        "name": "Rock Salt"
+      },
+      {
+        "name": "Turmeric"
+      },
+      {
+        "name": "Lemon"
+      }
+    ],
+    "benefits": "Green chillies are a nutrient-dense food rich in vitamins A, B6, C, and E, along with antioxidants and essential minerals. The capsaicin in green chillies supports immune health, aids metabolism, and has anti-inflammatory effects. Unlike dried red chillies, fresh green chillies also provide a good source of vitamin K and potassium. Mustard seeds and fenugreek add digestive enzyme support. Cold-pressed groundnut oil contributes heart-healthy monounsaturated fats.",
+    "desc": "Green chilli pickle has a different kind of heat from red chilli pickle. It's more immediate — hits the front of the tongue first and then fades faster. There's also a fresh, grassy note from the green chilli that you don't get with the dried red variety. People who eat this regularly say it opens up the palate before the rest of the meal.\n\nThis is made with whole Andhra green chillies — the thin, long variety, not the thick Shimla type. The chillies are cured in Guntur red chilli powder, roasted mustard seed powder, fenugreek, rock salt, turmeric and cold-pressed sesame oil. They soften slightly over time but hold their shape, which means you get both the texture of the chilli and the masala coating together.\n\nEat a whole piece alongside dal rice or sambar rice. You can bite into it fully, or just press it into the rice and let the spiced oil do the work. Some people eat this alongside curd rice specifically for the heat contrast with the cool curd.\n\nThis is extra hot. That's not a warning so much as a description of what it's supposed to be.",
+    "desc2": "Green chilli pickle is best used as a heat condiment — a small amount alongside dal-rice or curd rice delivers a clean, fresh heat that complements mild dishes. Also excellent as a bold pairing with chapati and butter. Available in 250 g, 500 g, and 1 kg jars. How is green chilli pickle different from red chilli pickle? The main difference is in the heat character — green chilli pickle has a fresh, immediate, brighter heat while red chilli pickle has a deeper, more lingering, oil-infused heat. Green chilli pickle also has a vegetal freshness that dried chilli pickles lack.",
+    "storage": "Store Andhra Green Chilli Pickle in an airtight container immediately after opening. Use a clean, dry spoon every time. Unopened jars remain fresh for up to 12 months. Once opened, consume within 3 months and refrigerate to preserve the fresh green character and heat intensity.",
+    "metaDesc": "Pachimirchi pachadi — whole Andhra green chillies slow-cured in mustard, fenugreek and sesame oil. Fresh, fiery and excellent with dal rice. Ships pan-India."
+  },
+  {
+    "type": "Amla",
+    "sku": "AS-VEG-010",
+    "slug": "andhra-amla-pickle",
+    "name": "Andhra Amla Pickle",
+    "displayName": "Amla Pickle",
+    "localName": "Usirikaya Pachadi",
+    "category": "veg",
+    "subcategory": "Andhra Veg Pickle",
+    "badge": "",
+    "sortOrder": 10,
+    "spiceLevel": "medium",
+    "spiceLevelNum": 2,
+    "amount": 200,
+    "shortDesc": "Indian gooseberry slow-cured in Guntur chilli and sesame oil. Sour, slightly bitter and good on both rice and its own.",
+    "tags": [
+      "amla pickle",
+      "usirikaya pachadi",
+      "gooseberry pickle",
+      "andhra amla achar",
+      "usirikaya pickle",
+      "indian gooseberry pickle",
+      "andhra condiment"
+    ],
+    "image": [
+      {
+        "name": "/images/pickles/andhra-amla-pickle-sealed.webp",
+        "alt": "Amla Pickle — Andhra Store sealed glass jar on white background, hygienically packed"
+      },
+      {
+        "name": "/images/pickles/andhra-amla-pickle-hero.webp",
+        "alt": "Amla Pickle — Andhra Store glass jar, front view"
+      },
+      {
+        "name": "/images/pickles/andhra-amla-pickle-spoon.webp",
+        "alt": "Amla Pickle — close-up of spiced oil and pickle pieces on wooden spoon"
+      },
+      {
+        "name": "/images/pickles/andhra-amla-pickle-serving.webp",
+        "alt": "Amla Pickle served on hot steaming rice on banana leaf — traditional Andhra style"
+      },
+      {
+        "name": "/images/pickles/andhra-amla-pickle-ingredients.webp",
+        "alt": "Fresh ingredients for Andhra Store Amla Pickle — red chillies, garlic, curry leaves and whole spices"
+      },
+      {
+        "name": "/images/pickles/andhra-amla-pickle-lifestyle.webp",
+        "alt": "Hand holding Andhra Store Amla Pickle jar outdoors — authentic homemade pickle"
+      }
+    ],
+    "servingWith": [
+      "Hot rice with ghee",
+      "Curd rice",
+      "Plain dal rice",
+      "Chapati",
+      "Mixed rice dishes"
+    ],
+    "crossSells": [
+      "Lemon",
+      "Tomato",
+      "Curry"
+    ],
+    "relatedTypes": [
+      "Lemon",
+      "Tomato",
+      "Curry",
+      "Ginger",
+      "GreenChilli"
+    ],
+    "ingredients": [
+      {
+        "name": "Indian Gooseberry (Amla)"
+      },
+      {
+        "name": "Guntur Red Chilli Powder"
+      },
+      {
+        "name": "Roasted Mustard Seed Powder"
+      },
+      {
+        "name": "Fenugreek Seeds Powder"
+      },
+      {
+        "name": "Cold-Pressed Groundnut Oil"
+      },
+      {
+        "name": "Rock Salt"
+      },
+      {
+        "name": "Turmeric"
+      }
+    ],
+    "benefits": "Amla (Indian gooseberry) is one of the richest natural sources of Vitamin C — containing 20 times the Vitamin C content of an orange by weight. It is rich in antioxidants, flavonoids, and polyphenols that support immune health, reduce inflammation, and promote skin and hair health. The tannins and gallic acid in amla support liver health and digestive function. Regular consumption of amla is associated with improved eye health, lower cholesterol, better blood sugar regulation, and anti-aging effects in traditional Ayurvedic practice and modern research. This pickle format preserves amla's bioactive compounds in a long-shelf-life form.",
+    "desc": "Amla has a taste that takes a little getting used to — sour, astringent, slightly bitter, and then suddenly sweet in the aftertaste. As a pickle, all those qualities come together in a way that's genuinely interesting. People who grew up eating usirikaya pachadi in Andhra homes tend to love it. People encountering it for the first time often need a second try.\n\nThis is made with fresh Indian gooseberry (amla/usirikaya), cut into pieces, with Guntur red chilli powder, roasted mustard seed powder, fenugreek, rock salt, turmeric and cold-pressed sesame oil. The bitterness of the raw amla softens as it cures in the oil, but the sour and astringent notes remain — that's what the pickle is supposed to taste like.\n\nIt pairs best with plain rice and ghee — simple food that lets the complex flavour of the amla come through. It also works with curd rice and is surprisingly good alongside upma. Some families eat a small piece of amla pickle first thing in the morning as a habit, before the day's first meal.\n\nBeyond taste, amla is naturally high in Vitamin C. This pickle keeps you connected to that without needing capsules.",
+    "desc2": "Amla pickle pairs well with plain rice and ghee, curd rice, or chapati. Its sour-astringent character provides a digestive cleansing note to meals. Available in 250 g, 500 g, and 1 kg jars. Is amla pickle the same as amla chutney? Not exactly — amla pickle is oil-preserved and designed for extended shelf life, while amla chutney is typically fresh and consumed within days. The pickle format concentrates amla's flavor and preserves its active compounds for months. What does amla pickle taste like? It is sour, slightly astringent, and warming — the amla's natural bitterness is present but balanced by the spice base and oil.",
+    "storage": "Store Andhra Amla Pickle in an airtight container immediately after opening. Use a clean, dry spoon every time. Unopened jars remain fresh for up to 12 months. Once opened, consume within 3 months and refrigerate. Amla's natural acidity makes it one of the longer-lasting pickles in the range once opened.",
+    "metaDesc": "Usirikaya pachadi — Indian gooseberry pickle with Guntur chilli, mustard and sesame oil. Sour, a little bitter, genuinely good for you. Ships pan-India."
+  },
+  {
+    "type": "Karela",
+    "sku": "AS-VEG-011",
+    "slug": "andhra-karela-pickle",
+    "name": "Andhra Karela Pickle",
+    "displayName": "Karela Pickle",
+    "localName": "Kakarakaya Pachadi",
+    "category": "veg",
+    "subcategory": "Andhra Veg Pickle",
+    "badge": "",
+    "sortOrder": 11,
+    "spiceLevel": "hot",
+    "spiceLevelNum": 3,
+    "amount": 200,
+    "shortDesc": "Bitter gourd pieces cured in Guntur chilli and groundnut oil. Not for everyone, but deeply familiar if you grew up eating this.",
+    "tags": [
+      "karela pickle",
+      "kakarakaya pachadi",
+      "bitter gourd pickle",
+      "karela achar",
+      "andhra bitter gourd pickle",
+      "kakarakaya pickle"
+    ],
+    "image": [
+      {
+        "name": "/images/pickles/andhra-karela-pickle-sealed.webp",
+        "alt": "Karela Pickle — Andhra Store sealed glass jar on white background, hygienically packed"
+      },
+      {
+        "name": "/images/pickles/andhra-karela-pickle-hero.webp",
+        "alt": "Karela Pickle — Andhra Store glass jar, front view"
+      },
+      {
+        "name": "/images/pickles/andhra-karela-pickle-spoon.webp",
+        "alt": "Karela Pickle — close-up of spiced oil and pickle pieces on wooden spoon"
+      },
+      {
+        "name": "/images/pickles/andhra-karela-pickle-serving.webp",
+        "alt": "Karela Pickle served on hot steaming rice on banana leaf — traditional Andhra style"
+      },
+      {
+        "name": "/images/pickles/andhra-karela-pickle-ingredients.webp",
+        "alt": "Fresh ingredients for Andhra Store Karela Pickle — red chillies, garlic, curry leaves and whole spices"
+      },
+      {
+        "name": "/images/pickles/andhra-karela-pickle-lifestyle.webp",
+        "alt": "Hand holding Andhra Store Karela Pickle jar outdoors — authentic homemade pickle"
+      }
+    ],
+    "servingWith": [
+      "Hot rice with ghee",
+      "Dal and rice",
+      "Chapati or phulka",
+      "Curd rice",
+      "Khichdi"
+    ],
+    "crossSells": [
+      "Amla",
+      "Gongura",
+      "Mango"
+    ],
+    "relatedTypes": [
+      "Amla",
+      "Gongura",
+      "Mango",
+      "Tomato",
+      "Curry"
+    ],
+    "ingredients": [
+      {
+        "name": "Bitter Gourd (Karela)"
+      },
+      {
+        "name": "Cold-Pressed Groundnut Oil"
+      },
+      {
+        "name": "Guntur Red Chilli Powder"
+      },
+      {
+        "name": "Rock Salt"
+      },
+      {
+        "name": "Turmeric"
+      },
+      {
+        "name": "Lemon Juice & Vinegar"
+      },
+      {
+        "name": "Ginger & Garlic Paste"
+      },
+      {
+        "name": "Garam Masala"
+      }
+    ],
+    "benefits": "Karela (bitter gourd) is one of the most medicinally valued vegetables in traditional Indian medicine. It is exceptionally rich in Vitamin C and Vitamin A, and contains bioactive compounds including charantin, vicine, and polypeptide-p, which are associated with blood sugar regulation and insulin sensitivity. Bitter gourd is also a good source of iron, folate, potassium, and dietary fiber. Cold-pressed groundnut oil provides heart-healthy monounsaturated fats. The Guntur chilli adds capsaicin for metabolism support and anti-inflammatory properties. Ginger and garlic contribute antibacterial and immune-boosting compounds. This pickle format allows you to benefit from karela's medicinal properties in a shelf-stable, flavorful form.",
+    "desc": "Karela pickle is one of those foods that you either grew up eating and love, or you're trying for the first time and wondering what possessed anyone to pickle something this bitter. There's no middle ground, and that's fine. This pickle is made for people who know what kakarakaya pachadi is supposed to taste like.\n\nBitter gourd (kakarakaya in Telugu) is cut into thin rounds, lightly dried to reduce moisture, and then cured in Guntur red chilli powder, roasted mustard seed powder, fenugreek, rock salt, turmeric and cold-pressed groundnut oil. The bitterness doesn't go away — it's the whole point of the pickle. What the spices and oil do is round out the edges so the bitterness becomes rich rather than harsh.\n\nIn Andhra homes, this was a pickle kept specifically for older family members who had been told by doctors to eat karela for blood sugar management. Over time it became part of the regular rotation. Eat a small piece alongside dal rice or sambar rice. It cuts through the mild, starchy flavour of the rice in a way that the sweeter or sourer pickles don't.\n\nIf you've been looking for a genuine kakarakaya pachadi that tastes like the one your nana or thatha used to have, this is close.",
+    "desc2": "Karela pickle is best served in small quantities alongside plain rice and ghee or dal-rice — the bitterness acts as a digestive stimulant and pairs with mild, starchy companions. Also excellent with chapati and curd. Available in 250g. How bitter is Andhra karela pickle? The bitterness is present but significantly mellowed by the pickling process — the Guntur chilli heat, garam masala earthiness, and lemon-vinegar tang create a balanced, multi-dimensional flavor. Is karela pickle good for health? Karela contains charantin and polypeptide-p, compounds studied for blood sugar support, making it one of the most medicinally recognized vegetables in Ayurvedic tradition.",
+    "storage": "Store Andhra Karela Pickle in an airtight container immediately after opening. Use a clean, dry spoon every time. Shelf life is 6 months from manufacture date (unopened). Once opened, consume within 2 months and refrigerate. The vinegar and lemon base provides additional natural preservation. Best kept away from direct sunlight.",
+    "metaDesc": "Kakarakaya pachadi — bitter gourd slow-cured in Guntur chilli, mustard and cold-pressed groundnut oil. Strong, bitter, very Andhra. Good with rice. Ships pan-India."
+  },
+  {
+    "type": "Tamarind",
+    "sku": "AS-VEG-012",
+    "slug": "andhra-tamarind-pickle",
+    "name": "Andhra Tamarind Pickle",
+    "displayName": "Tamarind Pickle",
+    "localName": "Chintapandu Pachadi",
+    "category": "veg",
+    "subcategory": "Andhra Veg Pickle",
+    "badge": "",
+    "sortOrder": 12,
+    "spiceLevel": "medium",
+    "spiceLevelNum": 2,
+    "amount": 200,
+    "shortDesc": "Tamarind and jaggery cooked together with Guntur chilli and groundnut oil. Sweet-sour-spicy, all at once.",
+    "tags": [
+      "tamarind pickle",
+      "chintakaya pachadi",
+      "imli ka achar andhra",
+      "tamarind jaggery pickle",
+      "andhra tamarind pickle",
+      "sweet sour pickle"
+    ],
+    "image": [
+      {
+        "name": "/images/pickles/andhra-tamarind-pickle-sealed.webp",
+        "alt": "Tamarind Pickle — Andhra Store sealed glass jar on white background, hygienically packed"
+      },
+      {
+        "name": "/images/pickles/andhra-tamarind-pickle-hero.webp",
+        "alt": "Tamarind Pickle — Andhra Store glass jar, front view"
+      },
+      {
+        "name": "/images/pickles/andhra-tamarind-pickle-spoon.webp",
+        "alt": "Tamarind Pickle — close-up of spiced oil and pickle pieces on wooden spoon"
+      },
+      {
+        "name": "/images/pickles/andhra-tamarind-pickle-serving.webp",
+        "alt": "Tamarind Pickle served on hot steaming rice on banana leaf — traditional Andhra style"
+      },
+      {
+        "name": "/images/pickles/andhra-tamarind-pickle-ingredients.webp",
+        "alt": "Fresh ingredients for Andhra Store Tamarind Pickle — red chillies, garlic, curry leaves and whole spices"
+      },
+      {
+        "name": "/images/pickles/andhra-tamarind-pickle-lifestyle.webp",
+        "alt": "Hand holding Andhra Store Tamarind Pickle jar outdoors — authentic homemade pickle"
+      }
+    ],
+    "servingWith": [
+      "Hot steamed rice with ghee",
+      "Curd rice",
+      "Chapati",
+      "Dal rice",
+      "Idli and dosa"
+    ],
+    "crossSells": [
+      "Mango",
+      "Lemon",
+      "Amla"
+    ],
+    "relatedTypes": [
+      "Mango",
+      "Lemon",
+      "Amla",
+      "Gongura",
+      "Tomato"
+    ],
+    "ingredients": [
+      {
+        "name": "Tamarind (Imli)"
+      },
+      {
+        "name": "Jaggery"
+      },
+      {
+        "name": "Guntur Red Chilli Powder"
+      },
+      {
+        "name": "Roasted Mustard Seed Powder"
+      },
+      {
+        "name": "Fenugreek Seeds Powder"
+      },
+      {
+        "name": "Cold-Pressed Groundnut Oil"
+      },
+      {
+        "name": "Rock Salt"
+      },
+      {
+        "name": "Turmeric"
+      },
+      {
+        "name": "Curry Leaves"
+      },
+      {
+        "name": "Asafoetida (Hing)"
+      }
+    ],
+    "benefits": "Tamarind is a rich source of tartaric acid, malic acid, and potassium, which support heart health, electrolyte balance, and digestion. It contains phytochemicals including luteolin and procyanidins with antioxidant and anti-inflammatory properties. The natural tartaric acid in tamarind acts as a digestive stimulant and is traditionally used in Ayurvedic medicine to support liver function and bile production. Tamarind is also a source of iron, magnesium, thiamine, and B vitamins. Jaggery adds natural unrefined sugars along with iron and minerals. Together with the digestive properties of mustard seeds, fenugreek, and asafoetida, this pickle supports gut health and aids in absorption.",
+    "desc": "Tamarind pickle is the most approachable of the Andhra pickles because it has all three things at once: sour from the tamarind, sweet from the jaggery and spicy from the Guntur chilli. It's the kind of pickle that people who \"don't eat spicy food\" often end up eating the most because the sweetness softens the heat.\n\nThis is made with whole tamarind, soaked and cooked with jaggery, Guntur red chilli, mustard seeds, fenugreek seeds, curry leaves, groundnut oil and hing. The tamarind and jaggery cook together and thicken into a paste that's rich but not heavy. Salt balances the sweetness.\n\nIt works with rice the same way other pickles do — a small spoonful alongside dal rice or plain rice with ghee. But it's also very good with roti and paratha because the sweet-sour combination works better with bread than some of the purely spicy pickles. Kids in the family usually take to this one faster than the hot mango or red chilli varieties.\n\nIf you've grown up eating imli chutney with chaat or pani puri, you already understand approximately what this tastes like — but the Andhra version is more complex and less sweet.",
+    "desc2": "Tamarind pickle is one of the most versatile condiments in Telugu cuisine — it pairs with hot rice and ghee, curd rice, idli, dosa, and chapati alike. The thick, syrupy texture also makes it excellent as a dipping sauce alongside fried snacks. Available in 250g, 500g, and 1kg jars. What does Andhra tamarind pickle taste like? It is sweet, sour, spicy, and earthy all at once — a complex, layered flavor profile unlike sharp lemon or vinegar-based pickles. Is this the same as tamarind chutney? No — our tamarind pickle is oil-preserved with whole spices and designed for long shelf life and bold flavor, whereas tamarind chutney is typically water-based, thinner, and consumed fresh.",
+    "storage": "Store Andhra Tamarind Pickle in an airtight glass container immediately after opening. Use a clean, dry spoon every time — moisture will shorten shelf life. Unopened jars remain fresh for up to 12 months. Once opened, refrigerate and consume within 3 months. Tamarind's natural acidity and the oil-preserve base give this pickle excellent natural preservation properties.",
+    "metaDesc": "Chintakaya pachadi — tamarind and jaggery pickle with Guntur chilli, mustard and groundnut oil. Sweet, sour and spicy all at once. Ships pan-India."
+  },
+  {
+    "type": "Chicken",
+    "sku": "AS-NVG-001",
+    "slug": "andhra-chicken-pickle",
+    "name": "Andhra Chicken Pickle",
+    "displayName": "Chicken Pickle",
+    "localName": "Kodi Pachadi",
+    "category": "non-veg",
+    "subcategory": "Andhra Non-Veg Pickle",
+    "badge": "BEST SELLER",
+    "sortOrder": 11,
+    "spiceLevel": "hot",
+    "spiceLevelNum": 3,
+    "amount": 300,
+    "shortDesc": "Tender chicken pieces slow-cooked in Guntur red chilli and sesame oil. The kind of pickle that turns plain rice into a full meal.",
+    "tags": [
+      "chicken pickle",
+      "andhra chicken pickle",
+      "chicken achar andhra",
+      "murgh ka achar",
+      "non veg pickle andhra",
+      "chicken pickle online"
+    ],
+    "image": [
+      {
+        "name": "/images/pickles/andhra-chicken-pickle-sealed.webp",
+        "alt": "Chicken Pickle — Andhra Store sealed glass jar on white background, hygienically packed"
+      },
+      {
+        "name": "/images/pickles/andhra-chicken-pickle-hero.webp",
+        "alt": "Chicken Pickle — Andhra Store glass jar, front view"
+      },
+      {
+        "name": "/images/pickles/andhra-chicken-pickle-spoon.webp",
+        "alt": "Chicken Pickle — close-up of spiced oil and pickle pieces on wooden spoon"
+      },
+      {
+        "name": "/images/pickles/andhra-chicken-pickle-serving.webp",
+        "alt": "Chicken Pickle served on hot steaming rice on banana leaf — traditional Andhra style"
+      },
+      {
+        "name": "/images/pickles/andhra-chicken-pickle-ingredients.webp",
+        "alt": "Fresh ingredients for Andhra Store Chicken Pickle — red chillies, garlic, curry leaves and whole spices"
+      },
+      {
+        "name": "/images/pickles/andhra-chicken-pickle-lifestyle.webp",
+        "alt": "Hand holding Andhra Store Chicken Pickle jar outdoors — authentic homemade pickle"
+      }
+    ],
+    "servingWith": [
+      "Hot steamed white rice",
+      "Chapati or paratha",
+      "Curd rice",
+      "Biryani as a side",
+      "Bread or puri"
+    ],
+    "crossSells": [
+      "Meat",
+      "Prawns",
+      "Fish"
+    ],
+    "relatedTypes": [
+      "Meat",
+      "Prawns",
+      "Fish"
+    ],
+    "ingredients": [
+      {
+        "name": "Boneless Chicken (Fresh)"
+      },
+      {
+        "name": "Guntur Red Chilli Powder"
+      },
+      {
+        "name": "Garam Masala"
+      },
+      {
+        "name": "Garlic and Ginger"
+      },
+      {
+        "name": "Cold-Pressed Groundnut Oil"
+      },
+      {
+        "name": "Lemon"
+      },
+      {
+        "name": "Rock Salt"
+      },
+      {
+        "name": "Turmeric"
+      }
+    ],
+    "benefits": "Chicken is an excellent source of lean protein and essential amino acids that support muscle maintenance, weight management, and cardiac health. Protein-rich diets help maintain bone mineral density and reduce the risk of osteoporosis. The Guntur chilli in our chicken pickle is rich in capsaicin, which has anti-inflammatory and metabolism-boosting properties. Garlic and ginger — both key ingredients — are known for their antibacterial and immune-supporting compounds. Cold-pressed groundnut oil provides heart-healthy monounsaturated fats. Together, the ingredients combine the nutritional benefits of lean protein with the medicinal properties of traditional Andhra spices.",
+    "desc": "Non-vegetarian pickles from Andhra are a whole different category from the vegetable pickles. Where veg pickles rely on the natural sourness of their main ingredient, meat pickles are built on the cooking process — slow heat, deep spicing, good oil. A well-made chicken pickle has a richness that no vegetarian pickle can match.\n\nThis chicken pickle is made with boneless chicken pieces cooked in Guntur red chilli, coriander, cumin, turmeric, ginger, garlic, and cold-pressed sesame oil. The chicken cooks until it's tender and absorbs the spices fully. The oil, now flavoured with all the spices, coats the pieces and acts as both a preservative and a flavour carrier.\n\nEat it the same way you'd eat any pickle — a small portion alongside rice. The ratio matters: a lot of rice, a small amount of the pickle. The concentrated flavour of the pickle is the accent, not the main event. It also works as a stuffing for parathas, especially when the chicken pieces are broken up slightly and mixed with a little fresh coriander.\n\nA jar of this in the fridge changes what plain rice can be. Long workdays, quick lunches, meals when you don't want to cook anything — this pickle does the job.",
+    "desc2": "Andhra chicken pickle pairs perfectly with hot steamed rice, chapati, or as a bold accompaniment to curd rice and dal. It is also excellent as a quick protein-rich side dish. Available in 250 g, 500 g, and 1 kg jars. Is the chicken fully cooked? Yes — the chicken pieces are fully cooked during the pickling process and preserved in spiced oil, ready to eat directly from the jar. How long does Andhra chicken pickle last? Unopened jars remain fresh up to 12 months from manufacture date; once opened, consume within 3 months and refrigerate for maximum freshness.",
+    "storage": "Store Andhra Chicken Pickle in an airtight container immediately after opening. Always use a clean, dry spoon — moisture accelerates spoilage. Unopened jars are best before 12 months from manufacture date. Once opened, refrigerate and consume within 3 months for best flavor and safety. Do not leave the jar open or at room temperature for extended periods.",
+    "metaDesc": "Andhra chicken pickle — tender chicken pieces slow-cooked in Guntur red chilli, whole spices and sesame oil. Rich, meaty and deeply spiced. 250g jar. Ships pan-India."
+  },
+  {
+    "type": "Meat",
+    "sku": "AS-NVG-002",
+    "slug": "andhra-meat-pickle",
+    "name": "Andhra Mutton Pickle",
+    "displayName": "Mutton Pickle",
+    "localName": "Mamsam Pachadi",
+    "category": "non-veg",
+    "subcategory": "Andhra Non-Veg Pickle",
+    "badge": "PREMIUM",
+    "sortOrder": 12,
+    "spiceLevel": "hot",
+    "spiceLevelNum": 3,
+    "amount": 350,
+    "shortDesc": "Slow-cooked mutton pieces in Guntur chilli and sesame oil. Deeply spiced and rich — a little goes a long way with rice.",
+    "tags": [
+      "mutton pickle",
+      "andhra mutton pickle",
+      "gosht ka achar andhra",
+      "lamb pickle",
+      "non veg andhra pickle",
+      "meat pickle online"
+    ],
+    "image": [
+      {
+        "name": "/images/pickles/andhra-meat-pickle-sealed.webp",
+        "alt": "Mutton Pickle — Andhra Store sealed glass jar on white background, hygienically packed"
+      },
+      {
+        "name": "/images/pickles/andhra-meat-pickle-hero.webp",
+        "alt": "Mutton Pickle — Andhra Store glass jar, front view"
+      },
+      {
+        "name": "/images/pickles/andhra-meat-pickle-spoon.webp",
+        "alt": "Mutton Pickle — close-up of spiced oil and pickle pieces on wooden spoon"
+      },
+      {
+        "name": "/images/pickles/andhra-meat-pickle-serving.webp",
+        "alt": "Mutton Pickle served on hot steaming rice on banana leaf — traditional Andhra style"
+      },
+      {
+        "name": "/images/pickles/andhra-meat-pickle-ingredients.webp",
+        "alt": "Fresh ingredients for Andhra Store Mutton Pickle — red chillies, garlic, curry leaves and whole spices"
+      },
+      {
+        "name": "/images/pickles/andhra-meat-pickle-lifestyle.webp",
+        "alt": "Hand holding Andhra Store Mutton Pickle jar outdoors — authentic homemade pickle"
+      }
+    ],
+    "servingWith": [
+      "Hot steamed rice with ghee",
+      "Chapati or naan",
+      "Biryani as a side",
+      "Puri",
+      "Curd rice"
+    ],
+    "crossSells": [
+      "Chicken",
+      "Prawns",
+      "Fish"
+    ],
+    "relatedTypes": [
+      "Chicken",
+      "Prawns",
+      "Fish"
+    ],
+    "ingredients": [
+      {
+        "name": "Boneless Mutton (Fresh)"
+      },
+      {
+        "name": "Guntur Red Chilli Powder"
+      },
+      {
+        "name": "Garam Masala"
+      },
+      {
+        "name": "Garlic and Ginger"
+      },
+      {
+        "name": "Cold-Pressed Groundnut Oil"
+      },
+      {
+        "name": "Lemon"
+      },
+      {
+        "name": "Rock Salt"
+      },
+      {
+        "name": "Turmeric"
+      }
+    ],
+    "benefits": "Mutton is a substantial source of high-quality protein and essential amino acids that support muscle maintenance, weight management, and bone health. It is rich in iron, zinc, and B vitamins — particularly B12, which is essential for nerve function and red blood cell formation. The Guntur chilli in this pickle delivers capsaicin for metabolism and anti-inflammatory effects. Garlic and ginger contribute antimicrobial and immune-supporting compounds. Cold-pressed groundnut oil provides heart-healthy monounsaturated fats. Together, this is one of the most protein-dense and nutritionally rich items in the range.",
+    "desc": "Mutton pickle is heavier and more intense than chicken pickle. Mutton has more fat and more flavour, and when it's slow-cooked in a proper Andhra spice base, it develops a depth that you can taste even in a small spoonful. This is the kind of thing people bring back from Andhra in their luggage when they visit family, or order online when they can't visit.\n\nThis is made with tender mutton pieces cooked low and slow in Guntur red chilli, coriander, cumin, turmeric, ginger, garlic, black pepper and cold-pressed sesame oil. The mutton breaks down gradually and absorbs the spices all the way through. The oil, enriched by the cooking, holds the flavour together and keeps the pickle preserved.\n\nEat it with hot rice — plain rice works better than flavoured rice here because the pickle has enough going on by itself. Curd rice with a small piece of mutton pickle on the side is a complete meal. It also works inside parathas or stuffed into bread for a quick non-veg snack.\n\nThis is a pickle worth trying if you've only ever eaten the commercial store-bought versions. The mutton is actually tender, not dried out, which is the test of a well-made meat pickle.",
+    "desc2": "Andhra mutton pickle is best served with hot steamed rice and ghee, chapati, or alongside biryani as a bold flavor accompaniment. Available in 250 g, 500 g, and 1 kg jars. Is the mutton fully cooked? Yes — the meat is fully cooked during the pickling process and preserved in spiced oil, ready to eat directly. How long does mutton pickle last? Unopened jars remain fresh up to 12 months from manufacture date; once opened, refrigerate and consume within 3 months.",
+    "storage": "Store Andhra Mutton Pickle in an airtight container immediately after opening. Always use a clean, dry spoon. Unopened jars are best before 12 months from manufacture date. Once opened, refrigerate and consume within 3 months. Non-vegetarian pickles must be refrigerated after opening — do not leave at room temperature for extended periods.",
+    "metaDesc": "Andhra mutton pickle — slow-cooked tender mutton in Guntur chilli, whole spices and sesame oil. Deeply spiced, rich and genuinely satisfying with rice. Ships pan-India."
+  },
+  {
+    "type": "Prawns",
+    "sku": "AS-NVG-003",
+    "slug": "andhra-prawns-pickle",
+    "name": "Andhra Prawns Pickle",
+    "displayName": "Prawns Pickle",
+    "localName": "Royyala Pachadi",
+    "category": "non-veg",
+    "subcategory": "Andhra Non-Veg Pickle",
+    "badge": "PREMIUM",
+    "sortOrder": 13,
+    "spiceLevel": "hot",
+    "spiceLevelNum": 3,
+    "amount": 350,
+    "shortDesc": "Dried prawns in Guntur chilli, tamarind and sesame oil. The coastal Andhra way — intense, salty and very good with rice.",
+    "tags": [
+      "prawns pickle",
+      "royyala pachadi",
+      "shrimp pickle",
+      "andhra prawns pickle",
+      "dried shrimp achar",
+      "seafood pickle andhra",
+      "coastal andhra pickle"
+    ],
+    "image": [
+      {
+        "name": "/images/pickles/andhra-prawns-pickle-sealed.webp",
+        "alt": "Prawn Pickle — Andhra Store sealed glass jar on white background, hygienically packed"
+      },
+      {
+        "name": "/images/pickles/andhra-prawns-pickle-hero.webp",
+        "alt": "Prawn Pickle — Andhra Store glass jar, front view"
+      },
+      {
+        "name": "/images/pickles/andhra-prawns-pickle-spoon.webp",
+        "alt": "Prawn Pickle — close-up of spiced oil and pickle pieces on wooden spoon"
+      },
+      {
+        "name": "/images/pickles/andhra-prawns-pickle-serving.webp",
+        "alt": "Prawn Pickle served on hot steaming rice on banana leaf — traditional Andhra style"
+      },
+      {
+        "name": "/images/pickles/andhra-prawns-pickle-ingredients.webp",
+        "alt": "Fresh ingredients for Andhra Store Prawn Pickle — red chillies, garlic, curry leaves and whole spices"
+      },
+      {
+        "name": "/images/pickles/andhra-prawns-pickle-lifestyle.webp",
+        "alt": "Hand holding Andhra Store Prawn Pickle jar outdoors — authentic homemade pickle"
+      }
+    ],
+    "servingWith": [
+      "Hot steamed white rice",
+      "Chapati or paratha",
+      "Fried rice",
+      "Curd rice",
+      "Plain boiled rice"
+    ],
+    "crossSells": [
+      "Fish",
+      "Chicken",
+      "Meat"
+    ],
+    "relatedTypes": [
+      "Fish",
+      "Chicken",
+      "Meat"
+    ],
+    "ingredients": [
+      {
+        "name": "Fresh Prawns"
+      },
+      {
+        "name": "Guntur Red Chilli Powder"
+      },
+      {
+        "name": "Garam Masala"
+      },
+      {
+        "name": "Garlic and Ginger"
+      },
+      {
+        "name": "Cold-Pressed Groundnut Oil"
+      },
+      {
+        "name": "Roasted Mustard Seed Powder"
+      },
+      {
+        "name": "Fenugreek Seeds Powder"
+      },
+      {
+        "name": "Rock Salt"
+      },
+      {
+        "name": "Turmeric"
+      }
+    ],
+    "benefits": "Prawns are an excellent source of high-quality lean protein, low in fat and calories, while being rich in selenium, iodine, omega-3 fatty acids, and vitamins B12 and D. Omega-3 fatty acids support heart health, brain function, and reduce inflammation. Selenium is a powerful antioxidant mineral. The Guntur chilli adds capsaicin for metabolism support. Garlic and ginger contribute antimicrobial and anti-inflammatory compounds. This pickle delivers the full nutritional profile of fresh seafood in a preserved, shelf-stable format.",
+    "desc": "Prawns pickle is a coastal Andhra thing. East Godavari, Krishna and Guntur districts have a long tradition of cooking with dried seafood — not just fresh fish, but dried prawns that concentrate in flavour and keep for months. The pickle form takes that concentration and makes it even more intense through spicing and oil.\n\nThis is made with small dried prawns cooked with Guntur red chilli, tamarind, garlic, mustard seeds, fenugreek, curry leaves and cold-pressed sesame oil. The tamarind adds sourness that complements the natural saltiness of the dried prawns. The prawns soften in the oil but keep a slight chew — they're not paste, they're pieces.\n\nThe flavour is strong and salty by design. You eat a small amount with plain rice or curd rice. It's particularly good with red boiled rice — the variety eaten commonly in coastal Andhra — because the starchy sweetness of that rice balances the intensity of the pickle.\n\nIf you've grown up in a seafood-eating coastal family anywhere in India, this type of pickle will feel immediately familiar even if the Andhra spices are new to you. It's the kind of thing that makes a simple meal feel like home.",
+    "desc2": "Prawn pickle pairs best with hot steamed white rice — the rich spiced oil and tender prawn pieces combine with rice in a way that is deeply satisfying. Also excellent with chapati or fried rice. Available in 250 g, 500 g, and 1 kg jars. Are the prawns fully cooked? Yes — the prawns are fully cooked during the pickling process and preserved in spiced oil, ready to eat directly from the jar. How long does prawn pickle last? Unopened jars remain fresh up to 12 months; once opened, refrigerate and consume within 3 months.",
+    "storage": "Store Andhra Prawns Pickle in an airtight container immediately after opening. Always use a clean, dry spoon. Refrigerate after opening — seafood pickles must not be left at room temperature for extended periods after opening. Consume within 3 months of opening for best flavor and safety. Unopened jars are best before 12 months from manufacture date.",
+    "metaDesc": "Royyala pachadi — dried prawns cooked in Guntur chilli, tamarind and sesame oil. The coastal Andhra way of pickling seafood. 250g jar. Ships pan-India."
+  },
+  {
+    "type": "Fish",
+    "sku": "AS-NVG-004",
+    "slug": "andhra-fish-pickle",
+    "name": "Andhra Fish Pickle",
+    "displayName": "Fish Pickle",
+    "localName": "Chepala Pachadi",
+    "category": "non-veg",
+    "subcategory": "Andhra Non-Veg Pickle",
+    "badge": "",
+    "sortOrder": 14,
+    "spiceLevel": "medium",
+    "spiceLevelNum": 2,
+    "amount": 200,
+    "shortDesc": "Fish pieces slow-cooked in Guntur chilli, fenugreek and sesame oil — coastal Andhra's most nostalgic pickle.",
+    "tags": [
+      "fish pickle",
+      "chepala pachadi",
+      "andhra fish pickle",
+      "fish achar",
+      "seafood pickle india",
+      "coastal andhra pickle online"
+    ],
+    "image": [
+      {
+        "name": "/images/pickles/andhra-fish-pickle-sealed.webp",
+        "alt": "Fish Pickle — Andhra Store sealed glass jar on white background, hygienically packed"
+      },
+      {
+        "name": "/images/pickles/andhra-fish-pickle-hero.webp",
+        "alt": "Fish Pickle — Andhra Store glass jar, front view"
+      },
+      {
+        "name": "/images/pickles/andhra-fish-pickle-spoon.webp",
+        "alt": "Fish Pickle — close-up of spiced oil and pickle pieces on wooden spoon"
+      },
+      {
+        "name": "/images/pickles/andhra-fish-pickle-serving.webp",
+        "alt": "Fish Pickle served on hot steaming rice on banana leaf — traditional Andhra style"
+      },
+      {
+        "name": "/images/pickles/andhra-fish-pickle-ingredients.webp",
+        "alt": "Fresh ingredients for Andhra Store Fish Pickle — red chillies, garlic, curry leaves and whole spices"
+      },
+      {
+        "name": "/images/pickles/andhra-fish-pickle-lifestyle.webp",
+        "alt": "Hand holding Andhra Store Fish Pickle jar outdoors — authentic homemade pickle"
+      }
+    ],
+    "servingWith": [
+      "Hot steamed rice with ghee",
+      "Plain boiled rice",
+      "Chapati",
+      "Curd rice",
+      "Sambar rice"
+    ],
+    "crossSells": [
+      "Prawns",
+      "Chicken",
+      "Meat"
+    ],
+    "relatedTypes": [
+      "Prawns",
+      "Chicken",
+      "Meat"
+    ],
+    "ingredients": [
+      {
+        "name": "Fresh Fish"
+      },
+      {
+        "name": "Guntur Red Chilli Powder"
+      },
+      {
+        "name": "Roasted Mustard Seed Powder"
+      },
+      {
+        "name": "Fenugreek Seeds Powder"
+      },
+      {
+        "name": "Cold-Pressed Groundnut Oil"
+      },
+      {
+        "name": "Garlic and Ginger"
+      },
+      {
+        "name": "Rock Salt"
+      },
+      {
+        "name": "Turmeric"
+      }
+    ],
+    "benefits": "Fish is an excellent source of high-quality protein and omega-3 fatty acids (EPA and DHA), which support heart health, reduce inflammation, improve brain function, and lower the risk of chronic diseases. Fish is also rich in vitamin D, B12, iodine, and selenium — essential for bone health, immune function, thyroid regulation, and antioxidant protection. The Guntur chilli adds capsaicin for anti-inflammatory and metabolic support. Garlic and ginger contribute antibacterial and immune-boosting compounds.",
+    "desc": "Fish pickle from Andhra is not the same as fish pakoda or fried fish. It's a slow-cooked, oil-preserved preparation where the fish breaks down into the spice base and becomes something entirely different from fresh fish. People who haven't tried it often hesitate. People who have tried it tend to keep a jar in the fridge at all times.\n\nThis is made with small fish pieces, cleaned and cooked in Guntur red chilli, coriander, cumin, turmeric, ginger, garlic, fenugreek and cold-pressed sesame oil. The fenugreek is important — it gives fish pickle its characteristic slightly bitter, complex note that distinguishes it from other meat pickles. The fish cooks until it's tender and fully flavoured.\n\nEat it with hot rice and ghee. It's especially good alongside sambar rice or plain dal rice. Some coastal Andhra households also eat this pickle mixed into upma or rice porridge (kanji) for a heavy breakfast on cold mornings.\n\nThis is the kind of pickle that coastal families carry when they move to cities. Once you've grown up with it, you miss it specifically. If that's you, this is close to what you remember.",
+    "desc2": "Fish pickle pairs best with hot steamed rice and a drizzle of ghee, or with curd rice for a cooling contrast to the spice. Available in 250 g, 500 g, and 1 kg jars. Is the fish fully cooked? Yes — the fish is fully cooked and preserved in spiced oil, ready to eat directly from the jar. How long does fish pickle last? Unopened jars remain fresh up to 12 months; once opened, refrigerate and consume within 3 months.",
+    "storage": "Store Andhra Fish Pickle in an airtight container immediately after opening. Always use a clean, dry spoon. Refrigerate after opening — seafood pickles must not be left at room temperature after opening. Consume within 3 months of opening. Unopened jars are best before 12 months from manufacture date.",
+    "metaDesc": "Chepala pachadi — Andhra-style fish pickle slow-cooked in Guntur chilli, fenugreek and sesame oil. Coastal taste in a jar. Ships pan-India."
+  }
 ]

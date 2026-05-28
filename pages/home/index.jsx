@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Head from 'next/head';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -7,8 +8,7 @@ import HeroSection from '@/components/HeroSection';
 import CategoryCard from '@/components/CategoryCard';
 import ProductCard from '@/components/ProductCard';
 import SectionHeading from '@/components/SectionHeading';
-
-const BASE_URL = "https://www.andhrastore.in";
+import { SITE_URL } from '@/lib/seo';
 
 const categories = [
   { name: 'Chicken', image: '/chicken-1.jpeg', type: 'Chicken' },
@@ -37,20 +37,11 @@ const vegPickles = [
   { name: 'Amla Pickle', image: '/amla-1.jpeg', price: 200, type: 'Amla' },
 ];
 
-const pageTitle = "Andhra Store | Authentic Handcrafted Andhra Pickles";
-const pageDesc = "Shop authentic Andhra-style pickles handcrafted with traditional recipes — chicken, mango, prawns, garlic & more. No preservatives. Pan-India delivery. Starting at ₹200.";
+const pageTitle = "Buy Andhra Pickles Online — Andhra Store | Free Pan-India Delivery";
+const pageDesc = "Shop authentic Andhra pickles online — Mango Avakaya, Gongura, Chicken & 11 more. Handcrafted in East Godavari. No preservatives. Free delivery across India.";
 
-const homeSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Andhra Store",
-  url: BASE_URL,
-  potentialAction: {
-    "@type": "SearchAction",
-    target: `${BASE_URL}/pickle?type={search_term_string}`,
-    "query-input": "required name=search_term_string",
-  },
-};
+// WEBSITE_SCHEMA is injected globally by _app.js (from lib/schema.js).
+// No page-level WebSite schema needed here — duplicate blocks cause conflicts.
 
 export default function HomePage() {
   return (
@@ -58,18 +49,17 @@ export default function HomePage() {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
-        <link rel="canonical" href={`${BASE_URL}/home`} />
+        <link rel="canonical" href={`${SITE_URL}/home`} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
-        <meta property="og:url" content={`${BASE_URL}/home`} />
-        <meta property="og:image" content={`${BASE_URL}/chicken-1.jpeg`} />
-        <meta name="twitter:title" content={pageTitle} />
+        <meta property="og:url" content={`${SITE_URL}/home`} />
+        <meta property="og:image"       content={`${SITE_URL}/mango-1.jpeg`} />
+        <meta property="og:image:alt"   content="Andhra Store — authentic Andhra pickles, podi, snacks and sweets" />
+        <meta property="og:image:width"  content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:title"       content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
-        <meta name="twitter:image" content={`${BASE_URL}/chicken-1.jpeg`} />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }}
-        />
+        <meta name="twitter:image"       content={`${SITE_URL}/mango-1.jpeg`} />
       </Head>
       <Header />
       <HeroSection />
@@ -103,7 +93,7 @@ export default function HomePage() {
                 </svg>
               ),
               text: 'Pan-India Delivery',
-              sub: 'Free above ₹500',
+              sub: 'Hyderabad, Bangalore, Mumbai & more',
             },
             {
               icon: (
@@ -141,7 +131,7 @@ export default function HomePage() {
             label="Best Sellers"
             title="Our Most Popular Pickles"
             description="Loved by 500+ customers across India. Each jar is crafted with authentic Andhra spices and cold-pressed sesame oil for a taste that is both bold and memorable."
-            actionHref="/pickle?type=non-veg"
+            actionHref="/pickles/non-veg"
             id="bestsellers-heading"
           />
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
@@ -151,12 +141,12 @@ export default function HomePage() {
       </section>
 
       <section className="relative h-48 sm:h-56 overflow-hidden" aria-label="Freshly made pickles banner">
-        <img
+        <Image
           src="/pickle17.jpeg"
           alt="Fresh authentic Andhra pickles made weekly with hand-pounded spices"
-          className="absolute inset-0 w-full h-full object-cover"
-          width={1200}
-          height={400}
+          fill
+          className="object-cover"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/40 flex items-center">
           <div className="container-main">
@@ -176,7 +166,7 @@ export default function HomePage() {
             label="Veg Pickles"
             title="Vegetarian Collection"
             description="Our vegetarian pickle collection celebrates the rich diversity of Andhra Pradesh. From the tartness of mango avakaya to the bold heat of red chilli, every jar carries generations of culinary wisdom."
-            actionHref="/pickle?type=veg"
+            actionHref="/pickles/veg"
             id="veg-pickles-heading"
           />
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
