@@ -1,12 +1,14 @@
-export async function getServerSideProps() {
-  return {
-    redirect: {
-      destination: '/home',
-      permanent: true,
-    },
-  };
-}
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-export default function Home() {
+const Home = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace('/home');
+  }, [router]);
+
   return null;
-}
+};
+
+export default Home;

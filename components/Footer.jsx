@@ -1,18 +1,13 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 const shopLinks = [
-  { label: 'All Pickles',      href: '/pickles'          },
-  { label: 'Veg Pickles',      href: '/pickles/veg'      },
-  { label: 'Non-Veg Pickles',  href: '/pickles/non-veg'  },
-  { label: 'Andhra Podi',      href: '/podi'             },
-  { label: 'Andhra Snacks',    href: '/snacks'           },
-  { label: 'Andhra Sweets',    href: '/sweets'           },
+  { label: 'Veg Pickles', href: '/pickle?type=veg' },
+  { label: 'Non-Veg Pickles', href: '/pickle?type=non-veg' },
+  { label: 'Sweets', href: '/sweets' },
 ];
 
 const companyLinks = [
   { label: 'About Us', href: '/about' },
-  { label: 'Return & Refund Policy', href: '/return-policy' },
   { label: 'Privacy Policy', href: '/privacy-policy' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -37,12 +32,13 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="col-span-2 md:col-span-1">
             <Link href="/home" className="flex items-center gap-2 mb-3" aria-label="Andhra Store — Home">
-              <Image
+              <img
                 src="/logo.jpeg"
                 alt="Andhra Store logo"
+                className="h-9 w-9 rounded-full object-cover"
                 width={36}
                 height={36}
-                className="h-9 w-9 rounded-full object-cover"
+                loading="lazy"
               />
               <div>
                 <span className="text-base font-bold text-white">Andhra</span>
@@ -54,10 +50,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3 mt-4">
               {socialLinks.map((s) => (
-                // Use <a> not Next.js <Link> for external URLs — <Link> with href="#"
-                // causes a hydration mismatch because Next.js resolves "#" relative
-                // to the current URL including query params on the client.
-                <a
+                <Link
                   key={s.label}
                   href={s.href}
                   target="_blank"
@@ -66,7 +59,7 @@ export default function Footer() {
                   className="w-8 h-8 rounded-lg bg-gray-800 flex items-center justify-center hover:bg-brand-500 transition-colors"
                 >
                   <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">{s.icon}</svg>
-                </a>
+                </Link>
               ))}
             </div>
           </div>

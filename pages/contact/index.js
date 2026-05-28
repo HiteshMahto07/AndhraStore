@@ -3,7 +3,8 @@ import Footer from '@/components/Footer';
 import Head from 'next/head';
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
-import { SITE_URL } from '@/lib/seo';
+
+const BASE_URL = "https://www.andhrastore.in";
 
 const pageTitle = "Contact Andhra Store — Get in Touch with Us";
 const pageDesc = "Reach out to Andhra Store for orders, queries, or bulk pickle inquiries. Call us at 8758302568 or email Andhrastore.india@gmail.com. Located in Nani Daman, Daman & Diu.";
@@ -41,7 +42,7 @@ const contactSchema = {
   "@type": "ContactPage",
   name: pageTitle,
   description: pageDesc,
-  url: `${SITE_URL}/contact`,
+  url: `${BASE_URL}/contact`,
   mainEntity: {
     "@type": "LocalBusiness",
     name: "Andhra Store",
@@ -56,7 +57,7 @@ const contactSchema = {
     telephone: "+91-8758302568",
     email: "Andhrastore.india@gmail.com",
     openingHours: "Mo-Su 10:00-22:00",
-    url: SITE_URL,
+    url: BASE_URL,
   },
 };
 
@@ -77,17 +78,14 @@ export default function ContactPage() {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
-        <link rel="canonical" href={`${SITE_URL}/contact`} />
+        <link rel="canonical" href={`${BASE_URL}/contact`} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
-        <meta property="og:url" content={`${SITE_URL}/contact`} />
-        <meta property="og:image"        content={`${SITE_URL}/pickle17.jpeg`} />
-        <meta property="og:image:alt"    content="Andhra Store — contact us for authentic Andhra pickles, podi, snacks and sweets" />
-        <meta property="og:image:width"  content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content={`${BASE_URL}/contact`} />
+        <meta property="og:image" content={`${BASE_URL}/pickle17.jpeg`} />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
-        <meta name="twitter:image" content={`${SITE_URL}/pickle17.jpeg`} />
+        <meta name="twitter:image" content={`${BASE_URL}/pickle17.jpeg`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}

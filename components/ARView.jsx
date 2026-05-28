@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
 import { X } from 'lucide-react';
 
 /* ─── Dummy data maps ────────────────────────────────────────────── */
@@ -255,7 +254,7 @@ export default function ARView({ pickle, onClose }) {
           }}>
             {/* Product silhouette with scan line */}
             <div style={{ position: 'relative', width: 200, height: 200, overflow: 'hidden', borderRadius: 16 }}>
-              <Image src={pickle.image[0]?.name} alt="" width={200} height={200} style={{
+              <img src={pickle.image[0]?.name} alt="" style={{
                 width: '100%', height: '100%', objectFit: 'cover', borderRadius: 16,
                 filter: 'brightness(0.3) contrast(1.2)',
               }} />
@@ -413,7 +412,7 @@ export default function ARView({ pickle, onClose }) {
                     <path d="M294 240 V294 H240" stroke="#00e5ff" strokeWidth="2" strokeLinecap="round" />
                     <path d="M60 294 H6 V240" stroke="#00e5ff" strokeWidth="2" strokeLinecap="round" />
                   </svg>
-                  <Image src={pickle.image[0]?.name} alt={pickle.name} width={300} height={300} style={{
+                  <img src={pickle.image[0]?.name} alt={pickle.name} style={{
                     width: '100%', height: '100%', objectFit: 'cover', borderRadius: 16, padding: 16,
                   }} />
                   {/* Subtle ring */}

@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ARView from '@/components/ARView';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import PickleType from '@/data/pickles.json';
-import { SITE_URL, PRODUCT_RATINGS, PRODUCT_SEO_NAMES, PRODUCT_SEO_DESCS, NON_VEG_TYPES, TYPE_TO_SLUG } from '@/lib/seo';
+
+const BASE_URL = "https://www.andhrastore.in";
 
 /* ── Nutrient highlights per pickle type ── */
 const nutrientMap = {
@@ -102,36 +102,25 @@ export default function PickleDetail() {
   const nutrients = nutrientMap[type] || defaultNutrients;
   const recommended = allProducts.filter(p => p.type !== type).slice(0, 5);
 
-  const seoName = PRODUCT_SEO_NAMES[type] || pickle?.name;
-  const seoDesc = PRODUCT_SEO_DESCS[type] || pickle?.desc;
-  const productRating = PRODUCT_RATINGS[type] || { rating: 4.5, count: 100 };
-
   const productSchema = pickle ? {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: seoName,
-    description: seoDesc,
-    image: pickle.image.map(img => `${SITE_URL}${img.name}`),
-    sku: `AS-${type?.toUpperCase()}`,
-    category: NON_VEG_TYPES.has(type) ? 'Non-Veg Andhra Pickle' : 'Veg Andhra Pickle',
+    name: pickle.name,
+    description: pickle.desc,
+    image: `${BASE_URL}${pickle.image[0]?.name}`,
     brand: { "@type": "Brand", name: "Andhra Store" },
     offers: {
       "@type": "Offer",
       priceCurrency: "INR",
       price: pickle.amount,
-      priceValidUntil: "2026-12-31",
       availability: "https://schema.org/InStock",
-      url: `${SITE_URL}/pickleinfo?type=${pickle.type}`,
-      seller: {
-        "@type": "Organization",
-        name: "Andhra Store",
-        url: SITE_URL,
-      },
+      url: `${BASE_URL}/pickleinfo?type=${pickle.type}`,
+      seller: { "@type": "Organization", name: "Andhra Store" },
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: String(productRating.rating),
-      reviewCount: String(productRating.count),
+      ratingValue: "4.8",
+      reviewCount: "245",
     },
   } : null;
 
@@ -150,77 +139,26 @@ export default function PickleDetail() {
     );
   }
 
-  const pageTitle = PRODUCT_SEO_NAMES[type]
-    ? `${PRODUCT_SEO_NAMES[type]} | ₹${pickle.amount} | Andhra Store`
-    : `${pickle.name} — Authentic Andhra Pickle | Andhra Store`;
-  const pageDesc = PRODUCT_SEO_DESCS[type] || pickle.desc?.slice(0, 155) || `Buy authentic ${pickle.name} handcrafted with traditional Andhra recipes. No preservatives, pure spices, pan-India delivery.`;
-
-  const canonicalSlug = TYPE_TO_SLUG[type];
-  const canonicalUrl = canonicalSlug ? `${SITE_URL}/pickles/${canonicalSlug}` : `${SITE_URL}/pickles`;
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/home` },
-      { "@type": "ListItem", position: 2, name: "Andhra Pickles", item: `${SITE_URL}/pickles` },
-      { "@type": "ListItem", position: 3, name: seoName, item: canonicalUrl },
-    ],
-  };
-
-  const faqData = {
-    Mango: [
-      { q: "How long does Andhra mango pickle last?", a: "When stored correctly with a clean, dry spoon, our avakaya keeps up to 12 months unopened and 3 months once opened." },
-      { q: "Is Andhra avakaya spicy?", a: "The heat level is traditional Andhra — bold and full-flavored, balanced by the tartness of raw mango and the richness of cold-pressed oil." },
-    ],
-    Gongura: [
-      { q: "Is gongura pickle the same as gongura pachadi?", a: "Yes — both terms refer to the same beloved Andhra condiment; pachadi is the Telugu word for pickle or chutney." },
-      { q: "What makes Andhra Store gongura pachadi different?", a: "Every batch is handmade from fresh gongura leaves sourced directly from East Godavari, ground with traditional stone spices and cold-pressed oil — never mass-produced or made from dried stored leaves." },
-    ],
-    Chicken: [
-      { q: "Is the chicken fully cooked in Andhra chicken pickle?", a: "Yes — the chicken pieces are fully cooked during the pickling process and preserved in spiced oil, ready to eat directly from the jar." },
-      { q: "How long does Andhra chicken pickle last?", a: "Unopened jars remain fresh up to 12 months from the manufacture date; once opened, consume within 3 months and refrigerate for maximum freshness." },
-    ],
-  };
-
-  const faqSchema = faqData[type] ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqData[type].map(({ q, a }) => ({
-      "@type": "Question",
-      name: q,
-      acceptedAnswer: { "@type": "Answer", text: a },
-    })),
-  } : null;
+  const pageTitle = `${pickle.name} — Authentic Andhra Pickle | Andhra Store`;
+  const pageDesc = pickle.desc?.slice(0, 155) || `Buy authentic ${pickle.name} handcrafted with traditional Andhra recipes. No preservatives, pure spices, pan-India delivery.`;
 
   return (
     <>
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
-        <meta name="robots" content="noindex, follow" />
-        <link rel="canonical" href={canonicalUrl} />
+        <link rel="canonical" href={`${BASE_URL}/pickleinfo?type=${pickle.type}`} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:image" content={`${SITE_URL}${pickle.image[0]?.name}`} />
+        <meta property="og:url" content={`${BASE_URL}/pickleinfo?type=${pickle.type}`} />
+        <meta property="og:image" content={`${BASE_URL}${pickle.image[0]?.name}`} />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
-        <meta name="twitter:image" content={`${SITE_URL}${pickle.image[0]?.name}`} />
+        <meta name="twitter:image" content={`${BASE_URL}${pickle.image[0]?.name}`} />
         {productSchema && (
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-          />
-        )}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        />
-        {faqSchema && (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
           />
         )}
       </Head>
@@ -244,13 +182,12 @@ export default function PickleDetail() {
             {/* Images */}
             <div>
               <div className="rounded-xl overflow-hidden bg-gray-50 border border-gray-100 mb-3">
-                <Image
+                <img
                   src={pickle.image[activeImg]?.name}
                   alt={`${pickle.name} — authentic Andhra-style pickle handcrafted with traditional spices`}
+                  className="w-full h-60 sm:h-80 lg:h-[420px] object-cover"
                   width={800}
                   height={600}
-                  priority
-                  className="w-full h-60 sm:h-80 lg:h-[420px] object-cover"
                 />
               </div>
               {pickle.image.length > 1 && (
@@ -259,7 +196,7 @@ export default function PickleDetail() {
                     <button key={i} onClick={() => setActiveImg(i)}
                       className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${activeImg === i ? 'border-brand-500 shadow-sm' : 'border-gray-200 opacity-60 hover:opacity-100'
                         }`}>
-                      <Image src={img.name} alt={`${pickle.name} view ${i + 1}`} width={64} height={64} className="w-full h-full object-cover" />
+                      <img src={img.name} alt={`${pickle.name} view ${i + 1}`} className="w-full h-full object-cover" width={64} height={64} />
                     </button>
                   ))}
                 </div>
@@ -472,7 +409,7 @@ export default function PickleDetail() {
                       p.badge === 'BEST SELLER' ? 'bg-brand-500 text-white' : 'bg-gray-900 text-white'
                     }`}>{p.badge}</span>
                   )}
-                  <Image src={p.image} alt={`${p.name} — authentic Andhra pickle`} width={300} height={300} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <img src={p.image} alt={`${p.name} — authentic Andhra pickle`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" width={300} height={300} />
                 </div>
                 <div className="p-3">
                   <div className="flex items-center gap-1 mb-1">

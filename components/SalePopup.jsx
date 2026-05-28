@@ -51,7 +51,7 @@ export default function SalePopup() {
               Get <span className="font-bold text-brand-600">20% off</span> your first order of authentic pickles with code <span className="font-mono bg-brand-50 text-brand-700 px-1.5 py-0.5 rounded border border-brand-200 font-bold inline-block mt-1">SPICY20</span>
             </p>
             
-            <Link href="/pickles" className="inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-700 group/link transition-colors focus:outline-none">
+            <Link href="/pickle" className="inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-700 group/link transition-colors focus:outline-none">
               Shop Now 
               <ChevronRight size={16} className="ml-1 group-hover/link:translate-x-1 transition-transform" />
             </Link>
