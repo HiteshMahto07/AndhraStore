@@ -93,7 +93,10 @@ export default function PrivacyPolicy() {
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
         <meta property="og:url" content={`${SITE_URL}/privacy-policy`} />
-        <meta property="og:image" content={`${SITE_URL}/pickle17.jpeg`} />
+        <meta property="og:image"        content={`${SITE_URL}/pickle17.jpeg`} />
+        <meta property="og:image:alt"    content="Andhra Store privacy policy — how we handle your data and orders" />
+        <meta property="og:image:width"  content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
         <meta name="twitter:image" content={`${SITE_URL}/pickle17.jpeg`} />

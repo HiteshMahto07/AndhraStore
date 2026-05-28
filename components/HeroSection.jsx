@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HeroSection() {
     return (
@@ -23,13 +24,13 @@ export default function HeroSection() {
                         </p>
 
                         <div className="flex flex-wrap gap-3 pt-1">
-                            <Link href="/pickle?type=non-veg" className="btn-primary">
+                            <Link href="/pickles/non-veg" className="btn-primary">
                                 Shop Non-Veg
                                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                                 </svg>
                             </Link>
-                            <Link href="/pickle?type=veg" className="btn-outline">
+                            <Link href="/pickles/veg" className="btn-outline">
                                 Shop Veg
                             </Link>
                         </div>
@@ -50,14 +51,13 @@ export default function HeroSection() {
 
                     <div className="relative">
                         <div className="rounded-2xl overflow-hidden shadow-2xl shadow-brand-500/10">
-                            <img
+                            <Image
                                 src="/chicken-1.jpeg"
                                 alt="Authentic Andhra chicken pickle — handcrafted with traditional spices from East Godavari"
-                                className="w-full h-[300px] sm:h-[380px] lg:h-[440px] object-cover"
                                 width={640}
                                 height={440}
-                                loading="eager"
-                                fetchpriority="high"
+                                priority
+                                className="w-full h-[300px] sm:h-[380px] lg:h-[440px] object-cover"
                             />
                         </div>
                         <div className="absolute -bottom-3 -left-2 sm:left-4 bg-white rounded-xl shadow-xl px-4 py-3 border border-gray-100">
