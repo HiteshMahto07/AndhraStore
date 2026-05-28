@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local reference docs (not pushed to GitHub)
+/_seo_docs
+/_docs

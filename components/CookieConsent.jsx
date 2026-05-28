@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Cookie, Settings, Shield } from 'lucide-react';
 import Link from 'next/link';
+import { updateConsent, restoreConsent } from '@/lib/gtm';
 
 export default function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,6 +14,8 @@ export default function CookieConsent() {
     marketing: false,
   });
 
+  // Effect 1: Show banner for new visitors (no saved consent).
+  // Existing visitors already have 'cookie-consent' in localStorage — banner stays hidden.
   useEffect(() => {
     try {
       const consent = localStorage.getItem('cookie-consent');
@@ -28,6 +31,13 @@ export default function CookieConsent() {
     } catch (e) {}
   }, []);
 
+  // Effect 2: Restore previous consent for returning visitors on every page load.
+  // Fires within the 500ms wait_for_update window set in _document.js so GTM
+  // receives the 'granted' update before it times out and fires tags at 'denied'.
+  useEffect(() => {
+    restoreConsent();
+  }, []);
+
   const dismiss = (data) => {
     try {
       localStorage.setItem('cookie-consent', JSON.stringify({ ...data, date: new Date().toISOString() }));
@@ -36,9 +46,22 @@ export default function CookieConsent() {
     setTimeout(() => setIsRendered(false), 600);
   };
 
-  const handleAccept = () => dismiss({ accepted: true, all: true });
-  const handleDecline = () => dismiss({ accepted: false, all: false });
-  const handleSavePreferences = () => dismiss({ accepted: true, preferences });
+  // Each handler calls updateConsent() BEFORE dismiss() so GTM receives the
+  // signal immediately — before the banner animates out.
+  const handleAccept = () => {
+    updateConsent(true, true);
+    dismiss({ accepted: true, all: true });
+  };
+
+  const handleDecline = () => {
+    updateConsent(false, false);
+    dismiss({ accepted: false, all: false });
+  };
+
+  const handleSavePreferences = () => {
+    updateConsent(preferences.analytics, preferences.marketing);
+    dismiss({ accepted: true, preferences });
+  };
 
   if (!isRendered) return null;
 

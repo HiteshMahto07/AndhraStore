@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import React, { useState, useEffect, useMemo } from 'react';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import PickleType from '@/data/pickles.json';
-
-const BASE_URL = "https://www.andhrastore.in";
+import { SITE_URL } from '@/lib/seo';
 
 const allProducts = [
   { name: 'Ginger Pickle', image: '/ginger-1.jpeg', price: 200, type: 'Ginger', cat: 'veg', weight: '250g', badge: '' },
@@ -40,19 +40,19 @@ const sortOptions = [
 
 const ratings = { Chicken: 4.8, Mango: 4.9, Meat: 4.7, Garlic: 4.6, Ginger: 4.5, RedChilli: 4.4, Prawns: 4.7, Fish: 4.3, Gongura: 4.5, Tomato: 4.4, Lemon: 4.3, Amla: 4.2, Curry: 4.3, GreenChilli: 4.4 };
 
-const pageTitle = "Shop Andhra Pickles — Veg & Non-Veg Collection";
-const pageDesc = "Browse 14+ authentic Andhra pickles — chicken, mango, prawns, ginger, garlic & more. Handcrafted, no preservatives. Veg & non-veg options. Free delivery above ₹500.";
+const pageTitle = "Andhra Pickles Online — Shop 14 Authentic Pickles | Andhra Store";
+const pageDesc = "Shop 14 authentic Andhra pickles online — Mango Avakaya, Gongura, Chicken, Prawns & more. Handcrafted in East Godavari with no preservatives. Ships pan-India.";
 
 const shopSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   name: pageTitle,
   description: pageDesc,
-  url: `${BASE_URL}/pickle`,
+  url: `${SITE_URL}/pickle`,
   provider: {
     "@type": "Organization",
     name: "Andhra Store",
-    url: BASE_URL,
+    url: SITE_URL,
   },
 };
 
@@ -134,14 +134,15 @@ export default function ShopPage() {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
-        <link rel="canonical" href={`${BASE_URL}/pickle`} />
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href={`${SITE_URL}/pickles`} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
-        <meta property="og:url" content={`${BASE_URL}/pickle`} />
-        <meta property="og:image" content={`${BASE_URL}/mango-1.jpeg`} />
+        <meta property="og:url" content={`${SITE_URL}/pickles`} />
+        <meta property="og:image" content={`${SITE_URL}/mango-1.jpeg`} />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
-        <meta name="twitter:image" content={`${BASE_URL}/mango-1.jpeg`} />
+        <meta name="twitter:image" content={`${SITE_URL}/mango-1.jpeg`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(shopSchema) }}
@@ -153,7 +154,7 @@ export default function ShopPage() {
         <div className="container-main py-8 md:py-10">
           <p className="text-[11px] font-bold text-brand-500 uppercase tracking-[0.2em] mb-1">Our Collection</p>
           <div className="flex items-end justify-between gap-4 flex-wrap">
-            <h1 className="text-3xl sm:text-4xl font-heading text-gray-900">Shop All Products</h1>
+            <h1 className="text-3xl sm:text-4xl font-heading text-gray-900">Andhra Pickles Online</h1>
             <div className="flex items-center gap-3">
               <button
                 id="mobile-filter-toggle"
@@ -218,12 +219,12 @@ export default function ShopPage() {
                               {p.badge}
                             </span>
                           )}
-                          <img
+                          <Image
                             src={p.image}
-                            alt={`${p.name} — authentic Andhra pickle, ${p.weight}`}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            alt={`Andhra ${p.name} — handmade in East Godavari, ${p.weight}`}
                             width={400}
                             height={400}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                           />
                         </div>
                       </Link>

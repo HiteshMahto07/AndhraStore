@@ -1,23 +1,23 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Head from 'next/head';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { SITE_URL } from '@/lib/seo';
 
-const BASE_URL = "https://www.andhrastore.in";
-
-const pageTitle = "About Andhra Store — Our Story & Heritage";
-const pageDesc = "Learn how Andhra Store was born from a passion for authentic East Godavari pickles. Handcrafted with traditional Telugu recipes, no preservatives, and delivered pan-India.";
+const pageTitle = "About Andhra Store — Authentic Handmade Andhra Pickles from East Godavari";
+const pageDesc = "Andhra Store handcrafts authentic Andhra pickles in East Godavari using Guntur chillies, cold-pressed oils, and zero preservatives. Discover our 14-variety pickle range.";
 
 const aboutSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
   name: pageTitle,
   description: pageDesc,
-  url: `${BASE_URL}/about`,
+  url: `${SITE_URL}/about`,
   publisher: {
     "@type": "Organization",
     name: "Andhra Store",
-    url: BASE_URL,
+    url: SITE_URL,
   },
 };
 
@@ -27,14 +27,17 @@ export default function AboutPage() {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
-        <link rel="canonical" href={`${BASE_URL}/about`} />
+        <link rel="canonical" href={`${SITE_URL}/about`} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
-        <meta property="og:url" content={`${BASE_URL}/about`} />
-        <meta property="og:image" content={`${BASE_URL}/pickle17.jpeg`} />
+        <meta property="og:url" content={`${SITE_URL}/about`} />
+        <meta property="og:image"        content={`${SITE_URL}/pickle17.jpeg`} />
+        <meta property="og:image:alt"    content="Andhra Store — authentic handmade Andhra pickles, podi, snacks and sweets" />
+        <meta property="og:image:width"  content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
-        <meta name="twitter:image" content={`${BASE_URL}/pickle17.jpeg`} />
+        <meta name="twitter:image" content={`${SITE_URL}/pickle17.jpeg`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
@@ -43,12 +46,12 @@ export default function AboutPage() {
       <Header />
 
       <section className="relative h-48 sm:h-56 overflow-hidden" aria-label="About us hero">
-        <img
+        <Image
           src="/pickle17.jpeg"
           alt="Authentic Andhra pickles in traditional earthen jars"
-          className="absolute inset-0 w-full h-full object-cover"
-          width={1200}
-          height={400}
+          fill
+          priority
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gray-900/60" />
         <div className="container-main relative z-10 h-full flex flex-col justify-end pb-6">
@@ -61,12 +64,12 @@ export default function AboutPage() {
         <div className="container-main space-y-12 md:space-y-16">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div className="rounded-xl overflow-hidden shadow-sm border border-gray-100">
-              <img
+              <Image
                 src="/pickle17.jpeg"
                 alt="Our journey — traditional Andhra pickle making process in East Godavari"
-                className="w-full h-56 sm:h-72 lg:h-[360px] object-cover"
                 width={600}
                 height={400}
+                className="w-full h-56 sm:h-72 lg:h-[360px] object-cover"
               />
             </div>
             <div>
@@ -91,12 +94,12 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="order-1 lg:order-2 rounded-xl overflow-hidden shadow-sm border border-gray-100">
-              <img
+              <Image
                 src="/chicken-1.jpeg"
                 alt="Freshly prepared chicken pickle in traditional Andhra style with authentic spices"
-                className="w-full h-56 sm:h-72 lg:h-[360px] object-cover"
                 width={600}
                 height={400}
+                className="w-full h-56 sm:h-72 lg:h-[360px] object-cover"
               />
             </div>
           </div>
@@ -163,9 +166,9 @@ export default function AboutPage() {
       <section className="bg-brand-500 py-10 md:py-12" aria-label="Shop call to action">
         <div className="container-main text-center">
           <h2 className="text-2xl sm:text-3xl font-heading text-white mb-2">Ready to taste tradition?</h2>
-          <p className="text-white/70 text-sm max-w-sm mx-auto mb-5">Order now and experience authentic Andhra pickles delivered to your doorstep. Free delivery on orders above ₹500.</p>
+          <p className="text-white/70 text-sm max-w-sm mx-auto mb-5">Order now and experience authentic Andhra pickles delivered to your doorstep. Free delivery on orders above ₹999.</p>
           <div className="flex items-center justify-center gap-3">
-            <Link href="/home" className="inline-flex items-center gap-2 bg-white text-brand-700 px-6 py-3 rounded-lg font-bold text-sm hover:bg-gray-50 transition-colors shadow">
+            <Link href="/pickles" className="inline-flex items-center gap-2 bg-white text-brand-700 px-6 py-3 rounded-lg font-bold text-sm hover:bg-gray-50 transition-colors shadow">
               Shop Now →
             </Link>
             <Link href="https://wa.me/918758302568" target="_blank" rel="noopener noreferrer"
