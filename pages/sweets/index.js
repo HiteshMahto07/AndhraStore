@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -7,6 +7,7 @@ import Head from 'next/head';
 import SweetsData from '@/data/sweets.json';
 import { SITE_URL } from '@/lib/seo';
 import { useCart } from '@/context/CartContext';
+import { pushViewItemList, pushSelectItem } from '@/lib/analytics';
 
 const allSweets = [...SweetsData].sort((a, b) => a.sortOrder - b.sortOrder);
 
@@ -61,6 +62,16 @@ export default function SweetsPage() {
   const [sort, setSort]           = useState('featured');
   const [addedType, setAddedType] = useState(null);
 
+  // Fires once with the full, unsorted list — represents what the page
+  // showed on load, independent of any later client-side re-sort.
+  useEffect(() => {
+    pushViewItemList(
+      allSweets.map((p) => ({ type: p.type, name: p.name, category: 'Sweets', unitPrice: p.amount })),
+      'Sweets'
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const sorted = useMemo(() => {
     let items = [...allSweets];
     switch (sort) {
@@ -73,7 +84,7 @@ export default function SweetsPage() {
   }, [sort]);
 
   const handleAdd = (p) => {
-    addToCart({ id: p.type, type: p.type, name: p.name, image: p.image[0]?.name, unitPrice: p.amount, price: p.amount, qty: 1 });
+    addToCart({ id: p.type, type: p.type, name: p.name, category: 'Sweets', image: p.image[0]?.name, unitPrice: p.amount, price: p.amount, qty: 1 });
     setAddedType(p.type);
     setTimeout(() => setAddedType(null), 1800);
   };
@@ -146,7 +157,8 @@ export default function SweetsPage() {
               return (
                 <div key={p.type}
                   className="bg-white rounded-2xl border border-gray-100 overflow-hidden group hover:shadow-lg hover:border-gray-200 hover:-translate-y-0.5 transition-all duration-300 flex flex-col">
-                  <Link href={`/sweets/${p.slug}`} className="relative block overflow-hidden bg-gray-50 aspect-square">
+                  <Link href={`/sweets/${p.slug}`} className="relative block overflow-hidden bg-gray-50 aspect-square"
+                    onClick={() => pushSelectItem({ type: p.type, name: p.name, category: 'Sweets', unitPrice: p.amount }, 'Sweets')}>
                     {p.badge && (
                       <span className={`absolute top-3 left-3 z-10 px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wide uppercase shadow-sm ${
                         p.badge === 'BEST SELLER'   ? 'bg-brand-500 text-white'  :
@@ -160,7 +172,8 @@ export default function SweetsPage() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </Link>
                   <div className="p-4 flex flex-col flex-1">
-                    <Link href={`/sweets/${p.slug}`}>
+                    <Link href={`/sweets/${p.slug}`}
+                      onClick={() => pushSelectItem({ type: p.type, name: p.name, category: 'Sweets', unitPrice: p.amount }, 'Sweets')}>
                       <h2 className="text-sm font-bold text-gray-900 hover:text-brand-600 transition-colors line-clamp-1 mb-0.5">{p.name}</h2>
                     </Link>
                     {p.localName && p.localName !== p.displayName && (

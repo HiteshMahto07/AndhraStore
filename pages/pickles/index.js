@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -13,6 +13,7 @@ import {
   PRODUCT_SPICE_LEVELS,
   TYPE_TO_SLUG,
 } from '@/lib/seo';
+import { pushViewItemList, pushSelectItem } from '@/lib/analytics';
 
 // ─── Derive listing array from single source of truth ────────────────────────
 const allProducts = PickleData.map(p => ({
@@ -119,6 +120,16 @@ export default function ShopPage() {
   const [spiceFilter,       setSpiceFilter]        = useState('all');
   const [sort,              setSort]               = useState('featured');
   const [showMobileFilter,  setShowMobileFilter]   = useState(false);
+
+  // Fires once with the full, unfiltered list — represents what the page
+  // showed on load, independent of any later client-side filter/sort.
+  useEffect(() => {
+    pushViewItemList(
+      allProducts.map((p) => ({ type: p.type, name: p.name, category: 'Pickles', unitPrice: p.price })),
+      'All Pickles'
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const filtered = useMemo(() => {
     let items = [...allProducts];
@@ -303,7 +314,8 @@ export default function ShopPage() {
                     <div key={p.type}
                       className="bg-white rounded-2xl border border-gray-100 overflow-hidden group hover:shadow-xl hover:border-gray-200 hover:-translate-y-1 transition-all duration-300"
                       style={{ animationDelay: `${idx * 60}ms` }}>
-                      <Link href={`/pickles/${TYPE_TO_SLUG[p.type]}`}>
+                      <Link href={`/pickles/${TYPE_TO_SLUG[p.type]}`}
+                        onClick={() => pushSelectItem({ type: p.type, name: p.name, category: 'Pickles', unitPrice: p.price }, 'All Pickles')}>
                         <div className="relative aspect-square overflow-hidden bg-gray-50">
                           {p.badge && (
                             <span className={`absolute top-3 left-3 z-10 px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wide uppercase shadow-sm ${
@@ -339,7 +351,8 @@ export default function ShopPage() {
                           </div>
                         </div>
 
-                        <Link href={`/pickles/${TYPE_TO_SLUG[p.type]}`}>
+                        <Link href={`/pickles/${TYPE_TO_SLUG[p.type]}`}
+                          onClick={() => pushSelectItem({ type: p.type, name: p.name, category: 'Pickles', unitPrice: p.price }, 'All Pickles')}>
                           <h2 className="text-sm font-bold text-gray-800 hover:text-brand-600 transition-colors line-clamp-1 mb-1">
                             {p.name}
                           </h2>

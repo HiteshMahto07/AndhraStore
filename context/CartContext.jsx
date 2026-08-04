@@ -30,7 +30,7 @@ import {
   useEffect,
   useMemo,
 } from 'react';
-import { pushAddToCart } from '@/lib/analytics';
+import { pushAddToCart, pushRemoveFromCart } from '@/lib/analytics';
 
 // ─── Context ────────────────────────────────────────────────────────────────
 
@@ -135,7 +135,13 @@ export function CartProvider({ children }) {
     pushAddToCart(item);
   };
 
-  const removeFromCart = (id) => dispatch({ type: 'REMOVE_ITEM', id });
+  // Look up the item BEFORE dispatching the removal — once removed from
+  // state, its data (name, price, category) is gone and can't be reported.
+  const removeFromCart = (id) => {
+    const item = cartItems.find((i) => i.id === id);
+    dispatch({ type: 'REMOVE_ITEM', id });
+    if (item) pushRemoveFromCart(item);
+  };
 
   const updateQuantity = (id, qty) =>
     dispatch({ type: 'UPDATE_QTY', id, qty });

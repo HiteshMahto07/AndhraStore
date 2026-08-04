@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { SITE_URL } from '@/lib/seo';
+import { pushGenerateLead } from '@/lib/analytics';
 
 const pageTitle = "Contact Andhra Store — Get in Touch with Us";
 const pageDesc = "Reach out to Andhra Store for orders, queries, or bulk pickle inquiries. Call us at 8758302568 or email Andhrastore.india@gmail.com. Located in Nani Daman, Daman & Diu.";
@@ -67,6 +68,11 @@ export default function ContactPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const text = `Hi Andhra Store!%0A%0AName: ${form.name}%0APhone: ${form.phone}%0AEmail: ${form.email}%0AMessage: ${form.message}`;
+    // This form intercepts native submission (preventDefault) and redirects
+    // to WhatsApp, so GTM's built-in form-submission auto-listener never
+    // sees it fire — this explicit push is the only way this lead gets
+    // tracked at all.
+    pushGenerateLead('contact_form');
     window.open(`https://wa.me/918758302568?text=${text}`, '_blank');
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
