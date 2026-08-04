@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -9,6 +9,7 @@ import { SITE_URL } from '@/lib/seo';
 import { useCart } from '@/context/CartContext';
 import { buildProductSchema, buildBreadcrumbSchema, buildFaqSchema, buildSpeakableSchema } from '@/lib/schema';
 import { PRODUCT_REVIEWS } from '@/lib/reviews';
+import { pushViewItem } from '@/lib/analytics';
 
 const SLUG_MAP = Object.fromEntries(SweetsData.map(p => [p.slug, p]));
 
@@ -34,6 +35,12 @@ export default function SweetDetail({ item }) {
   const [added, setAdded] = useState(false);
   const [activeTab, setActiveTab] = useState('description');
   const [activeImg, setActiveImg] = useState(0);
+
+  // Fires once per product-page view, on mount only.
+  useEffect(() => {
+    pushViewItem({ type: item.type, name: item.name, category: 'Sweets', unitPrice: item.amount });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [item.type]);
 
   const origPrice  = Math.round(item.amount * 1.2);
   const discount   = Math.round(((origPrice - item.amount) / origPrice) * 100);
@@ -72,7 +79,7 @@ export default function SweetDetail({ item }) {
   ]);
 
   const handleAddToCart = () => {
-    addToCart({ id: item.type, type: item.type, name: item.name, image: item.image[0]?.name, unitPrice: item.amount, price: item.amount * qty, qty });
+    addToCart({ id: item.type, type: item.type, name: item.name, category: 'Sweets', image: item.image[0]?.name, unitPrice: item.amount, price: item.amount * qty, qty });
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
   };

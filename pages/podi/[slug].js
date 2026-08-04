@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Head from 'next/head';
@@ -8,6 +8,7 @@ import PodiData from '@/data/podi.json';
 import { SITE_URL } from '@/lib/seo';
 import { buildProductSchema, buildBreadcrumbSchema, buildFaqSchema, buildSpeakableSchema } from '@/lib/schema';
 import { PRODUCT_REVIEWS } from '@/lib/reviews';
+import { pushViewItem } from '@/lib/analytics';
 
 const SLUG_TO_PODI = Object.fromEntries(PodiData.map(p => [p.slug, p]));
 
@@ -35,6 +36,12 @@ export default function PodiDetail({ podi }) {
   const [qty, setQty]         = useState(1);
   const [added, setAdded]     = useState(false);
   const [activeImg, setActiveImg] = useState(0);
+
+  // Fires once per product-page view, on mount only.
+  useEffect(() => {
+    pushViewItem({ type: podi.type, name: podi.name, category: 'Podi', unitPrice: podi.amount });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [podi.type]);
 
   const spiceKey    = podi.spiceLevel || 'medium';
   const spiceColors = SPICE_COLORS[spiceKey] || SPICE_COLORS['medium'];

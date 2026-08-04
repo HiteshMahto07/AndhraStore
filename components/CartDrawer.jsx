@@ -17,7 +17,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { X, ShoppingBag } from 'lucide-react';
 import { useCart, buildWhatsAppUrl } from '@/context/CartContext';
-import { pushBeginCheckout } from '@/lib/analytics';
+import { pushBeginCheckout, pushViewCart } from '@/lib/analytics';
 import { calcDelivery, DELIVERY_THRESHOLD, DELIVERY_NUDGE_AT } from '@/lib/checkout';
 
 export default function CartDrawer() {
@@ -40,6 +40,10 @@ export default function CartDrawer() {
   useEffect(() => {
     if (isCartOpen) {
       document.body.style.overflow = 'hidden';
+      // Fires once per open transition, regardless of what opened it
+      // (header icon, or the auto-open on add-to-cart) — this effect only
+      // re-runs when isCartOpen flips, so it can't double-fire on re-render.
+      pushViewCart(cartItems, cartTotal);
       // Double rAF gives the browser one frame to paint before animating in
       requestAnimationFrame(() => {
         requestAnimationFrame(() => setVisible(true));
@@ -169,7 +173,7 @@ export default function CartDrawer() {
               )}
               {cartTotal >= DELIVERY_THRESHOLD && (
                 <div className="mb-3 bg-green-50 border border-green-100 rounded-xl px-4 py-2 text-center">
-                  <p className="text-xs font-semibold text-green-700">🎉 You've unlocked free delivery!</p>
+                  <p className="text-xs font-semibold text-green-700">🎉 You&apos;ve unlocked free delivery!</p>
                 </div>
               )}
 
