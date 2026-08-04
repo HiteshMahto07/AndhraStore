@@ -9,6 +9,7 @@ import CategoryCard from '@/components/CategoryCard';
 import ProductCard from '@/components/ProductCard';
 import SectionHeading from '@/components/SectionHeading';
 import { SITE_URL } from '@/lib/seo';
+import { ORGANIZATION_SCHEMA, SHIPPING_DETAILS, MERCHANT_RETURN_POLICY_SCHEMA, buildFaqSchema } from '@/lib/schema';
 
 const categories = [
   { name: 'Chicken', image: '/chicken-1.jpeg', type: 'Chicken' },
@@ -43,6 +44,63 @@ const pageDesc = "Shop authentic Andhra pickles online — Mango Avakaya, Gongur
 // WEBSITE_SCHEMA is injected globally by _app.js (from lib/schema.js).
 // No page-level WebSite schema needed here — duplicate blocks cause conflicts.
 
+// ─── Dynamic values pulled from lib/schema.js — single source of truth,       ───
+// ─── so this content can never drift out of sync with the JSON-LD elsewhere. ───
+const foundedYear   = ORGANIZATION_SCHEMA.foundingDate;
+const foundedCity   = ORGANIZATION_SCHEMA.foundingLocation.address.addressLocality;
+const foundedRegion = ORGANIZATION_SCHEMA.foundingLocation.address.addressRegion;
+
+const shippingHandlingDays = SHIPPING_DETAILS.deliveryTime.handlingTime.maxValue;
+const shippingTransitMin   = SHIPPING_DETAILS.deliveryTime.transitTime.minValue;
+const shippingTransitMax   = SHIPPING_DETAILS.deliveryTime.transitTime.maxValue;
+// SHIPPING_DETAILS.shippingRate.description is prose, not structured tiers, so
+// the table below mirrors it visually — update both together if it changes.
+const shippingCostAnswer   = SHIPPING_DETAILS.shippingRate.description;
+
+const paymentAnswer = `Yes — we accept ${ORGANIZATION_SCHEMA.paymentAccepted}.`;
+const returnsAnswer  = MERCHANT_RETURN_POLICY_SCHEMA.additionalProperty.value;
+
+const faqItems = [
+  {
+    q: "How long does shipping take?",
+    a: `Orders ship within ${shippingHandlingDays} day of being packed and arrive in ${shippingTransitMin}–${shippingTransitMax} days across India.`,
+  },
+  {
+    q: "How much does shipping cost?",
+    a: shippingCostAnswer,
+  },
+  {
+    q: "Do your pickles contain preservatives?",
+    a: "No. Every product is made with cold-pressed oils, salt and natural spices only — no artificial preservatives, no added colour.",
+  },
+  {
+    q: "How long do the pickles last?",
+    a: "Most pickles keep for 12 months unopened at room temperature. Once opened, use a clean, dry spoon each time and keep the pickle submerged in oil.",
+  },
+  {
+    q: "Is Cash on Delivery available?",
+    a: paymentAnswer,
+  },
+  {
+    q: "What if my order arrives damaged or wrong?",
+    a: returnsAnswer,
+  },
+];
+
+const faqSchema = buildFaqSchema(faqItems);
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${SITE_URL}/home#webpage`,
+  url: `${SITE_URL}/home`,
+  name: pageTitle,
+  description: pageDesc,
+  isPartOf: { "@id": `${SITE_URL}/#website` },
+  about: { "@id": `${SITE_URL}/#organization` },
+  dateModified: "2026-08-04",
+};
+
 export default function HomePage() {
   return (
     <>
@@ -60,9 +118,25 @@ export default function HomePage() {
         <meta name="twitter:title"       content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
         <meta name="twitter:image"       content={`${SITE_URL}/mango-1.jpeg`} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema)     }} />
       </Head>
       <Header />
       <HeroSection />
+
+      <section className="bg-white py-8 sm:py-10 border-b border-gray-100" aria-labelledby="about-summary-heading">
+        <div className="container-main max-w-3xl">
+          <h2 id="about-summary-heading" className="text-lg sm:text-xl font-heading text-gray-900 mb-2">
+            What Is Andhra Store?
+          </h2>
+          <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+            Andhra Store makes and ships authentic Andhra homemade foods — pickles, podi, snacks and traditional sweets — using cold-pressed oils, unrefined jaggery and no artificial preservatives. Founded in {foundedYear} by a family from {foundedCity}, {foundedRegion}, and now shipping pan-India in {shippingTransitMin}–{shippingTransitMax} days.
+          </p>
+          <p className="text-sm sm:text-base text-gray-600 leading-relaxed mt-3">
+            It&rsquo;s for anyone who grew up on Andhra food and wants the taste they remember, and for anyone discovering Guntur chilli, gongura and cold-pressed sesame oil for the first time. Some of the Andhra specialities in our catalog — Atreyapuram Pootharekulu and Kakinada Madta Kaja — carry official Geographical Indication (GI) tags from the Government of India, legally protecting them as products unique to their home villages in East Godavari.
+          </p>
+        </div>
+      </section>
 
       <div className="bg-olive-700 py-3">
         <div className="container-main grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -197,6 +271,45 @@ export default function HomePage() {
                   <p className="text-sm font-semibold text-gray-800">{t.name}</p>
                   <p className="text-[11px] text-gray-400">{t.loc}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad bg-white" aria-labelledby="faq-heading">
+        <div className="container-main max-w-3xl">
+          <SectionHeading label="FAQ" title="Frequently Asked Questions" id="faq-heading" />
+          <div className="space-y-6">
+            {faqItems.map((item, i) => (
+              <div key={item.q}>
+                <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-1.5">{item.q}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{item.a}</p>
+                {i === 1 && (
+                  <table className="mt-3 w-full max-w-sm text-sm text-gray-600 border border-gray-200 rounded-lg overflow-hidden">
+                    <caption className="sr-only">Shipping cost by order value</caption>
+                    <thead>
+                      <tr className="bg-gray-50 text-left">
+                        <th scope="col" className="px-3 py-2 font-semibold text-gray-700">Order value</th>
+                        <th scope="col" className="px-3 py-2 font-semibold text-gray-700">Shipping</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-t border-gray-100">
+                        <td className="px-3 py-2">Above ₹999</td>
+                        <td className="px-3 py-2">Free</td>
+                      </tr>
+                      <tr className="border-t border-gray-100">
+                        <td className="px-3 py-2">₹500 – ₹998</td>
+                        <td className="px-3 py-2">₹60</td>
+                      </tr>
+                      <tr className="border-t border-gray-100">
+                        <td className="px-3 py-2">Below ₹500</td>
+                        <td className="px-3 py-2">₹100</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                )}
               </div>
             ))}
           </div>
