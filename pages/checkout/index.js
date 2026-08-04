@@ -25,7 +25,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useCart } from '@/context/CartContext';
 import { calcTotals, calcDelivery, buildCODWhatsAppUrl, DELIVERY_THRESHOLD } from '@/lib/checkout';
-import { pushAddPaymentInfo, pushPurchase, pushPaymentFailed } from '@/lib/analytics';
+import { pushAddShippingInfo, pushAddPaymentInfo, pushPurchase, pushOrderPlaced, pushPaymentFailed } from '@/lib/analytics';
 import { SITE_URL } from '@/lib/seo';
 
 // ─── Razorpay SDK dynamic loader ─────────────────────────────────────────────
@@ -245,12 +245,18 @@ export default function CheckoutPage() {
     };
     sessionStorage.setItem('as_order', JSON.stringify(orderMeta));
 
-    pushPurchase({
-      orderId   : orderMeta.orderId,
-      paymentId : 'cod',
+    // NOT pushPurchase — this checkout flow has no server-side confirmation
+    // step for COD orders (no webhook, no admin order-status change), so
+    // there's nothing here that verifies the order the way Razorpay's
+    // signature check does. Firing 'purchase' for an unconfirmed order
+    // would count unconfirmed revenue as real conversions. See the
+    // function's doc comment in lib/analytics.js for the full rationale.
+    pushOrderPlaced({
+      orderId     : orderMeta.orderId,
       cartItems,
-      total     : totals.total,
-      delivery  : totals.delivery,
+      total       : totals.total,
+      delivery    : totals.delivery,
+      paymentType : 'cod',
     });
 
     clearCart();
@@ -273,6 +279,12 @@ export default function CheckoutPage() {
       document.getElementById(`field-${firstKey}`)?.focus();
       return;
     }
+
+    // Fires once, right when the address is validated and the shipping
+    // cost for this order is known — the earliest point "shipping info"
+    // genuinely exists in this flow (there's no separate carrier/method
+    // selection step to hook into instead).
+    pushAddShippingInfo(cartItems, totals.total, totals.delivery);
 
     if (paymentMethod === 'razorpay') {
       await handleRazorpayPayment();

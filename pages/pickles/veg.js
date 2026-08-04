@@ -1,11 +1,12 @@
 import Link from 'next/link';
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Head from 'next/head';
 import PickleData from '@/data/pickles.json';
 import { SITE_URL, PRODUCT_SEO_NAMES, PRODUCT_SHORT_DESCS, PRODUCT_RATINGS, PRODUCT_SPICE_LEVELS, TYPE_TO_SLUG } from '@/lib/seo';
+import { pushViewItemList, pushSelectItem } from '@/lib/analytics';
 
 // Derive from single source of truth
 const vegProducts = PickleData
@@ -92,6 +93,16 @@ const itemListSchema = {
 export default function VegPicklesPage() {
   const [sort, setSort] = useState('featured');
 
+  // Fires once with the full, unsorted list — represents what the page
+  // showed on load, independent of any later client-side re-sort.
+  useEffect(() => {
+    pushViewItemList(
+      vegProducts.map((p) => ({ type: p.type, name: p.name, category: 'Pickles', unitPrice: p.price })),
+      'Veg Pickles'
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const sorted = useMemo(() => {
     let items = [...vegProducts];
     switch (sort) {
@@ -177,7 +188,8 @@ export default function VegPicklesPage() {
                 <div key={p.type}
                   className="bg-white rounded-2xl border border-gray-100 overflow-hidden group hover:shadow-xl hover:border-gray-200 hover:-translate-y-1 transition-all duration-300"
                   style={{ animationDelay: `${idx * 60}ms` }}>
-                  <Link href={`/pickles/${TYPE_TO_SLUG[p.type]}`}>
+                  <Link href={`/pickles/${TYPE_TO_SLUG[p.type]}`}
+                    onClick={() => pushSelectItem({ type: p.type, name: p.name, category: 'Pickles', unitPrice: p.price }, 'Veg Pickles')}>
                     <div className="relative aspect-square overflow-hidden bg-gray-50">
                       {p.badge && (
                         <span className={`absolute top-3 left-3 z-10 px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wide uppercase shadow-sm ${
@@ -206,7 +218,8 @@ export default function VegPicklesPage() {
                         ))}
                       </div>
                     </div>
-                    <Link href={`/pickles/${TYPE_TO_SLUG[p.type]}`}>
+                    <Link href={`/pickles/${TYPE_TO_SLUG[p.type]}`}
+                      onClick={() => pushSelectItem({ type: p.type, name: p.name, category: 'Pickles', unitPrice: p.price }, 'Veg Pickles')}>
                       <h2 className="text-sm font-bold text-gray-800 hover:text-brand-600 transition-colors line-clamp-1 mb-0.5">{p.name}</h2>
                     </Link>
                     {p.localName && <p className="text-[9px] text-gray-400 italic mb-1.5">{p.localName}</p>}

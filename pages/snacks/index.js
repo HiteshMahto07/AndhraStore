@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -7,6 +7,7 @@ import Head from 'next/head';
 import SnacksData from '@/data/snacks.json';
 import { SITE_URL } from '@/lib/seo';
 import { useCart } from '@/context/CartContext';
+import { pushViewItemList, pushSelectItem } from '@/lib/analytics';
 
 const allSnacks = [...SnacksData].sort((a, b) => a.sortOrder - b.sortOrder);
 
@@ -61,6 +62,16 @@ export default function SnacksPage() {
   const [sort, setSort]           = useState('featured');
   const [addedType, setAddedType] = useState(null);
 
+  // Fires once with the full, unsorted list — represents what the page
+  // showed on load, independent of any later client-side re-sort.
+  useEffect(() => {
+    pushViewItemList(
+      allSnacks.map((p) => ({ type: p.type, name: p.name, category: 'Snacks', unitPrice: p.amount })),
+      'Snacks'
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const sorted = useMemo(() => {
     let items = [...allSnacks];
     switch (sort) {
@@ -73,7 +84,7 @@ export default function SnacksPage() {
   }, [sort]);
 
   const handleAdd = (p) => {
-    addToCart({ id: p.type, type: p.type, name: p.name, image: p.image[0]?.name, unitPrice: p.amount, price: p.amount, qty: 1 });
+    addToCart({ id: p.type, type: p.type, name: p.name, category: 'Snacks', image: p.image[0]?.name, unitPrice: p.amount, price: p.amount, qty: 1 });
     setAddedType(p.type);
     setTimeout(() => setAddedType(null), 1800);
   };
@@ -146,7 +157,8 @@ export default function SnacksPage() {
               return (
                 <div key={p.type}
                   className="bg-white rounded-2xl border border-gray-100 overflow-hidden group hover:shadow-lg hover:border-gray-200 hover:-translate-y-0.5 transition-all duration-300 flex flex-col">
-                  <Link href={`/snacks/${p.slug}`} className="relative block overflow-hidden bg-gray-50 aspect-square">
+                  <Link href={`/snacks/${p.slug}`} className="relative block overflow-hidden bg-gray-50 aspect-square"
+                    onClick={() => pushSelectItem({ type: p.type, name: p.name, category: 'Snacks', unitPrice: p.amount }, 'Snacks')}>
                     {p.badge && (
                       <span className={`absolute top-3 left-3 z-10 px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wide uppercase shadow-sm ${
                         p.badge === 'BEST SELLER' ? 'bg-brand-500 text-white' : 'bg-olive-500 text-white'
@@ -158,7 +170,8 @@ export default function SnacksPage() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </Link>
                   <div className="p-4 flex flex-col flex-1">
-                    <Link href={`/snacks/${p.slug}`}>
+                    <Link href={`/snacks/${p.slug}`}
+                      onClick={() => pushSelectItem({ type: p.type, name: p.name, category: 'Snacks', unitPrice: p.amount }, 'Snacks')}>
                       <h2 className="text-sm font-bold text-gray-900 hover:text-brand-600 transition-colors line-clamp-1 mb-0.5">{p.name}</h2>
                     </Link>
                     {p.localName && p.localName !== p.displayName && (

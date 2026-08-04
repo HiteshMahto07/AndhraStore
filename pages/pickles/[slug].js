@@ -24,6 +24,7 @@ import {
 import { useCart } from '@/context/CartContext';
 import { buildProductSchema, buildBreadcrumbSchema, buildFaqSchema, buildSpeakableSchema } from '@/lib/schema';
 import { PRODUCT_REVIEWS } from '@/lib/reviews';
+import { pushViewItem } from '@/lib/analytics';
 
 // ─── Nutrient highlights per product ─────────────────────────────────────────
 const nutrientMap = {
@@ -178,6 +179,12 @@ export default function PickleDetail({ type, pickle }) {
   const { addToCart } = useCart();
   const [added, setAdded] = useState(false);
 
+  // Fires once per product-page view, on mount only.
+  useEffect(() => {
+    pushViewItem({ type, name: pickle.name, category: 'Pickles', unitPrice: pickle.amount });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [type]);
+
   const handleAddToCart = () => {
     const unitPriceMap   = { '250': pickle.amount, '500': pickle.amount * 2, '1': pickle.amount * 4 };
     const weightLabelMap = { '250': '250g', '500': '500g', '1': '1 Kg' };
@@ -185,6 +192,7 @@ export default function PickleDetail({ type, pickle }) {
       id:          `${type}-${weight}`,
       type,
       name:        pickle.name,
+      category:    'Pickles',
       image:       pickle.image[0]?.name,
       weight,
       weightLabel: weightLabelMap[weight],
