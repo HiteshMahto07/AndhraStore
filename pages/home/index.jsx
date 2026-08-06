@@ -9,6 +9,7 @@ import CategoryCard from '@/components/CategoryCard';
 import ProductCard from '@/components/ProductCard';
 import SectionHeading from '@/components/SectionHeading';
 import { SITE_URL } from '@/lib/seo';
+import { buildBreadcrumbSchema, buildFaqSchema } from '@/lib/schema';
 
 const categories = [
   { name: 'Chicken', image: '/chicken-1.jpeg', type: 'Chicken' },
@@ -20,28 +21,58 @@ const categories = [
 ];
 
 const bestSellers = [
-  { name: 'Chicken Pickle', image: '/chicken-1.jpeg', price: 300, type: 'Chicken', badge: 'BEST SELLER' },
-  { name: 'Meat Pickle', image: '/mutton-1.jpeg', price: 350, type: 'Meat', badge: 'PREMIUM' },
-  { name: 'Prawns Pickle', image: '/prawns-1.jpeg', price: 350, type: 'Prawns' },
-  { name: 'Fish Pickle', image: '/fish-2.jpeg', price: 200, type: 'Fish' },
+  { name: 'Chicken Pickle', image: '/chicken-1.jpeg', price: 399, type: 'Chicken', badge: 'BEST SELLER' },
+  { name: 'Meat Pickle', image: '/mutton-1.jpeg', price: 549, type: 'Meat', badge: 'PREMIUM' },
+  { name: 'Prawns Pickle', image: '/prawns-1.jpeg', price: 499, type: 'Prawns' },
+  { name: 'Fish Pickle', image: '/fish-2.jpeg', price: 399, type: 'Fish' },
 ];
 
 const vegPickles = [
-  { name: 'Ginger Pickle', image: '/ginger-1.jpeg', price: 200, type: 'Ginger' },
-  { name: 'Mango Pickle', image: '/mango-1.jpeg', price: 200, type: 'Mango' },
-  { name: 'Garlic Pickle', image: '/garlic-1.jpeg', price: 200, type: 'Garlic' },
-  { name: 'Red Chilli', image: '/redchilli-1.jpeg', price: 200, type: 'RedChilli' },
+  { name: 'Ginger Pickle', image: '/ginger-1.jpeg', price: 299, type: 'Ginger' },
+  { name: 'Mango Pickle', image: '/mango-1.jpeg', price: 299, type: 'Mango' },
+  { name: 'Garlic Pickle', image: '/garlic-1.jpeg', price: 349, type: 'Garlic' },
+  { name: 'Red Chilli', image: '/redchilli-1.jpeg', price: 299, type: 'RedChilli' },
   { name: 'Gongura Pickle', image: '/gongura-1.jpeg', price: 200, type: 'Gongura' },
-  { name: 'Tomato Pickle', image: '/tomato-1.jpeg', price: 200, type: 'Tomato' },
-  { name: 'Lemon Pickle', image: '/lemon-1.jpeg', price: 200, type: 'Lemon' },
-  { name: 'Amla Pickle', image: '/amla-1.jpeg', price: 200, type: 'Amla' },
+  { name: 'Tomato Pickle', image: '/tomato-1.jpeg', price: 299, type: 'Tomato' },
+  { name: 'Lemon Pickle', image: '/lemon-1.jpeg', price: 299, type: 'Lemon' },
+  { name: 'Amla Pickle', image: '/amla-1.jpeg', price: 299, type: 'Amla' },
 ];
 
-const pageTitle = "Buy Andhra Pickles Online — Andhra Store | Free Pan-India Delivery";
+const pageTitle = "Andhra Pickles Online — Authentic & Homemade | Andhra Store";
 const pageDesc = "Shop authentic Andhra pickles online — Mango Avakaya, Gongura, Chicken & 11 more. Handcrafted in East Godavari. No preservatives. Free delivery across India.";
 
 // WEBSITE_SCHEMA is injected globally by _app.js (from lib/schema.js).
 // No page-level WebSite schema needed here — duplicate blocks cause conflicts.
+
+const breadcrumbSchema = buildBreadcrumbSchema([
+  { name: "Home", item: `${SITE_URL}/home` },
+]);
+
+// FAQ answers restate facts already published elsewhere in the codebase
+// (ORGANIZATION_SCHEMA, MERCHANT_RETURN_POLICY_SCHEMA, lib/checkout.js constants)
+// so visible content and structured data stay consistent.
+const faqSchema = buildFaqSchema([
+  {
+    q: "What are Andhra pickles?",
+    a: "Andhra pickles — called pachadi in Telugu — are traditional South Indian pickles made with regional spices, cold-pressed oils, and authentic family recipes from Andhra Pradesh, distinct from mass-produced, vinegar-based pickles.",
+  },
+  {
+    q: "Do Andhra Store pickles contain preservatives?",
+    a: "No. All Andhra Store pickles, podi, snacks and sweets are made without artificial preservatives, colors, or flavor enhancers — cold-pressed oil and traditional spicing are used as natural preservation methods.",
+  },
+  {
+    q: "Is Cash on Delivery available, and what are the delivery charges?",
+    a: "Yes. We ship pan-India in 2–4 business days. Delivery is free on orders above ₹999, with small charges below that threshold. Cash on Delivery is available with an additional ₹99 COD charge.",
+  },
+  {
+    q: "What is the return policy for Andhra Store pickles?",
+    a: "As food products, pickles are not returnable for a change of mind, but we offer a replacement or refund within 7 days of delivery for damaged, wrong, or missing items.",
+  },
+  {
+    q: "Where is Andhra Store based?",
+    a: "Andhra Store was founded in 2023 by a family from Rajahmundry, East Godavari, and now operates from Daman, shipping pickles, podi, snacks and sweets pan-India.",
+  },
+]);
 
 export default function HomePage() {
   return (
@@ -60,9 +91,32 @@ export default function HomePage() {
         <meta name="twitter:title"       content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
         <meta name="twitter:image"       content={`${SITE_URL}/mango-1.jpeg`} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema)        }} />
       </Head>
       <Header />
       <HeroSection />
+
+      {/* Quick Answer + Definition — concise, extractable answers for AI search
+          (Google AI Mode, ChatGPT, Gemini, Perplexity) placed right below the H1. */}
+      <section className="bg-white py-8 sm:py-10" aria-labelledby="quick-answer-heading">
+        <div className="container-main max-w-3xl">
+          <h2 id="quick-answer-heading" className="text-lg sm:text-xl font-heading text-gray-900 mb-2">
+            What Is Andhra Store?
+          </h2>
+          <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+            Andhra Store is an online store delivering authentic, homemade Andhra pickles across India.
+            Founded in 2023 by a family from Rajahmundry, East Godavari, we prepare traditional vegetarian
+            and non-vegetarian pickles using family recipes, cold-pressed oils, and no artificial
+            preservatives — the same taste Andhra households have relied on for generations.
+          </p>
+          <p className="text-sm sm:text-base text-gray-600 leading-relaxed mt-3">
+            <strong>Andhra pickles</strong> — called <em>pachadi</em> in Telugu — are traditional South
+            Indian pickles made with regional spices, cold-pressed oils, and authentic family recipes from
+            Andhra Pradesh, distinct from mass-produced, vinegar-based pickles.
+          </p>
+        </div>
+      </section>
 
       <div className="bg-olive-700 py-3">
         <div className="container-main grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -116,9 +170,53 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Why Choose Andhra Store — expands on the trust-bar icons above with
+          real, extractable content: traits, audience, use cases, internal links. */}
+      <section className="section-pad bg-cream" aria-labelledby="why-choose-heading">
+        <div className="container-main max-w-3xl">
+          <h2 id="why-choose-heading" className="text-xl sm:text-2xl md:text-3xl font-heading text-gray-900 mb-3">
+            Why Choose Andhra Store for Authentic Andhra Pickles
+          </h2>
+          <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
+            We make homemade Andhra pickles the traditional way — no shortcuts and no mass production.
+            Every jar is made to order in small batches using recipes from East Godavari, Andhra Pradesh,
+            and shipped pan-India in 2–4 days.
+          </p>
+          <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-gray-600 list-disc list-inside mb-4">
+            <li><strong>Traditional Andhra recipes</strong> passed down through generations</li>
+            <li><strong>Homemade preparation</strong> in small batches, not factory-produced</li>
+            <li><strong>Authentic East Godavari origin</strong> — the heart of Andhra pickle-making</li>
+            <li><strong>Premium ingredients</strong> — cold-pressed oils, Guntur chillies, rock salt</li>
+            <li><strong>No artificial preservatives</strong>, colors, or flavor enhancers</li>
+            <li><strong>Pan-India delivery</strong> in 2–4 days, free on orders above ₹999</li>
+          </ul>
+          <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
+            Our pickles are made for Andhra food lovers, South Indian families, NRIs missing home-cooked
+            flavors, spice lovers, and anyone who prefers homemade food over store-bought alternatives —
+            as well as gift buyers looking for an authentic taste of Andhra Pradesh. They pair naturally
+            with daily meals, rice, dosa, idli, and chapati, and travel well for festivals and long journeys.
+          </p>
+          <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+            Explore our full range: <Link href="/pickles/veg" className="text-brand-600 font-semibold hover:underline">Veg Pickles</Link>,{' '}
+            <Link href="/pickles/non-veg" className="text-brand-600 font-semibold hover:underline">Non-Veg Pickles</Link>,{' '}
+            <Link href="/podi" className="text-brand-600 font-semibold hover:underline">Andhra Podi</Link>,{' '}
+            <Link href="/snacks" className="text-brand-600 font-semibold hover:underline">Andhra Snacks</Link>, and{' '}
+            <Link href="/sweets" className="text-brand-600 font-semibold hover:underline">traditional Andhra Sweets</Link> —
+            or learn more <Link href="/about" className="text-brand-600 font-semibold hover:underline">about us</Link>,{' '}
+            read our <Link href="#faq" className="text-brand-600 font-semibold hover:underline">frequently asked questions</Link>, or{' '}
+            <Link href="/contact" className="text-brand-600 font-semibold hover:underline">get in touch</Link> with any questions.
+          </p>
+        </div>
+      </section>
+
       <section className="section-pad bg-white" aria-labelledby="categories-heading">
         <div className="container-main">
-          <SectionHeading label="Categories" title="Shop by Pickle Type" id="categories-heading" />
+          <SectionHeading
+            label="Categories"
+            title="Shop by Pickle Type"
+            description="Browse Andhra pickles by type — from bold non-vegetarian classics like Chicken and Prawns pickle to tangy vegetarian favourites like Mango and Garlic pickle."
+            id="categories-heading"
+          />
           <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 sm:gap-4">
             {categories.map((c) => <CategoryCard key={c.type} {...c} />)}
           </div>
@@ -130,7 +228,7 @@ export default function HomePage() {
           <SectionHeading
             label="Best Sellers"
             title="Our Most Popular Pickles"
-            description="Loved by 500+ customers across India. Each jar is crafted with authentic Andhra spices and cold-pressed sesame oil for a taste that is both bold and memorable."
+            description="Our best-selling pickles are Chicken, Mutton, Prawns, and Fish — bold non-vegetarian Andhra pickles loved by 500+ customers across India, each made with authentic spices and cold-pressed oil."
             actionHref="/pickles/non-veg"
             id="bestsellers-heading"
           />
@@ -165,7 +263,7 @@ export default function HomePage() {
           <SectionHeading
             label="Veg Pickles"
             title="Vegetarian Collection"
-            description="Our vegetarian pickle collection celebrates the rich diversity of Andhra Pradesh. From the tartness of mango avakaya to the bold heat of red chilli, every jar carries generations of culinary wisdom."
+            description="Our vegetarian Andhra pickles include Mango Avakaya, Gongura, Garlic, and Red Chilli pickle — made with cold-pressed oil and no preservatives, capturing the diverse flavors of Andhra Pradesh in every jar."
             actionHref="/pickles/veg"
             id="veg-pickles-heading"
           />
@@ -177,7 +275,12 @@ export default function HomePage() {
 
       <section className="section-pad bg-cream" aria-labelledby="reviews-heading">
         <div className="container-main">
-          <SectionHeading label="Reviews" title="What Our Customers Say" id="reviews-heading" />
+          <SectionHeading
+            label="Reviews"
+            title="What Our Customers Say"
+            description="Customers across India — from Hyderabad to Mumbai — rate our pickles 4.9/5 for authentic taste and freshly homemade quality."
+            id="reviews-heading"
+          />
           <div className="grid sm:grid-cols-3 gap-4">
             {[
               { name: 'Priya K.', loc: 'Hyderabad', text: 'The chicken pickle is absolutely divine! Tastes just like my grandmother\'s recipe. The spice balance is perfect and the quality is outstanding.' },
@@ -198,6 +301,41 @@ export default function HomePage() {
                   <p className="text-[11px] text-gray-400">{t.loc}</p>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ — direct-answer Q&A for AI/answer-engine extraction, backed by
+          FAQPage schema. Every answer restates a fact already published
+          elsewhere in the codebase (org schema, return policy, checkout constants). */}
+      <section id="faq" className="section-pad bg-white" aria-labelledby="faq-heading">
+        <div className="container-main max-w-3xl">
+          <SectionHeading label="FAQ" title="Frequently Asked Questions" id="faq-heading" />
+          <div className="space-y-2">
+            {faqSchema.mainEntity.map(({ name, acceptedAnswer }) => (
+              <details key={name} className="border border-gray-100 rounded-xl group">
+                <summary className="px-4 py-3.5 cursor-pointer text-sm font-semibold text-gray-700 flex items-center justify-between list-none hover:bg-gray-50 rounded-xl transition-colors">
+                  {name}
+                  <svg className="w-4 h-4 text-gray-300 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-4 pb-4 border-t border-gray-50 pt-3">
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {acceptedAnswer.text}
+                    {name === "What is the return policy for Andhra Store pickles?" && (
+                      <>
+                        {' '}
+                        <Link href="/return-policy" className="text-brand-600 font-semibold hover:underline">
+                          Read our full Return &amp; Refund Policy
+                        </Link>
+                        .
+                      </>
+                    )}
+                  </p>
+                </div>
+              </details>
             ))}
           </div>
         </div>

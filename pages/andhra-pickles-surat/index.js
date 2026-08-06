@@ -12,10 +12,10 @@ const pageDesc  = 'Get authentic Andhra pickles delivered to Surat in 1 day. Our
 const pageUrl   = `${SITE_URL}/andhra-pickles-surat`;
 
 const featuredProducts = [
-  { name: 'Mango Pickle', image: '/images/pickles/andhra-mango-pickle-sealed.webp', price: 200, type: 'Mango', badge: 'MOST LOVED' },
-  { name: 'Chicken Pickle', image: '/images/pickles/andhra-chicken-pickle-sealed.webp', price: 300, type: 'Chicken', badge: 'BEST SELLER' },
+  { name: 'Mango Pickle', image: '/images/pickles/andhra-mango-pickle-sealed.webp', price: 299, type: 'Mango', badge: 'MOST LOVED' },
+  { name: 'Chicken Pickle', image: '/images/pickles/andhra-chicken-pickle-sealed.webp', price: 399, type: 'Chicken', badge: 'BEST SELLER' },
   { name: 'Gongura Pickle', image: '/images/pickles/andhra-gongura-pickle-sealed.webp', price: 200, type: 'Gongura' },
-  { name: 'Garlic Pickle', image: '/images/pickles/andhra-garlic-pickle-sealed.webp', price: 220, type: 'Garlic' },
+  { name: 'Garlic Pickle', image: '/images/pickles/andhra-garlic-pickle-sealed.webp', price: 349, type: 'Garlic' },
 ];
 
 const cityAreas = ['Adajan', 'Athwa', 'Katargam', 'Varachha', 'Piplod', 'Vesu', 'Althan', 'Pal', 'Udhna', 'Sarthana', 'Rander', 'Bardoli', 'Navsari'];

@@ -12,7 +12,7 @@
     "sortOrder": 1,
     "spiceLevel": "hot",
     "spiceLevelNum": 3,
-    "amount": 200,
+    "amount": 299,
     "shortDesc": "Chunky raw mango pieces with Guntur red chilli, mustard powder and cold-pressed sesame oil. Made the old-fashioned way — no vinegar, nothing extra.",
     "tags": [
       "avakaya",
@@ -212,7 +212,7 @@
     "sortOrder": 3,
     "spiceLevel": "hot",
     "spiceLevelNum": 3,
-    "amount": 200,
+    "amount": 349,
     "shortDesc": "Whole garlic cloves slow-cured in Guntur red chilli, mustard powder and cold-pressed groundnut oil. The kind that makes plain rice feel like a complete meal.",
     "tags": [
       "garlic pickle",
@@ -313,7 +313,7 @@
     "sortOrder": 4,
     "spiceLevel": "medium",
     "spiceLevelNum": 2,
-    "amount": 200,
+    "amount": 299,
     "shortDesc": "Sliced ginger in Guntur red chilli and groundnut oil — sharp, warming and a little spicy. Good with rice, roti or even plain dosa.",
     "tags": [
       "ginger pickle",
@@ -414,7 +414,7 @@
     "sortOrder": 5,
     "spiceLevel": "extra-hot",
     "spiceLevelNum": 4,
-    "amount": 200,
+    "amount": 299,
     "shortDesc": "Whole Guntur dried red chillies in sesame oil with mustard and tamarind. Extra hot, unapologetically Andhra.",
     "tags": [
       "red chilli pickle",
@@ -512,7 +512,7 @@
     "sortOrder": 6,
     "spiceLevel": "medium",
     "spiceLevelNum": 2,
-    "amount": 200,
+    "amount": 299,
     "shortDesc": "Whole lemon pieces slow-cured in Guntur chilli and sesame oil. Sharp and sour — the one that goes best with curd rice.",
     "tags": [
       "lemon pickle",
@@ -610,7 +610,7 @@
     "sortOrder": 7,
     "spiceLevel": "medium",
     "spiceLevelNum": 2,
-    "amount": 200,
+    "amount": 299,
     "shortDesc": "Slow-cooked tomatoes with Guntur chilli, garlic and sesame oil. Tangy, slightly smoky and versatile enough to use beyond just rice.",
     "tags": [
       "tomato pickle",
@@ -710,7 +710,7 @@
     "sortOrder": 8,
     "spiceLevel": "medium",
     "spiceLevelNum": 2,
-    "amount": 200,
+    "amount": 299,
     "shortDesc": "Fresh curry leaves cooked down with tamarind, Guntur chilli and sesame oil. Earthy and fragrant — a pickle you can't find at most stores.",
     "tags": [
       "curry leaves pickle",
@@ -810,7 +810,7 @@
     "sortOrder": 9,
     "spiceLevel": "extra-hot",
     "spiceLevelNum": 4,
-    "amount": 200,
+    "amount": 299,
     "shortDesc": "Whole green chillies slow-cured in mustard and sesame oil. Fresh heat — sharper and brighter than dried red chilli pickles.",
     "tags": [
       "green chilli pickle",
@@ -907,7 +907,7 @@
     "sortOrder": 10,
     "spiceLevel": "medium",
     "spiceLevelNum": 2,
-    "amount": 200,
+    "amount": 299,
     "shortDesc": "Indian gooseberry slow-cured in Guntur chilli and sesame oil. Sour, slightly bitter and good on both rice and its own.",
     "tags": [
       "amla pickle",
@@ -1005,7 +1005,7 @@
     "sortOrder": 11,
     "spiceLevel": "hot",
     "spiceLevelNum": 3,
-    "amount": 200,
+    "amount": 299,
     "shortDesc": "Bitter gourd pieces cured in Guntur chilli and groundnut oil. Not for everyone, but deeply familiar if you grew up eating this.",
     "tags": [
       "karela pickle",
@@ -1105,7 +1105,7 @@
     "sortOrder": 12,
     "spiceLevel": "medium",
     "spiceLevelNum": 2,
-    "amount": 200,
+    "amount": 299,
     "shortDesc": "Tamarind and jaggery cooked together with Guntur chilli and groundnut oil. Sweet-sour-spicy, all at once.",
     "tags": [
       "tamarind pickle",
@@ -1211,7 +1211,7 @@
     "sortOrder": 11,
     "spiceLevel": "hot",
     "spiceLevelNum": 3,
-    "amount": 300,
+    "amount": 399,
     "shortDesc": "Tender chicken pieces slow-cooked in Guntur red chilli and sesame oil. The kind of pickle that turns plain rice into a full meal.",
     "tags": [
       "chicken pickle",
@@ -1309,7 +1309,7 @@
     "sortOrder": 12,
     "spiceLevel": "hot",
     "spiceLevelNum": 3,
-    "amount": 350,
+    "amount": 549,
     "shortDesc": "Slow-cooked mutton pieces in Guntur chilli and sesame oil. Deeply spiced and rich — a little goes a long way with rice.",
     "tags": [
       "mutton pickle",
@@ -1407,7 +1407,7 @@
     "sortOrder": 13,
     "spiceLevel": "hot",
     "spiceLevelNum": 3,
-    "amount": 350,
+    "amount": 499,
     "shortDesc": "Dried prawns in Guntur chilli, tamarind and sesame oil. The coastal Andhra way — intense, salty and very good with rice.",
     "tags": [
       "prawns pickle",
@@ -1509,7 +1509,7 @@
     "sortOrder": 14,
     "spiceLevel": "medium",
     "spiceLevelNum": 2,
-    "amount": 200,
+    "amount": 399,
     "shortDesc": "Fish pieces slow-cooked in Guntur chilli, fenugreek and sesame oil — coastal Andhra's most nostalgic pickle.",
     "tags": [
       "fish pickle",

@@ -12,10 +12,10 @@ const pageDesc  = 'Order authentic Andhra pickles with delivery to Delhi NCR in 
 const pageUrl   = `${SITE_URL}/andhra-pickles-delhi`;
 
 const featuredProducts = [
-  { name: 'Chicken Pickle', image: '/images/pickles/andhra-chicken-pickle-sealed.webp', price: 300, type: 'Chicken', badge: 'BEST SELLER' },
-  { name: 'Mango Pickle', image: '/images/pickles/andhra-mango-pickle-sealed.webp', price: 200, type: 'Mango', badge: 'MOST LOVED' },
+  { name: 'Chicken Pickle', image: '/images/pickles/andhra-chicken-pickle-sealed.webp', price: 399, type: 'Chicken', badge: 'BEST SELLER' },
+  { name: 'Mango Pickle', image: '/images/pickles/andhra-mango-pickle-sealed.webp', price: 299, type: 'Mango', badge: 'MOST LOVED' },
   { name: 'Gongura Pickle', image: '/images/pickles/andhra-gongura-pickle-sealed.webp', price: 200, type: 'Gongura' },
-  { name: 'Ginger Pickle', image: '/images/pickles/andhra-ginger-pickle-sealed.webp', price: 220, type: 'Ginger' },
+  { name: 'Ginger Pickle', image: '/images/pickles/andhra-ginger-pickle-sealed.webp', price: 299, type: 'Ginger' },
 ];
 
 const cityAreas = ['South Delhi', 'Dwarka', 'Rohini', 'Noida', 'Gurgaon', 'Faridabad', 'Lajpat Nagar', 'Saket', 'Vasant Kunj', 'Janakpuri', 'Pitampura', 'Greater Noida', 'Ghaziabad'];

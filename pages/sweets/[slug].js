@@ -27,6 +27,7 @@ const TRUST_BADGES = [
   { icon: '🍯', label: 'Pure Ingredients',   sub: 'No Refined Sugar*' },
   { icon: '🏺', label: 'Handcrafted',         sub: 'Small Batch' },
   { icon: '↩️', label: '7-Day Returns',       sub: 'Easy Policy' },
+  { icon: '💵', label: 'COD Available',       sub: '+₹99 charge' },
 ];
 
 export default function SweetDetail({ item }) {
@@ -79,7 +80,7 @@ export default function SweetDetail({ item }) {
   ]);
 
   const handleAddToCart = () => {
-    addToCart({ id: item.type, type: item.type, name: item.name, category: 'Sweets', image: item.image[0]?.name, unitPrice: item.amount, price: item.amount * qty, qty });
+    addToCart({ id: item.type, type: item.type, name: item.name, category: 'Sweets', image: item.image[0]?.name, weight: 'single', weightLabel: 'Pack', unitPrice: item.amount, price: item.amount * qty, qty });
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
   };

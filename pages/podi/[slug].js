@@ -9,6 +9,7 @@ import { SITE_URL } from '@/lib/seo';
 import { buildProductSchema, buildBreadcrumbSchema, buildFaqSchema, buildSpeakableSchema } from '@/lib/schema';
 import { PRODUCT_REVIEWS } from '@/lib/reviews';
 import { pushViewItem } from '@/lib/analytics';
+import { useCart } from '@/context/CartContext';
 
 const SLUG_TO_PODI = Object.fromEntries(PodiData.map(p => [p.slug, p]));
 
@@ -36,6 +37,7 @@ export default function PodiDetail({ podi }) {
   const [qty, setQty]         = useState(1);
   const [added, setAdded]     = useState(false);
   const [activeImg, setActiveImg] = useState(0);
+  const { addToCart } = useCart();
 
   // Fires once per product-page view, on mount only.
   useEffect(() => {
@@ -87,12 +89,17 @@ export default function PodiDetail({ podi }) {
   ]);
 
   const handleAddToCart = () => {
-    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-    const existing = cart.find(i => i.type === podi.type);
-    if (existing) existing.qty += qty;
-    else cart.push({ type: podi.type, name: podi.name, image: podi.image[0]?.name, price: podi.amount, qty, category: 'podi' });
-    localStorage.setItem('cart', JSON.stringify(cart));
-    window.dispatchEvent(new Event('cart-updated'));
+    addToCart({
+      id:          podi.type,
+      type:        podi.type,
+      name:        podi.name,
+      category:    'Podi',
+      image:       podi.image[0]?.name,
+      weight:      'single',
+      weightLabel: '100g',
+      unitPrice:   podi.amount,
+      qty,
+    });
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
   };
@@ -204,7 +211,7 @@ export default function PodiDetail({ podi }) {
 
               {/* Attribute pills */}
               <div className="flex flex-wrap gap-2 mb-6">
-                {['100g / 200g', 'No Preservatives', 'No Artificial Color', '2–4 Day Delivery'].map(tag => (
+                {['100g / 200g', 'No Preservatives', 'No Artificial Color', '2–4 Day Delivery', 'COD Available (+₹99)'].map(tag => (
                   <span key={tag} className="text-[11px] font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">{tag}</span>
                 ))}
               </div>

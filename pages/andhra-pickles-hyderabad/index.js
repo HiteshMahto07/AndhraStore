@@ -13,9 +13,9 @@ const pageUrl   = `${SITE_URL}/andhra-pickles-hyderabad`;
 
 const featuredProducts = [
   { name: 'Gongura Pickle', image: '/images/pickles/andhra-gongura-pickle-sealed.webp', price: 200, type: 'Gongura', badge: 'ANDHRA CLASSIC' },
-  { name: 'Mango Pickle', image: '/images/pickles/andhra-mango-pickle-sealed.webp', price: 200, type: 'Mango', badge: 'MOST LOVED' },
-  { name: 'Chicken Pickle', image: '/images/pickles/andhra-chicken-pickle-sealed.webp', price: 300, type: 'Chicken', badge: 'BEST SELLER' },
-  { name: 'Red Chilli Pickle', image: '/images/pickles/andhra-red-chilli-pickle-sealed.webp', price: 220, type: 'RedChilli' },
+  { name: 'Mango Pickle', image: '/images/pickles/andhra-mango-pickle-sealed.webp', price: 299, type: 'Mango', badge: 'MOST LOVED' },
+  { name: 'Chicken Pickle', image: '/images/pickles/andhra-chicken-pickle-sealed.webp', price: 399, type: 'Chicken', badge: 'BEST SELLER' },
+  { name: 'Red Chilli Pickle', image: '/images/pickles/andhra-red-chilli-pickle-sealed.webp', price: 299, type: 'RedChilli' },
 ];
 
 const cityAreas = ['Banjara Hills', 'Jubilee Hills', 'Madhapur', 'Gachibowli', 'Kondapur', 'Kukatpally', 'Secunderabad', 'Ameerpet', 'Begumpet', 'Hitech City', 'Manikonda', 'Miyapur', 'LB Nagar'];
