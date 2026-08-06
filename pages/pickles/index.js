@@ -210,7 +210,7 @@ export default function ShopPage() {
           <div className="flex items-center gap-2">
             <span className="text-xs text-gray-500 bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-100">₹200</span>
             <div className="flex-1 h-px bg-gray-200" />
-            <span className="text-xs text-gray-500 bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-100">₹350</span>
+            <span className="text-xs text-gray-500 bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-100">₹549</span>
           </div>
         </div>
       </div>

@@ -9,20 +9,20 @@ import PickleType from '@/data/pickles.json';
 import { SITE_URL } from '@/lib/seo';
 
 const allProducts = [
-  { name: 'Ginger Pickle', image: '/ginger-1.jpeg', price: 200, type: 'Ginger', cat: 'veg', weight: '250g', badge: '' },
-  { name: 'Mango Pickle', image: '/mango-1.jpeg', price: 200, type: 'Mango', cat: 'veg', weight: '250g', badge: 'BEST SELLER' },
-  { name: 'Garlic Pickle', image: '/garlic-1.jpeg', price: 200, type: 'Garlic', cat: 'veg', weight: '250g', badge: '' },
-  { name: 'Red Chilli Pickle', image: '/redchilli-1.jpeg', price: 200, type: 'RedChilli', cat: 'veg', weight: '250g', badge: '' },
+  { name: 'Ginger Pickle', image: '/ginger-1.jpeg', price: 299, type: 'Ginger', cat: 'veg', weight: '250g', badge: '' },
+  { name: 'Mango Pickle', image: '/mango-1.jpeg', price: 299, type: 'Mango', cat: 'veg', weight: '250g', badge: 'BEST SELLER' },
+  { name: 'Garlic Pickle', image: '/garlic-1.jpeg', price: 349, type: 'Garlic', cat: 'veg', weight: '250g', badge: '' },
+  { name: 'Red Chilli Pickle', image: '/redchilli-1.jpeg', price: 299, type: 'RedChilli', cat: 'veg', weight: '250g', badge: '' },
   { name: 'Gongura Pickle', image: '/gongura-1.jpeg', price: 200, type: 'Gongura', cat: 'veg', weight: '250g', badge: '' },
-  { name: 'Tomato Pickle', image: '/tomato-1.jpeg', price: 200, type: 'Tomato', cat: 'veg', weight: '250g', badge: '' },
-  { name: 'Lemon Pickle', image: '/lemon-1.jpeg', price: 200, type: 'Lemon', cat: 'veg', weight: '250g', badge: '' },
-  { name: 'Curry Leaves Pickle', image: '/curry-1.jpeg', price: 200, type: 'Curry', cat: 'veg', weight: '250g', badge: '' },
-  { name: 'Green Chilli Pickle', image: '/green-1.jpeg', price: 200, type: 'GreenChilli', cat: 'veg', weight: '250g', badge: '' },
-  { name: 'Amla Pickle', image: '/amla-1.jpeg', price: 200, type: 'Amla', cat: 'veg', weight: '250g', badge: '' },
-  { name: 'Chicken Pickle', image: '/chicken-1.jpeg', price: 300, type: 'Chicken', cat: 'non-veg', weight: '250g', badge: 'BEST SELLER' },
-  { name: 'Meat Pickle', image: '/mutton-1.jpeg', price: 350, type: 'Meat', cat: 'non-veg', weight: '250g', badge: 'PREMIUM' },
-  { name: 'Prawns Pickle', image: '/prawns-1.jpeg', price: 350, type: 'Prawns', cat: 'non-veg', weight: '250g', badge: '' },
-  { name: 'Fish Pickle', image: '/fish-2.jpeg', price: 200, type: 'Fish', cat: 'non-veg', weight: '250g', badge: '' },
+  { name: 'Tomato Pickle', image: '/tomato-1.jpeg', price: 299, type: 'Tomato', cat: 'veg', weight: '250g', badge: '' },
+  { name: 'Lemon Pickle', image: '/lemon-1.jpeg', price: 299, type: 'Lemon', cat: 'veg', weight: '250g', badge: '' },
+  { name: 'Curry Leaves Pickle', image: '/curry-1.jpeg', price: 299, type: 'Curry', cat: 'veg', weight: '250g', badge: '' },
+  { name: 'Green Chilli Pickle', image: '/green-1.jpeg', price: 299, type: 'GreenChilli', cat: 'veg', weight: '250g', badge: '' },
+  { name: 'Amla Pickle', image: '/amla-1.jpeg', price: 299, type: 'Amla', cat: 'veg', weight: '250g', badge: '' },
+  { name: 'Chicken Pickle', image: '/chicken-1.jpeg', price: 399, type: 'Chicken', cat: 'non-veg', weight: '250g', badge: 'BEST SELLER' },
+  { name: 'Meat Pickle', image: '/mutton-1.jpeg', price: 549, type: 'Meat', cat: 'non-veg', weight: '250g', badge: 'PREMIUM' },
+  { name: 'Prawns Pickle', image: '/prawns-1.jpeg', price: 499, type: 'Prawns', cat: 'non-veg', weight: '250g', badge: '' },
+  { name: 'Fish Pickle', image: '/fish-2.jpeg', price: 399, type: 'Fish', cat: 'non-veg', weight: '250g', badge: '' },
 ];
 
 const categoryFilters = [
@@ -122,7 +122,7 @@ export default function ShopPage() {
           <div className="flex items-center gap-2">
             <span className="text-xs text-gray-500 bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-100">₹200</span>
             <div className="flex-1 h-px bg-gray-200" />
-            <span className="text-xs text-gray-500 bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-100">₹350</span>
+            <span className="text-xs text-gray-500 bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-100">₹549</span>
           </div>
         </div>
       </div>

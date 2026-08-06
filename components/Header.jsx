@@ -63,7 +63,7 @@ export default function Header() {
   return (
     <>
       <div className="bg-olive-700 text-white text-center py-1.5 text-[11px] font-medium tracking-wide" role="banner">
-        🚚 Free Delivery on Orders Above ₹999 &nbsp;|&nbsp; 📞 8758302568, 8799114169
+        🚚 Free Delivery on Orders Above ₹999 &nbsp;|&nbsp; 💵 COD Available (+₹99) &nbsp;|&nbsp; 📞 8758302568, 8799114169
       </div>
 
       <header className={`sticky top-0 z-50 transition-shadow duration-300 bg-white ${scrolled ? 'shadow-md' : 'shadow-sm'}`}>

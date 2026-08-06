@@ -433,6 +433,7 @@ export default function PickleDetail({ type, pickle }) {
                   { label: 'No Preservatives',  icon: '✅' },
                   { label: '2–4 Day Delivery',  icon: '🚚' },
                   { label: attrs.oilType || 'Cold-Pressed Oil', icon: '🫙' },
+                  { label: 'COD Available (+₹99)', icon: '💵' },
                 ].map((a) => (
                   <span key={a.label} className="inline-flex items-center gap-1 text-[10px] font-semibold text-gray-600 bg-gray-50 border border-gray-200 rounded-md px-2 py-1">
                     <span aria-hidden="true">{a.icon}</span>{a.label}

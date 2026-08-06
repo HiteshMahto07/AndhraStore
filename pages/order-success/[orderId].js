@@ -102,6 +102,12 @@ export default function OrderSuccessPage() {
                         <span>₹{order.delivery}</span>
                       </div>
                     )}
+                    {order.codCharge > 0 && (
+                      <div className="flex justify-between text-gray-600">
+                        <span>COD Charge</span>
+                        <span>₹{order.codCharge}</span>
+                      </div>
+                    )}
                     <div className="flex justify-between font-extrabold text-gray-900 text-base">
                       <span>Total Paid</span>
                       <span>₹{order.total}</span>

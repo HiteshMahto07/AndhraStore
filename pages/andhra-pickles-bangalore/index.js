@@ -12,10 +12,10 @@ const pageDesc  = 'Order authentic Andhra pickles with delivery to Bangalore in 
 const pageUrl   = `${SITE_URL}/andhra-pickles-bangalore`;
 
 const featuredProducts = [
-  { name: 'Chicken Pickle', image: '/images/pickles/andhra-chicken-pickle-sealed.webp', price: 300, type: 'Chicken', badge: 'BEST SELLER' },
-  { name: 'Mango Pickle', image: '/images/pickles/andhra-mango-pickle-sealed.webp', price: 200, type: 'Mango', badge: 'MOST LOVED' },
+  { name: 'Chicken Pickle', image: '/images/pickles/andhra-chicken-pickle-sealed.webp', price: 399, type: 'Chicken', badge: 'BEST SELLER' },
+  { name: 'Mango Pickle', image: '/images/pickles/andhra-mango-pickle-sealed.webp', price: 299, type: 'Mango', badge: 'MOST LOVED' },
   { name: 'Gongura Pickle', image: '/images/pickles/andhra-gongura-pickle-sealed.webp', price: 200, type: 'Gongura' },
-  { name: 'Prawns Pickle', image: '/images/pickles/andhra-prawns-pickle-sealed.webp', price: 350, type: 'Prawns' },
+  { name: 'Prawns Pickle', image: '/images/pickles/andhra-prawns-pickle-sealed.webp', price: 499, type: 'Prawns' },
 ];
 
 const cityAreas = ['Koramangala', 'Indiranagar', 'Whitefield', 'Electronic City', 'HSR Layout', 'JP Nagar', 'Jayanagar', 'BTM Layout', 'Marathahalli', 'Bellandur', 'Sarjapur Road', 'Hebbal', 'Yelahanka'];
