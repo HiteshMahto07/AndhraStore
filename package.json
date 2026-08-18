@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "postbuild": "node node_modules/next-sitemap/bin/next-sitemap.mjs",
-    "validate:schema": "node scripts/validate-schema.js"
+    "validate:schema": "node scripts/validate-schema.js",
+    "indexnow": "node scripts/submit-indexnow.js"
   },
   "dependencies": {
     "@mui/icons-material": "^6.1.4",

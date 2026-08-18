@@ -38,3 +38,7 @@ next-env.d.ts
 # Local reference docs (not pushed to GitHub)
 /_seo_docs
 /_docs
+
+# Windows NTFS metadata (mark-of-the-web tags on downloaded files)
+*:Zone.Identifier
+*Zone.Identifier
