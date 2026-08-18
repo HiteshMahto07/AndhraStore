@@ -11,7 +11,7 @@
     "sortOrder": 1,
     "spiceLevel": "hot",
     "spiceLevelNum": 3,
-    "amount": 150,
+    "amount": 200,
     "shortDesc": "Roasted toor dal powder with Guntur chilli, garlic and cumin. Mix it into hot rice with ghee — that's all you need.",
     "tags": [
       "kandi podi",
@@ -83,7 +83,7 @@
     "sortOrder": 2,
     "spiceLevel": "hot",
     "spiceLevelNum": 3,
-    "amount": 150,
+    "amount": 200,
     "shortDesc": "Spicy Andhra karapodi with roasted chana dal, urad dal and Guntur chilli. The one your idli and dosa have been waiting for.",
     "tags": [
       "idly podi",
@@ -158,7 +158,7 @@
     "sortOrder": 3,
     "spiceLevel": "medium",
     "spiceLevelNum": 2,
-    "amount": 150,
+    "amount": 200,
     "shortDesc": "Roasted sesame seed powder with Guntur chilli and garlic. Nutty and rich — very good on rice, and one of the more wholesome powders in the range.",
     "tags": [
       "nuvvula podi",
@@ -230,7 +230,7 @@
     "sortOrder": 4,
     "spiceLevel": "extra-hot",
     "spiceLevelNum": 4,
-    "amount": 150,
+    "amount": 200,
     "shortDesc": "Whole roasted Guntur red chillies ground with garlic and tamarind. This is what Andhra people mean when they say 'spicy podi.'",
     "tags": [
       "nala karam",
@@ -305,7 +305,7 @@
     "sortOrder": 5,
     "spiceLevel": "medium",
     "spiceLevelNum": 2,
-    "amount": 150,
+    "amount": 200,
     "shortDesc": "Roasted groundnut powder with Guntur chilli, garlic and tamarind. Rich and filling — works on rice, dosa, roti and everything in between.",
     "tags": [
       "peanut podi",
@@ -380,7 +380,7 @@
     "sortOrder": 6,
     "spiceLevel": "medium",
     "spiceLevelNum": 2,
-    "amount": 150,
+    "amount": 200,
     "shortDesc": "Dry coconut powder with chana dal, Guntur chilli and curry leaves. Mildly spiced, fragrant — good for people who want a less intense podi.",
     "tags": [
       "coconut podi",
@@ -455,7 +455,7 @@
     "sortOrder": 7,
     "spiceLevel": "mild",
     "spiceLevelNum": 1,
-    "amount": 180,
+    "amount": 200,
     "shortDesc": "Dried drumstick leaves ground with roasted dal and Guntur chilli. Earthy, mildly bitter and packed with nutrients — the podi your grandmother always added to rice.",
     "tags": [
       "moringa podi",
@@ -530,7 +530,7 @@
     "sortOrder": 8,
     "spiceLevel": "extra-hot",
     "spiceLevelNum": 4,
-    "amount": 150,
+    "amount": 200,
     "shortDesc": "Whole roasted Guntur chillies ground with raw garlic and chana dal. Bold and garlicky — this one has a strong character.",
     "tags": [
       "vellulli karam",
@@ -601,7 +601,7 @@
     "sortOrder": 9,
     "spiceLevel": "medium",
     "spiceLevelNum": 2,
-    "amount": 160,
+    "amount": 200,
     "shortDesc": "Dried bitter gourd ground with roasted dal, Guntur chilli and tamarind. Earthy and slightly bitter — the podi you eat because you know your body needs it.",
     "tags": [
       "kakarakaya podi",

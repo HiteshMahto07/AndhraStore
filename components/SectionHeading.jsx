@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
-export default function SectionHeading({ label, title, description, actionHref, actionLabel = 'View All' }) {
+export default function SectionHeading({ label, title, description, actionHref, actionLabel = 'View All', id }) {
     return (
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-6 md:mb-8">
             <div>
                 {label && <p className="text-[11px] font-bold text-brand-500 uppercase tracking-[0.15em] mb-0.5">{label}</p>}
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-heading text-gray-900">{title}</h2>
+                <h2 id={id} className="text-xl sm:text-2xl md:text-3xl font-heading text-gray-900">{title}</h2>
                 {description && <p className="text-sm text-gray-500 mt-1 max-w-lg">{description}</p>}
             </div>
             {actionHref && (

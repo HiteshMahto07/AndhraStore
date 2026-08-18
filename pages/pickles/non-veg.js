@@ -35,7 +35,7 @@ const SPICE_DOTS   = { 'extra-hot': 4, 'hot': 3, 'medium': 2, 'mild': 1 };
 const SPICE_COLORS = { 'extra-hot': 'text-red-600', 'hot': 'text-orange-500', 'medium': 'text-yellow-600', 'mild': 'text-green-600' };
 
 const pageTitle = "Non-Veg Andhra Pickles Online — Chicken, Mutton, Prawns & Fish | Andhra Store";
-const pageDesc  = "Shop 4 authentic Andhra non-veg pickles — Chicken (kodi pachadi), Mutton, Prawns & Fish pickle. Handcrafted with no preservatives. 250g from ₹200. Ships pan-India.";
+const pageDesc  = "Shop 4 authentic Andhra non-veg pickles — Chicken (kodi pachadi), Mutton, Prawns & Fish pickle. Handcrafted with no preservatives. 250g from ₹399. Ships pan-India.";
 
 const pageSchema = {
   "@context": "https://schema.org",

@@ -12,10 +12,10 @@ const pageDesc  = 'Order authentic Andhra pickles with home delivery to Ahmedaba
 const pageUrl   = `${SITE_URL}/andhra-pickles-ahmedabad`;
 
 const featuredProducts = [
-  { name: 'Mango Pickle', image: '/images/pickles/andhra-mango-pickle-sealed.webp', price: 200, type: 'Mango', badge: 'MOST LOVED' },
+  { name: 'Mango Pickle', image: '/images/pickles/andhra-mango-pickle-sealed.webp', price: 299, type: 'Mango', badge: 'MOST LOVED' },
   { name: 'Gongura Pickle', image: '/images/pickles/andhra-gongura-pickle-sealed.webp', price: 200, type: 'Gongura', badge: 'MUST TRY' },
-  { name: 'Lemon Pickle', image: '/images/pickles/andhra-lemon-pickle-sealed.webp', price: 200, type: 'Lemon' },
-  { name: 'Chicken Pickle', image: '/images/pickles/andhra-chicken-pickle-sealed.webp', price: 300, type: 'Chicken', badge: 'BEST SELLER' },
+  { name: 'Lemon Pickle', image: '/images/pickles/andhra-lemon-pickle-sealed.webp', price: 299, type: 'Lemon' },
+  { name: 'Chicken Pickle', image: '/images/pickles/andhra-chicken-pickle-sealed.webp', price: 399, type: 'Chicken', badge: 'BEST SELLER' },
 ];
 
 const cityAreas = ['Navrangpura', 'Satellite', 'Bopal', 'SG Highway', 'Prahlad Nagar', 'Vastrapur', 'Maninagar', 'Gota', 'Chandkheda', 'Naranpura', 'Bodakdev', 'Thaltej', 'Gandhinagar'];

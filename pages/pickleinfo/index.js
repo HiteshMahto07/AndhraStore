@@ -68,14 +68,14 @@ const ratingBreakdown = [
 
 /* ── All products for "You Might Also Like" ── */
 const allProducts = [
-  { name: 'Mango Pickle', image: '/mango-1.jpeg', price: 200, type: 'Mango', rating: 4.9, badge: 'BEST SELLER' },
-  { name: 'Chicken Pickle', image: '/chicken-1.jpeg', price: 300, type: 'Chicken', rating: 4.8, badge: 'BEST SELLER' },
-  { name: 'Garlic Pickle', image: '/garlic-1.jpeg', price: 200, type: 'Garlic', rating: 4.6 },
-  { name: 'Red Chilli Pickle', image: '/redchilli-1.jpeg', price: 200, type: 'RedChilli', rating: 4.4 },
-  { name: 'Ginger Pickle', image: '/ginger-1.jpeg', price: 200, type: 'Ginger', rating: 4.5 },
-  { name: 'Prawns Pickle', image: '/prawns-1.jpeg', price: 350, type: 'Prawns', rating: 4.7, badge: 'PREMIUM' },
-  { name: 'Tomato Pickle', image: '/tomato-1.jpeg', price: 200, type: 'Tomato', rating: 4.4 },
-  { name: 'Meat Pickle', image: '/mutton-1.jpeg', price: 350, type: 'Meat', rating: 4.7, badge: 'PREMIUM' },
+  { name: 'Mango Pickle', image: '/mango-1.jpeg', price: 299, type: 'Mango', rating: 4.9, badge: 'BEST SELLER' },
+  { name: 'Chicken Pickle', image: '/chicken-1.jpeg', price: 399, type: 'Chicken', rating: 4.8, badge: 'BEST SELLER' },
+  { name: 'Garlic Pickle', image: '/garlic-1.jpeg', price: 349, type: 'Garlic', rating: 4.6 },
+  { name: 'Red Chilli Pickle', image: '/redchilli-1.jpeg', price: 299, type: 'RedChilli', rating: 4.4 },
+  { name: 'Ginger Pickle', image: '/ginger-1.jpeg', price: 299, type: 'Ginger', rating: 4.5 },
+  { name: 'Prawns Pickle', image: '/prawns-1.jpeg', price: 499, type: 'Prawns', rating: 4.7, badge: 'PREMIUM' },
+  { name: 'Tomato Pickle', image: '/tomato-1.jpeg', price: 299, type: 'Tomato', rating: 4.4 },
+  { name: 'Meat Pickle', image: '/mutton-1.jpeg', price: 549, type: 'Meat', rating: 4.7, badge: 'PREMIUM' },
 ];
 
 export default function PickleDetail() {

@@ -84,7 +84,7 @@ export default function SnacksPage() {
   }, [sort]);
 
   const handleAdd = (p) => {
-    addToCart({ id: p.type, type: p.type, name: p.name, category: 'Snacks', image: p.image[0]?.name, unitPrice: p.amount, price: p.amount, qty: 1 });
+    addToCart({ id: p.type, type: p.type, name: p.name, category: 'Snacks', image: p.image[0]?.name, weight: 'single', weightLabel: 'Pack', unitPrice: p.amount, price: p.amount, qty: 1 });
     setAddedType(p.type);
     setTimeout(() => setAddedType(null), 1800);
   };

@@ -196,6 +196,11 @@ export default function CartDrawer() {
                 </div>
               </div>
 
+              {/* COD availability note — actual charge is added at checkout only if COD is selected */}
+              <p className="text-[11px] text-gray-400 text-center mb-3">
+                💵 Cash on Delivery available (+₹99 COD charge applies)
+              </p>
+
               {/* Primary CTA — Proceed to Checkout */}
               <button
                 onClick={() => {

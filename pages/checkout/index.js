@@ -24,7 +24,7 @@ import { ChevronLeft, Loader2, AlertCircle, CheckCircle2 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useCart } from '@/context/CartContext';
-import { calcTotals, calcDelivery, buildCODWhatsAppUrl, DELIVERY_THRESHOLD } from '@/lib/checkout';
+import { calcTotals, calcDelivery, buildCODWhatsAppUrl, DELIVERY_THRESHOLD, COD_CHARGE } from '@/lib/checkout';
 import { pushAddShippingInfo, pushAddPaymentInfo, pushPurchase, pushOrderPlaced, pushPaymentFailed } from '@/lib/analytics';
 import { SITE_URL } from '@/lib/seo';
 
@@ -94,7 +94,7 @@ export default function CheckoutPage() {
     }
   }, [cartReady, cartItems.length, router]);
 
-  const totals   = cartReady && cartItems.length > 0 ? calcTotals(cartItems) : { subtotal: 0, delivery: 0, total: 0 };
+  const totals   = cartReady && cartItems.length > 0 ? calcTotals(cartItems, paymentMethod) : { subtotal: 0, delivery: 0, codCharge: 0, total: 0 };
   const isFree   = totals.subtotal >= DELIVERY_THRESHOLD;
 
   function handleField(e) {
@@ -239,6 +239,7 @@ export default function CheckoutPage() {
       cartItems,
       subtotal  : totals.subtotal,
       delivery  : totals.delivery,
+      codCharge : totals.codCharge,
       total     : totals.total,
       name      : form.name,
       payMethod : 'cod',
@@ -485,7 +486,7 @@ export default function CheckoutPage() {
                     selected={paymentMethod === 'cod'}
                     onChange={() => setMethod('cod')}
                     label="Cash on Delivery"
-                    sub="Confirm via WhatsApp — pay when your order arrives"
+                    sub={`Confirm via WhatsApp — pay when your order arrives (+₹${COD_CHARGE} COD charge)`}
                     icon={
                       <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
@@ -517,7 +518,7 @@ export default function CheckoutPage() {
                 ) : (
                   paymentMethod === 'razorpay'
                     ? `Pay ₹${totals.total}`
-                    : 'Confirm COD Order via WhatsApp'
+                    : `Confirm COD Order via WhatsApp — ₹${totals.total}`
                 )}
               </button>
 
@@ -572,6 +573,12 @@ export default function CheckoutPage() {
                   <p className="text-xs text-gray-400">
                     Add ₹{DELIVERY_THRESHOLD - totals.subtotal} more for free delivery
                   </p>
+                )}
+                {paymentMethod === 'cod' && (
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-600">COD Charge</span>
+                    <span className="text-gray-800">₹{totals.codCharge}</span>
+                  </div>
                 )}
                 <div className="flex justify-between text-base font-extrabold text-gray-900 pt-2 border-t border-gray-100">
                   <span>Total</span>

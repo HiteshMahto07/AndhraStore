@@ -63,7 +63,7 @@ export default function HeroSection() {
                         <div className="absolute -bottom-3 -left-2 sm:left-4 bg-white rounded-xl shadow-xl px-4 py-3 border border-gray-100">
                             <p className="text-[10px] text-gray-400 uppercase font-bold tracking-wider">Best Seller</p>
                             <p className="text-sm font-bold text-gray-900">Chicken Pickle</p>
-                            <p className="text-brand-600 font-bold text-sm">From ₹300</p>
+                            <p className="text-brand-600 font-bold text-sm">From ₹399</p>
                         </div>
                         <div className="absolute top-4 right-4 bg-brand-500 text-white px-3 py-1.5 rounded-lg text-xs font-bold shadow-lg">
                             🔥 Trending

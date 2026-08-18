@@ -32,7 +32,8 @@ export default function CartPage() {
           </div>
           <h1 id="cart-heading" className="text-2xl font-heading text-gray-900 mb-2">Your Cart</h1>
           <p className="text-sm text-gray-500 mb-1">Cart feature coming soon!</p>
-          <p className="text-xs text-gray-400 mb-6">In the meantime, you can place your order directly via WhatsApp. Our team will respond promptly and process your order with care.</p>
+          <p className="text-xs text-gray-400 mb-1">In the meantime, you can place your order directly via WhatsApp. Our team will respond promptly and process your order with care.</p>
+          <p className="text-xs text-gray-400 mb-6">💵 Cash on Delivery available (+₹99 COD charge applies)</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link href="/home" className="btn-primary w-full sm:w-auto">Continue Shopping</Link>
             <Link href="https://wa.me/918758302568" target="_blank" rel="noopener noreferrer" className="btn-green w-full sm:w-auto">

@@ -22,7 +22,7 @@ const SPICE_COLORS = { 'extra-hot': 'text-red-600', 'hot': 'text-orange-500', 'm
 const SPICE_LABELS = { 'extra-hot': 'Extra Hot', 'hot': 'Hot', 'medium': 'Medium', 'mild': 'Mild' };
 
 const pageTitle = "Andhra Podi & Gun Powder Online — Kandi Podi, Idly Podi & 7 More | Andhra Store";
-const pageDesc  = "Shop 9 authentic Andhra podi & gun powders — Kandi Podi, Idly Podi, Nuvvula Podi, Moringa Podi & more. Handcrafted with no additives. 100g from ₹150. Ships pan-India.";
+const pageDesc  = "Shop 9 authentic Andhra podi & gun powders — Kandi Podi, Idly Podi, Nuvvula Podi, Moringa Podi & more. Handcrafted with no additives. 100g from ₹200. Ships pan-India.";
 
 const pageSchema = {
   "@context": "https://schema.org",
