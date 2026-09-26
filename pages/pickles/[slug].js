@@ -183,6 +183,14 @@ export default function PickleDetail({ type, pickle }) {
     setActiveImg(0);
   };
 
+  // Each pickle opens on glass, or on the pouch when a listing's pouch card linked
+  // here with "#pouch". Keyed on the product so one pickle's choice doesn't carry
+  // over to the next during client-side navigation between pickle pages.
+  useEffect(() => {
+    setPackaging(offersPouch && window.location.hash === '#pouch' ? 'pouch' : 'glass');
+    setActiveImg(0);
+  }, [type, offersPouch]);
+
   useEffect(() => {
     const map = { '250': packPrice, '500': packPrice * 2, '1': packPrice * 4 };
     setPrice(map[weight] * qty);
