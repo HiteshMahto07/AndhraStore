@@ -7,6 +7,7 @@ import Head from 'next/head';
 import PickleData from '@/data/pickles.json';
 import { SITE_URL, PRODUCT_SEO_NAMES, PRODUCT_SHORT_DESCS, PRODUCT_RATINGS, PRODUCT_SPICE_LEVELS, TYPE_TO_SLUG } from '@/lib/seo';
 import { pushViewItemList, pushSelectItem } from '@/lib/analytics';
+import { hasPouch, packagingPrice } from '@/lib/packaging';
 
 // Derive from single source of truth
 const nonVegProducts = PickleData
@@ -19,6 +20,7 @@ const nonVegProducts = PickleData
     image:     p.image[0]?.name,
     imageAlt:  p.image[0]?.alt || `${PRODUCT_SEO_NAMES[p.type]} — Andhra Store`,
     price:     p.amount,
+    pouchPrice: hasPouch(p) ? packagingPrice(p, 'pouch') : null,
     badge:     p.badge,
     spiceLevel: p.spiceLevel,
     localName: p.localName,
@@ -231,6 +233,9 @@ export default function NonVegPicklesPage() {
                       </div>
                       <span className="text-[10px] font-bold text-green-600 bg-green-50 px-2 py-0.5 rounded-md">{discount}% OFF</span>
                     </div>
+                    {p.pouchPrice && (
+                      <p className="mt-1.5 text-[11px] font-medium text-olive-700">Also in pouch · ₹{p.pouchPrice}</p>
+                    )}
                   </div>
                 </div>
               );

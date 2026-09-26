@@ -349,7 +349,7 @@ export default function PickleDetail({ type, pickle }) {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
 
             {/* ── Images ── */}
-            <div>
+            <div className="min-w-0">
               <div className="rounded-xl overflow-hidden bg-gray-50 border border-gray-100 mb-3">
                 <Image
                   src={images[activeImg]?.name}
