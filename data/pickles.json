@@ -50,6 +50,42 @@
         "alt": "Hand holding Andhra Store Mango Pickle jar outdoors — authentic homemade pickle"
       }
     ],
+    "pouch": {
+      "image": [
+        {
+          "name": "/images/pickles/andhra-mango-pickle-pouch-250g-01.webp",
+          "alt": "Mango Pickle in the Andhra Store 250g stand-up pouch, with a bowl of the pickle and whole spices"
+        },
+        {
+          "name": "/images/pickles/andhra-mango-pickle-pouch-250g-02.webp",
+          "alt": "Mango Pickle served with hot rice, curd rice, chapati and dosa"
+        },
+        {
+          "name": "/images/pickles/andhra-mango-pickle-pouch-250g-03.webp",
+          "alt": "Ingredients arranged around the Mango Pickle pouch"
+        },
+        {
+          "name": "/images/pickles/andhra-mango-pickle-pouch-250g-04.webp",
+          "alt": "Mango Pickle pouch shown from the front, side and back, with zip-lock and material close-ups"
+        },
+        {
+          "name": "/images/pickles/andhra-mango-pickle-pouch-250g-05.webp",
+          "alt": "Mango Pickle pouch in a traditional Andhra kitchen"
+        },
+        {
+          "name": "/images/pickles/andhra-mango-pickle-pouch-250g-06.webp",
+          "alt": "Family sharing an Andhra meal with the Mango Pickle pouch on the table"
+        },
+        {
+          "name": "/images/pickles/andhra-mango-pickle-pouch-250g-07.webp",
+          "alt": "Mango Pickle pouch with Andhra Store quality badges"
+        },
+        {
+          "name": "/images/pickles/andhra-mango-pickle-pouch-250g-08.webp",
+          "alt": "Mango Pickle pouch with a list of product highlights"
+        }
+      ]
+    },
     "servingWith": [
       "Hot steamed white rice with ghee",
       "Curd rice",
@@ -148,6 +184,42 @@
         "alt": "Hand holding Andhra Store Gongura Pickle jar outdoors — authentic homemade pickle"
       }
     ],
+    "pouch": {
+      "image": [
+        {
+          "name": "/images/pickles/andhra-gongura-pickle-pouch-250g-01.webp",
+          "alt": "Gongura Pickle in the Andhra Store 250g stand-up pouch, with a bowl of the pickle and whole spices"
+        },
+        {
+          "name": "/images/pickles/andhra-gongura-pickle-pouch-250g-02.webp",
+          "alt": "Gongura Pickle served with hot rice, curd rice, dosa and idli"
+        },
+        {
+          "name": "/images/pickles/andhra-gongura-pickle-pouch-250g-03.webp",
+          "alt": "Ingredients arranged around the Gongura Pickle pouch"
+        },
+        {
+          "name": "/images/pickles/andhra-gongura-pickle-pouch-250g-04.webp",
+          "alt": "Gongura Pickle pouch with a list of packaging features"
+        },
+        {
+          "name": "/images/pickles/andhra-gongura-pickle-pouch-250g-05.webp",
+          "alt": "Gongura Pickle pouch in a traditional Andhra kitchen"
+        },
+        {
+          "name": "/images/pickles/andhra-gongura-pickle-pouch-250g-06.webp",
+          "alt": "Family sharing an Andhra meal with the Gongura Pickle pouch on the table"
+        },
+        {
+          "name": "/images/pickles/andhra-gongura-pickle-pouch-250g-07.webp",
+          "alt": "Gongura Pickle pouch with Andhra Store quality badges"
+        },
+        {
+          "name": "/images/pickles/andhra-gongura-pickle-pouch-250g-08.webp",
+          "alt": "Gongura Pickle pouch with a list of product highlights"
+        }
+      ]
+    },
     "servingWith": [
       "Hot white rice with ghee",
       "As base for gongura chicken curry",
@@ -249,6 +321,38 @@
         "alt": "Hand holding Andhra Store Garlic Pickle jar outdoors — authentic homemade pickle"
       }
     ],
+    "pouch": {
+      "image": [
+        {
+          "name": "/images/pickles/andhra-garlic-pickle-pouch-250g-01.webp",
+          "alt": "Garlic Pickle in the Andhra Store 250g stand-up pouch, with a bowl of the pickle and whole spices"
+        },
+        {
+          "name": "/images/pickles/andhra-garlic-pickle-pouch-250g-02.webp",
+          "alt": "Garlic Pickle served with hot rice, curd rice, idli, chapati and dosa"
+        },
+        {
+          "name": "/images/pickles/andhra-garlic-pickle-pouch-250g-03.webp",
+          "alt": "Ingredients arranged around the Garlic Pickle pouch"
+        },
+        {
+          "name": "/images/pickles/andhra-garlic-pickle-pouch-250g-04.webp",
+          "alt": "Garlic Pickle 250g pouch with its packaging features labelled, beside a bowl of the pickle and garlic cloves"
+        },
+        {
+          "name": "/images/pickles/andhra-garlic-pickle-pouch-250g-05.webp",
+          "alt": "Garlic Pickle pouch in a traditional Andhra kitchen"
+        },
+        {
+          "name": "/images/pickles/andhra-garlic-pickle-pouch-250g-06.webp",
+          "alt": "Family sharing an Andhra meal with the Garlic Pickle pouch on the table"
+        },
+        {
+          "name": "/images/pickles/andhra-garlic-pickle-pouch-250g-07.webp",
+          "alt": "Garlic Pickle pouch with a bowl of the pickle, garlic and dried red chillies, next to a list of product highlights"
+        }
+      ]
+    },
     "servingWith": [
       "Hot steamed rice with ghee",
       "Curd rice",
@@ -451,6 +555,42 @@
         "alt": "Hand holding Andhra Store Red Chilli Pickle jar outdoors — authentic homemade pickle"
       }
     ],
+    "pouch": {
+      "image": [
+        {
+          "name": "/images/pickles/andhra-red-chilli-pickle-pouch-250g-01.webp",
+          "alt": "Red Chilli Pickle in the Andhra Store 250g stand-up pouch, with a bowl of the pickle and whole spices"
+        },
+        {
+          "name": "/images/pickles/andhra-red-chilli-pickle-pouch-250g-02.webp",
+          "alt": "Red Chilli Pickle served with hot rice, curd rice, chapati and dosa"
+        },
+        {
+          "name": "/images/pickles/andhra-red-chilli-pickle-pouch-250g-03.webp",
+          "alt": "Ingredients arranged around the Red Chilli Pickle pouch"
+        },
+        {
+          "name": "/images/pickles/andhra-red-chilli-pickle-pouch-250g-04.webp",
+          "alt": "Red Chilli Pickle pouch shown from the front, side and back, with zip-lock and material close-ups"
+        },
+        {
+          "name": "/images/pickles/andhra-red-chilli-pickle-pouch-250g-05.webp",
+          "alt": "Red Chilli Pickle pouch in a traditional Andhra kitchen"
+        },
+        {
+          "name": "/images/pickles/andhra-red-chilli-pickle-pouch-250g-06.webp",
+          "alt": "Family sharing an Andhra meal with the Red Chilli Pickle pouch on the table"
+        },
+        {
+          "name": "/images/pickles/andhra-red-chilli-pickle-pouch-250g-07.webp",
+          "alt": "Red Chilli Pickle pouch with Andhra Store quality badges"
+        },
+        {
+          "name": "/images/pickles/andhra-red-chilli-pickle-pouch-250g-08.webp",
+          "alt": "Red Chilli Pickle pouch with a list of product highlights"
+        }
+      ]
+    },
     "servingWith": [
       "Hot rice with ghee",
       "Curd rice",
@@ -549,6 +689,38 @@
         "alt": "Hand holding Andhra Store Lemon Pickle jar outdoors — authentic homemade pickle"
       }
     ],
+    "pouch": {
+      "image": [
+        {
+          "name": "/images/pickles/andhra-lemon-pickle-pouch-250g-01.webp",
+          "alt": "Lemon Pickle in the Andhra Store 250g stand-up pouch, with a bowl of the pickle and whole spices"
+        },
+        {
+          "name": "/images/pickles/andhra-lemon-pickle-pouch-250g-02.webp",
+          "alt": "Lemon Pickle served with hot rice, curd rice, chapati and dosa"
+        },
+        {
+          "name": "/images/pickles/andhra-lemon-pickle-pouch-250g-03.webp",
+          "alt": "Ingredients arranged around the Lemon Pickle pouch"
+        },
+        {
+          "name": "/images/pickles/andhra-lemon-pickle-pouch-250g-04.webp",
+          "alt": "Lemon Pickle pouch in a traditional Andhra kitchen"
+        },
+        {
+          "name": "/images/pickles/andhra-lemon-pickle-pouch-250g-05.webp",
+          "alt": "Family sharing an Andhra meal with the Lemon Pickle pouch on the table"
+        },
+        {
+          "name": "/images/pickles/andhra-lemon-pickle-pouch-250g-06.webp",
+          "alt": "Lemon Pickle pouch with Andhra Store quality badges"
+        },
+        {
+          "name": "/images/pickles/andhra-lemon-pickle-pouch-250g-07.webp",
+          "alt": "Lemon Pickle pouch with a list of product highlights"
+        }
+      ]
+    },
     "servingWith": [
       "Plain rice with ghee",
       "Curd rice",
@@ -646,6 +818,42 @@
         "alt": "Hand holding Andhra Store Tomato Pickle jar outdoors — authentic homemade pickle"
       }
     ],
+    "pouch": {
+      "image": [
+        {
+          "name": "/images/pickles/andhra-tomato-pickle-pouch-250g-01.webp",
+          "alt": "Tomato Pickle in the Andhra Store 250g stand-up pouch, with a bowl of the pickle and whole spices"
+        },
+        {
+          "name": "/images/pickles/andhra-tomato-pickle-pouch-250g-02.webp",
+          "alt": "Tomato Pickle served with hot rice, curd rice, chapati and dosa"
+        },
+        {
+          "name": "/images/pickles/andhra-tomato-pickle-pouch-250g-03.webp",
+          "alt": "Ingredients arranged around the Tomato Pickle pouch"
+        },
+        {
+          "name": "/images/pickles/andhra-tomato-pickle-pouch-250g-04.webp",
+          "alt": "Tomato Pickle pouch shown from the front, side and back, with zip-lock and material close-ups"
+        },
+        {
+          "name": "/images/pickles/andhra-tomato-pickle-pouch-250g-05.webp",
+          "alt": "Tomato Pickle pouch in a traditional Andhra kitchen"
+        },
+        {
+          "name": "/images/pickles/andhra-tomato-pickle-pouch-250g-06.webp",
+          "alt": "Family sharing an Andhra meal with the Tomato Pickle pouch on the table"
+        },
+        {
+          "name": "/images/pickles/andhra-tomato-pickle-pouch-250g-07.webp",
+          "alt": "Tomato Pickle pouch with Andhra Store quality badges"
+        },
+        {
+          "name": "/images/pickles/andhra-tomato-pickle-pouch-250g-08.webp",
+          "alt": "Tomato Pickle pouch with a list of product highlights"
+        }
+      ]
+    },
     "servingWith": [
       "Hot rice with ghee",
       "Idli or dosa",
@@ -746,6 +954,30 @@
         "alt": "Hand holding Andhra Store Curry Leaves Pickle jar outdoors — authentic homemade pickle"
       }
     ],
+    "pouch": {
+      "image": [
+        {
+          "name": "/images/pickles/andhra-curry-leaves-pickle-pouch-250g-01.webp",
+          "alt": "Curry Leaves Pickle in the Andhra Store 250g stand-up pouch, with a bowl of the pickle and whole spices"
+        },
+        {
+          "name": "/images/pickles/andhra-curry-leaves-pickle-pouch-250g-02.webp",
+          "alt": "Curry Leaves Pickle served with hot rice, curd rice, chapati and dosa"
+        },
+        {
+          "name": "/images/pickles/andhra-curry-leaves-pickle-pouch-250g-03.webp",
+          "alt": "Family sharing an Andhra meal with the Curry Leaves Pickle pouch on the table"
+        },
+        {
+          "name": "/images/pickles/andhra-curry-leaves-pickle-pouch-250g-04.webp",
+          "alt": "Curry Leaves Pickle pouch with Andhra Store quality badges"
+        },
+        {
+          "name": "/images/pickles/andhra-curry-leaves-pickle-pouch-250g-05.webp",
+          "alt": "Curry Leaves Pickle pouch with a list of product highlights"
+        }
+      ]
+    },
     "servingWith": [
       "Plain steamed rice",
       "Idli or dosa",
@@ -846,6 +1078,34 @@
         "alt": "Hand holding Andhra Store Green Chilli Pickle jar outdoors — authentic homemade pickle"
       }
     ],
+    "pouch": {
+      "image": [
+        {
+          "name": "/images/pickles/andhra-green-chilli-pickle-pouch-250g-01.webp",
+          "alt": "Green Chilli Pickle in the Andhra Store 250g stand-up pouch, with a bowl of the pickle and whole spices"
+        },
+        {
+          "name": "/images/pickles/andhra-green-chilli-pickle-pouch-250g-02.webp",
+          "alt": "Ingredients arranged around the Green Chilli Pickle pouch"
+        },
+        {
+          "name": "/images/pickles/andhra-green-chilli-pickle-pouch-250g-03.webp",
+          "alt": "Green Chilli Pickle pouch shown from the front, side and back, with zip-lock and material close-ups"
+        },
+        {
+          "name": "/images/pickles/andhra-green-chilli-pickle-pouch-250g-04.webp",
+          "alt": "Green Chilli Pickle pouch in a traditional Andhra kitchen"
+        },
+        {
+          "name": "/images/pickles/andhra-green-chilli-pickle-pouch-250g-05.webp",
+          "alt": "Family sharing an Andhra meal with the Green Chilli Pickle pouch on the table"
+        },
+        {
+          "name": "/images/pickles/andhra-green-chilli-pickle-pouch-250g-06.webp",
+          "alt": "Green Chilli Pickle pouch with Andhra Store quality badges"
+        }
+      ]
+    },
     "servingWith": [
       "Dal and rice",
       "Curd rice",
@@ -944,6 +1204,42 @@
         "alt": "Hand holding Andhra Store Amla Pickle jar outdoors — authentic homemade pickle"
       }
     ],
+    "pouch": {
+      "image": [
+        {
+          "name": "/images/pickles/andhra-amla-pickle-pouch-250g-01.webp",
+          "alt": "Amla Pickle in the Andhra Store 250g stand-up pouch, with a bowl of the pickle and whole spices"
+        },
+        {
+          "name": "/images/pickles/andhra-amla-pickle-pouch-250g-02.webp",
+          "alt": "Amla Pickle served with hot rice, curd rice, chapati and dosa"
+        },
+        {
+          "name": "/images/pickles/andhra-amla-pickle-pouch-250g-03.webp",
+          "alt": "Ingredients arranged around the Amla Pickle pouch"
+        },
+        {
+          "name": "/images/pickles/andhra-amla-pickle-pouch-250g-04.webp",
+          "alt": "Amla Pickle pouch shown from the front, side and back, with zip-lock and material close-ups"
+        },
+        {
+          "name": "/images/pickles/andhra-amla-pickle-pouch-250g-05.webp",
+          "alt": "Amla Pickle pouch in a traditional Andhra kitchen"
+        },
+        {
+          "name": "/images/pickles/andhra-amla-pickle-pouch-250g-06.webp",
+          "alt": "Family sharing an Andhra meal with the Amla Pickle pouch on the table"
+        },
+        {
+          "name": "/images/pickles/andhra-amla-pickle-pouch-250g-07.webp",
+          "alt": "Amla Pickle pouch with Andhra Store quality badges"
+        },
+        {
+          "name": "/images/pickles/andhra-amla-pickle-pouch-250g-08.webp",
+          "alt": "Amla Pickle pouch with a list of product highlights"
+        }
+      ]
+    },
     "servingWith": [
       "Hot rice with ghee",
       "Curd rice",
@@ -1041,6 +1337,42 @@
         "alt": "Hand holding Andhra Store Karela Pickle jar outdoors — authentic homemade pickle"
       }
     ],
+    "pouch": {
+      "image": [
+        {
+          "name": "/images/pickles/andhra-karela-pickle-pouch-250g-01.webp",
+          "alt": "Karela Pickle in the Andhra Store 250g stand-up pouch, with a bowl of the pickle and whole spices"
+        },
+        {
+          "name": "/images/pickles/andhra-karela-pickle-pouch-250g-02.webp",
+          "alt": "Karela Pickle served with hot rice, curd rice, chapati and dosa"
+        },
+        {
+          "name": "/images/pickles/andhra-karela-pickle-pouch-250g-03.webp",
+          "alt": "Ingredients arranged around the Karela Pickle pouch"
+        },
+        {
+          "name": "/images/pickles/andhra-karela-pickle-pouch-250g-04.webp",
+          "alt": "Karela Pickle pouch shown from the front, side and back, with zip-lock and material close-ups"
+        },
+        {
+          "name": "/images/pickles/andhra-karela-pickle-pouch-250g-05.webp",
+          "alt": "Karela Pickle pouch in a traditional Andhra kitchen"
+        },
+        {
+          "name": "/images/pickles/andhra-karela-pickle-pouch-250g-06.webp",
+          "alt": "Family sharing an Andhra meal with the Karela Pickle pouch on the table"
+        },
+        {
+          "name": "/images/pickles/andhra-karela-pickle-pouch-250g-07.webp",
+          "alt": "Karela Pickle pouch with Andhra Store quality badges"
+        },
+        {
+          "name": "/images/pickles/andhra-karela-pickle-pouch-250g-08.webp",
+          "alt": "Karela Pickle pouch with a list of product highlights"
+        }
+      ]
+    },
     "servingWith": [
       "Hot rice with ghee",
       "Dal and rice",
@@ -1141,6 +1473,42 @@
         "alt": "Hand holding Andhra Store Tamarind Pickle jar outdoors — authentic homemade pickle"
       }
     ],
+    "pouch": {
+      "image": [
+        {
+          "name": "/images/pickles/andhra-tamarind-pickle-pouch-250g-01.webp",
+          "alt": "Tamarind Pickle in the Andhra Store 250g stand-up pouch, with a bowl of the pickle and whole spices"
+        },
+        {
+          "name": "/images/pickles/andhra-tamarind-pickle-pouch-250g-02.webp",
+          "alt": "Tamarind Pickle served with hot rice, curd rice, chapati and dosa"
+        },
+        {
+          "name": "/images/pickles/andhra-tamarind-pickle-pouch-250g-03.webp",
+          "alt": "Ingredients arranged around the Tamarind Pickle pouch"
+        },
+        {
+          "name": "/images/pickles/andhra-tamarind-pickle-pouch-250g-04.webp",
+          "alt": "Tamarind Pickle pouch shown from the front, side and back, with zip-lock and material close-ups"
+        },
+        {
+          "name": "/images/pickles/andhra-tamarind-pickle-pouch-250g-05.webp",
+          "alt": "Tamarind Pickle pouch in a traditional Andhra kitchen"
+        },
+        {
+          "name": "/images/pickles/andhra-tamarind-pickle-pouch-250g-06.webp",
+          "alt": "Family sharing an Andhra meal with the Tamarind Pickle pouch on the table"
+        },
+        {
+          "name": "/images/pickles/andhra-tamarind-pickle-pouch-250g-07.webp",
+          "alt": "Tamarind Pickle pouch with Andhra Store quality badges"
+        },
+        {
+          "name": "/images/pickles/andhra-tamarind-pickle-pouch-250g-08.webp",
+          "alt": "Tamarind Pickle pouch with a list of product highlights"
+        }
+      ]
+    },
     "servingWith": [
       "Hot steamed rice with ghee",
       "Curd rice",
@@ -1247,6 +1615,42 @@
         "alt": "Hand holding Andhra Store Chicken Pickle jar outdoors — authentic homemade pickle"
       }
     ],
+    "pouch": {
+      "image": [
+        {
+          "name": "/images/pickles/andhra-chicken-pickle-pouch-250g-01.webp",
+          "alt": "Chicken Pickle in the Andhra Store 250g stand-up pouch, with a bowl of the pickle and whole spices"
+        },
+        {
+          "name": "/images/pickles/andhra-chicken-pickle-pouch-250g-02.webp",
+          "alt": "Chicken Pickle served with hot rice, curd rice, chapati and dosa"
+        },
+        {
+          "name": "/images/pickles/andhra-chicken-pickle-pouch-250g-03.webp",
+          "alt": "Ingredients arranged around the Chicken Pickle pouch"
+        },
+        {
+          "name": "/images/pickles/andhra-chicken-pickle-pouch-250g-04.webp",
+          "alt": "Chicken Pickle pouch shown from the front, side and back, with zip-lock and material close-ups"
+        },
+        {
+          "name": "/images/pickles/andhra-chicken-pickle-pouch-250g-05.webp",
+          "alt": "Chicken Pickle pouch in a traditional Andhra kitchen"
+        },
+        {
+          "name": "/images/pickles/andhra-chicken-pickle-pouch-250g-06.webp",
+          "alt": "Family sharing an Andhra meal with the Chicken Pickle pouch on the table"
+        },
+        {
+          "name": "/images/pickles/andhra-chicken-pickle-pouch-250g-07.webp",
+          "alt": "Chicken Pickle pouch with Andhra Store quality badges"
+        },
+        {
+          "name": "/images/pickles/andhra-chicken-pickle-pouch-250g-08.webp",
+          "alt": "Chicken Pickle pouch with a list of product highlights"
+        }
+      ]
+    },
     "servingWith": [
       "Hot steamed white rice",
       "Chapati or paratha",
@@ -1345,6 +1749,38 @@
         "alt": "Hand holding Andhra Store Mutton Pickle jar outdoors — authentic homemade pickle"
       }
     ],
+    "pouch": {
+      "image": [
+        {
+          "name": "/images/pickles/andhra-meat-pickle-pouch-250g-01.webp",
+          "alt": "Mutton Pickle in the Andhra Store 250g stand-up pouch, with a bowl of the pickle and whole spices"
+        },
+        {
+          "name": "/images/pickles/andhra-meat-pickle-pouch-250g-02.webp",
+          "alt": "Mutton Pickle pouch with a bowl of the pickle, raw mutton pieces, garlic and ginger"
+        },
+        {
+          "name": "/images/pickles/andhra-meat-pickle-pouch-250g-03.webp",
+          "alt": "Ingredients arranged around the Mutton Pickle pouch"
+        },
+        {
+          "name": "/images/pickles/andhra-meat-pickle-pouch-250g-04.webp",
+          "alt": "Mutton Pickle pouch shown from the front, side and back, with zip-lock and material close-ups"
+        },
+        {
+          "name": "/images/pickles/andhra-meat-pickle-pouch-250g-05.webp",
+          "alt": "Mutton Pickle pouch in a traditional Andhra kitchen"
+        },
+        {
+          "name": "/images/pickles/andhra-meat-pickle-pouch-250g-06.webp",
+          "alt": "Mutton Pickle pouch with a list of product highlights"
+        },
+        {
+          "name": "/images/pickles/andhra-meat-pickle-pouch-250g-07.webp",
+          "alt": "Mutton Pickle pouch with Andhra Store quality badges"
+        }
+      ]
+    },
     "servingWith": [
       "Hot steamed rice with ghee",
       "Chapati or naan",
@@ -1444,6 +1880,46 @@
         "alt": "Hand holding Andhra Store Prawn Pickle jar outdoors — authentic homemade pickle"
       }
     ],
+    "pouch": {
+      "image": [
+        {
+          "name": "/images/pickles/andhra-prawns-pickle-pouch-250g-01.webp",
+          "alt": "Prawns Pickle in the Andhra Store 250g stand-up pouch, with a bowl of the pickle and whole spices"
+        },
+        {
+          "name": "/images/pickles/andhra-prawns-pickle-pouch-250g-02.webp",
+          "alt": "Prawns Pickle 250g stand-up pouch, front view"
+        },
+        {
+          "name": "/images/pickles/andhra-prawns-pickle-pouch-250g-03.webp",
+          "alt": "Prawns Pickle served with hot rice, curd rice, chapati and dosa"
+        },
+        {
+          "name": "/images/pickles/andhra-prawns-pickle-pouch-250g-04.webp",
+          "alt": "Ingredients arranged around the Prawns Pickle pouch"
+        },
+        {
+          "name": "/images/pickles/andhra-prawns-pickle-pouch-250g-05.webp",
+          "alt": "Prawns Pickle pouch shown from the front, side and back, with zip-lock and material close-ups"
+        },
+        {
+          "name": "/images/pickles/andhra-prawns-pickle-pouch-250g-06.webp",
+          "alt": "Prawns Pickle pouch with a bowl of the pickle, raw prawns, a clay pot and a bottle of oil"
+        },
+        {
+          "name": "/images/pickles/andhra-prawns-pickle-pouch-250g-07.webp",
+          "alt": "Prawns Pickle pouch in a traditional Andhra kitchen"
+        },
+        {
+          "name": "/images/pickles/andhra-prawns-pickle-pouch-250g-08.webp",
+          "alt": "Family sharing an Andhra meal with the Prawns Pickle pouch on the table"
+        },
+        {
+          "name": "/images/pickles/andhra-prawns-pickle-pouch-250g-09.webp",
+          "alt": "Prawns Pickle pouch with Andhra Store quality badges"
+        }
+      ]
+    },
     "servingWith": [
       "Hot steamed white rice",
       "Chapati or paratha",
@@ -1545,6 +2021,38 @@
         "alt": "Hand holding Andhra Store Fish Pickle jar outdoors — authentic homemade pickle"
       }
     ],
+    "pouch": {
+      "image": [
+        {
+          "name": "/images/pickles/andhra-fish-pickle-pouch-250g-01.webp",
+          "alt": "Fish Pickle in the Andhra Store 250g stand-up pouch, with a bowl of the pickle and whole spices"
+        },
+        {
+          "name": "/images/pickles/andhra-fish-pickle-pouch-250g-02.webp",
+          "alt": "Fish Pickle served with hot rice, curd rice, chapati and dosa"
+        },
+        {
+          "name": "/images/pickles/andhra-fish-pickle-pouch-250g-03.webp",
+          "alt": "Ingredients arranged around the Fish Pickle pouch"
+        },
+        {
+          "name": "/images/pickles/andhra-fish-pickle-pouch-250g-04.webp",
+          "alt": "Fish Pickle pouch shown from the front, side and back, with zip-lock and material close-ups"
+        },
+        {
+          "name": "/images/pickles/andhra-fish-pickle-pouch-250g-05.webp",
+          "alt": "Family sharing an Andhra meal with the Fish Pickle pouch on the table"
+        },
+        {
+          "name": "/images/pickles/andhra-fish-pickle-pouch-250g-06.webp",
+          "alt": "Fish Pickle pouch with Andhra Store quality badges"
+        },
+        {
+          "name": "/images/pickles/andhra-fish-pickle-pouch-250g-07.webp",
+          "alt": "Fish Pickle pouch with a list of product highlights"
+        }
+      ]
+    },
     "servingWith": [
       "Hot steamed rice with ghee",
       "Plain boiled rice",

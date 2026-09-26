@@ -24,6 +24,7 @@ import {
 import { useCart } from '@/context/CartContext';
 import { buildProductSchema, buildBreadcrumbSchema, buildFaqSchema, buildSpeakableSchema } from '@/lib/schema';
 import { PRODUCT_REVIEWS } from '@/lib/reviews';
+import { hasPouch, packagingPrice, packagingImages, PACKAGING_LABELS } from '@/lib/packaging';
 import { pushViewItem } from '@/lib/analytics';
 
 // ─── Nutrient highlights per product ─────────────────────────────────────────
@@ -166,15 +167,26 @@ export async function getStaticProps({ params }) {
 
 export default function PickleDetail({ type, pickle }) {
   const [weight, setWeight] = useState('250');
+  const [packaging, setPackaging] = useState('glass');
   const [qty,    setQty]    = useState(1);
   const [price,  setPrice]  = useState(pickle.amount);
   const [activeImg, setActiveImg] = useState(0);
   const [showAR, setShowAR] = useState(false);
 
+  const offersPouch = hasPouch(pickle);
+  const images      = packagingImages(pickle, packaging);
+  const packPrice   = packagingPrice(pickle, packaging); // one 250g pack in the chosen packaging
+
+  // Switching packaging swaps the gallery, so start it from the first image again.
+  const choosePackaging = (p) => {
+    setPackaging(p);
+    setActiveImg(0);
+  };
+
   useEffect(() => {
-    const map = { '250': pickle.amount, '500': pickle.amount * 2, '1': pickle.amount * 4 };
+    const map = { '250': packPrice, '500': packPrice * 2, '1': packPrice * 4 };
     setPrice(map[weight] * qty);
-  }, [weight, qty, pickle]);
+  }, [weight, qty, packPrice]);
 
   const { addToCart } = useCart();
   const [added, setAdded] = useState(false);
@@ -186,16 +198,20 @@ export default function PickleDetail({ type, pickle }) {
   }, [type]);
 
   const handleAddToCart = () => {
-    const unitPriceMap   = { '250': pickle.amount, '500': pickle.amount * 2, '1': pickle.amount * 4 };
+    const unitPriceMap   = { '250': packPrice, '500': packPrice * 2, '1': packPrice * 4 };
     const weightLabelMap = { '250': '250g', '500': '500g', '1': '1 Kg' };
     addToCart({
-      id:          `${type}-${weight}`,
+      // Glass keeps the original id format so carts saved before pouches existed still merge.
+      id:          packaging === 'pouch' ? `${type}-${weight}-pouch` : `${type}-${weight}`,
       type,
       name:        pickle.name,
       category:    'Pickles',
-      image:       pickle.image[0]?.name,
+      image:       images[0]?.name,
       weight,
-      weightLabel: weightLabelMap[weight],
+      packaging,
+      weightLabel: offersPouch
+        ? `${weightLabelMap[weight]} · ${PACKAGING_LABELS[packaging]}`
+        : weightLabelMap[weight],
       unitPrice:   unitPriceMap[weight],
       qty,
     });
@@ -336,20 +352,20 @@ export default function PickleDetail({ type, pickle }) {
             <div>
               <div className="rounded-xl overflow-hidden bg-gray-50 border border-gray-100 mb-3">
                 <Image
-                  src={pickle.image[activeImg]?.name}
-                  alt={pickle.image[activeImg]?.alt || `${seoName} — authentic Andhra-style pickle`}
+                  src={images[activeImg]?.name}
+                  alt={images[activeImg]?.alt || `${seoName} — authentic Andhra-style pickle`}
                   className="w-full h-60 sm:h-80 lg:h-[420px] object-cover"
                   width={800}
                   height={600}
                   priority={activeImg === 0}
                 />
               </div>
-              {pickle.image.length > 1 && (
-                <div className="flex gap-2" role="list" aria-label="Product image thumbnails">
-                  {pickle.image.map((img, i) => (
+              {images.length > 1 && (
+                <div className="flex gap-2 overflow-x-auto pb-1" role="list" aria-label="Product image thumbnails">
+                  {images.map((img, i) => (
                     <button key={i} onClick={() => setActiveImg(i)} role="listitem"
                       aria-label={`View image ${i + 1}`}
-                      className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
+                      className={`w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all ${
                         activeImg === i ? 'border-brand-500 shadow-sm' : 'border-gray-200 opacity-60 hover:opacity-100'
                       }`}>
                       <Image src={img.name} alt={img.alt || `${seoName} view ${i + 1}`}
@@ -443,6 +459,29 @@ export default function PickleDetail({ type, pickle }) {
 
               {/* Size + Qty + CTA */}
               <div className="border border-gray-100 rounded-xl p-4">
+                {offersPouch && (
+                  <div className="mb-4">
+                    <p className="text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-3">Packaging</p>
+                    <div className="flex gap-2 mb-2" role="group" aria-label="Packaging">
+                      {['glass', 'pouch'].map((p) => (
+                        <button key={p} onClick={() => choosePackaging(p)}
+                          aria-pressed={packaging === p}
+                          className={`px-4 py-2 rounded-lg text-sm font-semibold border-2 transition-all ${
+                            packaging === p
+                              ? 'border-olive-600 bg-olive-50 text-olive-700'
+                              : 'border-gray-200 text-gray-600 hover:border-gray-300'
+                          }`}>
+                          {PACKAGING_LABELS[p]} · ₹{packagingPrice(pickle, p)}
+                        </button>
+                      ))}
+                    </div>
+                    <p className="text-xs text-gray-500">
+                      {packaging === 'pouch'
+                        ? 'Same pickle in a stand-up pouch, ₹50 less than the glass jar.'
+                        : 'Sealed glass jar.'}
+                    </p>
+                  </div>
+                )}
                 <p className="text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-3">Available Sizes</p>
                 <div className="flex gap-2 mb-4">
                   {[{ v: '250', l: '250g' }, { v: '500', l: '500g' }, { v: '1', l: '1 Kg' }].map((o) => (
@@ -576,6 +615,7 @@ export default function PickleDetail({ type, pickle }) {
                     {[
                       ['SKU',           sku                               ],
                       ['Net Weight',    '250g / 500g / 1kg'               ],
+                      ...(offersPouch ? [['Packaging', 'Glass jar or stand-up pouch']] : []),
                       ['Origin',        attrs.origin || 'East Godavari'   ],
                       ['Oil Type',      attrs.oilType || 'Cold-Pressed'   ],
                       ['Preservatives', 'None'                            ],
