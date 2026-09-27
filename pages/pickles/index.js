@@ -14,6 +14,7 @@ import {
   TYPE_TO_SLUG,
 } from '@/lib/seo';
 import { pushViewItemList, pushSelectItem } from '@/lib/analytics';
+import { hasPouch, packagingPrice, packagingImages } from '@/lib/packaging';
 
 // ─── Derive listing array from single source of truth ────────────────────────
 const allProducts = PickleData.map(p => ({
@@ -28,6 +29,22 @@ const allProducts = PickleData.map(p => ({
   spiceLevel: p.spiceLevel,
   sortOrder: p.sortOrder,
 })).sort((a, b) => a.sortOrder - b.sortOrder);
+
+// Grid cards: each glass card, followed by a pouch card when the pickle has one.
+// The pouch card is the same product record with its pouch image, price and a
+// "#pouch" link; allProducts (one entry per product) still feeds schema + analytics.
+const allCards = allProducts.flatMap((p) => {
+  const product = PickleData.find((x) => x.type === p.type);
+  if (!hasPouch(product)) return [p];
+  const [pouchImg] = packagingImages(product, 'pouch');
+  return [p, {
+    ...p,
+    packaging:  'pouch',
+    image:      pouchImg.name,
+    imageAlt:   pouchImg.alt,
+    price:      packagingPrice(product, 'pouch'),
+  }];
+});
 
 const categoryFilters = [
   { value: 'all',     label: 'All Pickles'      },
@@ -132,7 +149,7 @@ export default function ShopPage() {
   }, []);
 
   const filtered = useMemo(() => {
-    let items = [...allProducts];
+    let items = [...allCards];
     if (category !== 'all')    items = items.filter(p => p.cat === category);
     if (spiceFilter !== 'all') items = items.filter(p => p.spiceLevel === spiceFilter);
     switch (sort) {
@@ -297,7 +314,7 @@ export default function ShopPage() {
 
             <div className="flex-1 min-w-0">
               <p className="text-sm text-gray-500 mb-5">
-                Showing <span className="font-semibold text-gray-700">{filtered.length}</span> products
+                Showing <span className="font-semibold text-gray-700">{new Set(filtered.map(p => p.type)).size}</span> products
                 {category !== 'all' && <span> in <span className="font-semibold">{categoryFilters.find(f=>f.value===category)?.label}</span></span>}
                 {spiceFilter !== 'all' && <span> · <span className="font-semibold">{PRODUCT_SPICE_LEVELS?.[spiceFilter]?.label || spiceFilter} spice</span></span>}
               </p>
@@ -309,14 +326,21 @@ export default function ShopPage() {
                   const discount  = Math.round(((origPrice - p.price) / origPrice) * 100);
                   const spiceDots = SPICE_DOTS[p.spiceLevel] || 2;
                   const spiceColor= SPICE_COLORS[p.spiceLevel] || 'text-yellow-600';
+                  const isPouch   = p.packaging === 'pouch';
+                  const href      = `/pickles/${TYPE_TO_SLUG[p.type]}${isPouch ? '#pouch' : ''}`;
 
                   return (
-                    <div key={p.type}
+                    <div key={isPouch ? `${p.type}-pouch` : p.type}
                       className="bg-white rounded-2xl border border-gray-100 overflow-hidden group hover:shadow-xl hover:border-gray-200 hover:-translate-y-1 transition-all duration-300"
                       style={{ animationDelay: `${idx * 60}ms` }}>
-                      <Link href={`/pickles/${TYPE_TO_SLUG[p.type]}`}
+                      <Link href={href}
                         onClick={() => pushSelectItem({ type: p.type, name: p.name, category: 'Pickles', unitPrice: p.price }, 'All Pickles')}>
                         <div className="relative aspect-square overflow-hidden bg-gray-50">
+                          {isPouch && (
+                            <span className="absolute top-3 right-3 z-10 px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wide uppercase shadow-sm bg-white text-olive-700">
+                              Pouch
+                            </span>
+                          )}
                           {p.badge && (
                             <span className={`absolute top-3 left-3 z-10 px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wide uppercase shadow-sm ${
                               p.badge === 'BEST SELLER'   ? 'bg-brand-500 text-white' :
@@ -351,7 +375,7 @@ export default function ShopPage() {
                           </div>
                         </div>
 
-                        <Link href={`/pickles/${TYPE_TO_SLUG[p.type]}`}
+                        <Link href={href}
                           onClick={() => pushSelectItem({ type: p.type, name: p.name, category: 'Pickles', unitPrice: p.price }, 'All Pickles')}>
                           <h2 className="text-sm font-bold text-gray-800 hover:text-brand-600 transition-colors line-clamp-1 mb-1">
                             {p.name}
@@ -360,7 +384,6 @@ export default function ShopPage() {
 
                         {/* Short desc */}
                         <p className="text-[10px] text-gray-400 leading-relaxed line-clamp-2 mb-2.5 hidden sm:block">{p.shortDesc}</p>
-                        <p className="text-[11px] text-gray-400 mb-2.5 sm:hidden">250g</p>
 
                         <div className="flex items-baseline justify-between">
                           <div>
@@ -369,6 +392,7 @@ export default function ShopPage() {
                           </div>
                           <span className="text-[10px] font-bold text-green-600 bg-green-50 px-2 py-0.5 rounded-md">{discount}% OFF</span>
                         </div>
+                        <p className="mt-1.5 text-[11px] font-medium text-olive-700">250g · {isPouch ? 'Pouch' : 'Glass'}</p>
                       </div>
                     </div>
                   );

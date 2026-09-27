@@ -211,7 +211,7 @@ export default function PodiDetail({ podi }) {
 
               {/* Attribute pills */}
               <div className="flex flex-wrap gap-2 mb-6">
-                {['100g / 200g', 'No Preservatives', 'No Artificial Color', '2–4 Day Delivery', 'COD Available (+₹99)'].map(tag => (
+                {['100g', 'No Preservatives', 'No Artificial Color', '2–4 Day Delivery', 'COD Available (+₹99)'].map(tag => (
                   <span key={tag} className="text-[11px] font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">{tag}</span>
                 ))}
               </div>

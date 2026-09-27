@@ -97,13 +97,13 @@ export default function PodiPage() {
         <meta property="og:title"       content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
         <meta property="og:url"         content={`${SITE_URL}/podi`} />
-        <meta property="og:image"       content={`${SITE_URL}/images/podi/andhra-kandi-podi-hero.webp`} />
-        <meta property="og:image:alt"    content="Andhra podi — kandi podi, idly podi, nuvvula podi and more by Andhra Store" />
-        <meta property="og:image:width"  content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image"       content={`${SITE_URL}/images/podi/andhra-kandi-podi-pouch-100g-01.webp`} />
+        <meta property="og:image:alt"    content="Andhra Store Kandi Podi 100g pouch with a bowl of the podi and whole spices" />
+        <meta property="og:image:width"  content="1024" />
+        <meta property="og:image:height" content="1024" />
         <meta name="twitter:title"       content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
-        <meta name="twitter:image"       content={`${SITE_URL}/images/podi/andhra-kandi-podi-hero.webp`} />
+        <meta name="twitter:image"       content={`${SITE_URL}/images/podi/andhra-kandi-podi-pouch-100g-01.webp`} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema)       }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema)   }} />

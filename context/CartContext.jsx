@@ -11,12 +11,13 @@
  *
  * Cart item shape:
  *   {
- *     id          : "Chicken-250"   — type + weight, unique per variant
+ *     id          : "Chicken-250"   — type + weight, unique per variant ("Chicken-250-pouch" for pouch)
  *     type        : "Chicken"
  *     name        : "Chicken Pickle"
  *     image       : "/chicken-1.jpeg"
  *     weight      : "250"           — "250" | "500" | "1"
- *     weightLabel : "250g"          — human-readable display label
+ *     packaging   : "glass"         — "glass" | "pouch" (pickles only; missing = glass)
+ *     weightLabel : "250g"          — human-readable display label ("250g · Pouch")
  *     unitPrice   : 300             — price for this weight tier (NOT × qty)
  *     qty         : 1
  *   }

@@ -7,6 +7,7 @@ import Head from 'next/head';
 import PickleData from '@/data/pickles.json';
 import { SITE_URL, PRODUCT_SEO_NAMES, PRODUCT_SHORT_DESCS, PRODUCT_RATINGS, PRODUCT_SPICE_LEVELS, TYPE_TO_SLUG } from '@/lib/seo';
 import { pushViewItemList, pushSelectItem } from '@/lib/analytics';
+import { hasPouch, packagingPrice, packagingImages } from '@/lib/packaging';
 
 // Derive from single source of truth
 const nonVegProducts = PickleData
@@ -23,6 +24,22 @@ const nonVegProducts = PickleData
     spiceLevel: p.spiceLevel,
     localName: p.localName,
   }));
+
+// Grid cards: each glass card, followed by a pouch card when the pickle has one.
+// The pouch card is the same product record with its pouch image, price and a
+// "#pouch" link; nonVegProducts (one entry per product) still feeds schema + analytics.
+const nonVegCards = nonVegProducts.flatMap((p) => {
+  const product = PickleData.find((x) => x.type === p.type);
+  if (!hasPouch(product)) return [p];
+  const [pouchImg] = packagingImages(product, 'pouch');
+  return [p, {
+    ...p,
+    packaging:  'pouch',
+    image:      pouchImg.name,
+    imageAlt:   pouchImg.alt,
+    price:      packagingPrice(product, 'pouch'),
+  }];
+});
 
 const sortOptions = [
   { value: 'featured',   label: 'Featured'           },
@@ -104,7 +121,7 @@ export default function NonVegPicklesPage() {
   }, []);
 
   const sorted = useMemo(() => {
-    let items = [...nonVegProducts];
+    let items = [...nonVegCards];
     switch (sort) {
       case 'price-asc':  items.sort((a, b) => a.price - b.price);             break;
       case 'price-desc': items.sort((a, b) => b.price - a.price);             break;
@@ -176,7 +193,7 @@ export default function NonVegPicklesPage() {
 
       <section className="bg-gray-50/50 min-h-screen" aria-label="Non-veg pickles grid">
         <div className="container-main py-8 md:py-10">
-          <p className="text-sm text-gray-500 mb-5">Showing <span className="font-semibold text-gray-700">{sorted.length}</span> non-veg pickles</p>
+          <p className="text-sm text-gray-500 mb-5">Showing <span className="font-semibold text-gray-700">{new Set(sorted.map(p => p.type)).size}</span> non-veg pickles</p>
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {sorted.map((p, idx) => {
               const rating    = PRODUCT_RATINGS[p.type]?.rating || 4.5;
@@ -184,13 +201,20 @@ export default function NonVegPicklesPage() {
               const discount  = Math.round(((origPrice - p.price) / origPrice) * 100);
               const spiceDots = SPICE_DOTS[p.spiceLevel] || 2;
               const spiceColor= SPICE_COLORS[p.spiceLevel] || 'text-orange-500';
+              const isPouch   = p.packaging === 'pouch';
+              const href      = `/pickles/${TYPE_TO_SLUG[p.type]}${isPouch ? '#pouch' : ''}`;
               return (
-                <div key={p.type}
+                <div key={isPouch ? `${p.type}-pouch` : p.type}
                   className="bg-white rounded-2xl border border-gray-100 overflow-hidden group hover:shadow-xl hover:border-gray-200 hover:-translate-y-1 transition-all duration-300"
                   style={{ animationDelay: `${idx * 80}ms` }}>
-                  <Link href={`/pickles/${TYPE_TO_SLUG[p.type]}`}
+                  <Link href={href}
                     onClick={() => pushSelectItem({ type: p.type, name: p.name, category: 'Pickles', unitPrice: p.price }, 'Non-Veg Pickles')}>
                     <div className="relative aspect-square overflow-hidden bg-gray-50">
+                      {isPouch && (
+                        <span className="absolute top-3 right-3 z-10 px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wide uppercase shadow-sm bg-white text-olive-700">
+                          Pouch
+                        </span>
+                      )}
                       {p.badge && (
                         <span className={`absolute top-3 left-3 z-10 px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wide uppercase shadow-sm ${
                           p.badge === 'BEST SELLER' ? 'bg-brand-500 text-white' :
@@ -218,7 +242,7 @@ export default function NonVegPicklesPage() {
                         ))}
                       </div>
                     </div>
-                    <Link href={`/pickles/${TYPE_TO_SLUG[p.type]}`}
+                    <Link href={href}
                       onClick={() => pushSelectItem({ type: p.type, name: p.name, category: 'Pickles', unitPrice: p.price }, 'Non-Veg Pickles')}>
                       <h2 className="text-sm font-bold text-gray-800 hover:text-brand-600 transition-colors line-clamp-1 mb-0.5">{p.name}</h2>
                     </Link>
@@ -231,6 +255,7 @@ export default function NonVegPicklesPage() {
                       </div>
                       <span className="text-[10px] font-bold text-green-600 bg-green-50 px-2 py-0.5 rounded-md">{discount}% OFF</span>
                     </div>
+                    <p className="mt-1.5 text-[11px] font-medium text-olive-700">250g · {isPouch ? 'Pouch' : 'Glass'}</p>
                   </div>
                 </div>
               );
