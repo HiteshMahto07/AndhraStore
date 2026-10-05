@@ -68,46 +68,41 @@ export default function CookieConsent() {
   return (
     <>
       <div
-        className={`fixed inset-0 bg-black/30 backdrop-blur-[2px] z-[200] transition-opacity duration-500 ${
+        className={`pointer-events-none fixed inset-x-0 bottom-0 z-[200] h-32 bg-gradient-to-t from-black/10 to-transparent transition-opacity duration-300 ${
           isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
-        onClick={handleDecline}
         aria-hidden="true"
       />
 
       <div
         role="dialog"
-        aria-modal="true"
         aria-label="Cookie consent"
-        className={`fixed z-[201] left-1/2 bottom-4 -translate-x-1/2 w-[92%] max-w-[500px] max-h-[85vh] overflow-y-auto transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
+        className={`fixed bottom-0 left-1/2 z-[201] max-h-[90vh] w-full -translate-x-1/2 overflow-y-auto transition-all duration-300 ease-out sm:bottom-4 sm:w-[calc(100%-2rem)] sm:max-w-[760px] ${
           isVisible
             ? 'translate-y-0 opacity-100 scale-100'
-            : 'translate-y-24 opacity-0 scale-95'
+            : 'translate-y-16 opacity-0 scale-95'
         }`}
       >
-        <div className="bg-white rounded-2xl shadow-2xl border border-gray-200/80 overflow-hidden">
+        <div className="overflow-hidden rounded-t-2xl border border-gray-200/80 bg-white shadow-2xl sm:rounded-2xl">
           <div className="h-[3px] w-full bg-gradient-to-r from-brand-400 via-brand-500 to-olive-500" aria-hidden="true" />
 
-          <div className="p-5 sm:p-6">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-brand-50 border border-brand-100" aria-hidden="true">
+          <div className="p-4 sm:p-5">
+            <div className="mb-2 flex items-center gap-3">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-brand-100 bg-brand-50" aria-hidden="true">
                 <Cookie size={18} className="text-brand-600" />
               </div>
-              <h2 className="text-lg font-heading font-bold text-gray-900">Cookie consent</h2>
+              <h2 className="font-heading text-base font-bold text-gray-900 sm:text-lg">Cookie consent</h2>
             </div>
 
-            <p className="text-gray-500 text-[13px] leading-relaxed mb-5">
-              We and our partners use cookies and other technologies to personalize
-              your experience, show you ads, and perform analytics, and we will not use
-              cookies or other technologies for these purposes unless you accept them.
-              Learn more in our{' '}
+            <p className="mb-4 text-[12px] leading-5 text-gray-600 sm:text-[13px]">
+              We use optional cookies for analytics and personalised advertising only with your consent. Necessary cookies keep the store working. Learn more in our{' '}
               <Link href="/privacy-policy" className="text-brand-600 hover:text-brand-700 underline underline-offset-2 font-medium transition-colors">
                 Privacy Policy
               </Link>.
             </p>
 
             {showPreferences && (
-              <div className="mb-5 p-4 bg-gray-50 rounded-xl border border-gray-200 space-y-3 animate-fade-in">
+              <div className="mb-4 space-y-3 rounded-xl border border-gray-200 bg-gray-50 p-4 animate-fade-in">
                 <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wider flex items-center gap-1.5">
                   <Settings size={12} aria-hidden="true" />
                   Preferences
@@ -180,8 +175,8 @@ export default function CookieConsent() {
               </div>
             )}
 
-            <div className="border-t border-gray-100 pt-4">
-              <div className="flex items-center justify-between gap-3">
+            <div className="border-t border-gray-100 pt-3">
+              <div className="flex items-center justify-between gap-2">
                 <button
                   onClick={() => setShowPreferences(prev => !prev)}
                   className="text-[13px] font-medium text-gray-500 hover:text-gray-800 underline underline-offset-2 transition-colors whitespace-nowrap"
@@ -190,16 +185,16 @@ export default function CookieConsent() {
                   {showPreferences ? 'Hide preferences' : 'Manage preferences'}
                 </button>
 
-                <div className="flex gap-2.5">
+                <div className="flex gap-2">
                   <button
                     onClick={handleAccept}
-                    className="px-5 py-2 text-[13px] font-semibold text-white bg-gray-900 rounded-lg hover:bg-gray-800 transition-all shadow-sm hover:shadow active:scale-[0.97]"
+                    className="min-h-11 rounded-lg bg-gray-900 px-4 text-[13px] font-semibold text-white shadow-sm transition-all hover:bg-gray-800 hover:shadow active:scale-[0.97]"
                   >
                     Accept
                   </button>
                   <button
                     onClick={handleDecline}
-                    className="px-5 py-2 text-[13px] font-semibold text-gray-600 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:border-gray-400 transition-all active:scale-[0.97]"
+                    className="min-h-11 rounded-lg border border-gray-300 bg-white px-4 text-[13px] font-semibold text-gray-600 transition-all hover:border-gray-400 hover:bg-gray-50 active:scale-[0.97]"
                   >
                     Decline
                   </button>

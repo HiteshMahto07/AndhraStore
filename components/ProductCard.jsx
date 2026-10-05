@@ -1,158 +1,60 @@
-/**
- * ProductCard.jsx
- *
- * Used on the Home page (best-sellers, veg collection) and anywhere
- * a compact product tile is needed.
- *
- * Props:
- *   name      — product display name
- *   image     — image path
- *   price     — base 250g price (number)
- *   type      — product type key ("Chicken", "Mango", etc.)
- *   badge     — optional badge string ("BEST SELLER" | "PREMIUM" | falsy)
- *   showCart  — when true, renders a quick-add button alongside "View & Order"
- *               defaults to false so existing usages are unchanged
- */
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { ArrowRight, Star } from 'lucide-react';
 import { TYPE_TO_SLUG } from '@/lib/seo';
 import { useCart } from '@/context/CartContext';
 import { pushSelectItem } from '@/lib/analytics';
 
-export default function ProductCard({ name, image, price, type, badge, showCart = false, listName = 'Pickles' }) {
-    const { addToCart } = useCart();
-    const [added, setAdded] = useState(false);
+const sizes = [
+  { value: '250', label: '250g', multiplier: 1 },
+  { value: '500', label: '500g', multiplier: 2 },
+  { value: '1', label: '1kg', multiplier: 4 },
+];
 
-    const handleQuickAdd = (e) => {
-        // Prevent the parent <Link> from navigating when the button is clicked
-        e.preventDefault();
-        e.stopPropagation();
+export default function ProductCard({ name, image, imageAlt, price, type, badge, rating, showCart = false, listName = 'Pickles' }) {
+  const { addToCart } = useCart();
+  const [weight, setWeight] = useState('250');
+  const [added, setAdded] = useState(false);
+  const selected = sizes.find((size) => size.value === weight);
+  const unitPrice = price * selected.multiplier;
+  const href = `/pickles/${TYPE_TO_SLUG[type]}`;
 
-        // Quick-add always uses 250g (the base / most common variant).
-        // The user can adjust weight + qty in the cart drawer.
-        addToCart({
-            id         : `${type}-250`,
-            type,
-            name,
-            category   : 'Pickles',
-            image,
-            weight     : '250',
-            weightLabel: '250g',
-            unitPrice  : price,
-            qty        : 1,
-        });
+  const handleQuickAdd = () => {
+    addToCart({ id: `${type}-${weight}`, type, name, category: 'Pickles', image, weight, weightLabel: selected.label === '1kg' ? '1 Kg' : selected.label, unitPrice, qty: 1 });
+    setAdded(true);
+    setTimeout(() => setAdded(false), 1800);
+  };
 
-        setAdded(true);
-        setTimeout(() => setAdded(false), 2000);
-    };
+  const handleSelect = () => pushSelectItem({ type, name, category: 'Pickles', unitPrice: price }, listName);
 
-    // Fires when the user clicks through to the product detail page —
-    // must fire before navigation, so it's on the Link's onClick, not a
-    // route-change listener.
-    const handleSelect = () => {
-        pushSelectItem({ type, name, category: 'Pickles', unitPrice: price }, listName);
-    };
-
-    return (
-        <div className="bg-white rounded-xl border border-gray-100 overflow-hidden group hover:shadow-lg hover:border-gray-200 transition-all duration-300">
-            <Link href={`/pickles/${TYPE_TO_SLUG[type]}`} aria-label={`View ${name} details`} onClick={handleSelect}>
-                <div className="relative aspect-square overflow-hidden bg-gray-50">
-                    {badge && (
-                        <span className={`absolute top-2 left-2 z-10 badge ${badge === 'BEST SELLER' ? 'badge-orange' :
-                                badge === 'PREMIUM' ? 'badge-dark' : 'badge-green'
-                            }`}>
-                            {badge}
-                        </span>
-                    )}
-                    <Image
-                        src={image}
-                        alt={`${name} — authentic Andhra pickle, handcrafted with traditional spices`}
-                        width={300}
-                        height={300}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                </div>
-            </Link>
-
-            <div className="p-3 sm:p-3.5">
-                <div className="flex items-center gap-1 mb-1.5" aria-label="4.5 out of 5 stars">
-                    <div className="flex gap-px">
-                        {[1, 2, 3, 4, 5].map((s) => (
-                            <svg key={s} className={`w-3 h-3 ${s <= 4 ? 'text-yellow-400' : 'text-gray-200'}`} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                            </svg>
-                        ))}
-                    </div>
-                    <span className="text-[10px] text-gray-400">(120)</span>
-                </div>
-
-                <Link href={`/pickles/${TYPE_TO_SLUG[type]}`} onClick={handleSelect}>
-                    <h3 className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors truncate">{name}</h3>
-                </Link>
-
-                <div className="flex items-center justify-between mt-2">
-                    <div>
-                        <span className="text-base font-bold text-gray-900">₹{price}</span>
-                        <span className="text-xs text-gray-400 line-through ml-1.5">₹{Math.round(price * 1.2)}</span>
-                    </div>
-                    <span className="text-[10px] font-bold text-green-600 bg-green-50 px-1.5 py-0.5 rounded">20% OFF</span>
-                </div>
-
-                {/* Bottom CTA — single "View & Order" link by default,
-                    or side-by-side buttons when showCart=true */}
-                {showCart ? (
-                    <div className="mt-3 flex gap-2">
-                        {/* Quick add — 250g, qty 1, opens cart drawer */}
-                        <button
-                            onClick={handleQuickAdd}
-                            className={`flex-1 flex items-center justify-center gap-1 py-2 rounded-lg text-xs font-semibold transition-all duration-200 ${
-                                added
-                                    ? 'bg-green-600 text-white'
-                                    : 'bg-gray-900 text-white hover:bg-gray-800 active:scale-[0.97]'
-                            }`}
-                            aria-label={added ? `${name} added to cart` : `Quick add ${name} to cart`}
-                        >
-                            {added ? (
-                                <>
-                                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    Added!
-                                </>
-                            ) : (
-                                <>
-                                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
-                                    </svg>
-                                    Add
-                                </>
-                            )}
-                        </button>
-
-                        {/* View details */}
-                        <Link
-                            href={`/pickles/${TYPE_TO_SLUG[type]}`}
-                            className="flex-1 flex items-center justify-center py-2 rounded-lg text-xs font-semibold bg-brand-50 text-brand-600 hover:bg-brand-500 hover:text-white transition-all duration-200"
-                            aria-label={`View ${name} details`}
-                            onClick={handleSelect}
-                        >
-                            View
-                        </Link>
-                    </div>
-                ) : (
-                    /* Default: single "View & Order" link — original design */
-                    <Link href={`/pickles/${TYPE_TO_SLUG[type]}`}
-                        onClick={handleSelect}
-                        className="mt-3 w-full flex items-center justify-center gap-1.5 bg-brand-50 text-brand-600 hover:bg-brand-500 hover:text-white py-2 rounded-lg text-xs font-semibold transition-all duration-200">
-                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-5.98.286m5.98-.286h9m-9 0a3.001 3.001 0 01-2.4-1.2M16.5 14.25a3 3 0 105.98.286m-5.98-.286h-9m9 0a3 3 0 012.4-1.2M4.575 6.75h14.85c.637 0 1.122.57.999 1.192l-.893 4.465a1.125 1.125 0 01-1.1.893H6.483" />
-                        </svg>
-                        View &amp; Order
-                    </Link>
-                )}
+  return (
+    <article className="group flex h-full min-w-0 flex-col overflow-hidden rounded-2xl border border-[#e8dfd0] bg-white shadow-[0_10px_35px_rgba(42,54,46,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(42,54,46,0.11)]">
+      <Link href={href} aria-label={`View ${name} details`} onClick={handleSelect} className="relative block aspect-square overflow-hidden bg-[#f5efe4]">
+        {badge && <span className="absolute left-2.5 top-2.5 z-10 rounded-full bg-olive-800 px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-white">{badge}</span>}
+        <Image src={image} alt={imageAlt || `${name} - authentic Andhra pickle`} fill sizes="(max-width: 639px) 50vw, 25vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+      </Link>
+      <div className="flex flex-1 flex-col p-3 sm:p-4">
+        {rating && (
+          <div className="mb-1.5 flex items-center gap-1.5 text-[11px] text-gray-500" aria-label={`${rating.rating} out of 5 from ${rating.count} reviews`}>
+            <Star className="h-3 w-3 fill-current text-amber-500" aria-hidden="true" /><span className="font-semibold text-gray-700">{rating.rating}</span><span>({rating.count})</span>
+          </div>
+        )}
+        <Link href={href} onClick={handleSelect} className="block"><h3 className="line-clamp-2 h-10 text-sm font-semibold leading-5 text-gray-900 transition-colors hover:text-brand-600 sm:text-base">{name}</h3></Link>
+        <p className="mt-1 text-base font-bold text-gray-900 sm:text-lg"><span aria-hidden="true">&#8377;</span>{unitPrice}</p>
+        {showCart && (
+          <>
+            <div className="mt-3 grid grid-cols-3 gap-1" role="group" aria-label={`Choose size for ${name}`}>
+              {sizes.map((size) => (
+                <button key={size.value} type="button" onClick={() => setWeight(size.value)} aria-pressed={weight === size.value} className={`min-h-8 rounded-lg border px-1 text-[10px] font-semibold transition-colors max-[400px]:min-h-11 sm:text-[11px] ${weight === size.value ? 'border-olive-700 bg-olive-700 text-white' : 'border-gray-200 text-gray-600 hover:border-olive-400'}`}>{size.label}</button>
+              ))}
             </div>
-        </div>
-    );
+            <button type="button" onClick={handleQuickAdd} className={`mt-3 flex min-h-10 w-full items-center justify-center gap-1.5 rounded-xl text-xs font-semibold transition-all max-[400px]:min-h-11 active:scale-[0.98] ${added ? 'bg-green-600 text-white' : 'bg-brand-500 text-white hover:bg-brand-600'}`} aria-label={added ? `${name} added to cart` : `Add ${selected.label} ${name} to cart`}>
+              {added ? 'Added to cart' : 'Add to cart'}{!added && <ArrowRight className="h-3.5 w-3.5" strokeWidth={2} aria-hidden="true" />}
+            </button>
+          </>
+        )}
+      </div>
+    </article>
+  );
 }

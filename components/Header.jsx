@@ -63,12 +63,12 @@ export default function Header() {
   return (
     <>
       <div className="bg-olive-700 text-white text-center py-1.5 text-[11px] font-medium tracking-wide" role="banner">
-        🚚 Free Delivery on Orders Above ₹999 &nbsp;|&nbsp; 💵 COD Available (+₹99) &nbsp;|&nbsp; 📞 8758302568, 8799114169
+        Free delivery on orders above &#8377;999 &nbsp;|&nbsp; COD available (+&#8377;99) &nbsp;|&nbsp; 8758302568, 8799114169
       </div>
 
       <header className={`sticky top-0 z-50 transition-shadow duration-300 bg-white ${scrolled ? 'shadow-md' : 'shadow-sm'}`}>
         <div className="container-main flex items-center justify-between h-14 md:h-16">
-          <Link href="/home" className="flex items-center gap-2" aria-label="Andhra Store — Home">
+          <Link href="/home" className="flex items-center gap-2" aria-label="Andhra Store Home">
             <Image
               src="/logo.jpeg"
               alt="Andhra Store logo"
@@ -83,7 +83,7 @@ export default function Header() {
             </div>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
+          <nav className="hidden xl:flex items-center gap-1" aria-label="Main navigation">
             {navLinks.map((link) => (
               <div key={link.label} className="relative"
                 onMouseEnter={() => link.dropdown && setDropdownOpen(link.label)}
@@ -143,7 +143,7 @@ export default function Header() {
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-50"
+              className="xl:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-50"
               aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={mobileOpen}
               aria-controls="mobile-nav"
@@ -159,7 +159,7 @@ export default function Header() {
         </div>
 
         {mobileOpen && (
-          <div id="mobile-nav" className="md:hidden border-t border-gray-100 bg-white animate-fade-in" role="navigation" aria-label="Mobile navigation">
+          <div id="mobile-nav" className="xl:hidden border-t border-gray-100 bg-white animate-fade-in" role="navigation" aria-label="Mobile navigation">
             <div className="container-main py-3 space-y-1">
               {navLinks.map((link) => (
                 <div key={link.label}>

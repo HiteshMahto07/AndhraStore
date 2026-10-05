@@ -9,7 +9,7 @@
     "category": "sweets",
     "badge": "FAN FAVOURITE",
     "sortOrder": 1,
-    "amount": 200,
+    "amount": 279,
     "shortDesc": "Rice and jaggery deep-fried into golden rounds with sesame seeds. The Andhra sweet that belongs at every Sankranti table.",
     "tags": [
       "ariselu",
@@ -44,7 +44,7 @@
     "category": "sweets",
     "badge": "BEST SELLER",
     "sortOrder": 2,
-    "amount": 200,
+    "amount": 269,
     "shortDesc": "Kakinada's famous layered fried sweet with a honeycomb inside and sugar syrup coating. Nothing else in Indian sweets quite looks or tastes like this.",
     "tags": [
       "madta kaja",
@@ -75,7 +75,7 @@
     "category": "sweets",
     "badge": "",
     "sortOrder": 3,
-    "amount": 180,
+    "amount": 349,
     "shortDesc": "Urad dal laddus with unrefined jaggery, ghee and cardamom. Filling and traditional — the kind that are made for new mothers and festival tables alike.",
     "tags": [
       "sunundalu",
@@ -119,7 +119,7 @@
     ],
     "image": [
       {
-        "name": "/pootharekulu-1.jpg",
+        "name": "/images/sweets/pootharekulu-primary.jpg",
         "alt": "Pootharekulu — thin Andhra rice paper rolls with dry fruit filling, laid on dark surface"
       }
     ],
@@ -137,7 +137,7 @@
     "category": "sweets",
     "badge": "",
     "sortOrder": 5,
-    "amount": 160,
+    "amount": 219,
     "shortDesc": "Rose-shaped fried maida sweet dusted in powdered sugar. The sweet that comes out at Andhra celebrations and looks too good to eat.",
     "tags": [
       "gulab puvu",
@@ -168,7 +168,7 @@
     "category": "sweets",
     "badge": "",
     "sortOrder": 6,
-    "amount": 160,
+    "amount": 199,
     "shortDesc": "Small shell-shaped fried dough coated in jaggery syrup. Crunchy, sweet and the perfect size for a handful.",
     "tags": [
       "bellam gavalu",
@@ -198,7 +198,7 @@
     "category": "sweets",
     "badge": "",
     "sortOrder": 7,
-    "amount": 180,
+    "amount": 349,
     "shortDesc": "Whole cashews set in jaggery brittle. Snaps cleanly, tastes real — no refined sugar.",
     "tags": [
       "kaju chikki",
@@ -229,7 +229,7 @@
     "category": "sweets",
     "badge": "",
     "sortOrder": 8,
-    "amount": 200,
+    "amount": 199,
     "shortDesc": "Classic boondi laddu with gram flour drops, sugar syrup, cardamom and cashews. The one that shows up at every Indian celebration.",
     "tags": [
       "boondi laddu",
@@ -260,7 +260,7 @@
     "category": "sweets",
     "badge": "",
     "sortOrder": 9,
-    "amount": 200,
+    "amount": 299,
     "shortDesc": "Soft Mysore Pak with gram flour and pure ghee. The kind that melts before you finish chewing.",
     "tags": [
       "mysore pak",
@@ -291,7 +291,7 @@
     "category": "sweets",
     "badge": "",
     "sortOrder": 10,
-    "amount": 300,
+    "amount": 299,
     "shortDesc": "Dates, cashews, almonds, walnuts and jaggery pressed into laddus. No refined sugar, no flour — just good ingredients.",
     "tags": [
       "dry fruits laddu",
@@ -334,7 +334,7 @@
     "category": "sweets",
     "badge": "",
     "sortOrder": 11,
-    "amount": 180,
+    "amount": 179,
     "shortDesc": "Roasted semolina laddus with ghee, cashews and cardamom. Light, fragrant and one of the easiest sweets to love.",
     "tags": [
       "rava laddu",
@@ -421,7 +421,7 @@
     "category": "sweets",
     "badge": "",
     "sortOrder": 13,
-    "amount": 350,
+    "amount": 349,
     "shortDesc": "Specially made for new mothers — gond, dry fruits, ajwain and warming spices in one nourishing laddu. A traditional recipe for postpartum recovery.",
     "tags": [
       "post delivery laddu",

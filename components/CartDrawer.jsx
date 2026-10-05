@@ -11,14 +11,16 @@
  *   4. Footer — total + WhatsApp checkout (items) or plain WhatsApp CTA (empty)
  */
 
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { X, ShoppingBag } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 import { useCart, buildWhatsAppUrl } from '@/context/CartContext';
 import { pushBeginCheckout, pushViewCart } from '@/lib/analytics';
 import { calcDelivery, DELIVERY_THRESHOLD, DELIVERY_NUDGE_AT } from '@/lib/checkout';
+import { drawerSlide } from '@/lib/motion';
 
 export default function CartDrawer() {
   const {
@@ -33,10 +35,6 @@ export default function CartDrawer() {
   } = useCart();
   const router = useRouter();
 
-  // `visible` drives CSS transitions — it lags slightly behind isCartOpen
-  // so the closing animation plays before the component unmounts
-  const [visible, setVisible] = useState(false);
-
   useEffect(() => {
     if (isCartOpen) {
       document.body.style.overflow = 'hidden';
@@ -44,43 +42,42 @@ export default function CartDrawer() {
       // (header icon, or the auto-open on add-to-cart) — this effect only
       // re-runs when isCartOpen flips, so it can't double-fire on re-render.
       pushViewCart(cartItems, cartTotal);
-      // Double rAF gives the browser one frame to paint before animating in
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => setVisible(true));
-      });
-    } else {
-      setVisible(false);
-      const t = setTimeout(() => {
-        document.body.style.overflow = '';
-      }, 400);
-      return () => clearTimeout(t);
     }
-  }, [isCartOpen]);
 
-  // Keep the DOM clean when fully hidden — avoids painting an off-screen drawer
-  if (!isCartOpen && !visible) return null;
+    return () => {
+      document.body.style.overflow = '';
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isCartOpen]);
 
   const hasItems = cartItems.length > 0;
 
   return (
-    <>
+    <AnimatePresence>
+      {isCartOpen && (
+        <>
       {/* ── Backdrop ─────────────────────────────────────────────────────── */}
-      <div
-        className={`fixed inset-0 bg-black/30 backdrop-blur-[2px] z-[150] transition-opacity duration-300 ${
-          visible ? 'opacity-100' : 'opacity-0'
-        }`}
+      <motion.div
+        key="cart-backdrop"
+        className="fixed inset-0 bg-black/30 backdrop-blur-[2px] z-[150]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
         onClick={closeCart}
         aria-hidden="true"
       />
 
       {/* ── Drawer panel ─────────────────────────────────────────────────── */}
-      <div
+      <motion.div
+        key="cart-drawer"
         role="dialog"
         aria-modal="true"
         aria-label="Your cart"
-        className={`fixed top-0 right-0 bottom-0 w-full max-w-[420px] bg-white z-[151] shadow-2xl flex flex-col transition-transform duration-400 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-          visible ? 'translate-x-0' : 'translate-x-full'
-        }`}
+        className="fixed top-0 right-0 bottom-0 w-full max-w-[420px] bg-white z-[151] shadow-2xl flex flex-col"
+        variants={drawerSlide}
+        initial="closed"
+        animate="open"
+        exit="closed"
       >
         {/* ── 1. Header ───────────────────────────────────────────────────── */}
         <div className="flex-shrink-0 flex items-center justify-between px-6 py-5 border-b border-gray-100">
@@ -141,14 +138,23 @@ export default function CartDrawer() {
           /* Items list — scrollable, leaves header + footer sticky */
           <div className="flex-1 overflow-y-auto px-6 py-4">
             <div className="space-y-4">
-              {cartItems.map((item) => (
-                <CartItem
-                  key={item.id}
-                  item={item}
-                  onRemove={() => removeFromCart(item.id)}
-                  onQtyChange={(qty) => updateQuantity(item.id, qty)}
-                />
-              ))}
+              <AnimatePresence initial={false}>
+                {cartItems.map((item) => (
+                  <motion.div
+                    layout
+                    key={item.id}
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, x: 24 }}
+                  >
+                    <CartItem
+                      item={item}
+                      onRemove={() => removeFromCart(item.id)}
+                      onQtyChange={(qty) => updateQuantity(item.id, qty)}
+                    />
+                  </motion.div>
+                ))}
+              </AnimatePresence>
             </div>
           </div>
         )}
@@ -248,8 +254,10 @@ export default function CartDrawer() {
             </a>
           )}
         </div>
-      </div>
-    </>
+      </motion.div>
+        </>
+      )}
+    </AnimatePresence>
   );
 }
 
