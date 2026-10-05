@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { MotionConfig } from 'motion/react';
 import CookieConsent from "@/components/CookieConsent";
 import CartDrawer from "@/components/CartDrawer";
 import { CartProvider } from '@/context/CartContext';
@@ -57,7 +58,8 @@ export default function App({ Component, pageProps }) {
   return (
     // CartProvider wraps the entire app so every page and component
     // can access cart state via useCart() without prop drilling
-    <CartProvider>
+    <MotionConfig reducedMotion="user" transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}>
+      <CartProvider>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#2D5A3D" />
@@ -67,7 +69,12 @@ export default function App({ Component, pageProps }) {
         <meta property="og:locale" content="en_IN" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@AndhraStore" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="application-name" content="Andhra Store" />
+        <meta name="apple-mobile-web-app-title" content="Andhra Store" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_SCHEMA)           }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_SCHEMA)               }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(MERCHANT_RETURN_POLICY_SCHEMA) }} />
@@ -82,6 +89,7 @@ export default function App({ Component, pageProps }) {
       <CartDrawer />
 
       <CookieConsent />
-    </CartProvider>
+      </CartProvider>
+    </MotionConfig>
   );
 }
