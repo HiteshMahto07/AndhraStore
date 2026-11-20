@@ -1,3 +1,4 @@
+import { catalogId } from '@/lib/catalog';
 import Link from 'next/link';
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
@@ -119,6 +120,13 @@ export default function PodiDetail({ podi }) {
         <meta property="og:url"         content={pageUrl} />
         <meta property="og:image"       content={`${SITE_URL}${podi.image[0]?.name}`} />
         <meta property="og:image:alt"   content={podi.image[0]?.alt || podi.name} />
+        {/* Meta catalog microdata — retailer_item_id must equal the feed id (lib/catalog.js) */}
+        <meta property="product:retailer_item_id" content={catalogId(podi.type)} />
+        <meta property="product:brand"            content="Andhra Store" />
+        <meta property="product:availability"     content="in stock" />
+        <meta property="product:condition"        content="new" />
+        <meta property="product:price:amount"   content={String(podi.amount)} />
+        <meta property="product:price:currency" content="INR" />
         <meta name="twitter:title"       content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
         <meta name="twitter:image"       content={`${SITE_URL}${podi.image[0]?.name}`} />

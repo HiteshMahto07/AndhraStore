@@ -334,7 +334,7 @@ export default function ShopPage() {
                       className="bg-white rounded-2xl border border-gray-100 overflow-hidden group hover:shadow-xl hover:border-gray-200 hover:-translate-y-1 transition-all duration-300"
                       style={{ animationDelay: `${idx * 60}ms` }}>
                       <Link href={href}
-                        onClick={() => pushSelectItem({ type: p.type, name: p.name, category: 'Pickles', unitPrice: p.price }, 'All Pickles')}>
+                        onClick={() => pushSelectItem({ type: p.type, packaging: p.packaging, name: p.name, category: 'Pickles', unitPrice: p.price }, 'All Pickles')}>
                         <div className="relative aspect-square overflow-hidden bg-gray-50">
                           {isPouch && (
                             <span className="absolute top-3 right-3 z-10 px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wide uppercase shadow-sm bg-white text-olive-700">
@@ -376,7 +376,7 @@ export default function ShopPage() {
                         </div>
 
                         <Link href={href}
-                          onClick={() => pushSelectItem({ type: p.type, name: p.name, category: 'Pickles', unitPrice: p.price }, 'All Pickles')}>
+                          onClick={() => pushSelectItem({ type: p.type, packaging: p.packaging, name: p.name, category: 'Pickles', unitPrice: p.price }, 'All Pickles')}>
                           <h2 className="text-sm font-bold text-gray-800 hover:text-brand-600 transition-colors line-clamp-1 mb-1">
                             {p.name}
                           </h2>

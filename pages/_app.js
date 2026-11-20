@@ -7,7 +7,7 @@ import CookieConsent from "@/components/CookieConsent";
 import CartDrawer from "@/components/CartDrawer";
 import { CartProvider } from '@/context/CartContext';
 import { pageview } from '@/lib/gtm';
-import { captureAttribution, cleanTrackingParams, debugAttribution, clearAttributionCookies } from '@/lib/attribution';
+import { captureAttribution, debugAttribution, clearAttributionCookies } from '@/lib/attribution';
 import {
   ORGANIZATION_SCHEMA,
   WEBSITE_SCHEMA,
@@ -22,14 +22,16 @@ const SHIPPING_SCHEMA = { "@context": "https://schema.org", ...SHIPPING_DETAILS 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
 
-  // On initial mount: capture attribution cookies from the landing URL,
-  // then immediately clean tracking params from the address bar.
-  // These are two explicit independent calls — cleanTrackingParams() is not
-  // buried inside captureAttribution() so it always runs even if cookie
-  // writing is skipped (e.g., returning visitor with existing cookies).
+  // On initial mount: capture attribution cookies from the landing URL.
+  //
+  // Tracking params (utm_*, gclid, fbclid…) are deliberately LEFT in the
+  // address bar. Stripping them on mount raced the GTM tags (consent
+  // wait_for_update delays them up to 500ms, and a late "Accept" delays them
+  // further), so GA4 lost the campaign, Google Ads lost gclid and the Meta
+  // Pixel lost fbclid/_fbc. Canonical tags already keep SEO clean.
+  // See tracking audit 2026-11-20, item W-2.
   useEffect(() => {
     captureAttribution();    // reads URL params → writes as_attr_ft / as_attr_lt
-    cleanTrackingParams();   // removes UTMs from address bar via history.replaceState
 
     if (process.env.NODE_ENV === 'development') {
       window.__andhraAttribution = {
@@ -49,7 +51,6 @@ export default function App({ Component, pageProps }) {
       // (no UTMs + same-origin referrer). Only acts when UTMs appear in the
       // URL — e.g., a shared UTM link opened inside the SPA.
       captureAttribution();
-      cleanTrackingParams();
     };
     router.events.on('routeChangeComplete', handleRouteChange);
     return () => router.events.off('routeChangeComplete', handleRouteChange);

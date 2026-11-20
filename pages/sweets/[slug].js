@@ -1,3 +1,4 @@
+import { catalogId } from '@/lib/catalog';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
@@ -106,6 +107,11 @@ export default function SweetDetail({ item }) {
         <meta property="og:url"         content={pageUrl} />
         <meta property="og:image"       content={`${SITE_URL}${item.image[0]?.name}`} />
         <meta property="og:image:alt"   content={item.image[0]?.alt || item.name} />
+        {/* Meta catalog microdata — retailer_item_id must equal the feed id (lib/catalog.js) */}
+        <meta property="product:retailer_item_id" content={catalogId(item.type)} />
+        <meta property="product:brand"            content="Andhra Store" />
+        <meta property="product:availability"     content="in stock" />
+        <meta property="product:condition"        content="new" />
         <meta property="product:price:amount"   content={String(item.amount)} />
         <meta property="product:price:currency" content="INR" />
         <meta name="twitter:card"        content="summary_large_image" />

@@ -1,3 +1,4 @@
+import { catalogId } from '@/lib/catalog';
 import Link from 'next/link';
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
@@ -316,6 +317,11 @@ export default function PickleDetail({ type, pickle }) {
         <meta property="og:url"         content={pageUrl} />
         <meta property="og:image"       content={`${SITE_URL}${pickle.image[0]?.name}`} />
         <meta property="og:image:alt"   content={pickle.image[0]?.alt || seoName} />
+        {/* Meta catalog microdata — retailer_item_id must equal the feed id (lib/catalog.js) */}
+        <meta property="product:retailer_item_id" content={catalogId(type)} />
+        <meta property="product:brand"            content="Andhra Store" />
+        <meta property="product:availability"     content="in stock" />
+        <meta property="product:condition"        content="new" />
         <meta property="product:price:amount"   content={String(pickle.amount)} />
         <meta property="product:price:currency" content="INR" />
         <meta name="twitter:title"       content={pageTitle} />

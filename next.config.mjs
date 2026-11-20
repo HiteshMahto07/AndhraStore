@@ -3,6 +3,13 @@ const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
+  async rewrites() {
+    return [
+      // Meta Commerce Manager product feed — public URL stays outside /api/
+      // (robots.txt disallows /api/). Handler: pages/api/meta-catalog.js
+      { source: '/meta-catalog.xml', destination: '/api/meta-catalog' },
+    ];
+  },
   async redirects() {
     return [
       // www → non-www permanent redirect (301)
