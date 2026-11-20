@@ -13,7 +13,7 @@ const allProducts = [
   { name: 'Mango Pickle', image: '/mango-1.jpeg', price: 299, type: 'Mango', cat: 'veg', weight: '250g', badge: 'BEST SELLER' },
   { name: 'Garlic Pickle', image: '/garlic-1.jpeg', price: 349, type: 'Garlic', cat: 'veg', weight: '250g', badge: '' },
   { name: 'Red Chilli Pickle', image: '/redchilli-1.jpeg', price: 299, type: 'RedChilli', cat: 'veg', weight: '250g', badge: '' },
-  { name: 'Gongura Pickle', image: '/gongura-1.jpeg', price: 200, type: 'Gongura', cat: 'veg', weight: '250g', badge: '' },
+  { name: 'Gongura Pickle', image: '/gongura-1.jpeg', price: 299, type: 'Gongura', cat: 'veg', weight: '250g', badge: '' },
   { name: 'Tomato Pickle', image: '/tomato-1.jpeg', price: 299, type: 'Tomato', cat: 'veg', weight: '250g', badge: '' },
   { name: 'Lemon Pickle', image: '/lemon-1.jpeg', price: 299, type: 'Lemon', cat: 'veg', weight: '250g', badge: '' },
   { name: 'Curry Leaves Pickle', image: '/curry-1.jpeg', price: 299, type: 'Curry', cat: 'veg', weight: '250g', badge: '' },
