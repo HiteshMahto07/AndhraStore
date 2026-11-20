@@ -7,6 +7,10 @@ import { Html, Head, Main, NextScript } from "next/document";
  *   1. window.dataLayer initialized
  *   2. window.gtag function defined
  *   3. Consent Mode v2 defaults set (all denied, wait_for_update: 500ms)
+ *   4. url_passthrough on — while ad_storage is denied, Google tags carry
+ *      gclid/dclid across internal links in the URL instead of cookies, so
+ *      Google Ads conversions can still be attributed (audit 2026-11-20, W-4).
+ *      Keep GTM free of a conflicting url_passthrough setting (see GTM-9).
  *
  * wait_for_update: 500 tells GTM to pause tag firing for up to 500ms in case
  * a returning visitor's consent is restored from localStorage by React.
@@ -22,6 +26,7 @@ gtag('consent','default',{
   ad_personalization:'denied',
   wait_for_update:500
 });
+gtag('set','url_passthrough',true);
 `.trim();
 
 /**
@@ -54,6 +59,12 @@ export default function Document() {
 
         <link rel="dns-prefetch" href="https://wa.me" />
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
+
+        {/* Meta Business domain verification (required for Commerce Manager / Instagram Shopping).
+            Value from Business Settings → Brand safety → Domains → Meta-tag method. */}
+        {process.env.NEXT_PUBLIC_FB_DOMAIN_VERIFICATION && (
+          <meta name="facebook-domain-verification" content={process.env.NEXT_PUBLIC_FB_DOMAIN_VERIFICATION} />
+        )}
 
         <meta name="format-detection" content="telephone=no" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />

@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/generate-catalog-images.js",
     "build": "next build",
+    "catalog:images": "node scripts/generate-catalog-images.js",
     "start": "next start",
     "lint": "next lint",
     "postbuild": "node node_modules/next-sitemap/bin/next-sitemap.mjs",
