@@ -6,24 +6,34 @@ import { Html, Head, Main, NextScript } from "next/document";
  * Execution order guaranteed by placement in <Head>:
  *   1. window.dataLayer initialized
  *   2. window.gtag function defined
- *   3. Consent Mode v2 defaults set (all denied, wait_for_update: 500ms)
+ *   3. Consent Mode v2 defaults set — denied for new visitors; a returning
+ *      visitor's saved choice (localStorage 'cookie-consent', written by
+ *      CookieConsent.jsx) is applied HERE, synchronously, before gtm.js.
+ *      Tags that require consent (Clarity, Meta) are evaluated once at
+ *      "Container loaded"; if consent only arrived later via React's
+ *      restoreConsent(), they were blocked for the whole page view.
  *   4. url_passthrough on — while ad_storage is denied, Google tags carry
  *      gclid/dclid across internal links in the URL instead of cookies, so
  *      Google Ads conversions can still be attributed (audit 2026-11-20, W-4).
  *      Keep GTM free of a conflicting url_passthrough setting (see GTM-9).
  *
- * wait_for_update: 500 tells GTM to pause tag firing for up to 500ms in case
- * a returning visitor's consent is restored from localStorage by React.
- * Typical hydration + useEffect cycle = 50–200ms, well within this window.
+ * wait_for_update: 500 still lets Google tags wait briefly for an update;
+ * new visitors' Accept/Decline is pushed later as a 'consent_update' event
+ * (lib/gtm.js) so GTM can fire the consent-gated page-load tags then.
  */
 const CONSENT_DEFAULTS_SCRIPT = `
 window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments);}
+var a=false,m=false;
+try{var s=JSON.parse(localStorage.getItem('cookie-consent')||'null');
+if(s){a=s.all===true||!!(s.preferences&&s.preferences.analytics===true);
+m=s.all===true||!!(s.preferences&&s.preferences.marketing===true);}}catch(e){}
+function c(x){return x?'granted':'denied';}
 gtag('consent','default',{
-  analytics_storage:'denied',
-  ad_storage:'denied',
-  ad_user_data:'denied',
-  ad_personalization:'denied',
+  analytics_storage:c(a),
+  ad_storage:c(m),
+  ad_user_data:c(m),
+  ad_personalization:c(m),
   wait_for_update:500
 });
 gtag('set','url_passthrough',true);

@@ -52,7 +52,8 @@ const SPICE_DOTS   = { 'extra-hot': 4, 'hot': 3, 'medium': 2, 'mild': 1 };
 const SPICE_COLORS = { 'extra-hot': 'text-red-600', 'hot': 'text-orange-500', 'medium': 'text-yellow-600', 'mild': 'text-green-600' };
 
 const pageTitle = "Veg Andhra Pickles Online — Mango Avakaya, Gongura & 10 More | Andhra Store";
-const pageDesc  = "Shop 12 authentic Andhra vegetarian pickles — Mango Avakaya, Gongura, Tamarind, Karela & more. Handcrafted with no preservatives. 250g from ₹200. Ships pan-India.";
+const minPrice  = Math.min(...vegCards.map((p) => p.price));
+const pageDesc  = `Shop 12 authentic Andhra vegetarian pickles — Mango Avakaya, Gongura, Tamarind, Karela & more. Handcrafted with no preservatives. 250g from ₹${minPrice}. Ships pan-India.`;
 
 const pageSchema = {
   "@context": "https://schema.org",

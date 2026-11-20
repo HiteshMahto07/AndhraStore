@@ -14,7 +14,7 @@ const pageUrl = `${SITE_URL}/andhra-pickles-mumbai`;
 const featuredProducts = [
   { name: 'Chicken Pickle', image: '/chicken-1.jpeg', price: 399, type: 'Chicken', badge: 'BEST SELLER' },
   { name: 'Mango Pickle',   image: '/mango-1.jpeg',   price: 299, type: 'Mango',   badge: 'MOST LOVED' },
-  { name: 'Gongura Pickle', image: '/gongura-1.jpeg', price: 200, type: 'Gongura' },
+  { name: 'Gongura Pickle', image: '/gongura-1.jpeg', price: 299, type: 'Gongura' },
   { name: 'Prawns Pickle',  image: '/prawns-1.jpeg',  price: 499, type: 'Prawns' },
 ];
 

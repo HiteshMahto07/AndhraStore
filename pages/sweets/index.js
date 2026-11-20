@@ -98,13 +98,13 @@ export default function SweetsPage() {
         <meta property="og:title"       content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
         <meta property="og:url"         content={`${SITE_URL}/sweets`} />
-        <meta property="og:image"       content={`${SITE_URL}/images/sweets/ariselu-hero.jpg`} />
+        <meta property="og:image"       content={`${SITE_URL}/images/sweets/ariselu-2.jpg`} />
         <meta property="og:image:alt"    content="Andhra sweets — ariselu, pootharekulu, kaja and more traditional sweets by Andhra Store" />
         <meta property="og:image:width"  content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:title"       content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
-        <meta name="twitter:image"       content={`${SITE_URL}/images/sweets/ariselu-hero.jpg`} />
+        <meta name="twitter:image"       content={`${SITE_URL}/images/sweets/ariselu-2.jpg`} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema)       }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema)   }} />

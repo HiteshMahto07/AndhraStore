@@ -78,7 +78,10 @@ const SPICE_COLORS = {
 };
 
 const pageTitle = "Andhra Pickles Online — Shop 16 Authentic Pickles | Andhra Store";
-const pageDesc  = "Shop 16 authentic Andhra pickles online — Mango Avakaya, Gongura, Tamarind, Karela, Chicken & more. Handcrafted with no preservatives. 250g from ₹200. Ships pan-India.";
+// Lowest and highest 250g prices across glass + pouch cards — derived, never hard-coded.
+const minPrice  = Math.min(...allCards.map((p) => p.price));
+const maxPrice  = Math.max(...allCards.map((p) => p.price));
+const pageDesc  = `Shop 16 authentic Andhra pickles online — Mango Avakaya, Gongura, Tamarind, Karela, Chicken & more. Handcrafted with no preservatives. 250g from ₹${minPrice}. Ships pan-India.`;
 
 const shopSchema = {
   "@context": "https://schema.org",
@@ -225,9 +228,9 @@ export default function ShopPage() {
         <div>
           <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">Price Range</p>
           <div className="flex items-center gap-2">
-            <span className="text-xs text-gray-500 bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-100">₹200</span>
+            <span className="text-xs text-gray-500 bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-100">₹{minPrice}</span>
             <div className="flex-1 h-px bg-gray-200" />
-            <span className="text-xs text-gray-500 bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-100">₹549</span>
+            <span className="text-xs text-gray-500 bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-100">₹{maxPrice}</span>
           </div>
         </div>
       </div>
