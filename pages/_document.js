@@ -53,7 +53,11 @@ f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KFNKBB87');
 `.trim();
 
-export default function Document() {
+export default function Document(props) {
+  // No GTM (GA4 / Meta / Clarity) on the private /admin pages — store staff
+  // checking orders shouldn't show up as site traffic.
+  const isAdmin = props.__NEXT_DATA__?.page?.startsWith('/admin') ?? false;
+
   return (
     <Html lang="en">
       <Head>
@@ -85,7 +89,7 @@ export default function Document() {
           Sets all signals to 'denied' with a 500ms update window.
           See Section 8 of _docs/today-implementation-summary.md for full rationale.
         */}
-        <script dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULTS_SCRIPT }} />
+        {!isAdmin && <script dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULTS_SCRIPT }} />}
 
         {/* ── Step 2: GTM loader (async, non-blocking) ────────────────────── */}
         {/*
@@ -93,7 +97,7 @@ export default function Document() {
           Reads the consent state already set above.
           Never fires GA4 or Meta tags until consent is updated to 'granted'.
         */}
-        <script dangerouslySetInnerHTML={{ __html: GTM_LOADER_SCRIPT }} />
+        {!isAdmin && <script dangerouslySetInnerHTML={{ __html: GTM_LOADER_SCRIPT }} />}
       </Head>
 
       <body className="antialiased">
@@ -103,11 +107,13 @@ export default function Document() {
           Must appear as early in <body> as possible per GTM documentation.
           In Next.js Pages Router this is the earliest achievable placement.
         */}
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFNKBB87" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-          }}
-        />
+        {!isAdmin && (
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFNKBB87" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+            }}
+          />
+        )}
 
         <Main />
         <NextScript />

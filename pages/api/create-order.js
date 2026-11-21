@@ -13,6 +13,7 @@
 
 import { getRazorpayClient } from '@/lib/razorpay';
 import { validateCartItems, calcServerTotals } from '@/lib/checkout';
+import { insertOrder, cleanCustomer, attributionFromCookies, isOrdersDbConfigured } from '@/lib/orders';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -53,6 +54,27 @@ export default async function handler(req, res) {
           .join(' | '),
       },
     });
+
+    // ── 4. Save the order as "pending" (best-effort, never blocks payment) ───
+    // verify-payment flips it to "paid". Rows left "pending" are abandoned or
+    // failed payments, which the admin panel hides by default.
+    if (isOrdersDbConfigured()) {
+      const { customer } = cleanCustomer(req.body.customer);
+      if (customer) {
+        try {
+          await insertOrder({
+            id           : order.id,
+            paymentMethod: 'razorpay',
+            paymentStatus: 'pending',
+            customer,
+            totals,
+            attribution  : attributionFromCookies(req.cookies),
+          });
+        } catch (dbErr) {
+          console.error('[create-order] save failed', dbErr.message);
+        }
+      }
+    }
 
     return res.status(200).json({
       orderId : order.id,

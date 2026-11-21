@@ -21,6 +21,7 @@ const SHIPPING_SCHEMA = { "@context": "https://schema.org", ...SHIPPING_DETAILS 
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
+  const isAdmin = router.pathname.startsWith('/admin');
 
   // On initial mount: capture attribution cookies from the landing URL.
   //
@@ -87,9 +88,9 @@ export default function App({ Component, pageProps }) {
       {/* CartDrawer is a singleton mounted at the app root.
           It reads open/close state and cart items from CartContext directly,
           so it never needs to be re-mounted when navigating between pages. */}
-      <CartDrawer />
+      {!isAdmin && <CartDrawer />}
 
-      <CookieConsent />
+      {!isAdmin && <CookieConsent />}
       </CartProvider>
     </MotionConfig>
   );

@@ -129,7 +129,7 @@ export default function CheckoutPage() {
       const res = await fetch('/api/create-order', {
         method : 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body   : JSON.stringify({ cartItems }),
+        body   : JSON.stringify({ cartItems, customer: form }),
       });
       orderData = await res.json();
       if (!res.ok) throw new Error(orderData.error || 'Order creation failed');
@@ -236,11 +236,24 @@ export default function CheckoutPage() {
 
     pushAddPaymentInfo(cartItems, totals.total, 'cod');
 
-    const waUrl = buildCODWhatsAppUrl(cartItems, form, totals);
+    const orderId = `COD-${Date.now()}-${Math.random().toString(36).slice(2, 6).toUpperCase().padEnd(4, '0')}`;
+    const waUrl = buildCODWhatsAppUrl(cartItems, form, totals, orderId);
+
+    // Save the order for the admin panel. Fire-and-forget with keepalive:
+    // awaiting it would delay window.open() below past the click, and mobile
+    // browsers then block the WhatsApp tab as a popup.
+    try {
+      fetch('/api/cod-order', {
+        method   : 'POST',
+        headers  : { 'Content-Type': 'application/json' },
+        body     : JSON.stringify({ orderId, cartItems, customer: form }),
+        keepalive: true,
+      }).catch(() => {});
+    } catch { /* never block the order */ }
 
     // Persist lightweight order meta for the success page
     const orderMeta = {
-      orderId   : `COD-${Date.now()}`,
+      orderId,
       paymentId : null,
       cartItems,
       subtotal  : totals.subtotal,
