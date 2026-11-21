@@ -13,7 +13,7 @@
 
 import { getRazorpayClient } from '@/lib/razorpay';
 import { validateCartItems, calcServerTotals } from '@/lib/checkout';
-import { insertOrder, cleanCustomer, attributionFromCookies, isOrdersDbConfigured } from '@/lib/orders';
+import { insertOrder, buildOrderRow, cleanCustomer, attributionFromCookies, isOrdersDbConfigured } from '@/lib/orders';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -62,14 +62,14 @@ export default async function handler(req, res) {
       const { customer } = cleanCustomer(req.body.customer);
       if (customer) {
         try {
-          await insertOrder({
+          await insertOrder(buildOrderRow({
             id           : order.id,
             paymentMethod: 'razorpay',
             paymentStatus: 'pending',
             customer,
             totals,
             attribution  : attributionFromCookies(req.cookies),
-          });
+          }));
         } catch (dbErr) {
           console.error('[create-order] save failed', dbErr.message);
         }
