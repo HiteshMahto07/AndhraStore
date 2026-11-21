@@ -22,7 +22,6 @@
 
 import crypto from 'crypto';
 import { markOrderPaid, isOrdersDbConfigured } from '@/lib/orders';
-import { sendOrderAlert } from '@/lib/orderAlert';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -68,12 +67,12 @@ export default async function handler(req, res) {
     // the customer's confirmed payment). Payment stays visible in Razorpay.
     if (isOrdersDbConfigured()) {
       try {
-        const paidOrder = await markOrderPaid(razorpay_order_id, razorpay_payment_id);
-        await sendOrderAlert(paidOrder); // store email alert; no-op if null or not configured
+        await markOrderPaid(razorpay_order_id, razorpay_payment_id);
       } catch (dbErr) {
         console.error('[verify-payment] mark paid failed', razorpay_order_id, dbErr.message);
       }
     }
+    // TODO: send confirmation email via Resend
 
     return res.status(200).json({
       success  : true,

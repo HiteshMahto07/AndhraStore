@@ -16,20 +16,6 @@
 
 Until step 5 is done, checkout works exactly as before. Orders just aren't saved.
 
-## New-order email alerts (optional, free)
-
-Every new COD order and every verified online payment sends an email with the items, total, customer, phone/WhatsApp link, address and a link to `/admin`.
-
-1. Sign up at resend.com **with the email address that should receive the alerts** (free plan: 3,000 emails/month).
-2. Resend → API Keys → Create → copy `re_…`.
-3. Vercel env vars: `RESEND_API_KEY` = that key, `ORDER_ALERT_EMAIL` = the same email address. Redeploy.
-
-Without a verified domain, Resend's test sender (`onboarding@resend.dev`) can only deliver to the email the Resend account was created with. To send to other or multiple addresses (comma-separated in `ORDER_ALERT_EMAIL`), verify `andhrastore.com` in Resend → Domains (add the DNS records it shows) and set `ORDER_ALERT_FROM`, e.g. `Andhra Store <orders@andhrastore.com>`.
-
-- Alerts are best-effort: if Resend fails, the order is still saved and checkout is unaffected (the error is logged in Vercel).
-- One email per order: a retried request doesn't send a duplicate.
-- COD alerts work even before Supabase is set up. Paid-order alerts need Supabase, because the customer details come from the saved order.
-
 ## How orders get saved
 
 | Flow | When it's saved | Status shown |
