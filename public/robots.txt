@@ -5,6 +5,7 @@ Disallow: /order-success
 Disallow: /order-failed
 Disallow: /api/
 Disallow: /cart
+Disallow: /admin
 
 # AI / LLM crawlers — explicit per-agent rules for granular control
 User-agent: GPTBot

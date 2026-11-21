@@ -44,6 +44,12 @@ function loadRazorpayScript() {
   });
 }
 
+// Online payment is offered only when the Razorpay key is configured in the
+// build env. Without it, /api/create-order fails for every customer, so we hide
+// "Pay Online" and default to COD. Setting RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET
+// and NEXT_PUBLIC_RAZORPAY_KEY_ID in Vercel + redeploying re-enables it.
+const ONLINE_PAYMENT_ENABLED = Boolean(process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID);
+
 // ─── Indian states ────────────────────────────────────────────────────────────
 
 const INDIAN_STATES = [
@@ -83,7 +89,7 @@ export default function CheckoutPage() {
     city: '', state: '', pincode: '',
   });
   const [errors, setErrors]           = useState({});
-  const [paymentMethod, setMethod]    = useState('razorpay'); // 'razorpay' | 'cod'
+  const [paymentMethod, setMethod]    = useState(ONLINE_PAYMENT_ENABLED ? 'razorpay' : 'cod'); // 'razorpay' | 'cod'
   const [submitting, setSubmitting]   = useState(false);
   const [serverError, setServerError] = useState('');
 
@@ -123,7 +129,7 @@ export default function CheckoutPage() {
       const res = await fetch('/api/create-order', {
         method : 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body   : JSON.stringify({ cartItems }),
+        body   : JSON.stringify({ cartItems, customer: form }),
       });
       orderData = await res.json();
       if (!res.ok) throw new Error(orderData.error || 'Order creation failed');
@@ -230,11 +236,24 @@ export default function CheckoutPage() {
 
     pushAddPaymentInfo(cartItems, totals.total, 'cod');
 
-    const waUrl = buildCODWhatsAppUrl(cartItems, form, totals);
+    const orderId = `COD-${Date.now()}-${Math.random().toString(36).slice(2, 6).toUpperCase().padEnd(4, '0')}`;
+    const waUrl = buildCODWhatsAppUrl(cartItems, form, totals, orderId);
+
+    // Save the order for the admin panel. Fire-and-forget with keepalive:
+    // awaiting it would delay window.open() below past the click, and mobile
+    // browsers then block the WhatsApp tab as a popup.
+    try {
+      fetch('/api/cod-order', {
+        method   : 'POST',
+        headers  : { 'Content-Type': 'application/json' },
+        body     : JSON.stringify({ orderId, cartItems, customer: form }),
+        keepalive: true,
+      }).catch(() => {});
+    } catch { /* never block the order */ }
 
     // Persist lightweight order meta for the success page
     const orderMeta = {
-      orderId   : `COD-${Date.now()}`,
+      orderId,
       paymentId : null,
       cartItems,
       subtotal  : totals.subtotal,
@@ -467,6 +486,7 @@ export default function CheckoutPage() {
                 <h2 className="text-base font-heading font-bold text-gray-900 mb-4">Payment Method</h2>
 
                 <div className="space-y-3">
+                  {ONLINE_PAYMENT_ENABLED && (
                   <PaymentOption
                     id="pm-razorpay"
                     value="razorpay"
@@ -480,6 +500,7 @@ export default function CheckoutPage() {
                       </svg>
                     }
                   />
+                  )}
                   <PaymentOption
                     id="pm-cod"
                     value="cod"
@@ -522,9 +543,11 @@ export default function CheckoutPage() {
                 )}
               </button>
 
-              <p className="text-center text-xs text-gray-400 mt-3">
-                Secured by Razorpay · 256-bit SSL encryption
-              </p>
+              {ONLINE_PAYMENT_ENABLED && (
+                <p className="text-center text-xs text-gray-400 mt-3">
+                  Secured by Razorpay · 256-bit SSL encryption
+                </p>
+              )}
             </form>
 
             {/* ── RIGHT: Order Summary ────────────────────────────────────── */}

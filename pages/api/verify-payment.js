@@ -21,6 +21,7 @@
  */
 
 import crypto from 'crypto';
+import { markOrderPaid, isOrdersDbConfigured } from '@/lib/orders';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -62,9 +63,16 @@ export default async function handler(req, res) {
     }
 
     // ── 3. Payment is genuine ───────────────────────────────────────────────
-    // TODO (when DB added): persist order record, send email via Resend
-    // const order = await db.orders.create({ orderId, paymentId, ...customerDetails });
-    // await sendConfirmationEmail(customerDetails.email, order);
+    // Mark the order saved by create-order as paid (best-effort, never fails
+    // the customer's confirmed payment). Payment stays visible in Razorpay.
+    if (isOrdersDbConfigured()) {
+      try {
+        await markOrderPaid(razorpay_order_id, razorpay_payment_id);
+      } catch (dbErr) {
+        console.error('[verify-payment] mark paid failed', razorpay_order_id, dbErr.message);
+      }
+    }
+    // TODO: send confirmation email via Resend
 
     return res.status(200).json({
       success  : true,

@@ -14,6 +14,8 @@ module.exports = {
     '/order-success/*',
     '/order-failed',
     '/cart',
+    '/admin',
+    '/admin/*',
     '/api/*',
     '/pickle',              // legacy 301 redirect — not a content page
     '/pickleinfo',          // legacy 301 redirect — not a content page
